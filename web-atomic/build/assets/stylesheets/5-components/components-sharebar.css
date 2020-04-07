@@ -1,0 +1,9 @@
+.shareBar {
+  display: none; }
+  .shareBar.is-show {
+    display: flex; }
+    .shareBar.is-show .shareBar-list {
+      transform: translateX(0); }
+  .shareBar-list {
+    transform: translateX(-70%);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275); }

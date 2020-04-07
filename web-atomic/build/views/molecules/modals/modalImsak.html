@@ -1,0 +1,28 @@
+<div class="modal jsModal" id="jsModalImsak">
+        <div class="modal-dialog jsModalDialog">
+            <div class="modal-content jsModalContent">
+                <div class="modal-section W(300px) H(400px) Mt(10px) Mx(auto)">
+                    <div class="modal-body W(100%) H(100%)">
+                        <div class="M(0) Pos(R) W(300px)">
+                            <div id="animation_container" class="Bgc(c-white) W(300px)">
+                                <canvas id="canvas" width="300" height="403" class="Pos(a) D(b) Bgc(c-white)"></canvas>
+                                <div id="dom_overlay_container" class="Ov(h) W(300px) H(400px) Pos(a) Start(0) T(0) D(b)"
+                                    style="pointer-events:none;">
+                                </div>
+                            </div>
+                            <button
+                                class="jsModalCloseButton Pos(a) T(0) End(-9px) Bgc(#d0021b) Bdrs(50%) W(25px) H(25px) D(f) Jc(c) Ai(c) C(c-white) Bd(borderSolidWhite)">
+                                <i class="fas fa-times Fz(15px)"></i></button>
+                            <button onclick="toggleSound()"
+                                class="Pos(a) B(10px) Start(50%) TranslateX(-50%) Bgc(c-normal) Bdrs(50%) W(25px) H(25px) D(f) Jc(c) Ai(c) C(c-white)">
+                                <i class="volume-on fas fa-volume-up Fz(13px) D(b)"></i>
+                                <i class="volume-off fas fa-volume-slash Fz(13px) D(n)"></i>
+                                <audio id="background-imsak" class="bg-audio">
+                                    <source src="../assets/audio/imsak.wav" type="audio/wav"/>
+                                </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

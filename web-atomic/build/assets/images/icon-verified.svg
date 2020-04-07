@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="14px" viewBox="0 0 16 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Group 17</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-4.6%" y="-6.3%" width="109.2%" height="112.7%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.05 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="21.08" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.-Hompej" transform="translate(-239.000000, -5633.000000)">
+            <g id="Group-26-Copy-2" transform="translate(0.000000, 5441.000000)">
+                <g id="Group-26-Copy">
+                    <g id="Group-19" filter="url(#filter-1)" transform="translate(16.000000, 55.000000)">
+                        <g id="Group-39" transform="translate(12.000000, 92.000000)">
+                            <g id="Stacked-Group" transform="translate(50.000000, 0.000000)">
+                                <text id="username" font-family="Roboto-Bold, Roboto" font-size="16" font-weight="bold" letter-spacing="-0.2" fill="#484848">
+                                    <tspan x="0" y="15">Komunitas One Punch </tspan>
+                                    <tspan x="0" y="34">Man Mania Season ke </tspan>
+                                    <tspan x="0" y="53">Sekian ngalahin GOT!</tspan>
+                                </text>
+                                <g id="Group-17" transform="translate(161.000000, 45.000000)">
+                                    <path d="M7.99998093,-1.77635684e-15 C12.4187326,-1.77635684e-15 15.9999619,2.90935586 15.9999619,6.4999845 C15.9999619,10.0906131 12.4187326,12.999969 7.99998093,12.999969 C6.79997158,12.999969 5.66560539,12.7781067 4.64372672,12.3937082 C3.87499076,13.0062251 2.32186336,13.9999666 0.249999404,13.9999666 C0.149993539,13.9999666 0.062499851,13.9437229 0.0218810513,13.8499731 C-0.0187377483,13.7562233 1.77635684e-15,13.6499614 0.0687559396,13.5780926 C0.0843809023,13.5624677 1.39062168,12.1593338 1.78124575,10.5843559 C0.668760613,9.46872742 1.77635684e-15,8.0499686 1.77635684e-15,6.4999845 C1.77635684e-15,2.90935586 3.58122925,-1.77635684e-15 7.99998093,-1.77635684e-15 Z" id="Path" fill="#1998ED"></path>
+                                    <path d="M11.5655852,5.11873169 C11.6999843,4.9874759 11.6999843,4.76872642 11.5687285,4.63435785 L10.7624865,3.82185978 C10.6280875,3.68749121 10.409338,3.68437842 10.2749694,3.818747 L7.23747054,6.83122151 L5.92186088,5.50309967 C5.78749231,5.3687311 5.56874283,5.36561831 5.43437425,5.49998689 L4.62187619,6.30622886 C4.48747709,6.44059744 4.48436431,6.65934692 4.61873288,6.79374601 L6.98435835,9.17810922 C7.11872692,9.31559058 7.3374764,9.31559058 7.47184498,9.18122201 L11.5655852,5.11873169 Z" id="Path" fill="#FFFFFF"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,7 @@
+.gridAutoAuto {
+  display: grid;
+  grid-template-columns: auto auto; }
+
+.grid32Auto {
+  display: grid;
+  grid-template-columns: 32px auto; }
