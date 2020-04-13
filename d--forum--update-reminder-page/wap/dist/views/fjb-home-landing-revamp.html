@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+<html lang="ID">
+
+<head>
+  <meta charset="UTF-8">
+  <title>M Framework</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, target-densitydpi=device-dpi" />
+  <link href="../assets/stylesheets/main.css" rel="stylesheet" type="text/css" media="all"/>
+  <!-- <link href="../assets/stylesheets/night.css" rel="stylesheet" type="text/css" media="all"/> -->
+  <link rel="apple-touch-icon-precomposed" href="../assets/img/apps_icon.png" />
+  <script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+</head>
+<body class="fjb">
+	<div id="wrapper" style="background:white;">
+		<div class="top-header">
+	        <!-- FJB NOTICE -->
+        <div class="nm nm-forum notice-app">
+          <a href="" target="_blank">
+            <img src="../assets/img/icon-notice-fjb.png" class="left">
+          </a>
+          <div class="nm-title">
+            <span>KASKUS</span>
+            <a href="#" class="x">&times;</a>
+          </div>
+          <div>
+            <span><a href="https://play.google.com/store/apps/details?id=com.kaskus.android&utm_source=kaskusmsite" target="_blank">Get the App</a></span>
+            <span class="right"><a href="https://play.google.com/store/apps/details?id=com.kaskus.android&utm_source=kaskusmsite" target="_blank">View in App</a></span>
+          </div>
+        </div>
+	      <header id="site-header" class="">
+          <div class="main-h r">
+            <nav class="n">
+              <a href="#" class="logo">
+                <img src="../assets/img/logo.png" height="30" width="30" alt="">
+              </a>
+              <a href="#" id="kk-forum">Forum</a>
+              <a href="#" id="kk-fjb">Jual Beli</a>
+              <a href="#" id="kk-news">News</a>
+             <!--  <a href="#" id="kk-mataharimall"><img src="../assets/img/logo-mataharimall.png" alt=""></a> -->
+            </nav>
+            <nav class="u">
+              <span id="mobile-menu-btn" class="login_btn">
+                <a href="https://fjb.m.kaskus.co.id/user/menu">
+                  <span></span>
+                  <div class="user-notice">6</div>
+                </a>
+              </span>
+            </nav>
+          </div>
+          <div class="header-login">
+            <div class="r">
+              <div class="p-left">
+                <span>Masa belum login, Gan?</span>
+              </div>
+              <div class="p-right">
+                <span><a href="#login">Login</a></span>
+                <span>or</span>
+                <span><a href="">Sign Up</a></span>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+
+      <!-- if notice install apps is closed & user not logged in -->
+      <!-- <div id="main" class="p-top-68" role="main"> -->
+
+      <!-- if notice install apps is closed & user is logged in -->
+      <!-- <div id="main" class="p-top-40" role="main"> -->
+      
+      <div id="main" role="main">
+        <div id="mobile-menu">
+          <div class="mobile-menu-wrapper">
+            <div class="mobile-menu-wrapper-inner">
+
+              <!-- When User is not logged in -->
+              <!-- <div id="profile-login" class="form-input">
+                <div class="p-all-10">
+                  <form action="" name="" method="" class="category-filter">
+                    <div class="r relative">
+                      <input class="search-category" type="text" id="filter-cat" placeholder="Filter Categories">
+                      <a href="" class="search-icon"><img src="../assets/img/search-icon.png" alt=""></a>
+                    </div>
+                  </form>
+                </div>
+
+                <div id="filter-content" class=""></div>
+                
+                <form>
+                  <fieldset class="border-none">
+                    <h2>
+                      <img src="../assets/img/layout/ic_lock.png" class="section__icon">
+                      <span class="section__title">KASKUS Sign In</span>
+                    </h2>
+                    <label class="r">
+                      <span>Username</span>
+                      <div class="in-txt">
+                        <input type="text" autocorrect="off" required>
+                      </div>
+                    </label>
+                    <label class="r">
+                      <span>Password</span>
+                      <div class="in-txt">
+                        <input type="password" autocorrect="off" required>
+                      </div>
+                    </label>
+                    <div class="r">
+                      <div class="in-btn btn-block">
+                        <input type="submit" value="Sign in">
+                      </div>
+                      <span style="font-size: 12px;font-weight: 400;">
+                        <a href="">
+                          <i>Forgot Password?</i>
+                        </a>
+                      </span>
+                    </div>
+                    <div class="r text-center">
+                      <small><i>or sign in with</i></small>
+                      <hr style="margin-top: -12px;margin-bottom: 20px;">
+                      <ul class="social-media">
+                        <li>
+                          <a href="#">
+                          <img src="../assets/img/facebook.png" height="19" width="9" alt="">
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                          <img src="../assets/img/twitter-login.png" height="14" width="17" alt="">
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                          <img src="../assets/img/google-plus.png" height="18" width="18" alt="">
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <hr style="margin-bottom: 15px;">
+                    <label class="r">
+                     <a href="" class="btn orange btn-block reset-margin" style="text-transform: uppercase;">Join Now!</a>
+                    </label>
+                  </fieldset>
+                </form>
+              </div> -->
+
+              <!-- When User is logged in -->
+              <div class="profile-menu" class="text-left">
+                <div class="p-all-10">
+                  <form action="" name="" method="" class="category-filter">
+                    <div class="r relative">
+                      <input class="search-category" type="text" id="filter-cat" placeholder="Filter Categories">
+                      <a href="" class="search-icon"><img src="../assets/img/search-icon.png" alt=""></a>
+                    </div>
+                  </form>
+                </div>
+
+                <div id="filter-content" class=""></div>
+                <ul>
+                  <li>
+                    <a href="#" class="user-photo">
+                      <div class="photo-wrapper">
+                          <img src="../assets/img/kob1.png" alt="user photo">
+                      </div>
+                      <span>Zenk</span>
+                    </a>
+                  </li>
+                  <li class="notice-plus">
+                    <a href="#">
+                      <img src="../assets/img/icon-kplus-grey.png" alt="" class="icon">
+                      <span>Upgrade Akun ke Plus</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="../assets/img/icon-kplus-grey.png" alt="" class="icon">
+                      <span>KASKUS Plus</span>
+                      <h6>20-08-2016</h6>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="../assets/img/icon-rp-grey.png" alt="" class="icon">
+                      <span>Saldo BranKas</span>
+                      <h6>Rp. 1.250.000</h6>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="../assets/img/icon-bell.png" alt="" class="icon">
+                      <span>Notifications</span>
+                      <span class="notif-count-head">99+</span>
+                    </a>
+                    <ul>
+                      <li>
+                        <a href="">
+                          <span>New Private Message</span>
+                          <span class="inbox">(10)</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <span>New Visitor Message</span>
+                          <span class="inbox">(1)</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <span>Quoted Post</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href=""><span>Feedback</span>
+                          <span class="inbox">(9)</span>
+                        </a>
+                      </li>
+                      <li class="accordionItem close">
+                        <a href="#" class="accordionItemHeading menu">
+                          <span>Transaksi Pembelian</span>
+                          <span class="inbox">(99+)</span>
+                        </a>
+                        <ul class="accordionContent extraPadding">
+                          <li>
+                            <a href="">
+                              <span>Tunggu Pembayaran</span>
+                              <span class="inbox">(10)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="">
+                              <span>Konfirmasi Terima</span>
+                              <span class="inbox">(1)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="">
+                              <span>Ada Pengaduan</span>
+                              <span class="inbox">(10)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href=""><span>Beri Feedback</span>
+                              <span class="inbox">(9)</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="accordionItem close">
+                        <a href="#" class="accordionItemHeading menu">
+                          <span>Transaksi Pembelian</span>
+                          <span class="inbox">(99+)</span>
+                        </a>
+                        <ul class="accordionContent extraPadding">
+                          <li>
+                            <a href="">
+                              <span>Tunggu Pembayaran</span>
+                              <span class="inbox">(10)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="">
+                              <span>Konfirmasi Terima</span>
+                              <span class="inbox">(1)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="">
+                              <span>Ada Pengaduan</span>
+                              <span class="inbox">(10)</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href=""><span>Beri Feedback</span>
+                              <span class="inbox">(9)</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <!--<li class="accordionItem close">
+                    <a href="#" class="accordionItemHeading menu">
+                      <img src="https://s.kaskus.id/img/seasonal/september2016/tematik/ic-keranjang1.png" alt="" class="icon">
+                      <span class="head-menu">Transaksi Pembelian</span>
+                      <span class="notif-count-head">99+</span>
+                    </a>
+                    <ul class="accordionContent extraPadding">
+                      <li>
+                        <a href="">
+                          <span>Tunggu Pembayaran</span>
+                          <span class="inbox">10</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <span>Konfirmasi Terima</span>
+                          <span class="inbox">1</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <span>Ada Pengaduan</span>
+                          <span class="inbox">10</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href=""><span>Beri Feedback</span>
+                          <span class="inbox">9</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="accordionItem close">
+                    <a href="#" class="accordionItemHeading menu">
+                      <img src="https://s.kaskus.id/img/seasonal/september2016/tematik/ic-keranjang1.png" alt="" class="icon">
+                      <span class="menu__head">Transaksi Penjualan</span>
+                      <span class="notif-count-head">99+</span>
+                    </a>
+                    <ul class="accordionContent extraPadding">
+                      <li>
+                        <a href="">
+                          <span>Respon Pesanan</span>
+                          <span class="inbox">10</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <span>Isi Resi</span>
+                          <span class="inbox">1</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <span>Ada Pengaduan</span>
+                          <span class="inbox">10</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>-->
+                  <li class=" close">
+                    <a href="#" class="">
+                      <img src="../assets/img/icon-bubble.png" alt="" class="icon">
+                      <span>Forum Activities</span>
+                    </a>
+                  </li>
+                  <li class=" close">
+                    <a href="#" class="">
+                      <img src="../assets/img/icon-basket.png" alt="" class="icon">
+                      <span>Jual Beli Activities</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="../assets/img/icon-envelope.png" alt="" class="icon">
+                      <span>Private Message</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="../assets/img/icon-gear.png" alt="" class="icon">
+                      <span>Account Settings</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="../assets/img/icon-exit.png" alt="" class="icon">
+                      <span>Sign Out</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+          </div>  
+        </div>
+   	  </div>
+			<div id="search">
+				<form>
+					<div class="r"><div class="c c-3"><div class="in-txt"><input type="text" placeholder="cari disini" name="q" autocorrect="off" spellcheck="false" required=""></div></div><div class="c c-1"><div class="in-btn"><input type="submit" value="Search"></div></div></div>
+				</form>
+			</div>
+
+			<div>
+				<ul class="trending-search"> 
+					<li><strong>TRENDING : </strong></li> 
+					<li><a href="#">Travel Adapter</a></li> 
+					<li><a href="#">Hard Case</a></li>
+					<li><a href="#">Xiao Mi Yi</a></li>
+					<li><a href="#">Samsung</a></li>  
+					<li><a href="#">Lenovo</a></li>  
+					<li><a href="#">Iphone6</a></li>  
+					<li><a href="#">PS4</a></li>  
+					<li><a href="#">HTC</a></li>  
+					<li><a href="#">Macbook Pro</a></li>  
+					<li><a href="#">Smartwatch</a></li>  
+				</ul>
+			</div>
+			<div class="ads-b">
+				<img src="../assets/img/banner_ads.gif" alt="" height="50">
+			</div>
+			<div class="primary-nav-btn text-center mb10">
+        		<a href="" class="btn btn__action btn--white-orange">Lihat Kategori</a>
+        	</div>
+			<div class="highlight-slider">
+				<div class="slider-item">
+					<a href="#">
+						<img class="banner_image" src="../assets/img/banner_landing1.jpg">
+					</a>
+				</div>
+				<div class="slider-item">
+					<a href="#">
+						<img class="banner_image" src="../assets/img/banner_landing2.jpg">
+					</a>
+				</div>
+				<div class="slider-item">
+					<a href="#">
+						<img class="banner_image" src="../assets/img/banner_landing3.jpg">
+					</a>
+				</div>
+			</div>
+
+			<section class="bar revamp border-none fjb-category-icons">
+    <h2 class="nav-arrow">
+        <i class="section__icon" style="background-image:url(../assets/img/layout/ic_kategori.png);"></i>
+        <span class="section__title">Kategori</span>
+    </h2>
+    <div class="fjb-category-icons__slider">
+        <div class="fjb-category-icons__slide">
+            <div class="fjb-category-icons__row">
+                <a href="#" class="fjb-category-icons__thumb">
+                    <img class="fjb-category-icons__icon" src="../assets/images/category-icon/image-10.png"/>
+                    <p class="fjb-category-icons__title">Berita</p>
+                </a>
+                <a href="#" class="fjb-category-icons__thumb">
+                    <img class="fjb-category-icons__icon" src="../assets/images/category-icon/image-16.png"/>
+                    <p class="fjb-category-icons__title">Pasangan Idaman</p>
+                </a>
+                <a href="#" class="fjb-category-icons__thumb">
+                    <img class="fjb-category-icons__icon" src="../assets/images/category-icon/image-36.png"/>
+                    <p class="fjb-category-icons__title">Handphone</p>
+                </a>
+                <a href="#" class="fjb-category-icons__thumb">
+                    <img class="fjb-category-icons__icon" src="../assets/images/category-icon/image-54.png"/>
+                    <p class="fjb-category-icons__title">Kamera</p>
+                </a>
+            </div>
+            <div class="fjb-category-icons__row">
+                <a href="#" class="fjb-category-icons__thumb">
+                    <img class="fjb-category-icons__icon" src="../assets/images/category-icon/image-66.png"/>
+                    <p class="fjb-category-icons__title">Buku</p>
+                </a>
+                <a href="#" class="fjb-category-icons__thumb">
+                    <img class="fjb-category-icons__icon" src="../assets/images/category-icon/image-235.png"/>
+                    <p class="fjb-category-icons__title">Tiket</p>
+                </a>
+                <a href="#" class="fjb-category-icons__thumb">
+                    <img class="fjb-category-icons__icon" src="../assets/images/category-icon/image-250.png"/>
+                    <p class="fjb-category-icons__title">Dekorasi Rumah</p>
+                </a>
+                <a href="#" class="fjb-category-icons__thumb">
+                    <img class="fjb-category-icons__icon" src="../assets/images/category-icon/aksesories.png"/>
+                    <p class="fjb-category-icons__title">Aksesori Komputer</p>
+                </a>
+            </div>
+        </div>
+        <div class="fjb-category-icons__slide">
+            <div class="fjb-category-icons__row">
+                <a href="#" class="fjb-category-icons__thumb">
+                    <img class="fjb-category-icons__icon" src="../assets/images/category-icon/image-10.png"/>
+                    <p class="fjb-category-icons__title">Berita</p>
+                </a>
+                <a href="#" class="fjb-category-icons__thumb">
+                    <img class="fjb-category-icons__icon" src="../assets/images/category-icon/image-16.png"/>
+                    <p class="fjb-category-icons__title">Pasangan Idaman</p>
+                </a>
+                <a href="#" class="fjb-category-icons__thumb">
+                    <img class="fjb-category-icons__icon" src="../assets/images/category-icon/image-36.png"/>
+                    <p class="fjb-category-icons__title">Handphone</p>
+                </a>
+                <a href="#" class="fjb-category-icons__thumb">
+                    <img class="fjb-category-icons__icon" src="../assets/images/category-icon/image-54.png"/>
+                    <p class="fjb-category-icons__title">Kamera</p>
+                </a>
+            </div>
+            <div class="fjb-category-icons__row">
+                <a href="#" class="fjb-category-icons__thumb">
+                    <img class="fjb-category-icons__icon" src="../assets/images/category-icon/image-66.png"/>
+                    <p class="fjb-category-icons__title">Buku</p>
+                </a>
+                <a href="#" class="fjb-category-icons__thumb">
+                    <img class="fjb-category-icons__icon" src="../assets/images/category-icon/image-235.png"/>
+                    <p class="fjb-category-icons__title">Tiket</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>			
+					<div class="bar revamp border-top-none">
+						<h2 class="nav-arrow">
+							<i class="section__icon" style="background-image:url(../assets/img/layout/ic_hot_reviews.png);"></i>
+							<span class="section__title">Hot Reviews</span>
+						</h2>
+
+						<div id="hot_reviews">
+							<div class="item-list hotreviews" id="item-listhotreviews1">
+								<div class="small-block-grid-2">
+									<div class="block-grid__item">
+										<div class="grid__item">
+											<div class="item__image">
+												<div class="image__photo">
+													<img src="../assets/img/layout/img_lapak1.png">         
+												</div>
+											</div>
+											<div class="item__description">
+												<div class="item__title">Daniel Wellington Watch</div>
+												<div class="description__content">Tampil trendy dengan jam tangan yang cocok buat untuk semua orang</div>
+											</div>
+										</div>
+									</div>
+									<div class="block-grid__item">
+										<div class="grid__item">
+											<div class="item__image">
+												<div class="image__photo">
+													<img src="../assets/img/layout/img_lapak1.png">         
+												</div>
+											</div>
+											<div class="item__description">
+												<div class="item__title">iPhone 6s</div>
+												<div class="description__content">Tampil trendy dengan jam tangan yang cocok buat untuk semua orang</div>
+											</div>
+										</div>
+									</div>
+									<div class="block-grid__item">
+										<div class="grid__item">
+											<div class="item__image">
+												<div class="image__photo">
+													<img src="../assets/img/layout/img_lapak1.png">         
+												</div>
+											</div>
+											<div class="item__description">
+												<div class="item__title">Nike Shoes Roshe</div>
+												<div class="description__content">Pas untuk Agan yang ingin tampil tetap trendy</div>
+											</div>
+										</div>
+									</div>
+									<div class="block-grid__item">
+										<div class="grid__item">
+											<div class="item__image">
+												<div class="image__photo">
+													<img src="../assets/img/layout/img_lapak1.png">         
+												</div>
+											</div>
+											<div class="item__description">
+												<div class="item__title">Magnum Ice Cream</div>
+												<div class="description__content">Ada yang baru dari Magnum classic</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="item-list hotreviews" id="item-listhotreviews2">
+								<div class="small-block-grid-2">
+									<div class="block-grid__item">
+										<div class="grid__item">
+											<div class="item__image">
+												<div class="image__photo">
+													<img src="../assets/img/layout/img_lapak1.png">         
+												</div>
+											</div>
+											<div class="item__description">
+												<div class="item__title">Danielo Wellington Watch</div>
+												<div class="description__content">Tampil trendy dengan jam tangan yang cocok buat untuk semua orang</div>
+											</div>
+										</div>
+									</div>
+									<div class="block-grid__item">
+										<div class="grid__item">
+											<div class="item__image">
+												<div class="image__photo">
+													<img src="../assets/img/layout/img_lapak1.png">
+												</div>
+											</div>
+											<div class="item__description">
+												<div class="item__title">iPhone 6s</div>
+												<div class="description__content">Tampil trendy dengan jam tangan yang cocok buat untuk semua orang</div>
+											</div>
+										</div>
+									</div>
+									<div class="block-grid__item">
+										<div class="grid__item">
+											<div class="item__image">
+												<div class="image__photo">
+													<img src="../assets/img/layout/img_lapak1.png">         
+												</div>
+											</div>
+											<div class="item__description">
+												<div class="item__title">Nike Shoes Roshe</div>
+												<div class="description__content">Pas untuk Agan yang ingin tampil tetap trendy</div>
+											</div>
+										</div>
+									</div>
+									<div class="block-grid__item">
+										<div class="grid__item">
+											<div class="item__image">
+												<div class="image__photo">
+													<img src="../assets/img/layout/img_lapak1.png">         
+												</div>
+											</div>
+											<div class="item__description">
+												<div class="item__title">Magnum Ice Cream</div>
+												<div class="description__content">Ada yang baru dari Magnum classic</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+          
+          <div id="kaskus-store" class="bar revamp">
+    <h2 class="nav-arrow">
+        <i class="section__img" style="background-image:url(https://s.kaskus.id/img/seasonal/september2016/tematik/kaskus-store.png);"></i> <span class="section__title" style="vertical-align:middle;">KASKUS Store</span>
+    </h2>
+    <div class="small-block-grid-3 tabnav pagination-tabs" id="qu-content-tab">
+        <div>
+            <a id="qu-ads-link" href="javascript:show('qu-ads','qu-ads-link');" class="small-block-grid-1">Ads</a>
+        </div>
+        <div>
+            <a id="qu-plus-link" href="javascript:show('qu-plus','qu-plus-link');" class="small-block-grid-1 current">Plus</a>
+        </div>
+        <div>
+            <a id="qu-e_pulsa-link" href="javascript:show('qu-e_pulsa','qu-e_pulsa-link');" class="small-block-grid-1">e-Pulsa</a>
+        </div>
+        <div class="clr"></div>
+    </div>
+    <div class="c-list-e-pulsa">
+      <div class="bar e-pulsa" id="qu-content">
+        <ul id="qu-plus" class="qu-con" style="display: block;">
+            <li>
+              <div class="entry-content">
+                <div id="e-pulsa" class="store--widget">
+                  <form action="" class="store--r">
+                    <fieldset>
+                      <div class="store--r position-r">
+                        <div class="r">
+                            <span>
+                                <label>User ID
+                                    <button type="button" class="tooltip-plus" onclick="revealTooltip(this);" >?</button>
+                                    <div id="tooltip-content" class="tooltip-plus-content" style="display: none;">Masukkan User ID yang akan dijadikan member Plus
+                                        <button type="button" class="tooltip-plus-close" onclick="concealTooltip(this);">x</button>
+                                    </div>
+                                </label>
+                            </span>
+                            
+                            <div class="text--field">
+                                <input name="input-number" id="input-number" type="text" class="form-classified detail--number" value="">
+                            </div>
+                            <div class="mt5">Masukkan User ID yang akan dijadikan member Plus</div>
+                        </div>
+                      </div>
+                      <div class="store--r position-r">
+                        <div class="r">
+                          <span>
+                            <label>
+                            Email
+                                <button type="button" class="tooltip-plus" onclick="revealTooltip(this);">?</button>
+                                <div id="tooltip-content" class="tooltip-plus-content" style="display: none; left: 35px;">Email akan digunakan untuk pengiriman data transaksi
+                                    <button type="button" class="tooltip-plus-close" onclick="concealTooltip(this);">x</button>
+                                </div>
+                            </label>
+                          </span>
+                          <div class="text--field">
+                            <input name="input-number" id="input-number" type="text" class="form-classified detail--number" value="">
+                          </div>
+                          <div class="mt5">Email akan digunakan untuk pengiriman data transaksi</div>
+                        </div>
+                      </div>
+                      <div class="store--r">
+                        <span><label>Paket</label></span>
+                        <div class="text--field">
+                          <select name="epulsa" id="epulsa">
+                            <option value="epulsa">12 Bulan - Rp.300.000</option>
+                            <option value="epulsa">12 Bulan - Rp.300.000</option>
+                            <option value="epulsa">12 Bulan - Rp.300.000</option>
+                            <option value="epulsa">12 Bulan - Rp.300.000</option>
+                          </select>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </form>
+                </div>
+                <div class="wrapper--row">
+                  <div class="small-block-grid-2">
+                    <div class="store--detail">
+                      <span>Harga</span>
+                      <span class="store--price">Rp.200.000</span>
+                    </div>
+                    <button type="submit" class="p-right btn btn-yellow">Bungkus Gan!</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+        </ul>
+        <ul id="qu-e_pulsa" class="qu-con">
+            <li>
+              <div class="entry-content">
+                <div id="e-pulsa" class="store--widget">
+                  <form action="" class="store--r">
+                    <fieldset>
+                      <div class="store--r">
+                        <span><label>Jenis Pembelian</label></span>
+                        <div class="text--field">
+                          <select name="epulsa" id="epulsa">
+                            <option value="epulsa">Pulsa & Paket Data</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="store--r">
+                        <div class="r">
+                          <span><label>No Telp</label></span>
+                          <div class="text--field">
+                            <input name="input-number" id="input-number" type="text" class="form-classified detail--number" value="">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="store--r">
+                        <span><label>Pulsa & Paket Data</label></span> 
+                        <div class="r">
+                          <div class="text--field">
+                            <select name="pilih-paket" id="pilih-paket">
+                              <option value="pilih-paket">Pilih Paket</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </form>
+                </div>
+                <div class="wrapper--row">
+                  <div class="small-block-grid-2">
+                    <div class="store--detail">
+                      <span>Harga</span>
+                      <span class="store--price">Rp.200.000</span>
+                    </div>
+                    <button type="submit" class="p-right btn btn-yellow">Bungkus Gan!</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+        </ul>
+        <ul id="qu-ads" class="qu-con">
+            <li>
+              <div class="entry-content">
+                <div id="e-pulsa" class="store--widget">
+                  <form action="" class="store--r">
+                    <fieldset>
+                      <div class="store--r">
+                        <span><label>Objektif Iklan</label></span>
+                        <div class="text--field">
+                          <select name="epulsa" id="epulsa">
+                            <option value="">Pilih Objektif Beriklan</option>
+                            <option value="">Mempromosikan Thread KASKUS</option>
+                            <option value="">Mempromosikan Lapak KASKUS</option>
+                            <option value="">Mempromosikan Website Lain</option>
+                            <option value="">Mempromosikan Produk Lain</option>
+                            <option value="">Promosi dengan Banner</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="store--r">
+                        <div class="r">
+                          <span><label>Judul Iklan</label></span>
+                          <div class="text--field">
+                            <input name="input-number" id="input-number" type="text" class="form-classified detail--number" value="" placeholder="Judul Iklan Agan">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="store--r">
+                        <div class="r">
+                          <span><label>URL Thread KASKUS</label></span>
+                          <div class="text--field">
+                            <input name="" id="" type="text" class="form-classified detail--number" value="" placeholder="URL Thread Agan">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="store--r">
+                        <span><label>Judul Iklan</label></span> 
+                        <div class="r">
+                          <div class="text--field">
+                            <select name="" id="">
+                              <option value="">970 x 90 px</option>
+                              <option value="">300 x 250 px</option>
+                              <option value="">320 x 50 px</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </form>
+                </div>
+                <div class="wrapper--row">
+                  <div class="small-block-grid-2">
+                    <!--<div class="store--detail">
+                      <span>Harga</span>
+                      <span class="store--price">Rp.200.000</span>
+                    </div>-->
+                    <button type="submit" class="p-right btn btn-yellow">Pasang Iklan!</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+        </div>
+			<!-- <div class="ads">
+				<div class="r">
+					<img src="../assets/img/ads_1.jpg" alt="">
+				</div>
+			</div> -->
+
+			<div id="success_story" class="bar revamp">
+				<h2 class="nav-arrow">
+					<i class="section__icon" style="background-image:url(../assets/img/layout/ic_successstory.png);"></i>
+					<span class="section__title">Success Story</span></h2>
+				<div class="item-list">
+	                <div class="story__image">
+	                	<img src="../assets/img/layout/img_success_story.png">
+	            	</div>
+	            	<div class="story__detail">
+	            		<div class="detail__title"><span class="title--green">Featured!</span>Ar Signature</div>
+	            		<div class="detail__content">Pengusaha Muda Sukses Dengan Mengasah Kilau Kristal</div>
+	            	</div>
+	            	<div class="story__button">
+	            		<div class="r">
+	            			<a class="p-right a-tile" href="">Success Story Lainnya &#10095;</a>
+	            		</div>
+	            	</div>
+				</div>
+			</div>
+
+			<div id="hot_deals" class="bar revamp">
+				<h2 class="nav-arrow">
+					<i class="section__icon" style="background-image:url(../assets/img/layout/ic_hotdeals.png);"></i>
+					<span class="section__title">Hot Deals</span></h2>
+				<div class="item-list">
+	                <div class="small-block-grid-2">
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo">
+                    <img src="../assets/img/contoh_produk2.jpg">         
+                  </div>
+								</div>
+								<div class="item__description">
+									<div class="username">
+										<div class="username__profile">
+											<div class="profile__image" style="background-image:url(../assets/img/layout/placeholder-userpp.png)">
+											</div>
+										</div>
+										<div class="username__name">kepitingpanggang</div>
+									</div>
+									<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+									<div class="item__price">
+										<div class="price__final">Rp. 490.000</div>
+										<div class="price__discount">Rp. 800.000</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo">
+                    <img src="../assets/img/contoh_produk2.jpg">         
+                  </div>
+								</div>
+								<div class="item__description">
+									<div class="username">
+										<div class="username__profile">
+											<div class="profile__image" style="background-image:url(../assets/img/layout/placeholder-userpp.png)">
+											</div>
+										</div>
+										<div class="username__name">kepitingpanggang</div>
+									</div>
+									<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+									<div class="item__price">
+										<div class="price__final">Rp. 490.000</div>
+										<div class="price__discount">Rp. 800.000</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo">
+                    <img src="../assets/img/contoh_produk2.jpg">         
+                  </div>
+								</div>
+								<div class="item__description">
+									<div class="username">
+										<div class="username__profile">
+											<div class="profile__image" style="background-image:url(../assets/img/layout/placeholder-userpp.png)">
+											</div>
+										</div>
+										<div class="username__name">kepitingpanggang</div>
+									</div>
+									<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+									<div class="item__price">
+										<div class="price__final">Rp. 490.000</div>
+										<div class="price__discount">Rp. 800.000</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo">
+                    <img src="../assets/img/contoh_produk2.jpg">         
+                  </div>
+								</div>
+								<div class="item__description">
+									<div class="username">
+										<div class="username__profile">
+											<div class="profile__image" style="background-image:url(../assets/img/layout/placeholder-userpp.png)">
+											</div>
+										</div>
+										<div class="username__name">kepitingpanggang</div>
+									</div>
+									<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+									<div class="item__price">
+										<div class="price__final">Rp. 490.000</div>
+										<div class="price__discount">Rp. 800.000</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="ads no-border">
+				<img src="../assets/img/banner_ads.gif" alt="" height="50">
+			</div>
+			
+			<div class="bar revamp">
+				<h2 class="nav-arrow">
+					<i class="section__icon" style="background-image:url(../assets/img/layout/ic_kob.png);"></i>
+					<span class="section__title">KASKUS Online Bazaar</span>
+				</h2>
+
+				<div id="online_bazaar">
+					<div class="item-list onlinebazaar" id="item-listonlinebazaar1">
+						<div class="small-block-grid-2">
+							<div class="block-grid__item">
+								<div class="grid__item">
+									<div class="item__image">
+										<div class="image__photo">
+											<img src="../assets/img/layout/img_lapak1.png">         
+										</div>
+									</div>
+									<div class="item__description">
+										<div class="username">
+											<div class="username__profile">
+												<div class="profile__image" style="background-image:url(../assets/img/layout/placeholder-userpp.png)">
+												</div>
+											</div>
+											<div class="username__name">kepitingpanggang</div>
+										</div>
+										<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+										<div class="item__price">
+											<div class="price__final">Rp. 490.000</div>
+											<div class="price__discount">Rp. 800.000</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="block-grid__item">
+								<div class="grid__item">
+									<div class="item__image">
+										<div class="image__photo">
+											<img src="../assets/img/layout/img_lapak1.png">         
+										</div>
+									</div>
+									<div class="item__description">
+										<div class="username">
+											<div class="username__profile">
+												<div class="profile__image" style="background-image:url(../assets/img/layout/placeholder-userpp.png)">
+												</div>
+											</div>
+											<div class="username__name">kepitingpanggang</div>
+										</div>
+										<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+										<div class="item__price">
+											<div class="price__final">Rp. 490.000</div>
+											<div class="price__discount">Rp. 800.000</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="item-list onlinebazaar" id="item-listonlinebazaar2">
+						<div class="small-block-grid-2">
+							<div class="block-grid__item">
+								<div class="grid__item">
+									<div class="item__image">
+										<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+									</div>
+									<div class="item__description">
+										<div class="username">
+											<div class="username__profile">
+												<div class="profile__image" style="background-image:url(../assets/img/layout/placeholder-userpp.png)">
+												</div>
+											</div>
+											<div class="username__name">kepitingpanggang</div>
+										</div>
+										<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+										<div class="item__price">
+											<div class="price__final">Rp. 490.000</div>
+											<div class="price__discount">Rp. 800.000</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="block-grid__item">
+								<div class="grid__item">
+									<div class="item__image">
+										<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+									</div>
+									<div class="item__description">
+										<div class="username">
+											<div class="username__profile">
+												<div class="profile__image" style="background-image:url(../assets/img/layout/placeholder-userpp.png)">
+												</div>
+											</div>
+											<div class="username__name">kepitingpanggang</div>
+										</div>
+										<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+										<div class="item__price">
+											<div class="price__final">Rp. 490.000</div>
+											<div class="price__discount">Rp. 800.000</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="bar__link">
+					<div class="r">
+						<a class="p-right a-tile" href="">Koleksi Lainnya &#10095;</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="bar revamp no-border">
+				<div class="trend__title text-center">
+					<p class="title__head">Kategori Paling Laris</p>
+					<p class="title__description">Kumpulan Lapak yang Recommended Abis</p>
+				</div>
+				
+				<h2 class="nav-arrow">
+					<span class="section__title">
+						<i class="section__icon" style="background-image:url(../assets/img/layout/ic_handphone.png);"></i>Handphone &amp; Accessories
+					</span>
+				</h2>
+
+				<div class="categories_trend">
+					<div class="item-list -category-1_" id="item-list-category-1_1">
+						<div class="small-block-grid-2">
+							<div class="block-grid__item">
+								<div class="grid__item">
+									<div class="item__image">
+										<div class="image__photo">
+											<img src="../assets/img/layout/img_lapak1.png">
+										</div>
+									</div>
+									<div class="item__description">
+										<div class="username">
+											<div class="username__profile">
+												<div class="profile__image" style="background-image:url(../assets/img/layout/placeholder-userpp.png)">
+												</div>
+											</div>
+											<div class="username__name">kepitingpanggang</div>
+										</div>
+										<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+										<div class="item__price">
+											<div class="price__final">Rp. 490.000</div>
+											<div class="price__discount">Rp. 800.000</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="block-grid__item">
+								<div class="grid__item">
+									<div class="item__image">
+										<div class="image__photo">
+											<img src="../assets/img/layout/img_lapak1.png">         
+										</div>
+									</div>
+									<div class="item__description">
+										<div class="username">
+											<div class="username__profile">
+												<div class="profile__image" style="background-image:url(../assets/img/layout/placeholder-userpp.png)">
+												</div>
+											</div>
+											<div class="username__name">kepitingpanggang</div>
+										</div>
+										<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+										<div class="item__price">
+											<div class="price__final">Rp. 490.000</div>
+											<div class="price__discount">Rp. 800.000</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item-list -category-1_" id="item-list-category-1_2">
+						<div class="small-block-grid-2">
+							<div class="block-grid__item">
+								<div class="grid__item">
+									<div class="item__image">
+										<div class="image__photo">
+											<img src="../assets/img/layout/img_lapak1.png">         
+										</div>
+									</div>
+									<div class="item__description">
+										<div class="username">
+											<div class="username__profile">
+												<div class="profile__image" style="background-image:url(../assets/img/layout/placeholder-userpp.png)">
+												</div>
+											</div>
+											<div class="username__name">kepitingpanggang</div>
+										</div>
+										<div class="item__title">Jam Garmin 120% Original Macam Warna</div>
+										<div class="item__price">
+											<div class="price__final">Rp. 490.000</div>
+											<div class="price__discount">Rp. 800.000</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="block-grid__item">
+								<div class="grid__item">
+									<div class="item__image">
+										<div class="image__photo">
+											<img src="../assets/img/layout/img_lapak1.png">       
+										</div>
+									</div>
+									<div class="item__description">
+										<div class="username">
+											<div class="username__profile">
+												<div class="profile__image" style="background-image:url(../assets/img/layout/placeholder-userpp.png)">
+												</div>
+											</div>
+											<div class="username__name">kepitingpanggang</div>
+										</div>
+										<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+										<div class="item__price">
+											<div class="price__final">Rp. 490.000</div>
+											<div class="price__discount">Rp. 800.000</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="bar__link">
+					<div class="r">
+						<a class="p-right a-tile" href="">Koleksi Lainnya &#10095;</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="ads-b">
+				<img src="../assets/img/banner_ads.gif" alt="" height="50">
+			</div>
+			
+			<div class="bar revamp">
+				<h2 class="nav-arrow">
+					<span class="section__title">
+						<i class="section__icon" style="background-image:url(../assets/img/layout/ic_computer.png);"></i>Computer
+					</span>
+				</h2>
+				<div class="categories_trend">
+					
+					<div class="item-list -category-1_" id="item-list-category-1_1">
+						<div class="small-block-grid-2">
+							<div class="block-grid__item">
+								<div class="grid__item">
+									<div class="item__image">
+										<div class="image__photo">
+											<img src="../assets/img/contoh_produk2.jpg">         
+										</div>
+									</div>
+									<div class="item__description">
+										<div class="username">
+											<div class="username__profile">
+												<div class="profile__image" style="background-image:url(../assets/img/layout/placeholder-userpp.png)">
+												</div>
+											</div>
+											<div class="username__name">kepitingpanggang</div>
+										</div>
+										<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+										<div class="item__price">
+											<div class="price__final">Rp. 490.000</div>
+											<div class="price__discount">Rp. 800.000</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="block-grid__item">
+								<div class="grid__item">
+									<div class="item__image">
+										<div class="image__photo">
+											<img src="../assets/img/contoh_produk2.jpg">         
+										</div>
+									</div>
+									<div class="item__description">
+										<div class="username">
+											<div class="username__profile">
+												<div class="profile__image" style="background-image:url(../assets/img/layout/placeholder-userpp.png)">
+												</div>
+											</div>
+											<div class="username__name">kepitingpanggang</div>
+										</div>
+										<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+										<div class="item__price">
+											<div class="price__final">Rp. 490.000</div>
+											<div class="price__discount">Rp. 800.000</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+	            
+					<div class="item-list -category-1_" id="item-list-category-1_2">
+						<div class="small-block-grid-2">
+							<div class="block-grid__item">
+								<div class="grid__item">
+									<div class="item__image">
+										<div class="image__photo"><img src="../assets/img/contoh_produk2.jpg"></div>
+									</div>
+									<div class="item__description">
+										<div class="username">
+											<div class="username__profile">
+												<div class="profile__image" style="background-image:url(../assets/img/layout/placeholder-userpp.png)"></div>
+											</div>
+											<div class="username__name">
+												kepitingpanggang
+											</div>
+										</div>
+										<div class="item__title">
+											Jam Garmin 120% Original Macam Warna
+										</div>
+										<div class="item__price">
+											<div class="price__final">
+												Rp. 490.000
+											</div>
+											<div class="price__discount">
+												Rp. 800.000
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="block-grid__item">
+								<div class="grid__item">
+									<div class="item__image">
+										<div class="image__photo"><img src="../assets/img/contoh_produk2.jpg"></div>
+									</div>
+									<div class="item__description">
+										<div class="username">
+											<div class="username__profile">
+												<div class="profile__image" style="background-image:url(../assets/img/layout/placeholder-userpp.png)"></div>
+											</div>
+											<div class="username__name">
+												kepitingpanggang
+											</div>
+										</div>
+										<div class="item__title">
+											Jam Garmin 100% Original Macam Warna
+										</div>
+										<div class="item__price">
+											<div class="price__final">
+												Rp. 490.000
+											</div>
+											<div class="price__discount">
+												Rp. 800.000
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="bar__link">
+					<div class="r">
+						<a class="p-right a-tile" href="">Koleksi Lainnya &#10095;</a>
+					</div>
+				</div>
+	    </div>
+
+	        <div class="bar revamp">
+						<h2 class="nav-arrow">
+							<span class="section__title">
+								<i class="section__icon" style="background-image:url(../assets/img/layout/ic_fashion.png);"></i>Fashion
+							</span>
+						</h2>
+
+						<div class="categories_trend">
+	            <div class="item-list -category-1_" id="item-list-category-1_1">
+								<div class="small-block-grid-2">
+									<div class="block-grid__item">
+										<div class="grid__item">
+											<div class="item__image">
+												<div class="image__photo">
+													<img src="../assets/img/contoh_produk2.jpg">         
+												</div>
+											</div>
+											<div class="item__description">
+												<div class="username">
+													<div class="username__profile">
+														<div class="profile__image" style="background-image:url(../assets/img/layout/placeholder-userpp.png)">
+														</div>
+													</div>
+													<div class="username__name">kepitingpanggang</div>
+												</div>
+												<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+												<div class="item__price">
+													<div class="price__final">Rp. 490.000</div>
+													<div class="price__discount">Rp. 800.000</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="block-grid__item">
+										<div class="grid__item">
+											<div class="item__image">
+												<div class="image__photo">
+													<img src="../assets/img/contoh_produk2.jpg">         
+												</div>
+											</div>
+											<div class="item__description">
+												<div class="username">
+													<div class="username__profile">
+														<div class="profile__image" style="background-image:url(../assets/img/layout/placeholder-userpp.png)">
+														</div>
+													</div>
+													<div class="username__name">kepitingpanggang</div>
+												</div>
+												<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+												<div class="item__price">
+													<div class="price__final">Rp. 490.000</div>
+													<div class="price__discount">Rp. 800.000</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+	            
+							<div class="item-list -category-1_" id="item-list-category-1_2">
+								<div class="small-block-grid-2">
+									<div class="block-grid__item">
+										<div class="grid__item">
+											<div class="item__image">
+												<div class="image__photo">
+													<img src="../assets/img/contoh_produk2.jpg">         
+												</div>
+											</div>
+											<div class="item__description">
+												<div class="username">
+													<div class="username__profile">
+														<div class="profile__image" style="background-image:url(../assets/img/layout/placeholder-userpp.png)">
+														</div>
+													</div>
+													<div class="username__name">kepitingpanggang</div>
+												</div>
+												<div class="item__title">Jam Garmin 120% Original Macam Warna</div>
+												<div class="item__price">
+													<div class="price__final">Rp. 490.000</div>
+													<div class="price__discount">Rp. 800.000</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="block-grid__item">
+										<div class="grid__item">
+											<div class="item__image">
+												<div class="image__photo">
+													<img src="../assets/img/contoh_produk2.jpg">         
+												</div>
+											</div>
+											<div class="item__description">
+												<div class="username">
+													<div class="username__profile">
+														<div class="profile__image" style="background-image:url(../assets/img/layout/placeholder-userpp.png)">
+														</div>
+													</div>
+													<div class="username__name">kepitingpanggang</div>
+												</div>
+												<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+												<div class="item__price">
+													<div class="price__final">Rp. 490.000</div>
+													<div class="price__discount">Rp. 800.000</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="bar__link">
+							<div class="r">
+							<a class="p-right a-tile" href="">Koleksi Lainnya &#10095;</a>
+						</div>  
+					</div>
+
+	        <div class="bar revamp no-border">
+						<h2 class="nav-arrow">
+							<span class="section__title">
+								<i class="section__icon" style="background-image:url(../assets/img/layout/ic_lastseen.png);"></i>Terakhir Diliat
+							</span>
+						</h2>
+
+						<div class="categories_trend">
+	            <div class="item-list -category-1_" id="item-list-category-1_1">
+								<div class="small-block-grid-2">
+									<div class="block-grid__item">
+										<div class="grid__item">
+											<div class="item__image">
+												<div class="image__photo">
+													<img src="../assets/img/contoh_produk2.jpg">         
+												</div>
+											</div>
+											<div class="item__description">
+												<div class="username">
+													<div class="username__profile">
+														<div class="profile__image" style="background-image:url(../assets/img/layout/placeholder-userpp.png)">
+														</div>
+													</div>
+													<div class="username__name">kepitingpanggang</div>
+												</div>
+												<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+												<div class="item__price">
+													<div class="price__final">Rp. 490.000</div>
+													<div class="price__discount">Rp. 800.000</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="block-grid__item">
+										<div class="grid__item">
+											<div class="item__image">
+												<div class="image__photo">
+													<img src="../assets/img/contoh_produk2.jpg">         
+												</div>
+											</div>
+											<div class="item__description">
+												<div class="username">
+													<div class="username__profile">
+														<div class="profile__image" style="background-image:url(../assets/img/layout/placeholder-userpp.png)">
+														</div>
+													</div>
+													<div class="username__name">kepitingpanggang</div>
+												</div>
+												<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+												<div class="item__price">
+													<div class="price__final">Rp. 490.000</div>
+													<div class="price__discount">Rp. 800.000</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+	            </div>
+	            <div class="item-list -category-1_" id="item-list-category-1_2">
+								<div class="small-block-grid-2">
+									<div class="block-grid__item">
+										<div class="grid__item">
+											<div class="item__image">
+												<div class="image__photo">
+													<img src="../assets/img/contoh_produk2.jpg">         
+												</div>
+											</div>
+											<div class="item__description">
+												<div class="username">
+													<div class="username__profile">
+														<div class="profile__image" style="background-image:url(../assets/img/layout/placeholder-userpp.png)">
+														</div>
+													</div>
+													<div class="username__name">kepitingpanggang</div>
+												</div>
+												<div class="item__title">Jam Garmin 120% Original Macam Warna</div>
+												<div class="item__price">
+													<div class="price__final">Rp. 490.000</div>
+													<div class="price__discount">Rp. 800.000</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="block-grid__item">
+										<div class="grid__item">
+											<div class="item__image">
+												<div class="image__photo">
+													<img src="../assets/img/contoh_produk2.jpg">         
+												</div>
+											</div>
+											<div class="item__description">
+												<div class="username">
+													<div class="username__profile">
+														<div class="profile__image" style="background-image:url(../assets/img/layout/placeholder-userpp.png)">
+														</div>
+													</div>
+													<div class="username__name">kepitingpanggang</div>
+												</div>
+												<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+												<div class="item__price">
+													<div class="price__final">Rp. 490.000</div>
+													<div class="price__discount">Rp. 800.000</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+	     				</div>
+						</div>
+					</div>
+
+
+		
+<div class="c-footer">
+  <div class="notice p-all-10">
+    <div class="title-kn">Kirim info peristiwa menarik di sekitarmu ke (Chat Only)</div>
+    <!-- add more text here -->
+    <div class="notice-wrapper">
+      <a href="" class="notice-btn whatsapp">
+        <img src="../assets/images/icon-whatsapp-border.svg" alt="whatsapp-icon"/>
+        <strong>+628119KASKUS</strong>
+      </a>
+      <a href="" class="notice-btn k-chat">
+        <img src="../assets/images/icon-chat-white.svg" alt="chat-icon"/>
+        <strong>KASKUS.Update</strong>
+      </a>
+    </div>
+  </div>
+
+  <nav class="kaskusnetworks">
+    <div class="title-kn">CHANNELS</div>
+    <div class="list-kn">
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611291043150120.png" alt="kaskusnetworks-image"> </a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611291043400966.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611290202260804.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2017/01/11/4501355_201701110710070180.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2017/03/06/6498705_201703060945090923.png" alt="kaskusnetworks-image"></a>
+    </div>
+  </nav>
+
+  <footer id="site-footer">
+    <nav class="mb10">
+          <a href="#site-header">Kembali ke Atas</a>
+          <a href="http://kaskus.com">Versi Desktop</a>
+          <a href="http://kaskus.com">Nightmode</a>
+          <a href="http://kaskus.com">Image off</a>
+          <a href="#" class="out">Widget</a>
+          <a href="#" class="out">Hubungi Kami</a>
+          <a href="#" class="out">Keluar</a>
+    </nav>
+    <img src="../assets/img/banner1.jpg" height="250" width="300" alt="">
+    <small>&copy; 2017 Kaskus – The Largest Indonesian Community</small>
+  </footer>
+</div>
+  </div>
+
+	<script type="text/javascript" src="../assets/js/header.js"></script>
+	<script type="text/javascript" src="../assets/js/nav-tabs.js"></script>
+  <script type="text/javascript" src="../assets/js/autocomplete.js"></script>
+  <script type="text/javascript" src="../assets/js/scroll.js"></script>
+	<script src="../assets/js/jquery.min.js"></script>
+	<script src="../assets/js/slick.min.js"></script>
+	<script src="../assets/js/blazy.min.js"></script>
+  <script type="text/javascript">
+    var selected = 'qu-plus';
+    var selectedLink = 'qu-plus-link';
+    function show(a, id){
+        document.getElementById(selected).style.display = "none";
+        document.getElementById(a).style.display = "block";
+        document.getElementById(selectedLink).className = "";
+        document.getElementById(id).className = "current";
+        selected = a;
+        selectedLink = id;
+    }
+    show(selected, selectedLink);
+  </script>
+      <script>
+        ;(function() {
+            // Initialize
+            var bLazy = new Blazy();
+        })();
+    </script>
+  <script type="text/javascript">
+      $(document).ready(function () {
+        $('.highlight-slider').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true
+        });
+
+				$('.fjb-category-icons__slider, #online_bazaar, #hot_reviews, .categories_trend').slick({
+					infinite: false,
+					slidesToShow: 1,
+          slidesToScroll: 1,
+				});
+    });
+  </script>
+  <script>
+        var accItem = document.getElementsByClassName('accordionItem');
+    var accHD = document.getElementsByClassName('accordionItemHeading');
+    for (i = 0; i < accHD.length; i++) {
+      accHD[i].addEventListener('click', toggleItem, false);
+    }
+    function toggleItem() {
+      var itemClass = this.parentNode.className;
+      for (i = 0; i < accItem.length; i++) {
+        accItem[i].className = 'accordionItem close';
+      }
+      if (itemClass == 'accordionItem close') {
+        this.parentNode.className = 'accordionItem open';
+       }
+    }
+    </script>
+    <script type="text/javascript" src="../assets/js/tooltip.js"></script>
+</body>
+</html>

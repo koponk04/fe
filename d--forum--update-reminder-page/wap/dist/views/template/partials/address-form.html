@@ -1,0 +1,95 @@
+<form class="r pall10 c-form">
+    <div class="c-form__field c-form__field--required">
+        <label class="c-form__field-name">Label Alamat</label>
+        <div class="o-input">
+            <input type="text" placeholder="Isi Label Alamat"/>
+        </div>
+    </div>
+    <div class="c-form__field c-form__field--required">
+        <label class="c-form__field-name">Nama</label>
+        <div class="o-input">
+            <input type="text" placeholder="Isi Nama"/>
+        </div>
+    </div>
+    <div class="c-form__field c-form__field--required">
+        <label class="c-form__field-name">Nomor Handphone</label>
+        <div class="o-input">
+            <input type="text" placeholder="Isi Handphone"/>
+        </div>
+    </div>
+    <div class="c-form__field c-form__field--required">
+        <label class="c-form__field-name">Alamat</label>
+        <div class="o-input">
+            <textarea placeholder="Isi Alamat Pengirim"></textarea>
+        </div>
+    </div>
+    <div class="c-form__field c-form__field--required">
+        <label class="c-form__field-name">Provinsi</label>
+        <div class="o-input o-input--select">
+            <select>
+                <option>Pilih Provinsi</option>
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+            </select>
+        </div>
+    </div>
+    <div class="c-form__field c-form__field--required">
+        <label class="c-form__field-name">Kota/Kabupaten</label>
+        <div class="o-input o-input--select">
+            <select>
+                <option>Pilih Kota/Kabupaten</option>
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+            </select>
+        </div>
+    </div>
+    <div class="c-form__field c-form__field--required">
+        <label class="c-form__field-name">Kecamatan</label>
+        <div class="o-input o-input--select">
+            <select>
+                <option>Pilih Kecamatan</option>
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+            </select>
+        </div>
+    </div>
+    <div class="c-form__field c-form__field--required">
+        <label class="c-form__field-name">Kode Pos</label>
+        <div class="o-input">
+            <input type="text" placeholder="Contoh: 12550"/>
+        </div>
+    </div>
+    <div class="c-form__field">
+        <div class="o-checkbox o-checkbox--jb">
+            <input id="cb-address" type="checkbox" value="1"/>
+            <label for="cb-address">Jadikan alamat utama</label>
+        </div>
+    </div>
+    <hr class="mb10">
+    <div class="c-form__field">
+        <label for="lat-lng" class="c-form__field-name">Lokasi Pengiriman</label>
+        <div class="row">
+            <input id="lat-lng" type="hidden"/>
+            <div class="row">
+                <div class="pull-left mr10">
+                    <i class="fa fa-map-marker fa-lg green"></i>
+                </div>
+                <p id="address" class="pull-left">
+                    Jl. Ultramen no.1 Pejaten,<br>
+                    Pasar Minggu
+                </p>
+                <button type="button" class="btn btn-link pull-right" onclick="showLocationPicker();">
+                    <i class="fa fa-edit fa-lg"></i>Ubah
+                </button>
+            </div>
+            <button type="button" class="btn btn__full list-teal mall0" onclick="showLocationPicker();">
+                <i class="fa fa-map-marker fa-lg"></i>
+                <span>Pilih Tujuan Pengiriman Dalam Peta</span>
+            </button>
+        </div>
+    </div>
+    <button type="submit"class="btn btn__full teal mt30">Simpan</button>
+</form>

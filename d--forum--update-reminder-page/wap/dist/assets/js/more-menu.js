@@ -1,0 +1,1 @@
+function jsmoreMenu(s){toShow=!0,"block"==$(s).next().css("display")&&(toShow=!1),$.each($(".c-showMoremenus"),function(s,o){"block"==$(o).next().css("display")&&($(o).next().hide(),$(o).addClass("hide").removeClass("show"))}),toShow&&($(s).next().show(),$(s).addClass("show").removeClass("hide"))}

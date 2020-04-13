@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ID">
+
+<head>
+  <meta charset="UTF-8">
+  <title>M Framework</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, target-densitydpi=device-dpi" />
+  <link href="../assets/stylesheets/main.css" rel="stylesheet" type="text/css" media="all"/>
+  <!-- <link href="../assets/stylesheets/night.css" rel="stylesheet" type="text/css" media="all"/> -->
+  <link rel="apple-touch-icon-precomposed" href="../assets/img/apps_icon.png" />
+  <script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+</head>
+<body class="fjb">
+	<div id="wrapper">
+		<header id="site-header">
+			<div class="main-h r">
+				<div class="c c-3">
+					<nav class="n">
+						<a href="#" class="logo">
+							<img src="../assets/img/logo.png" height="30" width="30" alt="">
+						</a>
+						<a href="#" id="kk-forum">Forum</a>
+						<a href="#" id="kk-fjb">FJB</a>
+					</nav>
+				</div>
+				<div class="c c-1">
+					<nav class="u">
+						<a href="#">Sign In</a>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<div id="main" role="main">
+			<div id="subnav">
+				<span><a href="#">VM<sup>3</sup></a></span>
+				<span><a href="#">PM<sup>3</sup></a></span>
+				<span class="curr"><a href="#">Activities</a></span>
+				<span><a href="#">Store</a></span>
+				<span><a href="#">Settings</a></span>
+				<span><a href="#">Sign Out</a></span>
+			</div>
+			<div id="search">
+				<form>
+					<div class="r">
+						<div class="c c-3">
+							<div class="in-txt">
+								<input type="text" placeholder="Search something&hellip;" autofocus="autofocus" autocorrect="off" spellcheck="false" required>
+							</div>
+						</div>
+						<div class="c c-1">
+							<div class="in-btn">
+								<input type="submit" value="Search">
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<div class="ads full" style="background-color:#fff">
+				<div class="r">
+					<div class="bnr-ads">
+						<a href="#" target="_blank"><img src="../assets/img/temp-ads.gif" alt="ads"> </a>
+					</div>
+				</div>
+			</div>
+
+			<div id="content-wrapper" class="bar">
+			<!-- rekening bank -->
+				<div class="fjb-header">
+					<ul class="fjb-breadcrumbs">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Jual Beli</a></li>
+  <li><a href="#">Categories</a></li>
+  <li>Current Category</li>
+</ul>					<h1>Daftar Alamat</h1>
+				</div>
+
+				<div class="notice-title">
+					<small class="red"><strong>Catatan Penting</strong></small>
+					<p class="light">KASKUS tidak bertanggung jawab atas penyimpanan Alamat yang salah bla bla bla bla bla.. (need wording here).</p>
+				</div>
+
+				<div class="rekening-bank">
+					<div class="r list-rekening">
+						<div class="c c-4 wrapper">
+							<div class="r">
+								<div class="c c-4"><b>Kantor</b>
+									<p>Menara Palma Lt. 11 JL.HR Rasuna Said, Jakarta Selatan</p>
+								</div>
+							</div>
+							<div class="actions">
+		                        <a href="#" class="btn-actions green border-orange">Set Utama</a>
+		                        <a href="#" class="btn-actions green border-orange">Ubah</a>
+		                        <a href="#" class="btn-actions green border-orange">Hapus</a>
+		                    </div>
+						</div>
+					</div>
+					<div class="r list-rekening">
+						<div class="c c-4 wrapper">
+							<div class="r">
+								<div class="c c-4"><b>Alamat Utama</b>
+									<p>Menara Palma Lt. 11 JL.HR Rasuna Said, Jakarta Selatan</p>
+								</div>
+							</div>
+							<div class="actions">
+		                        <a href="#" class="btn-actions green border-orange btn-plus1" disabled>Alamat Utama</a>
+		                        <a href="#" class="btn-actions green border-orange">Ubah</a>
+		                    </div>
+						</div>
+					</div>
+					<div class="r">
+						<button class="btn green btn-plus" onclick="KaskusDialog.openDialog('overlay-add-address');">Tambahkan Alamat Baru</button>
+					</div>
+				</div>
+				
+				<dialog id="overlay-add-address" class="c-dialog c-dialog--overlay">
+					<div class="c-overlay">
+						<div class="c-overlay__toolbar">
+							<button onclick="KaskusDialog.closeDialog();"><i class="fa fa-chevron-left"></i></button>
+							<h1>Tambah Alamat</h1>
+						</div>
+						<div class="c-overlay__content">
+							<form class="r pall10 c-form">
+    <div class="c-form__field c-form__field--required">
+        <label class="c-form__field-name">Label Alamat</label>
+        <div class="o-input">
+            <input type="text" placeholder="Isi Label Alamat"/>
+        </div>
+    </div>
+    <div class="c-form__field c-form__field--required">
+        <label class="c-form__field-name">Nama</label>
+        <div class="o-input">
+            <input type="text" placeholder="Isi Nama"/>
+        </div>
+    </div>
+    <div class="c-form__field c-form__field--required">
+        <label class="c-form__field-name">Nomor Handphone</label>
+        <div class="o-input">
+            <input type="text" placeholder="Isi Handphone"/>
+        </div>
+    </div>
+    <div class="c-form__field c-form__field--required">
+        <label class="c-form__field-name">Alamat</label>
+        <div class="o-input">
+            <textarea placeholder="Isi Alamat Pengirim"></textarea>
+        </div>
+    </div>
+    <div class="c-form__field c-form__field--required">
+        <label class="c-form__field-name">Provinsi</label>
+        <div class="o-input o-input--select">
+            <select>
+                <option>Pilih Provinsi</option>
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+            </select>
+        </div>
+    </div>
+    <div class="c-form__field c-form__field--required">
+        <label class="c-form__field-name">Kota/Kabupaten</label>
+        <div class="o-input o-input--select">
+            <select>
+                <option>Pilih Kota/Kabupaten</option>
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+            </select>
+        </div>
+    </div>
+    <div class="c-form__field c-form__field--required">
+        <label class="c-form__field-name">Kecamatan</label>
+        <div class="o-input o-input--select">
+            <select>
+                <option>Pilih Kecamatan</option>
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+            </select>
+        </div>
+    </div>
+    <div class="c-form__field c-form__field--required">
+        <label class="c-form__field-name">Kode Pos</label>
+        <div class="o-input">
+            <input type="text" placeholder="Contoh: 12550"/>
+        </div>
+    </div>
+    <div class="c-form__field">
+        <div class="o-checkbox o-checkbox--jb">
+            <input id="cb-address" type="checkbox" value="1"/>
+            <label for="cb-address">Jadikan alamat utama</label>
+        </div>
+    </div>
+    <hr class="mb10">
+    <div class="c-form__field">
+        <label for="lat-lng" class="c-form__field-name">Lokasi Pengiriman</label>
+        <div class="row">
+            <input id="lat-lng" type="hidden"/>
+            <div class="row">
+                <div class="pull-left mr10">
+                    <i class="fa fa-map-marker fa-lg green"></i>
+                </div>
+                <p id="address" class="pull-left">
+                    Jl. Ultramen no.1 Pejaten,<br>
+                    Pasar Minggu
+                </p>
+                <button type="button" class="btn btn-link pull-right" onclick="showLocationPicker();">
+                    <i class="fa fa-edit fa-lg"></i>Ubah
+                </button>
+            </div>
+            <button type="button" class="btn btn__full list-teal mall0" onclick="showLocationPicker();">
+                <i class="fa fa-map-marker fa-lg"></i>
+                <span>Pilih Tujuan Pengiriman Dalam Peta</span>
+            </button>
+        </div>
+    </div>
+    <button type="submit"class="btn btn__full teal mt30">Simpan</button>
+</form>						</div>
+					</div>
+					<div class="c-overlay">
+						<div class="c-overlay__toolbar">
+							<button onclick="KaskusDialog.slideBackward();"><i class="fa fa-chevron-left"></i></button>
+							<h1>Pilih Lokasi</h1>
+						</div>
+						<div class="c-overlay__content">
+							<div id="kk-map" class="c-map" style="height: 100%;">Loading map...</div>
+						</div>
+					</div>
+				</dialog>
+
+				<script src="../assets/js/util.js"></script>
+<script src="../assets/js/dialog.js"></script>
+<script src="../assets/js/map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFrD3vuTQ_GDDaD31NW21Bg4vSrJzhZi8&libraries=places" async defer></script>
+				<script type="text/javascript">
+					function showLocationPicker() {
+						KaskusDialog.slideForward();
+
+						var mapContainer = $('#kk-map')[0];
+						var locationPicker = new KaskusMap(mapContainer, {
+							location: { address: 'Pasar Minggu, Jakarta Selatan, DKI Jakarta' },
+							markerIcon: '../assets/images/layout/icon-kk-map-marker.png',
+							onSelected: onLocationSelected
+						});
+						locationPicker.init();
+					}
+
+					function onLocationSelected(location) {
+						var inputHidden = $('#lat-lng');
+						var locationText = $('#address');
+
+						inputHidden.val('' + location.latLng.lat + ';' + location.latLng.lng);
+						locationText.html(location.address.split(',').join('<br>'));
+						KaskusDialog.closeDialog();
+					}
+
+					function countChars() {
+					     var l = "10000";
+					     var str = document.getElementById("textArea").value;
+					     var len = str.length;
+					     if(len <= l) {
+					          document.getElementById("txtLen").value=l-len;
+					     } else {
+					          document.getElementById("textArea").value=str.substr(0, 140);
+					     }
+					}
+				</script>
+			<!-- end rekening bank -->
+			<!--<div class="r mb10">
+						<div>
+							<input type="checkbox" name="vehicle" value="Bike"> Dengan Mencentang box ini Agan menyatakan siap mengirimkan pesanan Buyer sesuai dengan kesepakatan bersama.
+						</div>
+					</div>-->
+			</div>
+
+			<div id="login" class="bar form-input">
+				<h2>KASKUS Sign In</h2>
+				<a href="#" class="back-to-top">
+					<img src="../assets/img/arrow-top.png" height="10" width="10" alt="">
+				</a>
+				<form>
+					<fieldset>
+						<label class="r">
+							<div class="c c-2">
+								<span>Username</span>
+							</div>
+							<div class="c c-2">
+								<div class="in-txt">
+									<input type="text" autocorrect="off" required>
+								</div>
+							</div>
+						</label>
+						<label class="r">
+							<div class="c c-2">
+								<span>Password</span>
+							</div>
+							<div class="c c-2">
+								<div class="in-txt">
+									<input type="password" autocorrect="off" required>
+								</div>
+							</div>
+						</label>
+						<div class="r">
+							<div class="in-btn c-1" style="margin-left:75%;">
+								<input type="submit" value="Sign in">
+							</div>
+						</div>
+
+						<div class="r">
+							<div class="c c-2">
+								<span>or Sign in with</span>
+							</div>
+							<div class="c c-2">
+								<ul class="social-media">
+									<li>
+										<a href="#">
+											<img src="../assets/img/mindtalk.png" height="19" width="19" alt="">
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="../assets/img/facebook.png" height="19" width="9" alt="">
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="../assets/img/twitter-login.png" height="14" width="17" alt="">
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="../assets/img/google-plus.png" height="18" width="18" alt="">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+
+		</div>
+		
+<div class="c-footer">
+  <div class="notice p-all-10">
+    <div class="title-kn">Kirim info peristiwa menarik di sekitarmu ke (Chat Only)</div>
+    <!-- add more text here -->
+    <div class="notice-wrapper">
+      <a href="" class="notice-btn whatsapp">
+        <img src="../assets/images/icon-whatsapp-border.svg" alt="whatsapp-icon"/>
+        <strong>+628119KASKUS</strong>
+      </a>
+      <a href="" class="notice-btn k-chat">
+        <img src="../assets/images/icon-chat-white.svg" alt="chat-icon"/>
+        <strong>KASKUS.Update</strong>
+      </a>
+    </div>
+  </div>
+
+  <nav class="kaskusnetworks">
+    <div class="title-kn">CHANNELS</div>
+    <div class="list-kn">
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611291043150120.png" alt="kaskusnetworks-image"> </a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611291043400966.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611290202260804.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2017/01/11/4501355_201701110710070180.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2017/03/06/6498705_201703060945090923.png" alt="kaskusnetworks-image"></a>
+    </div>
+  </nav>
+
+  <footer id="site-footer">
+    <nav class="mb10">
+          <a href="#site-header">Kembali ke Atas</a>
+          <a href="http://kaskus.com">Versi Desktop</a>
+          <a href="http://kaskus.com">Nightmode</a>
+          <a href="http://kaskus.com">Image off</a>
+          <a href="#" class="out">Widget</a>
+          <a href="#" class="out">Hubungi Kami</a>
+          <a href="#" class="out">Keluar</a>
+    </nav>
+    <img src="../assets/img/banner1.jpg" height="250" width="300" alt="">
+    <small>&copy; 2017 Kaskus – The Largest Indonesian Community</small>
+  </footer>
+</div>
+	</div>
+</body>
+</html>

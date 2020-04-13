@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ID">
+
+<head>
+  <meta charset="UTF-8">
+  <title>M Framework</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, target-densitydpi=device-dpi" />
+  <link href="../assets/stylesheets/main.css" rel="stylesheet" type="text/css" media="all"/>
+  <!-- <link href="../assets/stylesheets/night.css" rel="stylesheet" type="text/css" media="all"/> -->
+  <link rel="apple-touch-icon-precomposed" href="../assets/img/apps_icon.png" />
+  <script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+</head>
+<body class="fjb inner">
+	<div id="wrapper">
+		<header id="site-header">
+			<div class="main-h r">
+				<div class="c c-3">
+					<nav class="n">
+						<a href="#" class="logo">
+							<img src="../assets/img/logo.png" height="30" width="30" alt="">
+						</a>
+						<a href="#" id="kk-forum">Forum</a>
+						<a href="#" id="kk-fjb" class="current">FJB</a>
+					</nav>
+				</div>
+				<div class="c c-1">
+					<nav class="u">
+						<a href="#">Sign In</a>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+		<div id="main" role="main">
+			<div id="search">
+				<form>
+					<div class="r">
+						<div class="c c-4">
+							<div class="in-txt">
+								<input type="text" placeholder="search" autofocus="autofocus" autocorrect="off" spellcheck="false" required>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<div id="content-wrapper" class="bar">
+				<div class="entry entry-auction">
+					<div id="post_id" class="post">
+                        <h2 class="entry-title auction-fjb-title">Start Selling</h2>
+
+                        <div class="header">
+                            <div class="breadcrumbs">
+                                <a href="/">Handphones</a>
+                                <a href="#">Handphone &amp; PDA</a>
+                            </div>
+                        </div>
+
+                        <div class="cr-step">
+                            <span>Info Lapak</span> > Atribut Lapak > Upload Photo > Data Pribadi
+                        </div>
+                        <div class="cr-st">
+    						<span class="sub-title">Detail Information</span>
+                            <span>Tambahkan informasi lengkap barang yang akan dijual</span>
+                        </div>
+                        <div class="wrap pv-5">
+                            <div class="notice__box">Saat ini Buyer bisa <a href="#" >langsung "Beli" tanpa "Nego"</a> pastikan kolom yang Agan isi benar dan selalu cek pesanan Buyer di PM dan email :)</div>
+						</div>
+                        <div class="entry-content">
+                            <form action="" class="form-lelang">
+                                <fieldset>
+                                    <label class="r">
+                                        <div class="c c-4">
+                                            <span>Selling Type</span>
+                                        </div>
+                                        <div class="c c-4">
+                                            <div class="txt-r">
+                                                <label>
+                                                    <input type="radio" name="selling-type" value="1" id="buy-now" checked="">
+                                                    <span>Lapak</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </label>
+
+                                    <label class="r">
+                                        <span>Item Title <span class="f-red">*</span></span>
+                                        <div class="in-txt">
+                                            <input type="text" autocorrect="off" spellcheck="false" autofocus="yes" required>
+                                        </div>
+                                    </label>
+
+                                    <label class="r">
+                                        <span>Price (Rp) <span class="f-red">*</span></span>
+                                        <div class="in-txt">
+                                            <input type="text" autocorrect="off" spellcheck="false" autofocus="yes" required>
+                                        </div>
+                                        <div class="escrow_elements create-list__form mt5">
+                                            <div class="c-4">
+                                                <label>
+                                                    <input type="checkbox" name="payment_method[ESCROW]" value="2"> Bisa Nego
+                                                </label>
+                                                <span>
+                                                    <input type="checkbox" name="free_shipping" value="1" id="free_shipping">
+                                                    <label for="free_shipping">Gratis Ongkir</label>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </label>
+
+                                    <div class="r"><span>Price (Rp) <span class="f-red">*</span></span>
+                                        <div class="in-txt group-addon c-2" style="padding: 0;">
+                                            <div class="addon-label" >Rp</div>
+                                            <input name="harga" id="input-price" type="text" placeholder="Harga produk contoh: 210000" class="form-classified" value="" style="">
+                                        </div>
+                                    </div>
+
+                                    <label class="r">
+                                        <div class="c c-4">
+                                            <span>Special Discount</span>
+                                        </div>
+                                        <div class="c c-1">
+                                            <div class="in-txt">
+                                                <input type="text" autocorrect="off" spellcheck="false" autofocus="yes" required>
+                                            </div>
+                                        </div>
+                                        <div class="c c-1 sp-disc">
+                                            %
+                                        </div>
+                                    </label>
+
+                                    <label class="r">
+                                        <div class="c c-4">
+                                            <span>Item Condition</span>
+                                        </div>
+                                        <div class="c c-4">
+                                            <div class="txt-r">
+                                                <label>
+                                                    <input type="radio" name="condition" value="1" id="new" checked="">
+                                                    <span>New</span>
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="condition" value="2" id="second">
+                                                    <span>Second</span>
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="condition" value="3" id="refurbished">
+                                                    <span>Refurbished</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </label>
+
+                                    <label class="r">
+                                        <span>Location</span>
+                                        <div class="r">
+                                            <div class="in-txt">
+                                                <select name="location" id="location">
+                                                    <option value="location">Choose Location</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </label>
+
+                                    <div class="r">
+                                        <div class="c c-1">
+                                            <label>
+                                                <input type="checkbox" name="payment_method[COD]" value="1"> Bisa COD
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="r">
+                                        <div class="c c-1">
+                                            <label>
+                                                <input type="checkbox" name="gratis ongkir" value="1"> Gratis Ongkir
+                                            </label>
+                                        </div>
+                                    </div>
+
+
+
+                                    <label class="r">
+                                        <span>Description</span>
+                                        <div class="in-txt">
+                                            <textarea id="textArea" spellcheck="false" onKeyDown="countChars()" onKeyUp="countChars()" name="textArea" rows="7" value=""></textarea>
+                                            <div class="chr">
+                                                <input  disabled size="3" value="10000" name="txtLen" id="txtLen">
+                                            </div>
+                                        </div>
+                                    </label>
+
+                                    <label class="r">
+                                        <span>Tags</span>
+                                        <div class="in-txt">
+                                            <input type="text" autocorrect="off" spellcheck="false" autofocus="yes" required>
+                                        </div>
+                                    </label>
+
+                                    <label class="r">
+                                        <div class="c c-4">
+                                            <span>Option</span>
+                                        </div>
+                                        <div class="c c-4">
+                                            <div class="txt-r">
+                                                <label>
+                                                    <input type="checkbox" name="comment" value="1" id="enabled" checked="">
+                                                    <span>Automatically parse links in text</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </label>
+
+                                    <label class="r">
+                                        <span>Subscription</span>
+
+                                        <div class="r">
+                                            <select name="subscription" id="subscription">
+                                                <option value="subscription">Do Not Subscribe</option>
+                                                <option value="without">Without Email Notification</option>
+                                                <option value="instant">Instant Email Notification</option>
+                                            </select>
+                                        </div>
+                                        <div class="r">
+                                            <select name="subscription" id="subscription">
+                                                <option value="subscription">Subscriptions (2 Threads)</option>
+                                            </select>
+                                        </div>
+                                    </label>
+
+                                    <label class="r">
+                                        <div class="c c-4">
+                                            <span>Comment <span class="f-red">*</span></span>
+                                        </div>
+                                        <div class="c c-4">
+                                            <div class="txt-r">
+                                                <label>
+                                                    <input type="radio" name="comment" value="1" id="enabled" checked="">
+                                                    <span>Enabled</span>
+                                                </label>
+                                                <label>
+                                                    <input type="radio" name="comment" value="2" id="disabled">
+                                                    <span>Disabled</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </fieldset>
+                            </form>
+						</div>
+						<div class="footer-act-left">
+                            <a href="#" class="btn blue">Next >></a>
+                            <p class="f-red">* required fields</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="login" class="bar form-input">
+				<h2>KASKUS Sign In</h2>
+				<a href="#" class="back-to-top">
+					<img src="../assets/img/arrow-top.png" height="10" width="10" alt="">
+				</a>
+				<form>
+					<fieldset>
+						<label class="r">
+							<div class="c c-2">
+								<span>Username</span>
+							</div>
+							<div class="c c-2">
+								<div class="in-txt">
+									<input type="text" autocorrect="off" required>
+								</div>
+							</div>
+						</label>
+						<label class="r">
+							<div class="c c-2">
+								<span>Password</span>
+							</div>
+							<div class="c c-2">
+								<div class="in-txt">
+									<input type="password" autocorrect="off" required>
+								</div>
+							</div>
+						</label>
+						<div class="r">
+							<div class="in-btn c-1" style="margin-left:75%;">
+								<input type="submit" value="Sign in">
+							</div>
+						</div>
+
+						<div class="r">
+							<div class="c c-2">
+								<span>or Sign in with</span>
+							</div>
+							<div class="c c-2">
+								<ul class="social-media">
+									<li>
+										<a href="#">
+											<img src="../assets/img/mindtalk.png" height="19" width="19" alt="">
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="../assets/img/facebook.png" height="19" width="9" alt="">
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="../assets/img/twitter-login.png" height="14" width="17" alt="">
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="../assets/img/google-plus.png" height="18" width="18" alt="">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		
+<div class="c-footer">
+  <div class="notice p-all-10">
+    <div class="title-kn">Kirim info peristiwa menarik di sekitarmu ke (Chat Only)</div>
+    <!-- add more text here -->
+    <div class="notice-wrapper">
+      <a href="" class="notice-btn whatsapp">
+        <img src="../assets/images/icon-whatsapp-border.svg" alt="whatsapp-icon"/>
+        <strong>+628119KASKUS</strong>
+      </a>
+      <a href="" class="notice-btn k-chat">
+        <img src="../assets/images/icon-chat-white.svg" alt="chat-icon"/>
+        <strong>KASKUS.Update</strong>
+      </a>
+    </div>
+  </div>
+
+  <nav class="kaskusnetworks">
+    <div class="title-kn">CHANNELS</div>
+    <div class="list-kn">
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611291043150120.png" alt="kaskusnetworks-image"> </a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611291043400966.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611290202260804.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2017/01/11/4501355_201701110710070180.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2017/03/06/6498705_201703060945090923.png" alt="kaskusnetworks-image"></a>
+    </div>
+  </nav>
+
+  <footer id="site-footer">
+    <nav class="mb10">
+          <a href="#site-header">Kembali ke Atas</a>
+          <a href="http://kaskus.com">Versi Desktop</a>
+          <a href="http://kaskus.com">Nightmode</a>
+          <a href="http://kaskus.com">Image off</a>
+          <a href="#" class="out">Widget</a>
+          <a href="#" class="out">Hubungi Kami</a>
+          <a href="#" class="out">Keluar</a>
+    </nav>
+    <img src="../assets/img/banner1.jpg" height="250" width="300" alt="">
+    <small>&copy; 2017 Kaskus – The Largest Indonesian Community</small>
+  </footer>
+</div>
+	</div>
+</body>
+</html>

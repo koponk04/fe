@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ID">
+
+<head>
+  <meta charset="UTF-8">
+  <title>M Framework</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, target-densitydpi=device-dpi" />
+  <link href="../assets/stylesheets/main.css" rel="stylesheet" type="text/css" media="all"/>
+  <!-- <link href="../assets/stylesheets/night.css" rel="stylesheet" type="text/css" media="all"/> -->
+  <link rel="apple-touch-icon-precomposed" href="../assets/img/apps_icon.png" />
+  <script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+</head>
+<body class="forum">
+	<div id="wrapper" class="header-body">
+		<div class="nm nm-forum notice-app">
+	<a href="https://play.google.com/store/apps/details?id=com.kaskus.android&utm_source=kaskusmsite" target="_blank">
+		<img src="../assets/img/icon-notice-forum.png" class="left">
+	</a>
+	<div class="nm-title">
+		<span>KASKUS</span>
+		<a href="#" class="x">&times;</a>
+	</div>
+	<div>
+		<span>
+			<a href="https://play.google.com/store/apps/details?id=com.kaskus.android&utm_source=kaskusmsite" target="_blank">Get the App</a>
+		</span>
+		<span class="right">
+			<a href="https://play.google.com/store/apps/details?id=com.kaskus.android&utm_source=kaskusmsite" target="_blank">View in App</a>
+		</span>
+	</div>
+</div>
+<div class="header-body-top-header">
+	<header id="site-header-main">
+    	<div class="header-body-main-h">
+			<nav class="n">
+				<a href="#" class="header-body-kaskus-logo">
+					<img src="../assets/img/logo.png"alt="">
+				</a>
+				<div class="header-text-button">
+					<a href="#" class="active-forum">Forum</a>
+					<a href="#" class="active-fjb">Jual Beli</a>
+					<a href="#" id="kk-bpl" class="premium"><img src="images/logo-sundul-eropa.png" alt=""></a>
+				</div>
+			</nav>
+			<nav class="right-nav login">
+				<a class="header-body-user-photo">
+					<div class="search-button">
+						<img src="../assets/img/search-abu.png" alt="user photo" class="search-btn-img">
+					</div>
+				</a>
+				<!-- IF LOGGED IN -->
+				<!--
+				<span id="mobile-menu-btn" class="login_btn">
+				  <a href="#" class="header-body-user-photo" onclick="toggleProfile();">
+				    <div class="photo-wrapper">
+				      <img src="https://s.kaskus.id/r30x30/user/avatar/2016/11/10/avatar9329691_1.gif" alt="user photo">
+				    </div>
+				    <div class="user-notice">99+</div>
+				  </a>
+				</span>
+				-->
+			<!-- IF NOT LOGGED IN -->
+				<span id="mobile-menu-btn" class="">
+					<a href="#" class="header-body-user-photo" onclick="toggleProfile();">
+						Masuk
+					</a>
+				</span>
+			</nav>
+    	</div>
+	</header>
+</div>
+<div class="header-body-add active">
+	<a href="#" class="pick-category" onclick="toggleCategory();">
+		<span>KATEGORI</span>
+		<img src="../assets/img/ic-right-white.png">
+	</a>
+	<span class="right-nav">
+		<a href="#" onclick="toggleCreate()">
+			<span class="user-notice">N</span>
+			<img height src="../assets/img/icon-pencil-edit-alt.png"> BUAT POST
+		</a>
+		<span class="nav-divider"></span>
+		<a href="">
+			<span class="user-notice"></span>
+			<img height="20" src="../assets/img/ic_chat_alt.png"/>
+		</a>
+		<span class="nav-divider"></span>
+		<a href="">
+			<span class="user-notice">12</span>
+			<img height="20" src="../assets/img/ic-cart-2.png">
+		</a>
+	</span>
+</div>
+<div class="below-add">
+	<div id="category-swipe">
+		<span hidden id="scroll-left" class="block-row block-row--left noselect">&lsaquo;</span>
+		<div id="nav-swipe" class="header-body-category active">
+			<div class="nav-category">
+				<a class="premium" href="">Plus</a>
+				<a class="premium" href="">KasAds</a>
+				<a class="premium" href="">ePulsa</a>
+				<a href="">News</a>
+				<a href="">Video</a>
+				<a href="">Komunitas</a>
+				<a href="">Plus</a>
+				<a href="">KasAds</a>
+				<a href="">ePulsa</a>
+				<a href="">News</a>
+				<a href="">Video</a>
+				<a href="">Komunitas</a>
+				<a href="">Plus</a>
+				<a href="">KasAds</a>
+				<a href="">ePulsa</a>
+				<a href="">News</a>
+				<a href="">Video</a>
+				<a href="">Komunitas</a>
+			</div>
+		</div>
+		<span id="scroll-right" class="block-row block-row--right noselect">&rsaquo;</span>
+	</div>
+</div>		<div role="main">
+			<div id="content-wrapper" class="bar">
+				<div id="user-panel" class="u-panel forum-activities">
+					<h1>Forum Activities</h1>
+					<div class="tabnav">
+						<a href="#">Activity</a>
+						<a href="#">Quoted</a>
+						<a href="#">My Thread</a>
+						<a href="#" class="current">My Video</a>
+						<div class="clr"></div>
+					</div>
+					<div class="c-list">
+						<div class="controls">
+							<div class="pagination">
+								<span>Page 1 of 50</span>
+								<span class="p-right">
+									<a href="#" class="arr">«</a>
+									<a href="#" class="arr">‹</a>
+									<a href="#">1</a>
+									<a href="#">2</a>
+									<a href="#" class="current">3</a>
+									<a href="#">4</a>
+									<a href="#">5</a>
+									<a href="#" class="arr">›</a>
+									<a href="#" class="arr">»</a>
+								</span>
+							</div>
+						</div>
+						<div class="post-list">
+							<h2>My Video</h2>
+						</div>
+						<div class="bar revamp border-none">
+				          	<div class="item-list">
+				          		<div class="small-block-grid-2 related-thread block-grid">
+									<div class="block-grid__video--item video-list">
+										<a href="#">
+											<div class="img-desc">
+												<img src="../assets/img/icon-video-play.png" alt="" class="video-play-btn">
+												<img src="../assets/img/video-thumb.jpg" alt="" class="video-image">
+											</div>
+											<div class="video-desc">
+												<div class="title-desc">
+													Attack on Titans - The Beginning 2
+												</div>
+												<div class="video-desc--author">By me</div>
+												<div class="video-desc--time">
+													<span class="video-desc--viewer">180</span>
+													<span>1h 29m</span>
+												</div>
+											</div>
+										</a>
+										<div class="c c-2">
+											<div class="btn-kasad">
+												<a href="#" class="btn list-yellow">Iklankan</a>
+											</div>
+										</div>
+									</div>
+									<div class="block-grid__video--item video-list">
+										<a href="#">
+											<div class="img-desc">
+												<img src="../assets/img/icon-video-play.png" alt="" class="video-play-btn">
+												<img src="../assets/img/video-thumb.jpg" alt="" class="video-image">
+											</div>
+											<div class="video-desc">
+												<div class="title-desc">
+													Attack on Titans - The Beginning 2
+												</div>
+												<div class="video-desc--author">By me</div>
+												<div class="video-desc--time">
+													<span class="video-desc--viewer">180</span>
+													<span>1h 29m</span>
+												</div>
+											</div>
+										</a>
+										<div class="c c-2">
+											<div class="btn-kasad">
+												<a href="#" class="btn list-yellow">Iklankan</a>
+											</div>
+										</div>
+									</div>
+									<div class="block-grid__video--item video-list">
+										<a href="#">
+											<div class="img-desc">
+												<img src="../assets/img/icon-video-play.png" alt="" class="video-play-btn">
+												<img src="../assets/img/video-thumb.jpg" alt="" class="video-image">
+											</div>
+											<div class="video-desc">
+												<div class="title-desc">
+													Attack on Titans - The Beginning 2
+												</div>
+												<div class="video-desc--author">By me</div>
+												<div class="video-desc--time">
+													<span class="video-desc--viewer">180</span>
+													<span>1h 29m</span>
+												</div>
+											</div>
+										</a>
+										<div class="c c-2">
+											<div class="btn-kasad">
+												<a href="#" class="btn list-yellow">Iklankan</a>
+											</div>
+										</div>
+									</div>
+									<div class="block-grid__video--item video-list">
+										<a href="#">
+											<div class="img-desc">
+												<img src="../assets/img/icon-video-play.png" alt="" class="video-play-btn">
+												<img src="../assets/img/video-thumb.jpg" alt="" class="video-image">
+											</div>
+											<div class="video-desc">
+												<div class="title-desc">
+													Attack on Titans - The Beginning 2
+												</div>
+												<div class="video-desc--author">By me</div>
+												<div class="video-desc--time">
+													<span class="video-desc--viewer">180</span>
+													<span>1h 29m</span>
+												</div>
+											</div>
+										</a>
+										<div class="c c-2">
+											<div class="btn-kasad">
+												<a href="#" class="btn list-yellow">Iklankan</a>
+											</div>
+										</div>
+									</div>
+									<div class="block-grid__video--item video-list">
+										<a href="#">
+											<div class="img-desc">
+												<img src="../assets/img/icon-video-play.png" alt="" class="video-play-btn">
+												<img src="../assets/img/video-thumb.jpg" alt="" class="video-image">
+											</div>
+											<div class="video-desc">
+												<div class="title-desc">
+													Attack on Titans - The Beginning 2
+												</div>
+												<div class="video-desc--author">By me</div>
+												<div class="video-desc--time">
+													<span class="video-desc--viewer">180</span>
+													<span>1h 29m</span>
+												</div>
+											</div>
+										</a>
+										<div class="c c-2">
+											<div class="btn-kasad">
+												<a href="#" class="btn list-yellow">Iklankan</a>
+											</div>
+										</div>
+									</div>
+									<div class="block-grid__video--item video-list">
+										<a href="#">
+											<div class="img-desc">
+												<img src="../assets/img/icon-video-play.png" alt="" class="video-play-btn">
+												<img src="../assets/img/video-thumb.jpg" alt="" class="video-image">
+											</div>
+											<div class="video-desc">
+												<div class="title-desc">
+													Attack on Titans - The Beginning 2
+												</div>
+												<div class="video-desc--author">By me</div>
+												<div class="video-desc--time">
+													<span class="video-desc--viewer">180</span>
+													<span>1h 29m</span>
+												</div>
+											</div>
+										</a>
+										<div class="c c-2">
+											<div class="btn-kasad">
+												<a href="#" class="btn list-yellow">Iklankan</a>
+											</div>
+										</div>
+									</div>
+									<div class="block-grid__video--item video-list">
+										<a href="#">
+											<div class="img-desc">
+												<img src="../assets/img/icon-video-play.png" alt="" class="video-play-btn">
+												<img src="../assets/img/video-thumb.jpg" alt="" class="video-image">
+											</div>
+											<div class="video-desc">
+												<div class="title-desc">
+													Attack on Titans - The Beginning 2
+												</div>
+												<div class="video-desc--author">By me</div>
+												<div class="video-desc--time">
+													<span class="video-desc--viewer">180</span>
+													<span>1h 29m</span>
+												</div>
+											</div>
+										</a>
+										<div class="c c-2">
+											<div class="btn-kasad">
+												<a href="#" class="btn list-yellow">Iklankan</a>
+											</div>
+										</div>
+									</div>
+									<div class="block-grid__video--item video-list">
+										<a href="#">
+											<div class="img-desc">
+												<img src="../assets/img/icon-video-play.png" alt="" class="video-play-btn">
+												<img src="../assets/img/video-thumb.jpg" alt="" class="video-image">
+											</div>
+											<div class="video-desc">
+												<div class="title-desc">
+													Attack on Titans - The Beginning 2
+												</div>
+												<div class="video-desc--author">By me</div>
+												<div class="video-desc--time">
+													<span class="video-desc--viewer">180</span>
+													<span>1h 29m</span>
+												</div>
+											</div>
+										</a>
+										<div class="c c-2">
+											<div class="btn-kasad">
+												<a href="#" class="btn list-yellow">Iklankan</a>
+											</div>
+										</div>
+									</div>
+									<div class="block-grid__video--item video-list">
+										<a href="#">
+											<div class="img-desc">
+												<img src="../assets/img/icon-video-play.png" alt="" class="video-play-btn">
+												<img src="../assets/img/video-thumb.jpg" alt="" class="video-image">
+											</div>
+											<div class="video-desc">
+												<div class="title-desc">
+													Attack on Titans - The Beginning 2
+												</div>
+												<div class="video-desc--author">By me</div>
+												<div class="video-desc--time">
+													<span class="video-desc--viewer">180</span>
+													<span>1h 29m</span>
+												</div>
+											</div>
+										</a>
+										<div class="c c-2">
+											<div class="btn-kasad">
+												<a href="#" class="btn list-yellow">Iklankan</a>
+											</div>
+										</div>
+									</div>
+									<div class="block-grid__video--item video-list">
+										<a href="#">
+											<div class="img-desc">
+												<img src="../assets/img/icon-video-play.png" alt="" class="video-play-btn">
+												<img src="../assets/img/video-thumb.jpg" alt="" class="video-image">
+											</div>
+											<div class="video-desc">
+												<div class="title-desc">
+													Attack on Titans - The Beginning 2
+												</div>
+												<div class="video-desc--author">By me</div>
+												<div class="video-desc--time">
+													<span class="video-desc--viewer">180</span>
+													<span>1h 29m</span>
+												</div>
+											</div>
+										</a>
+										<div class="c c-2">
+											<div class="btn-kasad">
+												<a href="#" class="btn list-yellow">Iklankan</a>
+											</div>
+										</div>
+									</div>
+								</div>
+					        </div>
+				        </div>
+						<div class="controls">
+							<div class="pagination">
+								<span>Page 1 of 50</span>
+								<span class="p-right">
+									<a href="#" class="arr">«</a>
+									<a href="#" class="arr">‹</a>
+									<a href="#">1</a>
+									<a href="#">2</a>
+									<a href="#" class="current">3</a>
+									<a href="#">4</a>
+									<a href="#">5</a>
+									<a href="#" class="arr">›</a>
+									<a href="#" class="arr">»</a>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+<div class="c-footer">
+  <div class="notice p-all-10">
+    <div class="title-kn">Kirim info peristiwa menarik di sekitarmu ke (Chat Only)</div>
+    <!-- add more text here -->
+    <div class="notice-wrapper">
+      <a href="" class="notice-btn whatsapp">
+        <img src="../assets/images/icon-whatsapp-border.svg" alt="whatsapp-icon"/>
+        <strong>+628119KASKUS</strong>
+      </a>
+      <a href="" class="notice-btn k-chat">
+        <img src="../assets/images/icon-chat-white.svg" alt="chat-icon"/>
+        <strong>KASKUS.Update</strong>
+      </a>
+    </div>
+  </div>
+
+  <nav class="kaskusnetworks">
+    <div class="title-kn">CHANNELS</div>
+    <div class="list-kn">
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611291043150120.png" alt="kaskusnetworks-image"> </a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611291043400966.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611290202260804.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2017/01/11/4501355_201701110710070180.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2017/03/06/6498705_201703060945090923.png" alt="kaskusnetworks-image"></a>
+    </div>
+  </nav>
+
+  <footer id="site-footer">
+    <nav class="mb10">
+          <a href="#site-header">Kembali ke Atas</a>
+          <a href="http://kaskus.com">Versi Desktop</a>
+          <a href="http://kaskus.com">Nightmode</a>
+          <a href="http://kaskus.com">Image off</a>
+          <a href="#" class="out">Widget</a>
+          <a href="#" class="out">Hubungi Kami</a>
+          <a href="#" class="out">Keluar</a>
+    </nav>
+    <img src="../assets/img/banner1.jpg" height="250" width="300" alt="">
+    <small>&copy; 2017 Kaskus – The Largest Indonesian Community</small>
+  </footer>
+</div>
+	</div>
+</body>
+</html>

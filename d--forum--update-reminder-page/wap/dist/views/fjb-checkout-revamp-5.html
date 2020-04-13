@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="ID">
+
+<head>
+  <meta charset="UTF-8">
+  <title>M Framework</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, target-densitydpi=device-dpi" />
+  <link href="../assets/stylesheets/main.css" rel="stylesheet" type="text/css" media="all"/>
+  <!-- <link href="../assets/stylesheets/night.css" rel="stylesheet" type="text/css" media="all"/> -->
+  <link rel="apple-touch-icon-precomposed" href="../assets/img/apps_icon.png" />
+  <script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+</head>
+<body class="fjb">
+	<div id="wrapper">
+		<header id="site-header">
+			<div class="main-h r">
+				<div class="c c-3">
+					<nav class="n">
+						<a href="#" class="logo">
+							<img src="../assets/img/logo.png" height="30" width="30" alt="">
+						</a>
+						<a href="#" id="kk-forum">Forum</a>
+						<a href="#" id="kk-fjb">FJB</a>
+					</nav>
+				</div>
+				<div class="c c-1">
+					<nav class="u">
+						<a href="#">Sign In</a>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<div id="main" role="main">
+			<div id="search">
+				<form>
+					<div class="r">
+						<div class="c c-3">
+							<div class="in-txt">
+								<input type="text" placeholder="Search something&hellip;" autofocus="autofocus" autocorrect="off" spellcheck="false" required>
+							</div>
+						</div>
+						<div class="c c-1">
+							<div class="in-btn">
+								<input type="submit" value="Search">
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="header-detail">
+		        <div class="r head-menu">
+		          	<div class="p-left">
+				        <span>
+				          	<a href="">
+				          		<img class="logo-header" src="../assets/img/arrow-left-teal.png">
+				          	</a>
+				        </span>
+				        <span>
+				        	<a href="">
+				        		<img class="logo-header" src="../assets/img/logo.png">
+				        	</a>
+				        </span>
+				        <span class="row-tr">
+				            <a href="">Info Pembelian</a>
+				        </span>
+		          	</div>
+		        </div>
+		    </div>
+			<div id="content-wrapper" class="bar">
+			<!-- purchased -->
+				<div class="post-list jb-list">
+					<div class="list-entry l-8 white-background atur-lapak">
+						<div class="wrapper-checkout r-padding-10">
+							<p><strong>Detil Pengiriman</strong></p>
+							<div class="mt10">
+								<!-- JIKA SUDAH ADA ALAMAT -->
+								<div class="mb10">
+				                  	<label class="no-after title-kn">Alamat Pengiriman</label>
+				                  	<div class="in-txt radius-5 mt10">
+					                    <select name="" id="" value="">
+					                    	<option value="1">Alamat 1 - Jl. Blablabla</option>
+					                    </select>
+				                  	</div>
+				                  	<div class="title-kn mt10">
+				                  		<p>Joe Taslim</p>
+				                  		<p>PT 123</p>
+				                  		<p>Menara Palma</p>
+				                  	</div>
+				                </div>
+								<!-- END -->
+								<!--JIKA BELUM ADA ALAMAT -->
+								<div class="title-kn">
+									<p>Agan belum ada daftar alamat. Mohon untuk mendaftarkan alamat agan terlebih dahulu</p>
+								</div>
+								<div class="r mb10">
+						            <a href="#" class="btn teal longer" style="margin-left: 0;">+ Alamat</a>
+						        </div>
+						        <!-- END -->
+						        <!-- JIKA USER BELUM LOGIN -->
+						        <div class="r attribute mb20 mt10">
+					                <div class="mb10 title-kn">
+					                  <label class="no-after">Nama Pembeli</label>
+					                  <div class="in-txt radius-5"><input type="text" placeholder="Nama Agan"></div>
+					                </div>
+					                <div class="mb10 title-kn">
+					                  <label class="no-after">Email Pembeli</label>
+					                  <div class="in-txt radius-5"><input type="text" placeholder="Email Agan"></div>
+					                </div>
+					                <div class="mb10 title-kn">
+					                	<span class="p-left">
+					                		<label class="no-after">Nama Penerima</label>
+					                	</span>
+					                	<span class="p-right checkbox-group">
+						                    <input type="checkbox" value="biasa" name="option_4" id="option_4" class="buyer">
+						                    <label class="buyer" for="option_4">Sama dengan nama pembeli</label>
+					                	</span>
+					                	<div class="clr"></div>
+					                	<div class="in-txt radius-5"><input type="text" placeholder="E-mail Agan"></div>
+					                </div>
+					                <div class="clr"></div>
+					                <div class="mb10 title-kn">
+					                  <label class="no-after">Nama Penerima</label>
+					                  <div class="in-txt radius-5"><input type="text" placeholder="Nama yang akan menerima pesanan"></div>
+					                </div>
+					                <div class="mb10 title-kn">
+					                  <label class="no-after">Nomor Handphone Penerima</label>
+					                  <div class="in-txt radius-5"><input type="text" placeholder="Nomor yang dpat dihubungi"></div>
+					                </div>
+					                <div class="mb10 title-kn">
+					                  <label class="no-after">Alamat Pengiriman</label>
+					                  <div class="in-txt price radius-5">
+					                    <textarea name="" id="" cols="30" rows="3" required="required" placeholder="Alamat Lengkap"></textarea>
+					                  </div>
+					                </div>
+					                <div class="mb10 title-kn">
+					                  <label class="no-after">Provinsi</label>
+					                  <div class="in-txt radius-5">
+					                    <select name="" id="">
+					                      <option value="1">Pilih Provinsi</option>
+					                    </select>
+					                  </div>
+					                </div>
+					                <div class="mb10 title-kn">
+					                  <label class="no-after">Kota/Kabupaten</label>
+					                  <div class="in-txt radius-5">
+					                    <select name="" id="">
+					                      <option value="1">Pilih Kota/Kabupaten</option>
+					                    </select>
+					                  </div>
+					                </div>
+					                <div class="mb10 title-kn">
+					                  <label class="no-after">Kecamatan</label>
+					                  <div class="in-txt radius-5">
+					                    <select name="" id="">
+					                      <option value="1">Pilih Kecamatan</option>
+					                    </select>
+					                  </div>
+					                </div>
+					                <div class="mb10 title-kn">
+					                  <label class="no-after">Kode Pos</label>
+					                  <div class="in-txt radius-5"><input type="text" placeholder="Contoh: 12345"></div>
+					                </div>
+					            </div>
+						        <!-- END -->
+							</div>
+						</div>
+					</div>
+					<div class="list-entry l-8 white-background atur-lapak">
+						<div class="">
+							<div class="r c-4 mt10">
+								<div class="title-kn">
+									<p><strong>Daftar Pembelian</strong></p>
+								</div>
+							</div>
+						</div>
+						<div class="">
+							<div class="c c-4">
+								<div class="item__description" style="border: none;">
+									<a href="" class="username">
+				                        <div class="username__profile">
+					                        <div class="profile__image" style="background-image:url('img/temp-ads.gif')">
+					                        </div>
+				                        </div>
+				                      	<span class="username__name link-teal">zelda</span>
+				                    </a>
+			                    </div>
+			                </div>
+						</div>
+						<div class="clr"></div>
+						<div class="border-padding-10 mb10"></div>
+						<div class="wrapper-checkout r-padding-10">
+							<div class="c c-4">
+								<div class="wrapper-desc-status">
+									<div class="detail" style="margin-left: 0px;">
+										<div class="icon img-wrapper">
+											<img src="../assets/img/temp-nikon.jpg" alt="alt-item">
+										</div>
+										<div class="dis-inline-block wrapDesc">
+											<a class="item-name text__bold" href="#">Boss Bass Comp BC-1X</a>
+	                                        <div class="form-quantity mt10">
+											    <div class="dec-qty"><a class="quantity">-</a>
+											    </div>
+											    <div class="qty-input">
+											        <input type="text" class="quantity-input" value="1" />
+											    </div>
+											    <div class="inc-qty"><a class="quantity">+</a>
+											    </div>
+											    <div class="tag-qty">barang</div>
+											</div>
+											<div class="price text__medium mt20">
+												<span class="promoPrice">@ Rp 2.500.000</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="clr"></div>
+							<div class="r attribute mb10">
+			                  	<label class="no-after title-kn">Jasa Pengiriman</label>
+			                  	<div class="in-txt radius-5">
+				                    <select name="" id="" value="">
+				                    	<option value="1">Pilih Jasa Pengiriman</option>
+				                    </select>
+			                  	</div>
+			                </div>
+			                <div class="r attribute">
+			                	<label class="no-after title-kn">Mau pakai biaya asuransi Gan?</label>
+			                	<div class="radio-group radio-feedback mt10">
+					                <label class="radio-green" style="color: #000; font-size: 14px;">
+					                  <input type="radio" name="select-address" value="default">
+					                  <i class="border-teal"></i> Ya
+					                </label>
+					                <label class="radio-green" style="color: #000; font-size: 14px;">
+					                  <input type="radio" name="select-address" value="default">
+					                  <i class="border-teal"></i> Tidak
+					                </label>
+					            </div>
+			                </div>
+			                <div class="r attribute">
+			                	<div class="mt10">
+									<span class="title-kn">Biaya Asuransi: </span>
+									<span class="price-color">Rp 10.780.000</span>
+								</div>
+			                </div>
+			                <div class="r attribute">
+			                	<label class="no-after title-kn">Pesan untuk Seller (opsional)</label>
+			                	<div class="in-txt price radius-5">
+			                		<textarea name="" id="" cols="30" rows="4" required="required" placeholder="Tuliskan pesan yang ingin Agan sampaikan ke seller"></textarea>
+			                    </div>
+			                </div>
+			                <div class="r attribute">
+				                <div class="mt10">
+			                        <span class="title-kn">
+			                        	<strong>Rincian Harga</strong>
+			                        </span>
+		                            <div class="title-kn mb20">
+	                        			<table>
+	                            			<tr class="mb10">
+		                            			<td>Harga Barang</td>
+		                            			<td class="price-wrap">320.000</td>
+	                            			</tr>
+	                            			<tr class="mb10">
+		                            			<td>Biaya Pengiriman</td>
+		                            			<td class="price-wrap">10.000</td>
+	                            			</tr>
+	                            			<tr class="">
+		                            			<td>Subtotal</td>
+		                            			<td class="price-color price-wrap">331.000</td>
+	                            			</tr>
+	                            		</table>
+	                        		</div>
+	                            </div>
+                            </div>
+						</div>
+					</div>
+					<div class="list-entry l-8 white-background atur-lapak">
+						<div class="">
+							<div class="c c-4">
+								<div class="item__description" style="border: none;">
+									<a href="" class="username">
+				                        <div class="username__profile">
+					                        <div class="profile__image" style="background-image:url('img/temp-ads.gif')">
+					                        </div>
+				                        </div>
+				                      	<span class="username__name link-teal">copka</span>
+				                    </a>
+			                    </div>
+			                </div>
+						</div>
+						<div class="clr"></div>
+						<div class="border-padding-10 mb10"></div>
+						<div class="wrapper-checkout r-padding-10">
+							<div class="c c-4">
+								<div class="wrapper-desc-status">
+									<div class="detail" style="margin-left: 0px;">
+										<div class="icon img-wrapper">
+											<img src="../assets/img/temp-nikon.jpg" alt="alt-item">
+										</div>
+										<div class="dis-inline-block wrapDesc">
+											<a class="item-name text__bold" href="#">Boss Bass Comp BC-1X</a>
+	                                        <div class="form-quantity mt10">
+											    <div class="dec-qty"><a class="quantity">-</a>
+											    </div>
+											    <div class="qty-input">
+											        <input type="text" class="quantity-input" value="1" />
+											    </div>
+											    <div class="inc-qty"><a class="quantity">+</a>
+											    </div>
+											    <div class="tag-qty">barang</div>
+											</div>
+											<div class="price text__medium mt20">
+												<span class="promoPrice">@ Rp 2.500.000</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="clr"></div>
+							<div class="r attribute mb10">
+			                  	<label class="no-after title-kn">Jasa Pengiriman</label>
+			                  	<div class="in-txt radius-5">
+				                    <select name="" id="" value="">
+				                    	<option value="1">Pilih Jasa Pengiriman</option>
+				                    </select>
+			                  	</div>
+			                </div>
+			                <div class="r attribute">
+			                	<label class="no-after title-kn">Mau pakai biaya asuransi Gan?</label>
+			                	<div class="radio-group radio-feedback mt10">
+					                <label class="radio-green" style="color: #000; font-size: 14px;">
+					                  <input type="radio" name="select-address" value="default">
+					                  <i class="border-teal"></i> Ya
+					                </label>
+					                <label class="radio-green" style="color: #000; font-size: 14px;">
+					                  <input type="radio" name="select-address" value="default">
+					                  <i class="border-teal"></i> Tidak
+					                </label>
+					            </div>
+			                </div>
+			                <div class="r attribute">
+			                	<div class="mt10">
+									<span class="title-kn">Biaya Asuransi: </span>
+									<span class="price-color">Rp 10.780.000</span>
+								</div>
+			                </div>
+			                <div class="r attribute">
+			                	<label class="no-after title-kn">Pesan untuk Seller (opsional)</label>
+			                	<div class="in-txt price radius-5">
+			                		<textarea name="" id="" cols="30" rows="4" required="required" placeholder="Tuliskan pesan yang ingin Agan sampaikan ke seller"></textarea>
+			                    </div>
+			                </div>
+			                <div class="r attribute">
+				                <div class="mt10">
+			                        <span class="title-kn">
+			                        	<strong>Rincian Harga</strong>
+			                        </span>
+		                            <div class="title-kn mb20">
+	                        			<table>
+	                            			<tr class="mb10">
+		                            			<td>Harga Barang</td>
+		                            			<td class="price-wrap">320.000</td>
+	                            			</tr>
+	                            			<tr class="mb10">
+		                            			<td>Biaya Pengiriman</td>
+		                            			<td class="price-wrap">10.000</td>
+	                            			</tr>
+	                            			<tr class="">
+		                            			<td>Subtotal</td>
+		                            			<td class="price-color price-wrap">331.000</td>
+	                            			</tr>
+	                            		</table>
+	                        		</div>
+	                            </div>
+                            </div>
+			            </div>
+					</div>
+					<div class="list-entry l-8 white-background atur-lapak">
+						<div class="">
+							<div class="r c-4 mt10">
+								<div class="title-kn">
+									<p><strong>Tips BranKas isi sendiri</strong></p>
+								</div>
+							</div>
+						</div>
+						<div class="button__group thumb-button">
+							<button class="c-1 btn light-grey radius-5 top-padding-10 bottom-padding-10 text-center tips-0 tips__brankas">Rp 0</button>
+							<button class="c-1 btn light-grey radius-5 top-padding-10 bottom-padding-10 text-center tips-5000 tips__brankas">Rp 5000</button>
+						</div>
+						<div class="wrapper-checkout r-padding-10 mb20">
+							<div class="r attribute mb10">
+			                  	<div class="in-txt radius-5 top-padding-10 bottom-padding-10">
+				                    <input type="text" name="" placeholder="Isi sendiri" class="input-tips">
+			                  	</div>
+			                </div>
+			                <p>Silahkan isi tips BranKas sesuka hati Agan, makin banyak ngasih makin maju juga KASKUS kedepannya</p>
+			            </div>
+					</div>
+					<div class="list-entry l-8 white-background atur-lapak">
+						<div class="">
+							<div class="r c-4 mt10">
+								<div class="title-kn">
+									<p><strong>Saldo BranKas Agan</strong></p>
+								</div>
+							</div>
+						</div>
+						<div class="wrapper-checkout r-padding-10 mb20">
+							<div class="r attribute">
+								<p class="price-color">Rp 0</p>
+								<p class="title-kn mt10">Saldo Agan tidak cukup untuk melakukan transaksi</p>
+							</div>
+							<!-- SALDO BRANKAS TERISI -->
+							<div class="r attribute">
+								<p class="price-color">Rp 5.000.000</p>
+								<p class="title-kn mt10">Masukkan password account KASKUS Agan apabila ingin melakukan pembayaran dengan Saldo BranKas</p>
+							</div>
+							<div class="r attribute mb10">
+			                  	<span class="c-1 in-txt radius-5 top-padding-10 bottom-padding-10 tips0">
+				                    <input type="text" name="" placeholder="Nominal Saldo">
+			                  	</span>
+			                  	<span class="c-1 in-txt radius-5 top-padding-10 bottom-padding-10 tips5000">
+				                    <input type="text" name="" placeholder="Password">
+			                  	</span>
+			                </div>
+			                <div class="r mb10 mt20">
+					            <a href="#" class="btn long teal radius-5 text-center top-padding-10 bottom-padding-10" style="margin-left: 0;">Bayar</a>
+					        </div>
+					        <!-- END -->
+					        <!-- PENGGUNAAN SALDO BRANKAS -->
+					        <div class="r attribute">
+					        	<span class="p-left title-kn">
+					        		<div>
+						        		<p>Penggunaan Saldo
+						        			<span class="price-color">-Rp 20.000</span>
+						        		</p>
+					        		</div>
+					        		<div>
+						        		<p>Sisa Saldo
+						        			<span class="price-color">-Rp 50.000</span>
+						        		</p>
+					        		</div>
+					        	</span>
+					        	<span class="p-right">
+					        		<a href="">
+										<span class="middle deleteAdd"></span>
+										<span class="link-teal">Hapus</span>
+									</a>
+					        	</span>
+					        </div>
+					        <!-- END -->
+			            </div>
+					</div>
+					<div class="list-entry l-8 white-background atur-lapak">
+						<div class="">
+							<div class="r c-4 mt10">
+								<div class="title-kn">
+									<p><strong>Voucher</strong></p>
+								</div>
+							</div>
+						</div>
+						<div class="wrapper-checkout r-padding-10 mb20">
+							<div class="r attribute">
+								<p class="title-kn mt10">Upsss..voucher Agan sudah habis masa berlakunya.</p>
+							</div>
+							<!-- KODE VOUCHER SALAH -->
+							<div class="r attribute">
+								<p class="red mt10 mb10">Kode voucher yang Agan masukkan salah.</p>
+							</div>
+							<!-- END -->
+							<div class="r attribute mb10">
+			                  	<span class="c-1 in-txt radius-5 top-padding-10 bottom-padding-10">
+				                    <input type="text" name="" placeholder="Kode Voucher">
+			                  	</span>
+			                  	<a href="#" class="btn long teal radius-5 text-center top-padding-10 bottom-padding-10" style="margin-left: 0;">Masukkan</a>
+			                </div>
+			                <!-- KODE VOUCHER BENAR -->
+			                <div class="r attribute">
+					        	<span class="p-left title-kn">
+					        		<div>
+						        		<p>Voucher 17th KASKUS</p>
+					        		</div>
+					        		<div>
+						        		<p>Potongan Harga
+						        			<span class="price-color">-Rp 150.000</span>
+						        		</p>
+					        		</div>
+					        	</span>
+					        	<span class="p-right">
+					        		<a href="">
+										<span class="middle deleteAdd"></span>
+										<span class="link-teal">Hapus</span>
+									</a>
+					        	</span>
+					        </div>
+			                <!-- END -->
+			            </div>
+					</div>
+					<div class="list-entry l-8 white-background atur-lapak">
+						<div class="">
+							<div class="r c-4 mt10">
+								<div class="title-kn">
+									<p><strong>Rincian Pembelian</strong></p>
+								</div>
+							</div>
+						</div>
+						<div class="wrapper-checkout r-padding-10 mb20">
+							<div class="r attribute">
+								<div class="title-kn mb20">
+		                			<table>
+		                    			<tr class="mb20">
+		                        			<td>Harga Barang</td>
+		                        			<td class="price-wrap">320.000</td>
+		                    			</tr>
+		                    			<tr class="mb20">
+		                        			<td>Biaya Pengiriman</td>
+		                        			<td class="price-wrap">10.000</td>
+		                    			</tr>
+		                    			<tr class="mb20">
+		                        			<td>Biaya Asuransi</td>
+		                        			<td class="price-wrap">320.000</td>
+		                    			</tr>
+		                    			<tr class="mb20">
+		                        			<td>Tips Brankas</td>
+		                        			<td class="price-wrap">10.000</td>
+		                    			</tr>
+		                    			<tr class="mb20">
+		                        			<td>Saldo BranKas</td>
+		                        			<td class="price-wrap">10.000</td>
+		                    			</tr>
+		                    			<tr class="mb20">
+		                        			<td>Voucher</td>
+		                        			<td class="price-wrap">10.000</td>
+		                    			</tr>
+		                    			<tr class="tr-class">
+	                            			<td colspan="2"><hr></td>
+                            			</tr>
+		                    			<tr class="">
+		                        			<td>Total Pembelian</td>
+		                        			<td class="price-color price-wrap text__bold">331.000</td>
+		                    			</tr>
+		                    		</table>
+		                		</div>
+							</div>
+			            </div>
+			            <div class="clr"></div>
+						<div class="text-center mt20 mb20">
+							<input type="submit" class="btn orange btn-full radius-5 top-padding-10 bottom-padding-10 mr10" value="Lanjut Pembayaran">
+						</div>
+					</div>
+				</div>	
+
+			    <div class="controls">
+                    <div class="pagination">
+                        <span class="p-right">
+							<a href="#" class="arr">«</a>
+							<a href="#" class="arr">‹</a>
+							<a href="#">1</a>
+							<a href="#">2</a>
+							<a href="#" class="current">3</a>
+							<a href="#" class="arr">›</a>
+							<a href="#" class="arr">»</a>
+						</span>
+                    </div>
+                </div>
+                <!-- end purchased -->
+
+			<div id="login" class="bar form-input">
+				<h2>KASKUS Sign In</h2>
+				<a href="#" class="back-to-top">
+					<img src="../assets/img/arrow-top.png" height="10" width="10" alt="">
+				</a>
+				<form>
+					<fieldset>
+						<label class="r">
+							<div class="c c-2">
+								<span>Username</span>
+							</div>
+							<div class="c c-2">
+								<div class="in-txt">
+									<input type="text" autocorrect="off" required>
+								</div>
+							</div>
+						</label>
+						<label class="r">
+							<div class="c c-2">
+								<span>Password</span>
+							</div>
+							<div class="c c-2">
+								<div class="in-txt">
+									<input type="password" autocorrect="off" required>
+								</div>
+							</div>
+						</label>
+						<div class="r">
+							<div class="in-btn c-1" style="margin-left:75%;">
+								<input type="submit" value="Sign in">
+							</div>
+						</div>
+
+						<div class="r">
+							<div class="c c-2">
+								<span>or Sign in with</span>
+							</div>
+							<div class="c c-2">
+								<ul class="social-media">
+									<li>
+										<a href="#">
+											<img src="../assets/img/mindtalk.png" height="19" width="19" alt="">
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="../assets/img/facebook.png" height="19" width="9" alt="">
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="../assets/img/twitter-login.png" height="14" width="17" alt="">
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="../assets/img/google-plus.png" height="18" width="18" alt="">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		
+		</div>
+
+		
+<div class="c-footer">
+  <div class="notice p-all-10">
+    <div class="title-kn">Kirim info peristiwa menarik di sekitarmu ke (Chat Only)</div>
+    <!-- add more text here -->
+    <div class="notice-wrapper">
+      <a href="" class="notice-btn whatsapp">
+        <img src="../assets/images/icon-whatsapp-border.svg" alt="whatsapp-icon"/>
+        <strong>+628119KASKUS</strong>
+      </a>
+      <a href="" class="notice-btn k-chat">
+        <img src="../assets/images/icon-chat-white.svg" alt="chat-icon"/>
+        <strong>KASKUS.Update</strong>
+      </a>
+    </div>
+  </div>
+
+  <nav class="kaskusnetworks">
+    <div class="title-kn">CHANNELS</div>
+    <div class="list-kn">
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611291043150120.png" alt="kaskusnetworks-image"> </a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611291043400966.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611290202260804.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2017/01/11/4501355_201701110710070180.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2017/03/06/6498705_201703060945090923.png" alt="kaskusnetworks-image"></a>
+    </div>
+  </nav>
+
+  <footer id="site-footer">
+    <nav class="mb10">
+          <a href="#site-header">Kembali ke Atas</a>
+          <a href="http://kaskus.com">Versi Desktop</a>
+          <a href="http://kaskus.com">Nightmode</a>
+          <a href="http://kaskus.com">Image off</a>
+          <a href="#" class="out">Widget</a>
+          <a href="#" class="out">Hubungi Kami</a>
+          <a href="#" class="out">Keluar</a>
+    </nav>
+    <img src="../assets/img/banner1.jpg" height="250" width="300" alt="">
+    <small>&copy; 2017 Kaskus – The Largest Indonesian Community</small>
+  </footer>
+</div>
+	</div>
+	<script src="../assets/js/jquery.min.js"></script>
+	<script src="../assets/js/jquery-ui.js"></script>
+	<script>
+		$(".quantity").on("click", function () {
+		    var $button = $(this);
+		    var oldValue = $button.closest('.form-quantity').find("input.quantity-input").val();
+		    if ($button.text() == "+") {
+		        var newVal = parseFloat(oldValue) + 1;
+		    } else {
+		        // Don't allow decrementing below zero
+		        if (oldValue > 0) {
+		            var newVal = parseFloat(oldValue) - 1;
+		        } else {
+		            newVal = 0;
+		        }
+		    }
+		    $button.closest('.form-quantity').find("input.quantity-input").val(newVal);
+		});
+
+		var tips0 = '.tips-0';
+		var tips5000 = '.tips-5000';
+		var inputTips = '.input-tips';
+
+		$(tips0).on('click', function(){
+			$(tips0).addClass('active');
+		if ($(tips5000).hasClass('active')) {
+				$(tips5000).removeClass('active');
+			}
+		});
+		$(tips5000).on('click', function(){
+			$(tips5000).addClass('active');
+		if ($(tips0).hasClass('active')) {
+				$(tips0).removeClass('active');
+			}
+		});
+
+		//if focus on input deactive button 0 and 5000
+		$(inputTips).focus(function(){
+		if ($(tips0).hasClass('active')) {
+				$(tips0).removeClass('active');
+			}
+			if ($(tips5000).hasClass('active')) {
+				$(tips5000).removeClass('active');
+			}
+		});
+		//if input has 0 or 5000 activating button
+		$(inputTips).on('blur', function(){
+		if (!$(inputTips).val() || $(inputTips).val() == '0') {
+				$(tips0).addClass('active');
+				$(inputTips).val('');
+			}else if($(inputTips).val() == '5000'){
+				$(tips5000).addClass('active');
+				$(inputTips).val('');
+			}
+		});
+	</script>
+</body>
+</html>

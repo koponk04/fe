@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ID">
+
+<head>
+  <meta charset="UTF-8">
+  <title>M Framework</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, target-densitydpi=device-dpi" />
+  <link href="../assets/stylesheets/main.css" rel="stylesheet" type="text/css" media="all"/>
+  <!-- <link href="../assets/stylesheets/night.css" rel="stylesheet" type="text/css" media="all"/> -->
+  <link rel="apple-touch-icon-precomposed" href="../assets/img/apps_icon.png" />
+  <script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+</head>    <body class="fjb">
+        <div id="wrapper">
+            <!DOCTYPE html>
+<html lang="ID">
+
+<head>
+  <meta charset="UTF-8">
+  <title>M Framework</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, target-densitydpi=device-dpi" />
+  <link href="../assets/stylesheets/main.css" rel="stylesheet" type="text/css" media="all"/>
+  <!--<link href="../assets/stylesheets/night.css" rel="stylesheet" type="text/css" media="all"/>-->
+  <link rel="apple-touch-icon-precomposed" href="../assets/img/apps_icon.png" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+</head>
+
+<body class="fjb">
+  <div id="wrapper" style="background: white;" class="header-body">
+    <!-- FORUM NOTICE -->
+    <div class="nm nm-forum notice-app">
+      <a href="https://play.google.com/store/apps/details?id=com.kaskus.android&utm_source=kaskusmsite" target="_blank">
+        <img src="../assets/img/icon-notice-forum.png" class="left">
+      </a>
+      <div class="nm-title">
+        <span>KASKUS</span>
+        <a href="#" class="x">&times;</a>
+      </div>
+      <div>
+        <span>
+          <a href="https://play.google.com/store/apps/details?id=com.kaskus.android&utm_source=kaskusmsite" target="_blank">Get the App</a>
+        </span>
+        <span class="right">
+          <a href="https://play.google.com/store/apps/details?id=com.kaskus.android&utm_source=kaskusmsite" target="_blank">View in App</a>
+        </span>
+      </div>
+    </div>
+    <div class="header-body-top-header">
+      <header id="site-header-main">
+        <div class="header-body-main-h">
+          <nav class="n">
+            <a href="#" class="header-body-kaskus-logo">
+              <img src="../assets/images/17-agustus-seasonal-header.gif" alt="">
+            </a>
+            <div class="header-text-button">
+              <a href="#" class="active-forum">Forum</a>
+              <a href="#" class="active-fjb">Jual Beli</a>
+              <a href="#" id="kk-bpl" class="premium"><img src="images/logo-sundul-eropa.png" alt=""></a>
+              <!-- <a href="#" class="premium"><img src="images/logo-sundul-eropa.png" alt=""></a> -->
+            </div>
+          </nav>
+          <nav class="right-nav login">
+            <a class="header-body-user-photo">
+              <div class="search-button">
+                <img src="../assets/img/search-abu.png" alt="user photo" class="search-btn-img">
+              </div>
+            </a>
+            <!-- IF LOGGED IN -->
+            <!--
+            <span id="mobile-menu-btn" class="login_btn">
+              <a href="#" class="header-body-user-photo" onclick="toggleProfile();">
+                <div class="photo-wrapper">
+                  <img src="https://s.kaskus.id/r30x30/user/avatar/2016/11/10/avatar9329691_1.gif" alt="user photo">
+                </div>
+                <div class="user-notice">99+</div>
+              </a>
+            </span>
+            -->
+            <!-- IF NOT LOGGED IN -->
+            <span id="mobile-menu-btn" class="">
+              <a href="#" class="header-body-user-photo" onclick="toggleProfile();">
+                Masuk
+              </a>
+            </span>
+          </nav>
+        </div>
+
+        
+      </header>
+    </div>
+    <div class="header-body-add active fjb">
+      <a href="#" class="pick-category" onclick="toggleCategory();">
+        <span>KATEGORI</span>
+        <img src="../assets/img/ic-right-white.png">
+      </a>
+      <span class="right-nav">
+        <a href="#" onclick="toggleCreate()">
+          <span class="user-notice">N</span>
+          <img height src="../assets/img/icon-pencil-edit-alt.png"> BUAT POST
+        </a>
+        <span class="nav-divider"></span>
+        <a href="">
+          <span class="user-notice"></span>
+          <img height="20" src="../assets/img/ic_chat_alt.png"/>
+        </a>
+        <span class="nav-divider"></span>
+        <a href="">
+          <span class="user-notice">12</span>
+          <img height="20" src="../assets/img/ic-cart-2.png">
+        </a>
+      </span>
+    </div>
+                <div class="fjb-header">
+                <ul class="fjb-breadcrumbs">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Jual Beli</a></li>
+  <li><a href="#">Categories</a></li>
+  <li>Current Category</li>
+</ul>            </div>
+
+            <div id="fjb-negolist" class="wrap">
+                <div class="p-tb-10 r">
+                    <h1>Nego Agan ditolak!</h1>
+                    <div class="r mt10 mb10">
+                        <p class="p-left">
+                            <span class="vt">Seller</span>
+                            <img class="negolist__seller-thumbnail" src="../assets/images/temp-avatar-1.png"/> 
+                            <a href="#" class="vt link-teal">blueguy</a>
+                        <p>
+                        <small class="p-right"><time>Hari ini 12:15</time></small>
+                    </div>
+                    <div class="tbl w100">
+                        <div class="tab-cell c-1 text-center">
+                            <img class="negolist__product-thumbnail" src="../assets/images/temp-product-1.jpg"/>
+                        </div>
+                        <div class="tab-cell c-3 pl-10">
+                            <h2>Action Figure Original SHF Son Goku Normal</h2>
+                            <dl class="negolist__inline-keyvalue-pairings">
+                                <dt>Jumlah Pesanan</dt>
+                                <dd>: 3</dd>
+                                <dt>@</dt>
+                                <dd>Rp 100.000</dd>
+                                <dt>Harga Normal</dt>
+                                <dd>: Rp 300.000</dd>
+                                <dt>Harga Nego</dt>
+                                <dd class="negolist__price">: Rp 225.000</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <dl>
+                    <div class="p-tb-10 r">
+                        <dt><b>Alamat Pengiriman</b></dt>
+                        <dd>Stevan</dd>
+                        <dd>Jl. Serbet Kaca No. 2A</dd>
+                        <dd>Jatipadang</dd>
+                        <dd>Jakarta 12148</dd>
+                        <dd>No Telepon / Handphone 08123456789</dd>
+                    </div>
+                    <hr>
+                    <div class="p-tb-10 r">
+                        <dt><b>Jasa Pengiriman</b></dt>
+                        <dd>JNE YES 1-2 hari Rp 10.000</dd>
+                    </div>
+                    <hr>
+                    <div class="p-tb-10 r">
+                        <dt><b>Biaya Asuransi</b></dt>
+                        <dd>Rp 5.298</dd>
+                    </div>
+                    <hr>
+                    <div class="p-tb-10 r">
+                        <dt><b>Pesan dari Seller:</b></dt>
+                        <dd>Sorry Gan, Gak bisa nego. Harga udah pas</dd>
+                    </div>
+                </dl>
+                <a href="#" class="btn__full btn--orange">Nego Lagi</a>
+            </div>
+            
+<div class="c-footer">
+  <div class="notice p-all-10">
+    <div class="title-kn">Kirim info peristiwa menarik di sekitarmu ke (Chat Only)</div>
+    <!-- add more text here -->
+    <div class="notice-wrapper">
+      <a href="" class="notice-btn whatsapp">
+        <img src="../assets/images/icon-whatsapp-border.svg" alt="whatsapp-icon"/>
+        <strong>+628119KASKUS</strong>
+      </a>
+      <a href="" class="notice-btn k-chat">
+        <img src="../assets/images/icon-chat-white.svg" alt="chat-icon"/>
+        <strong>KASKUS.Update</strong>
+      </a>
+    </div>
+  </div>
+
+  <nav class="kaskusnetworks">
+    <div class="title-kn">CHANNELS</div>
+    <div class="list-kn">
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611291043150120.png" alt="kaskusnetworks-image"> </a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611291043400966.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611290202260804.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2017/01/11/4501355_201701110710070180.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2017/03/06/6498705_201703060945090923.png" alt="kaskusnetworks-image"></a>
+    </div>
+  </nav>
+
+  <footer id="site-footer">
+    <nav class="mb10">
+          <a href="#site-header">Kembali ke Atas</a>
+          <a href="http://kaskus.com">Versi Desktop</a>
+          <a href="http://kaskus.com">Nightmode</a>
+          <a href="http://kaskus.com">Image off</a>
+          <a href="#" class="out">Widget</a>
+          <a href="#" class="out">Hubungi Kami</a>
+          <a href="#" class="out">Keluar</a>
+    </nav>
+    <img src="../assets/img/banner1.jpg" height="250" width="300" alt="">
+    <small>&copy; 2017 Kaskus – The Largest Indonesian Community</small>
+  </footer>
+</div>
+	    </div>
+    </body>
+</html>

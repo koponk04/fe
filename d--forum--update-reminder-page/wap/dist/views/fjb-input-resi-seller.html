@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ID">
+
+<head>
+  <meta charset="UTF-8">
+  <title>M Framework</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, target-densitydpi=device-dpi" />
+  <link href="../assets/stylesheets/main.css" rel="stylesheet" type="text/css" media="all"/>
+  <!-- <link href="../assets/stylesheets/night.css" rel="stylesheet" type="text/css" media="all"/> -->
+  <link rel="apple-touch-icon-precomposed" href="../assets/img/apps_icon.png" />
+  <script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+</head>
+<body class="fjb">
+  <div id="wrapper" style="background:white;">
+    <div id="main" role="main" class="p-top-50">
+      <div class="header-detail">
+        <div class="r head-menu">
+          <div class="text-center">
+            <span class="row-tr">Input Resi</span>
+            <a href="http://www.google.com"><span class="close-btn"></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="bar ">
+        <div class="shipping">
+          <div class="shipping__wrapper">
+            <div class="r shipping__head ml0">
+                <div class="c c-4 green">Transaksi #1234567890987654321</div>
+            </div>  
+            <div class="shipping__form seller " 
+              <div class="r shipping__attr">
+                <label class="c c-4"><strong>Jasa Pengiriman</strong></label>
+                <div class="c c-4 shipping__tooltip">
+                  <div class="shipping__jasa  c-3 in-txt">
+                    <select class=" jasa-select" onchange="OtherSelectCheck(this);"">
+                      <option value="jne" selected>JNE</option>
+                      <option value="pos indonesia">Pos Indonesia</option>
+                      <option value="line parcel">Line Parcel</option>
+                      <option value="lainnya" id="jasaLain" ">Jasa Pengiriman Lainnya</option>
+                      <option value="COD">COD</option>
+                    </select>
+                  </div>
+                  <div class="c-1 shipping__tooltip__wrapper">
+                    <div class="shipping__tooltip__container">
+                      <div class="shipping__tooltip__text">
+                        <span class="tooltip__textwrap">Ini adalah jasa pengiriman pilihan Buyer. Agan bisa ubah dengan catatan, jika harga pengiriman baru lebih murah maka uang akan dikembalikan ke Saldo BranKas Buyer, jika lebih mahal akan jadi tanggungan Seller
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="c c-3 in-txt mb10" id="namajasa">
+                  <input name="namajasas" type="text" class="form-control"  placeholder="Nama Jasa Pengiriman" value="" required="">
+                </div>
+              </div>
+              <div class="r shipping__attr">
+                <label class="c c-4 mb10"><strong>Tanggal Pemesanan</strong></label>
+                <div class="c c-4 pl10">18 Februari 2017</div>
+              </div>
+              <div class="r shipping__attr">
+                <label class="c c-4 mb10"><strong>Harga</strong></label>
+                <div class="c c-4 orange pl10">Rp.150.000</div>
+              </div>
+              <div class="r shipping__attr">
+                <label class="c c-4 mb10"><strong>Ongkos Kirim</strong></label>
+                <div class="c c-4 orange pl10" id="jasa-text">Rp.150.000</div>
+                <div class="in-txt group-addon c-2" style="padding: 0;" id="input-jasa">
+                    <div class="addon-label">Rp</div>
+                    <input name="harga" id="input-price" type="text" placeholder="Contoh: 210000" class="form-classified" value="" style="">
+                </div>
+              </div>
+              <div class="r shipping__attr">
+                <label class="c c-4 mb10"><strong>Nomor Resi</strong></label>
+                <div class="c c-4">
+                    <div class="in-txt">
+                      <input name="noresi" type="text"  placeholder="Masukkan nomor resi pengiriman" value="" required="">
+                    </div>
+                </div>
+              </div>
+               <div class="r text-center mb10">
+                <button class="btn orange longer mt10">SIMPAN<button>
+              </div>
+            </div>
+
+           
+          </div>
+        </div>
+      </div>
+    </div>
+    
+<div class="c-footer">
+  <div class="notice p-all-10">
+    <div class="title-kn">Kirim info peristiwa menarik di sekitarmu ke (Chat Only)</div>
+    <!-- add more text here -->
+    <div class="notice-wrapper">
+      <a href="" class="notice-btn whatsapp">
+        <img src="../assets/images/icon-whatsapp-border.svg" alt="whatsapp-icon"/>
+        <strong>+628119KASKUS</strong>
+      </a>
+      <a href="" class="notice-btn k-chat">
+        <img src="../assets/images/icon-chat-white.svg" alt="chat-icon"/>
+        <strong>KASKUS.Update</strong>
+      </a>
+    </div>
+  </div>
+
+  <nav class="kaskusnetworks">
+    <div class="title-kn">CHANNELS</div>
+    <div class="list-kn">
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611291043150120.png" alt="kaskusnetworks-image"> </a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611291043400966.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611290202260804.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2017/01/11/4501355_201701110710070180.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2017/03/06/6498705_201703060945090923.png" alt="kaskusnetworks-image"></a>
+    </div>
+  </nav>
+
+  <footer id="site-footer">
+    <nav class="mb10">
+          <a href="#site-header">Kembali ke Atas</a>
+          <a href="http://kaskus.com">Versi Desktop</a>
+          <a href="http://kaskus.com">Nightmode</a>
+          <a href="http://kaskus.com">Image off</a>
+          <a href="#" class="out">Widget</a>
+          <a href="#" class="out">Hubungi Kami</a>
+          <a href="#" class="out">Keluar</a>
+    </nav>
+    <img src="../assets/img/banner1.jpg" height="250" width="300" alt="">
+    <small>&copy; 2017 Kaskus – The Largest Indonesian Community</small>
+  </footer>
+</div>
+  </div>
+  <script type="text/javascript" src="../assets/js/shipping.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ID">
+
+<head>
+  <meta charset="UTF-8">
+  <title>M Framework</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, target-densitydpi=device-dpi" />
+  <link href="../assets/stylesheets/main.css" rel="stylesheet" type="text/css" media="all"/>
+  <!-- <link href="../assets/stylesheets/night.css" rel="stylesheet" type="text/css" media="all"/> -->
+  <link rel="apple-touch-icon-precomposed" href="../assets/img/apps_icon.png" />
+  <script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+</head>
+<body class="forum nightmode fjb">
+	<div id="wrapper">
+		<header id="site-header">
+			<div class="main-h r">
+				<div class="c c-3">
+					<nav class="n">
+						<a href="#" class="logo">
+							<img src="../assets/img/logo.png" height="30" width="30" alt="">
+						</a>
+						<a href="#" id="kk-forum">Forum</a>
+						<a href="#" id="kk-fjb">FJB</a>
+					</nav>
+				</div>
+				<div class="c c-1">
+					<nav class="u">
+						<a href="#">Sign In</a>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+		<div id="main" role="main">
+			<div id="search">
+				<form>
+					<div class="r">
+						<div class="c c-4">
+							<div class="in-txt">
+								<input type="text" placeholder="search" autofocus="autofocus" autocorrect="off" spellcheck="false" required>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<div id="content-wrapper" class="bar search-result">
+				<!-- OLD DESIGN -->
+				<!-- <div class="c-search__spellcheck">
+					<div class="c-search__spellcheck-wrapper">
+						<img src="../assets/images/icon-blue-guy-search.svg" alt="blue guy search" />
+						<p>Maaf, hasil pencarian <span>telar</span> tidak ditemukan.</p>
+						<p>Apakah Agan ingin mencoba salah satu dari kata kunci ini?</p>
+						<div class="c-search__spellcheck-list">
+							<a href="#" class="c-search__spellcheck-item">Lorem ipsum dolor sit amet</a>
+							<a href="#" class="c-search__spellcheck-item">Lorem ipsum dolor</a>
+							<a href="#" class="c-search__spellcheck-item">Lorem ipsum dolor sit</a>
+							<a href="#" class="c-search__spellcheck-item">Lorem ipsum</a>
+							<a href="#" class="c-search__spellcheck-item">Lorem</a>
+						</div>
+					</div>
+				</div> -->
+				<div class="c-search__spellcheck">
+					<div class="c-search__spellcheck-wrapper">
+						<p>Hasil pencarian <span>telar</span>. Apakah yang Agan maksud:</p>
+						<div class="c-search__spellcheck-list">
+							<a href="#" class="c-search__spellcheck-item">Lorem</a>
+							<a href="#" class="c-search__spellcheck-item">Ipsum</a>
+							<a href="#" class="c-search__spellcheck-item">Dolor</a>
+							<a href="#" class="c-search__spellcheck-item">Sit</a>
+							<a href="#" class="c-search__spellcheck-item">Amet</a>
+						</div>
+					</div>
+				</div>
+				<!-- SEARCH FJB -->
+				<div class="bar-header">
+					<h3 class="h-jualbeli">Jual Beli – Search Result</h3>
+				</div>
+				<div class="controls">
+					<div class="r-info">Search Result of
+						<mark>sanuk</mark>39 Results found (0.0190 sec)</div>
+				</div>
+				<div class="post-list">
+					<div class="list-entry">
+						<a href="#">jika MUI anggap seolah2 indonesia sprt ngara islam,maka bagaimana dgn ini ?</a>
+						<div class="sub-meta">
+							<small>Sandal &amp; Sepatu</small>
+							<span class="price">Rp 170,000</span>
+							<span class="location">Daerah Istimewa Yogyakarta</span>
+						</div>
+					</div>
+					<div class="list-entry">
+						<a href="#">Sekarang Agan Pake Hape Merk Apa ?? (Vote Inside)</a>
+						<div class="sub-meta">
+							<small>Sandal &amp; Sepatu</small>
+							<span class="price">Rp 170,000</span>
+							<span class="location">Daerah Istimewa Yogyakarta</span>
+						</div>
+					</div>
+					<div class="list-entry">
+						<a href="#">hape jatuh milik wanita cantik, nyesel bnget ane gak kenalan :(</a>
+						<div class="sub-meta">
+							<small>Sandal &amp; Sepatu</small>
+							<span class="price">Rp 170,000</span>
+							<span class="location">Daerah Istimewa Yogyakarta</span>
+						</div>
+					</div>
+					<div class="list-entry">
+						<a href="#">alasan obito masih hidup</a>
+						<div class="sub-meta">
+							<small>Sandal &amp; Sepatu</small>
+							<span class="price">Rp 170,000</span>
+							<span class="location">Daerah Istimewa Yogyakarta</span>
+						</div>
+					</div>
+					<div class="list-entry">
+						<a href="#">G-string??? itu mah Biasa, Ini yang keren C-string</a>
+						<div class="sub-meta">
+							<small>Sandal &amp; Sepatu</small>
+							<span class="price">Rp 170,000</span>
+							<span class="location">Daerah Istimewa Yogyakarta</span>
+						</div>
+					</div>
+				</div>
+				<div class="controls">
+					<!-- <div class="action">
+						<div class="tools">
+							<a href="#">View more</a>
+						</div>
+					</div> -->
+					<!--
+		<div class="pagination">
+			<span>Page 1 of 815</span>
+			<span>
+				<a href="#" class="arr">&lt;&lt;</a>
+				<a href="#" class="arr">&lt;</a>
+				<a href="#">1</a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>
+				<a href="#" class="arr">&gt;</a>
+				<a href="#" class="arr">&gt;&gt;</a>
+			</span>
+		</div>
+	-->
+				</div>
+
+				<!-- SEARCH FORUM -->
+				<div class="bar-header">
+					<h3 id="class-forum">Forum – Search Result</h3>
+				</div>
+				<div class="controls">
+					<div class="r-info">Search Result of
+						<mark>sanuk</mark>39 Results found (0.0190 sec)</div>
+				</div>
+				<div class="post-list">
+					<div class="list-entry">
+						<a href="#">jika MUI anggap seolah2 indonesia sprt ngara islam,maka bagaimana dgn ini ?</a>
+						<div class="sub-meta">
+							<small>by UsernameID</small>
+							<span class="price">The Lounge 08-09-2012 17:14:38</span>
+							<span class="location">345 Replies</span>
+						</div>
+					</div>
+					<div class="list-entry">
+						<a href="#">Sekarang Agan Pake Hape Merk Apa ?? (Vote Inside)</a>
+						<div class="sub-meta">
+							<small>by UsernameID</small>
+							<span class="price">The Lounge 08-09-2012 17:14:38</span>
+							<span class="location">345 Replies</span>
+						</div>
+					</div>
+					<div class="list-entry">
+						<a href="#">hape jatuh milik wanita cantik, nyesel bnget ane gak kenalan :(</a>
+						<div class="sub-meta">
+							<small>by UsernameID</small>
+							<span class="price">Debate Club 08-09-2012 17:14:38</span>
+							<span class="location">345 Replies</span>
+						</div>
+					</div>
+					<div class="list-entry">
+						<a href="#">alasan obito masih hidup</a>
+						<div class="sub-meta">
+							<small>by UsernameID</small>
+							<span class="price">Heart to Heart 08-09-2012 17:14:38</span>
+							<span class="location">345 Replies</span>
+						</div>
+					</div>
+					<div class="list-entry">
+						<a href="#">G-string??? itu mah Biasa, Ini yang keren C-string</a>
+						<div class="sub-meta">
+							<small>by UsernameID</small>
+							<span class="price">The Lounge on 08-09-2012 17:14:38</span>
+							<span class="location">345 Replies</span>
+						</div>
+					</div>
+				</div>
+				<div class="controls">
+					<!-- <div class="action">
+						<div class="tools">
+							<a href="#">View more</a>
+						</div>
+					</div> -->
+					<!--
+		<div class="pagination">
+			<span>Page 1 of 815</span>
+			<span>
+				<a href="#" class="arr">&lt;&lt;</a>
+				<a href="#" class="arr">&lt;</a>
+				<a href="#">1</a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>
+				<a href="#" class="arr">&gt;</a>
+				<a href="#" class="arr">&gt;&gt;</a>
+			</span>
+		</div>
+	-->
+				</div>
+
+				<!-- SEARCH GROUPEE -->
+				<div class="bar-header">
+					<h3 class="h-group">Groupee – Search Result</h3>
+				</div>
+				<div class="controls">
+					<div class="r-info">Search Result of
+						<mark>sanuk</mark>39 Results found (0.0190 sec)</div>
+				</div>
+				<div class="post-list">
+					<div class="list-entry">
+						<img src="http://livebeta.kaskus.co.id/group/group_icon/16872" alt="" class="thumb">
+						<a href="#">jika MUI anggap seolah2 indonesia sprt ngara islam,maka bagaimana dgn ini ?</a>
+						<div class="sub-meta">
+							<small>Sandal &amp; Sepatu</small>
+							<span class="price">Rp 170,000</span>
+							<span class="location">Daerah Istimewa Yogyakarta</span>
+						</div>
+					</div>
+					<div class="list-entry">
+						<img src="http://livebeta.kaskus.co.id/group/group_icon/16872" alt="" class="thumb">
+						<a href="#">Sekarang Agan Pake Hape Merk Apa ?? (Vote Inside)</a>
+						<div class="sub-meta">
+							<small>Sandal &amp; Sepatu</small>
+							<span class="price">Rp 170,000</span>
+							<span class="location">Daerah Istimewa Yogyakarta</span>
+						</div>
+					</div>
+					<div class="list-entry">
+						<img src="http://livebeta.kaskus.co.id/group/group_icon/16872" alt="" class="thumb">
+						<a href="#">hape jatuh milik wanita cantik, nyesel bnget ane gak kenalan :(</a>
+						<div class="sub-meta">
+							<small>Sandal &amp; Sepatu</small>
+							<span class="price">Rp 170,000</span>
+							<span class="location">Daerah Istimewa Yogyakarta</span>
+						</div>
+					</div>
+					<div class="list-entry">
+						<img src="http://livebeta.kaskus.co.id/group/group_icon/16872" alt="" class="thumb">
+						<a href="#">alasan obito masih hidup</a>
+						<div class="sub-meta">
+							<small>Sandal &amp; Sepatu</small>
+							<span class="price">Rp 170,000</span>
+							<span class="location">Daerah Istimewa Yogyakarta</span>
+						</div>
+					</div>
+					<div class="list-entry">
+						<img src="http://livebeta.kaskus.co.id/group/group_icon/16872" alt="" class="thumb">
+						<a href="#">G-string??? itu mah Biasa, Ini yang keren C-string</a>
+						<div class="sub-meta">
+							<small>Sandal &amp; Sepatu</small>
+							<span class="price">Rp 170,000</span>
+							<span class="location">Daerah Istimewa Yogyakarta</span>
+						</div>
+					</div>
+				</div>
+				<div class="controls">
+					<!-- <div class="action">
+						<div class="tools">
+							<a href="#" class="">View more</a>
+						</div>
+					</div> -->
+					<!--
+		<div class="pagination">
+			<span>Page 1 of 815</span>
+			<span>
+				<a href="#" class="arr">&lt;&lt;</a>
+				<a href="#" class="arr">&lt;</a>
+				<a href="#">1</a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>
+				<a href="#" class="arr">&gt;</a>
+				<a href="#" class="arr">&gt;&gt;</a>
+			</span>
+		</div>
+	-->
+				</div>
+
+				<!-- SEARCH USERNAME -->
+				<div class="bar-header">
+					<h3 class="h-group">Groupee – Search Result</h3>
+				</div>
+				<div class="controls">
+					<div class="r-info">Search Result of
+						<mark>sanuk</mark>39 Results found (0.0190 sec)</div>
+				</div>
+				<div class="post-list">
+
+					<div class="list-entry">
+					  <img src="http://s.kaskus.id/user/avatar/2007/10/13/male.jpg" class="thumb" alt="">
+					  <a href="" id="">japri</a>
+					  <div class="sub-meta">
+					  	<small>newbie</small> <span class="date">Join : 13-10-2007 17:28</span>
+					  </div>
+					  <div>
+					  	<small>
+					  		<a href=""> 0 Forum Thread </a>
+					  	</small>
+					  	<span>|</span>
+					  	<small>
+					  		<a href=""> 0 FJB Threads </a>
+					  	</small>
+					  </div>
+
+						<!-- BUTTON PM -->
+					  <span class="r" style="margin:5px 0 0 40px">
+					  	<a href="">
+					  		<small>
+					  			<img src="../assets/img/ic_send_pm_blue.png" alt="" style="display:inline-block;vertical-align:middle;margin-right:5px;">Send PM
+					  		</small>
+					  	</a>
+					  </span>
+					  <!-- BUTTON CHAT -->
+					  <!-- <span class="r" style="margin:5px 0 0 40px">
+					  	<a href="">
+					  		<small style="color:#f7a532">
+					  			<img src="../assets/img/ic_chat.png" alt="" style="display:inline-block;vertical-align:middle;margin-right:5px;width:20px;">Chat
+					  		</small>
+					  	</a>
+					  </span> -->
+					  <!-- BUTTON CHAT DISABLED -->
+					  <span class="r" style="margin:5px 0 0 40px">
+					  	<a href="">
+					  		<small style="color: #acacac;">
+					  			<img src="../assets/img/ic_chat_disabled.png" alt="" style="display:inline-block;vertical-align:middle;margin-right:5px;width:20px;">Chat
+					  		</small>
+					  	</a>
+					  </span>
+
+					</div>
+
+					<div class="list-entry">
+					  <img src="http://s.kaskus.id/user/avatar/2007/10/13/male.jpg" class="thumb" alt="">
+					  <a href="" id="">japriaaaaa</a>
+					  <div class="sub-meta">
+					  	<small>newbie</small> <span class="date">Join : 13-10-2007 17:28</span>
+					  </div>
+					  <div>
+					  	<small>
+					  		<a href=""> 0 Forum Thread </a>
+					  	</small>
+					  	<span>|</span>
+					  	<small>
+					  		<a href=""> 0 FJB Threads </a>
+					  	</small>
+					  </div>
+
+					  <!-- BUTTON PM -->
+					  <span class="r" style="margin:5px 0 0 40px">
+					  	<a href="">
+					  		<small>
+					  			<img src="../assets/img/ic_send_pm_blue.png" alt="" style="display:inline-block;vertical-align:middle;margin-right:5px;">Send PM
+					  		</small>
+					  	</a>
+					  </span>
+					  <!-- BUTTON CHAT -->
+					  <span class="r" style="margin:5px 0 0 40px">
+					  	<a href="">
+					  		<small style="color:#f7a532">
+					  			<img src="../assets/img/ic_chat.png" alt="" style="display:inline-block;vertical-align:middle;margin-right:5px;width:20px;">Chat
+					  		</small>
+					  	</a>
+					  </span>
+					  <!-- BUTTON CHAT DISABLED -->
+					  <!-- <span class="r" style="margin:5px 0 0 40px">
+					  	<a href="">
+					  		<small style="color: #acacac;">
+					  			<img src="../assets/img/ic_chat_disabled.png" alt="" style="display:inline-block;vertical-align:middle;margin-right:5px;width:20px;">Chat
+					  		</small>
+					  	</a>
+					  </span> -->
+
+					</div>
+
+				</div>
+
+			</div><!-- END CONTENT WRAPPER -->
+
+
+			<div id="login" class="bar form-input">
+				<h2>KASKUS Sign In</h2>
+				<a href="#" class="back-to-top">
+					<img src="../assets/img/arrow-top.png" height="10" width="10" alt="">
+				</a>
+				<form>
+					<fieldset>
+						<label class="r">
+							<div class="c c-2">
+								<span>Username</span>
+							</div>
+							<div class="c c-2">
+								<div class="in-txt">
+									<input type="text" autocorrect="off" required>
+								</div>
+							</div>
+						</label>
+						<label class="r">
+							<div class="c c-2">
+								<span>Password</span>
+							</div>
+							<div class="c c-2">
+								<div class="in-txt">
+									<input type="password" autocorrect="off" required>
+								</div>
+							</div>
+						</label>
+						<div class="r">
+							<div class="in-btn c-1" style="margin-left:75%;">
+								<input type="submit" value="Sign in">
+							</div>
+						</div>
+
+						<div class="r">
+							<div class="c c-2">
+								<span>or Sign in with</span>
+							</div>
+							<div class="c c-2">
+								<ul class="social-media">
+									<li>
+										<a href="#">
+											<img src="../assets/img/mindtalk.png" height="19" width="19" alt="">
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="../assets/img/facebook.png" height="19" width="9" alt="">
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="../assets/img/twitter-login.png" height="14" width="17" alt="">
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="../assets/img/google-plus.png" height="18" width="18" alt="">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		
+<div class="c-footer">
+  <div class="notice p-all-10">
+    <div class="title-kn">Kirim info peristiwa menarik di sekitarmu ke (Chat Only)</div>
+    <!-- add more text here -->
+    <div class="notice-wrapper">
+      <a href="" class="notice-btn whatsapp">
+        <img src="../assets/images/icon-whatsapp-border.svg" alt="whatsapp-icon"/>
+        <strong>+628119KASKUS</strong>
+      </a>
+      <a href="" class="notice-btn k-chat">
+        <img src="../assets/images/icon-chat-white.svg" alt="chat-icon"/>
+        <strong>KASKUS.Update</strong>
+      </a>
+    </div>
+  </div>
+
+  <nav class="kaskusnetworks">
+    <div class="title-kn">CHANNELS</div>
+    <div class="list-kn">
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611291043150120.png" alt="kaskusnetworks-image"> </a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611291043400966.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611290202260804.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2017/01/11/4501355_201701110710070180.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2017/03/06/6498705_201703060945090923.png" alt="kaskusnetworks-image"></a>
+    </div>
+  </nav>
+
+  <footer id="site-footer">
+    <nav class="mb10">
+          <a href="#site-header">Kembali ke Atas</a>
+          <a href="http://kaskus.com">Versi Desktop</a>
+          <a href="http://kaskus.com">Nightmode</a>
+          <a href="http://kaskus.com">Image off</a>
+          <a href="#" class="out">Widget</a>
+          <a href="#" class="out">Hubungi Kami</a>
+          <a href="#" class="out">Keluar</a>
+    </nav>
+    <img src="../assets/img/banner1.jpg" height="250" width="300" alt="">
+    <small>&copy; 2017 Kaskus – The Largest Indonesian Community</small>
+  </footer>
+</div>
+	</div>
+</body>
+
+</html>

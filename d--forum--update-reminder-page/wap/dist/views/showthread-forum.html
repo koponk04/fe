@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="ID">
+
+<head>
+  <meta charset="UTF-8">
+  <title>M Framework</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, target-densitydpi=device-dpi" />
+  <link href="../assets/stylesheets/main.css" rel="stylesheet" type="text/css" media="all"/>
+  <!-- <link href="../assets/stylesheets/night.css" rel="stylesheet" type="text/css" media="all"/> -->
+  <link rel="apple-touch-icon-precomposed" href="../assets/img/apps_icon.png" />
+  <script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+</head><body class="forum">
+	<div id="wrapper">
+		<div class="nm nm-forum notice-app">
+	<a href="https://play.google.com/store/apps/details?id=com.kaskus.android&utm_source=kaskusmsite" target="_blank">
+		<img src="../assets/img/icon-notice-forum.png" class="left">
+	</a>
+	<div class="nm-title">
+		<span>KASKUS</span>
+		<a href="#" class="x">&times;</a>
+	</div>
+	<div>
+		<span>
+			<a href="https://play.google.com/store/apps/details?id=com.kaskus.android&utm_source=kaskusmsite" target="_blank">Get the App</a>
+		</span>
+		<span class="right">
+			<a href="https://play.google.com/store/apps/details?id=com.kaskus.android&utm_source=kaskusmsite" target="_blank">View in App</a>
+		</span>
+	</div>
+</div>
+<div class="header-body-top-header">
+  	<header id="site-header-main">
+    	<div class="header-body-main-h">
+      		<nav class="n">
+            	<a href="#" class="header-body-kaskus-logo">
+              		<img src="../assets/images/17-agustus-seasonal-header.gif" alt="">
+            	</a>
+            	<div class="header-text-button">
+					<a href="#" class="active-forum">Forum</a>
+					<a href="#" class="active-fjb">Jual Beli</a>
+					<a href="#" id="kk-bpl" class="premium"><img src="images/logo-sundul-eropa.png" alt=""></a>
+              		<!-- <a href="#" class="premium"><img src="images/logo-sundul-eropa.png" alt=""></a> -->
+            	</div>
+     		</nav>
+			<nav class="right-nav login">
+				<a class="header-body-user-photo">
+				  	<div class="search-button">
+				    	<img src="../assets/img/search-abu.png" alt="user photo" class="search-btn-img">
+				  	</div>
+				</a>
+			<!-- IF LOGGED IN -->
+			
+				<span id="mobile-menu-btn" class="login_btn">
+					<a href="#" class="header-body-user-photo" onclick="toggleProfile();">
+					    <div class="photo-wrapper">
+					    	<img src="https://s.kaskus.id/r30x30/user/avatar/2016/11/10/avatar9329691_1.gif" alt="user photo">
+					    </div>
+					    <div class="user-notice">99+</div>
+				  	</a>
+				</span>
+			</nav>
+    	</div>
+	</header>
+</div>
+<div class="header-body-add active">
+  	<a href="#" class="pick-category" onclick="toggleCategory();">
+    	<span>KATEGORI</span>
+    	<img src="../assets/img/ic-right-white.png">
+  	</a>
+  	<span class="right-nav">
+    	<a href="#" onclick="toggleCreate()">
+      		<span class="user-notice">N</span>
+      		<img height src="../assets/img/icon-pencil-edit-alt.png"> BUAT POST
+    	</a>
+    	<span class="nav-divider"></span>
+    	<a href="">
+      		<span class="user-notice"></span>
+  			<img height="20" src="../assets/img/ic_chat_alt.png"/>
+		</a>
+    	<span class="nav-divider"></span>
+    	<a href="">
+      		<span class="user-notice">12</span>
+      		<img height="20" src="../assets/img/ic-cart-2.png">
+    	</a>
+  	</span>
+</div>
+<div class="below-add">
+  	<div id="category-swipe">
+    	<span aria-hidden="true" id="scroll-left" class="block-row block-row--left noselect">&lsaquo;</span>
+    	<div id="nav-swipe" class="header-body-category active">
+          	<div class="nav-category">
+	            <a class="premium" href="">Plus</a>
+	            <a class="premium" href="">KasAds</a>
+	            <a class="premium" href="">ePulsa</a>
+	            <a href="">News</a>
+	            <a href="">Video</a>
+	            <a href="">Komunitas</a>
+	            <a href="">Plus</a>
+	            <a href="">KasAds</a>
+	            <a href="">ePulsa</a>
+	            <a href="">News</a>
+	            <a href="">Video</a>
+	            <a href="">Komunitas</a>
+	            <a href="">Plus</a>
+	            <a href="">KasAds</a>
+	            <a href="">ePulsa</a>
+	            <a href="">News</a>
+	            <a href="">Video</a>
+	            <a href="">Komunitas</a>
+          	</div>
+    	</div>
+    	<span id="scroll-right" class="block-row block-row--right noselect">&rsaquo;</span>
+  	</div>
+</div>			<div id="content-wrapper" class="bar ">
+				<div class="header">
+					<div class="breadcrumbs">
+						<a href="/">Home</a>
+						<a href="#">Forum</a>
+						<a href="#">Hewan Peliharaan</a>
+						<a href="#">Mamalia</a>
+					</div>
+					<h1>Karya seni unik and keren dari Pita Kaset bikin kepala pusing</h1>
+					<div class="action mr10">
+						<a href="#" class="btn blue">Post Reply</a>
+						<a href="#" class="btn list-yellow">Iklankan</a>
+						<a href="#" class="btn list-orange">Subscribe</a>
+					</div>
+				</div>
+				<hr>
+
+				<div class="share-fix">
+					<div class="row share-container p-all-10">
+						<div class="c total-share">
+							<span>234</span>
+							<span class="caption">Shares</span>
+						</div>
+						<div class="share-list">
+							<div class="small-block-grid-1">
+								<div class="small-block-grid-6 no-line">
+									<div class="share-btn facebook">
+										<a href="#">
+											<img class="img-share" src="../assets/img/facebook-square.jpg" alt="facebook">
+										</a>
+									</div>
+									<div class="share-btn twitter">
+										<a href="#">
+											<img class="img-share" src="../assets/img/twitter-square.jpg" alt="twitter">
+										</a>
+									</div>
+									<div class="share-btn whatsapp">
+										<a href="#">
+											<img class="img-share" src="../assets/img/whatsapp-icon-large.jpg" alt="whatsapp">
+										</a>
+									</div>
+									<div class="share-btn gplus">
+										<a href="#">
+											<img class="img-share" src="../assets/img/google-icon-large.jpg" alt="gplus">
+										</a>
+									</div>
+									<!-- <div class="share-btn line">
+										<a href="#">
+											<img class="img-share" src="img/line-square.jpg" alt="line">
+										</a>
+									</div> -->
+									<div class="share-btn mail">
+										<a href="#">
+											<img class="img-share" src="../assets/img/mail-icon-large.jpg" alt="mail">
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="header">
+					<div class="row total-share r mt10">
+						<div class="c c-2">
+							<span>234</span>
+							<span class="caption">Shares</span>
+						</div>
+						<div class="tools c c-2 text-right">
+							<div id="r-bar" style="display:inline-block">
+								<select name="rating">
+									<option value="0">Rate this thread!</option>
+									<option>5</option>
+									<option>4</option>
+									<option>3</option>
+									<option>2</option>
+									<option>1</option>
+									<option value="0">Remove your vote</option>
+								</select>
+								<span class="r-star"></span>
+								<span style="display:inline-block; vertical-align:middle; color: #454545;">
+									3,2
+									<small style="color:#999;">/5</small>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="row mb20">
+						<div class="share-wrapper">
+							<div class="small-block-grid-6 no-line">
+								<div class="share-btn facebook">
+									<a href="#">
+										<img class="img-share" src="../assets/img/facebook-square.jpg" alt="facebook">
+									</a>
+								</div>
+								<div class="share-btn twitter">
+									<a href="#">
+										<img class="img-share" src="../assets/img/twitter-square.jpg" alt="twitter">
+									</a>
+								</div>
+								<div class="share-btn whatsapp">
+									<a href="#">
+										<img class="img-share" src="../assets/img/whatsapp-icon-large.jpg" alt="whatsapp">
+									</a>
+								</div>
+								<div class="share-btn gplus">
+									<a href="#">
+										<img class="img-share" src="../assets/img/google-icon-large.jpg" alt="gplus">
+									</a>
+								</div>
+								<!-- <div class="share-btn line">
+									<a href="#">
+										<img class="img-share" src="img/line-square.jpg" alt="line">
+										<img class="img-share" src="../assets/img/whatsapp-icon-large.jpg" alt="whatsapp">
+									</a>
+								</div> -->
+								<div class="share-btn mail">
+									<a href="#">
+										<img class="img-share" src="../assets/img/mail-icon-large.jpg" alt="mail">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="r">
+					<div class="u-bar">
+						<b>Poll: Menurut agan apakah BB masih memimpin pasar smartphone?</b>
+					</div>
+					<hr>
+					<div class="u-bar">
+					  	<label class="dis-table" for="opt-1">
+							<input type="radio" class="tab-cell" name="gender" value="1" id="opt-1" checked="">
+							<span class="tab-cell">Tentu gan, kan indonesia banyak yang memakai BB</span>
+					  	</label>
+					  	<label class="dis-table" for="opt-2">
+							<input type="radio" class="tab-cell" name="gender" value="2" id="opt-2">
+							<span class="tab-cell">Nggak gan, pasti kegeser sama pesaingnya mungkin sama android</span>
+					  	</label>
+					  	<label class="dis-table" for="opt-3">
+							<input type="radio" class="tab-cell" name="gender" value="2" id="opt-3">
+							<span class="tab-cell">Menurut ane BB akan bangkrut tapi masih dalam jangka waktu yang lama gan</span>
+					  	</label>
+					  	<div class="text-center">
+						<a href="#" class="btn blue">Post Reply</a>
+					</div>
+					</div>
+
+					<div class="u-bar result-bar-con">
+						<label>
+							<span>Tentu gan, kan indonesia banyak yang memakai BB <div class="req">16%</span> (16 Votes)</div>
+							<div class="result-bar-wrapper">
+								<span class="result-bar" style="width:60%;"></span>
+							</div>
+						</label>
+						<label>
+							<span>Nggak gan, pasti kegeser sama pesaingnya mungkin sama android <div class="req">16%</span> (16 Votes)</div>
+							<div class="result-bar-wrapper">
+								<span class="result-bar" style="width:40%;"></span>
+							</div>
+						</label>
+						<label>
+							<span>Menurut ane BB akan bangkrut tapi masih dalam jangka waktu yang lama gan <div class="req">16%</span> (16 Votes)</div>
+							<div class="result-bar-wrapper">
+								<span class="result-bar" style="width:30%;"></span>
+							</div>
+						</label>
+					</div>
+				</div>
+
+				<div class="controls">
+					<div class="pagination">
+						<div class="pagination-center">
+							<span class="pagination-page-count">Page 1 of 815</span>
+							<span class="text-right p-right">
+								<a href="#" class="arr">«</a>
+								<a href="#">199</a>
+								<a href="#" class="current">200</a>
+								<a href="#">201</a>
+								<a href="#">202</a>
+								<a href="#">203</a>
+								<a href="#" class="arr">»</a>
+							</span>
+						</div>
+					</div>
+				</div>
+				<!--
+					<div class="form-input pools">
+						<fieldset>
+							<div class="r">
+								<input type="radio"> Pilihan Polling #1
+							</div>
+							<div class="r">
+								<input type="radio"> Pilihan Polling #2
+							</div>
+							<div class="r">
+								<input type="radio"> Pilihan Polling #3
+							</div>
+							<div class="r">
+								<input type="radio"> Pilihan Polling #4
+							</div>
+							<div class="r">
+								<div class="in-btn c-1" style="margin-left:25%;">
+									<input type="submit" value="Vote" >
+								</div>
+							</div>
+						</fieldset>
+					</div>
+					-->
+
+				<div itemscope itemtype="http://schema.org/Article">
+					<!-- FIRST POST	 -->
+					<div id="first-post">
+						<div class="c-entry entry first-post">
+							<div class="author">
+								<div class="has-border-bottom">
+									<span class="vcard">
+										<img src="https://s.kaskus.id/user/avatar/2009/11/10/avatar1197611_89.gif" alt="" class="photo">
+										<div class="usr position-r c-detail--user">
+											<a href="http://m.kaskus.com/user/profile/2412594" class="fn">Namasayaraka</a>
+											<span class="p-right c-showMoremenus ml10 hide" onclick="jsmoreMenu(this);">
+											</span>
+											<div class="c-reveal-menu c-reveal-menu--wrapper">
+												<div class="c-reveal-menu--show">
+													<div class="o-menu--wrapper">
+														<img src="../assets/images/icon-edit-grey.png" alt="icon more menu" />
+														<span>Edit Thread</span>
+													</div>
+													<div class="o-menu--wrapper">
+														<img src="../assets/images/icon-polling.png" alt="icon more menu" />
+														<span>Add a Poll to This Thread</span>
+													</div>
+													<div class="o-menu--separate"></div>
+													<div class="o-menu--wrapper">
+														<img src="../assets/images/icon-unread.png" alt="icon more menu" />
+														<span>View first unread</span>
+													</div>
+													<div class="o-menu--wrapper">
+														<img src="../assets/images/icon-subscribe.png" alt="icon more menu" />
+														<span>Subscribe this Thread</span>
+													</div>
+													<div class="o-menu--separate"></div>
+													<div class="o-menu--wrapper">
+														<img src="../assets/images/icon-lapor-hansip.png" alt="icon more menu" />
+														<span>Lapor Hansip</span>
+													</div>
+												</div>
+											</div>
+											<span class="grp mr30">#1</span>
+											<span><img src="assets/images/app-wap.png" alt="android"></span>
+										</div>
+										<div>
+											<span class="title">KASKUS Plus</span>
+											<a href="#id-post" class="permalink">28-01-2012 06:30</a>
+										</div>
+									</span>
+								</div>
+							</div>
+							<div id="post_id" class="post">
+								<div class="thread-icon__list">
+										<img src="../assets/img/layout/vcc.png" height="15" alt="">
+										<img src="../assets/img/layout/api-merah.png" height="15" alt="">
+								</div>
+								<h2 class="entry-title">[TOP 11 MUST SEE] 11 Sutradarax film terbaik di dunia [TOP 11 MUST SEE] 11 Sutradara film terbaik di dunia</h2>
+								<div class="entry-content">
+
+									JAKARTA - Kementerian Pendidikan dan Kebudayaan (Kemendikbud) menetapkan formulasi baru dalam Seleksi Nasional Masuk Perguruan Tinggi Negeri (SNMPTN) 2013 mendatang. Tahun depan, SNMPTN hanya dilakukan dengan jalur undangan. SNMPTN jalur tulis di hapus.
+									<br>
+									<br>
+									<br>
+		                            <!-- <div class="o-spoiler--wrapper">
+		                            	<div class="o-spoiler--control">1. Becak</div>
+			                            <div class="o-spoiler--btn">Show</div>
+			                            <div class="o-spoiler--wrapper-inner">
+									    	<div class="o-spoiler--content" style="display: none;">bro, stocknya interloper masih ada gak ya? naksir euy...</div>
+			                            </div>
+		                            </div> -->
+
+		                            <!-- MULTIPLE SPOILER -->
+		                            <div class="spoiler">
+		                            	<div class="o-spoiler--control">
+		                            		<span>1. Becaks</span>
+		                            		<input type="button" value="Show" class="spoiler_54a" onclick="spoiler(this);">
+		                            	</div>
+		                            	<div class="o-spoiler--wrapper-inner">
+		                            		<div class="content_spoiler_54a o-spoiler--content" style="display: none;">
+		                            			<div class="spoiler">
+					                            	<div class="o-spoiler--control">
+					                            		<span>test</span>
+					                            		<input type="button" value="Show" class="spoiler_5a4" onclick="spoiler(this);">
+					                            	</div>
+					                            	<div class="o-spoiler--wrapper-inner">
+					                            		<div class="content_spoiler_5a4 o-spoiler--content" style="display: none;">
+					                            			hahahahahha bisaaa! Thanks Pak De Nuris
+					                            		</div>
+					                            	</div>
+					                            </div>
+		                            		</div>
+		                            	</div>
+		                            </div>
+
+		                            <br>
+		                            <br>
+
+		                            <!-- SINGLE SPOILER -->
+		                            <div class="spoiler">
+		                            	<div class="o-spoiler--control">
+		                            		<span>2. Motor</span>
+		                            		<input type="button" value="Show" class="spoiler_2a3" onclick="spoiler(this);">
+		                            	</div>
+		                            	<div class="o-spoiler--wrapper-inner">
+		                            		<div class="content_spoiler_2a3 o-spoiler--content" style="display: none;">
+		                            			Mau cari apa hayooo?
+		                            		</div>
+		                            	</div>
+		                            </div>
+
+	                                <br>
+									<br>
+									<br>
+									<img src="http://i39.photobucket.com/albums/e181/remus02/IMG_6376.jpg" alt="Image" />
+									<br />
+									<br />Kebijakan menetapkan
+									<a href="#">menghapus SNMPTN</a>jalur ujian tulis merupakan implementasi dari Peraturan Menteri Pendidikan Nasional No. 34 Tahun 2010. Dalam Peraturan Menteri tersebut dinyatakan penerimaan mahasiswa baru di PTN melalui dua skema, yaitu SNMPTN dan/atau jalur mandiri.
+									<br />
+									<br />
+									<div style="width: 98%; margin: 0 auto;">
+										<div style="font-size: 8pt;">Quote:</div>
+										<div style="border: solid 1px #aaa; background: #E1E4F2; padding: 5px;">
+											Agan pasti suka nonton film kan? Agan pun pasti mengetahui siapa yang membuat film yang agan suka( masa ga tau :hammer: ) Karena itu, gw bikin list ini di kaskus, yaitu 11 Sutradara film terbaik di dunia :D
+											<br />
+											<br />
+											<div style="width: 98%; margin: 0 auto;">
+												<div style="font-size: 8pt;">Quote:</div>
+												<div style="border: solid 1px #aaa; background: #E1E4F2; padding: 5px;">
+													<div>
+														Agan pasti suka nonton film kan? Agan pun pasti mengetahui siapa yang membuat film yang agan suka( masa ga tau :hammer: ) Karena itu, gw bikin list ini di kaskus, yaitu 11 Sutradara film terbaik di dunia :D
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="footer footer-act">
+									<div class="footer__wrapper">
+										<div class="is-left-content c-reputation__list">
+											<a href="javascript:void(0)" class="c-reputation__item up-vote">
+												<div class="c-reputation__container">
+													<span class="is-icon-wrapper is-cendol jsCendol"></span>
+													<span class="is-icon-wrapper is-up-vote"></span>
+												</div>
+											</a>
+											<div class="c-reputation__item vote-count-post">
+												<span>1k</span>
+											</div>
+											<a href="javascript:void(0)" class="c-reputation__item down-vote">
+												<span class="is-icon-wrapper is-down-vote"></span>
+												<span class="is-icon-wrapper is-bata jsBata"></span>
+											</a>
+										</div>
+										
+										<div class="is-right-content c-user__tools">
+											<!-- ADMIN VIEW -->
+											<!-- <a href="#" class="user-post-tool"><i class="fa fa-edit"></i> Edit</a> -->
+											<a href="#" class="user-post-tool"><i class="fa fa-comment"></i></a>
+											<a href="#" class="user-post-tool"><i class="fa fa-comments"></i></a>
+											<a href="#" class="user-post-tool reply"><i class="fa fa-reply"></i>Reply</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- SECOND POST -->
+					<div id="second-post">
+						<div class="c-entry entry first-post">
+							<div class="author">
+								<div class="has-border-bottom">
+									<span class="vcard">
+										<img src="https://s.kaskus.id/user/avatar/2009/11/10/avatar1197611_89.gif" alt="" class="photo">
+										<div class="usr position-r c-detail--user">
+											<a href="http://m.kaskus.com/user/profile/2412594" class="fn">Namasayaraka</a>
+											<span class="p-right c-showMoremenus ml10 hide" onclick="jsmoreMenu(this);"></span>
+											<div class="c-reveal-menu c-reveal-menu--wrapper">
+												<div class="c-reveal-menu--show">
+													<div class="o-menu--wrapper">
+														<img src="../assets/images/icon-edit-grey.png" alt="icon more menu" />
+														<span>Edit Thread</span>
+													</div>
+													<div class="o-menu--separate"></div>
+													<div class="o-menu--wrapper">
+														<img src="../assets/images/icon-lapor-hansip.png" alt="icon more menu" />
+														<span>Lapor Hansip</span>
+													</div>
+												</div>
+											</div>
+											<span class="grp mr30">#2</span>
+										</div>
+										<div>
+											<span class="title">KASKUS Plus</span>
+											<a href="#id-post" class="permalink">28-01-2012 06:30</a>
+											<span class="p-right is-reply-to">
+												<i class="fa fa-reply"></i>
+												<img src="https://s.kaskus.id/user/avatar/2009/11/10/avatar1197611_89.gif" alt="" class="photo">
+											</span>
+										</div>
+									</span>
+								</div>
+							</div>
+							<div class="post">
+								<div class="entry-content">
+									JAKARTA - Kementerian Pendidikan dan Kebudayaan (Kemendikbud) menetapkan formulasi baru dalam Seleksi Nasional Masuk Perguruan Tinggi Negeri (SNMPTN) 2013 mendatang. Tahun depan, SNMPTN hanya dilakukan dengan jalur undangan. SNMPTN jalur tulis di hapus.
+								</div>
+								<div class="footer footer-act">
+									<div class="footer__wrapper">
+										<div class="is-left-content c-reputation__list">
+											<a href="javascript:void(0)" class="c-reputation__item up-vote">
+												<div class="c-reputation__container">
+													<span class="is-icon-wrapper is-cendol jsCendol"></span>
+													<span class="is-icon-wrapper is-up-vote"></span>
+												</div>
+											</a>
+											<div class="c-reputation__item vote-count-post">
+												<span>1k</span>
+											</div>
+											<a href="javascript:void(0)" class="c-reputation__item down-vote">
+												<span class="is-icon-wrapper is-down-vote"></span>
+												<span class="is-icon-wrapper is-bata jsBata"></span>
+											</a>
+										</div>
+										
+										<div class="is-right-content c-user__tools">
+											<!-- ADMIN VIEW -->
+											<!-- <a href="#" class="user-post-tool"><i class="fa fa-edit"></i> Edit</a> -->
+											<a href="#" class="user-post-tool"><i class="fa fa-comment"></i></a>
+											<a href="#" class="user-post-tool"><i class="fa fa-comments"></i></a>
+											<a href="#" class="user-post-tool reply"><i class="fa fa-reply"></i>Reply</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="postlist__comment">
+							<div class="">
+								<a href="javascript:void(0)" class="postlist__comment-showmore jsShowComment">Lihat Semua Post</a>
+								<div class="postlist__comment-list">
+									<div class="postlist__comment-nested">
+										<div class="postlist__comment-item">
+											<div class="postlist__comment-author clearfix">
+												<div class="author">
+													<div class="has-border-bottom">
+														<span class="vcard">
+															<img src="https://s.kaskus.id/user/avatar/2009/11/10/avatar1197611_89.gif" alt="" class="photo">
+															<div class="usr position-r c-detail--user">
+																<a href="http://m.kaskus.com/user/profile/2412594" class="fn">Namasayaraka</a>
+																<span class="is-icon-reply"></span>
+															</div>
+														</span>
+													</div>
+												</div>
+												<div class="is-wrapper">
+													<div class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultrices interdum tellus, sit amet eleifend ex vulputate id. Quisque vitae sollicitudin sapien. Aliquam malesuada felis eget tortor pulvinar, quis facilisis magna accumsan. Vivamus sit amet libero sed ex rhoncus lacinia. Vivamus sodales, tellus eget laoreet placerat, diam neque ultricies tortor, eget tempus felis urna quis risus.</div>
+												</div>
+											</div>
+										</div>
+										<div class="postlist__comment-item">
+											<div class="postlist__comment-author clearfix">
+												<div class="author">
+													<div class="has-border-bottom">
+														<span class="vcard">
+															<img src="https://s.kaskus.id/user/avatar/2009/11/10/avatar1197611_89.gif" alt="" class="photo">
+															<div class="usr position-r c-detail--user">
+																<a href="http://m.kaskus.com/user/profile/2412594" class="fn">hfbhebrhfebr</a>
+																<span class="is-icon-reply"></span>
+															</div>
+														</span>
+													</div>
+												</div>
+												<div class="is-wrapper">
+													<div class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultrices interdum tellus, sit amet eleifend ex vulputate id. Quisque vitae sollicitudin sapien. Aliquam malesuada felis eget tortor pulvinar, quis facilisis magna accumsan. Vivamus sit amet libero sed ex rhoncus lacinia. Vivamus sodales, tellus eget laoreet placerat, diam neque ultricies tortor, eget tempus felis urna quis risus.</div>
+												</div>
+											</div>
+										</div>
+										<div class="postlist__comment-item">
+											<div class="postlist__comment-author clearfix">
+												<div class="author">
+													<div class="has-border-bottom">
+														<span class="vcard">
+															<img src="https://s.kaskus.id/user/avatar/2009/11/10/avatar1197611_89.gif" alt="" class="photo">
+															<div class="usr position-r c-detail--user">
+																<a href="http://m.kaskus.com/user/profile/2412594" class="fn">hahahihihuhuhehe</a>
+																<span class="is-icon-reply"></span>
+															</div>
+														</span>
+													</div>
+												</div>
+												<div class="is-wrapper">
+													<div class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultrices interdum tellus, sit amet eleifend ex vulputate id. Quisque vitae sollicitudin sapien. Aliquam malesuada felis eget tortor pulvinar, quis facilisis magna accumsan. Vivamus sit amet libero sed ex rhoncus lacinia. Vivamus sodales, tellus eget laoreet placerat, diam neque ultricies tortor, eget tempus felis urna quis risus.</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="postlist__reply">
+									<div class="postlist__reply-image">
+										<img src="https://s.kaskus.id/user/avatar/2009/11/10/avatar1197611_89.gif">
+									</div>
+									<div class="postlist__reply-textarea">
+										<textarea class="reply-post" placeholder="Balas post...." onkeyup="textAreaAdjust(this)"></textarea>
+									</div>
+									<button type="submit" class="postlist__reply-submit" disabled>
+										<i class="fa fa-paper-plane"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- THIRD POST -->
+					<div id="third-post">
+						<div class="c-entry entry first-post">
+							<div class="author">
+								<div class="has-border-bottom">
+									<span class="vcard">
+										<img src="https://s.kaskus.id/user/avatar/2009/11/10/avatar1197611_89.gif" alt="" class="photo">
+										<div class="usr position-r c-detail--user">
+											<a href="http://m.kaskus.com/user/profile/2412594" class="fn">Namasayaraka</a>
+											<span class="p-right c-showMoremenus ml10 hide" onclick="jsmoreMenu(this);"></span>
+											<div class="c-reveal-menu c-reveal-menu--wrapper">
+												<div class="c-reveal-menu--show">
+													<div class="o-menu--wrapper">
+														<img src="../assets/images/icon-edit-grey.png" alt="icon more menu" />
+														<span>Edit Thread</span>
+													</div>
+													<div class="o-menu--separate"></div>
+													<div class="o-menu--wrapper">
+														<img src="../assets/images/icon-lapor-hansip.png" alt="icon more menu" />
+														<span>Lapor Hansip</span>
+													</div>
+												</div>
+											</div>
+											<span class="grp mr30">#3</span>
+										</div>
+										<div>
+											<span class="title">KASKUS Plus</span>
+											<a href="#id-post" class="permalink">28-01-2012 06:30</a>
+										</div>
+									</span>
+								</div>
+							</div>
+							<div class="post">
+								<div class="entry-content">
+									JAKARTA - Kementerian Pendidikan dan Kebudayaan (Kemendikbud) menetapkan formulasi baru dalam Seleksi Nasional Masuk Perguruan Tinggi Negeri (SNMPTN) 2013 mendatang. Tahun depan, SNMPTN hanya dilakukan dengan jalur undangan. SNMPTN jalur tulis di hapus.
+								</div>
+								<div class="footer footer-act">
+									<div class="footer__wrapper">
+										<div class="is-left-content c-reputation__list">
+											<a href="javascript:void(0)" class="c-reputation__item up-vote">
+												<div class="c-reputation__container">
+													<span class="is-icon-wrapper is-cendol jsCendol"></span>
+													<span class="is-icon-wrapper is-up-vote"></span>
+												</div>
+											</a>
+											<div class="c-reputation__item vote-count-post">
+												<span>1k</span>
+											</div>
+											<a href="javascript:void(0)" class="c-reputation__item down-vote">
+												<span class="is-icon-wrapper is-down-vote"></span>
+												<span class="is-icon-wrapper is-bata jsBata"></span>
+											</a>
+										</div>
+										
+										<div class="is-right-content c-user__tools">
+											<!-- ADMIN VIEW -->
+											<!-- <a href="#" class="user-post-tool"><i class="fa fa-edit"></i> Edit</a> -->
+											<a href="#" class="user-post-tool"><i class="fa fa-comment"></i></a>
+											<a href="#" class="user-post-tool"><i class="fa fa-comments"></i></a>
+											<a href="#" class="user-post-tool reply"><i class="fa fa-reply"></i>Reply</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="postlist__comment">
+							<div class="">
+								<a href="javascript:void(0)" class="postlist__comment-showmore jsShowComment">Tampilkan 1k balasan</a>
+								<div class="postlist__comment-list">
+									<div class="postlist__comment-nested">
+										<div class="postlist__comment-item">
+											<div class="postlist__comment-author clearfix">
+												<div class="author">
+													<div class="has-border-bottom">
+														<span class="vcard">
+															<img src="https://s.kaskus.id/user/avatar/2009/11/10/avatar1197611_89.gif" alt="" class="photo">
+															<div class="usr position-r c-detail--user">
+																<a href="http://m.kaskus.com/user/profile/2412594" class="fn">Namasayaraka</a>
+																<span class="is-icon-reply"></span>
+															</div>
+														</span>
+													</div>
+												</div>
+												<div class="is-wrapper">
+													<div class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultrices interdum tellus, sit amet eleifend ex vulputate id. Quisque vitae sollicitudin sapien. Aliquam malesuada felis eget tortor pulvinar, quis facilisis magna accumsan. Vivamus sit amet libero sed ex rhoncus lacinia. Vivamus sodales, tellus eget laoreet placerat, diam neque ultricies tortor, eget tempus felis urna quis risus.</div>
+												</div>
+											</div>
+										</div>
+										<div class="postlist__comment-item">
+											<div class="postlist__comment-author clearfix">
+												<div class="author">
+													<div class="has-border-bottom">
+														<span class="vcard">
+															<img src="https://s.kaskus.id/user/avatar/2009/11/10/avatar1197611_89.gif" alt="" class="photo">
+															<div class="usr position-r c-detail--user">
+																<a href="http://m.kaskus.com/user/profile/2412594" class="fn">hfbhebrhfebr</a>
+																<span class="is-icon-reply"></span>
+															</div>
+														</span>
+													</div>
+												</div>
+												<div class="is-wrapper">
+													<div class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultrices interdum tellus, sit amet eleifend ex vulputate id. Quisque vitae sollicitudin sapien. Aliquam malesuada felis eget tortor pulvinar, quis facilisis magna accumsan. Vivamus sit amet libero sed ex rhoncus lacinia. Vivamus sodales, tellus eget laoreet placerat, diam neque ultricies tortor, eget tempus felis urna quis risus.</div>
+												</div>
+											</div>
+										</div>
+										<div class="postlist__comment-item">
+											<div class="postlist__comment-author clearfix">
+												<div class="author">
+													<div class="has-border-bottom">
+														<span class="vcard">
+															<img src="https://s.kaskus.id/user/avatar/2009/11/10/avatar1197611_89.gif" alt="" class="photo">
+															<div class="usr position-r c-detail--user">
+																<a href="http://m.kaskus.com/user/profile/2412594" class="fn">hahahihihuhuhehe</a>
+																<span class="is-icon-reply"></span>
+															</div>
+														</span>
+													</div>
+												</div>
+												<div class="is-wrapper">
+													<div class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultrices interdum tellus, sit amet eleifend ex vulputate id. Quisque vitae sollicitudin sapien. Aliquam malesuada felis eget tortor pulvinar, quis facilisis magna accumsan. Vivamus sit amet libero sed ex rhoncus lacinia. Vivamus sodales, tellus eget laoreet placerat, diam neque ultricies tortor, eget tempus felis urna quis risus.</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="postlist__reply">
+									<div class="postlist__reply-image">
+										<img src="https://s.kaskus.id/user/avatar/2009/11/10/avatar1197611_89.gif">
+									</div>
+									<div class="postlist__reply-textarea">
+										<textarea class="reply-post" placeholder="Balas post...." onkeyup="textAreaAdjust(this)"></textarea>
+									</div>
+									<button type="submit" class="postlist__reply-submit" disabled>
+										<i class="fa fa-paper-plane"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- FOURTH POST -->
+					<div id="fourth-post">
+						<div class="c-entry entry first-post">
+							<div class="author">
+								<div class="has-border-bottom">
+									<span class="vcard">
+										<img src="https://s.kaskus.id/user/avatar/2009/11/10/avatar1197611_89.gif" alt="" class="photo">
+										<div class="usr position-r c-detail--user">
+											<a href="http://m.kaskus.com/user/profile/2412594" class="fn">Namasayaraka</a>
+											<span class="p-right c-showMoremenus ml10 hide" onclick="jsmoreMenu(this);"></span>
+											<div class="c-reveal-menu c-reveal-menu--wrapper">
+												<div class="c-reveal-menu--show">
+													<div class="o-menu--wrapper">
+														<img src="../assets/images/icon-edit-grey.png" alt="icon more menu" />
+														<span>Edit Thread</span>
+													</div>
+													<div class="o-menu--separate"></div>
+													<div class="o-menu--wrapper">
+														<img src="../assets/images/icon-lapor-hansip.png" alt="icon more menu" />
+														<span>Lapor Hansip</span>
+													</div>
+												</div>
+											</div>
+											<span class="grp mr30">#4</span>
+										</div>
+										<div>
+											<span class="title">KASKUS Plus</span>
+											<a href="#id-post" class="permalink">28-01-2012 06:30</a>
+											<span class="p-right is-reply-to">
+												<i class="fa fa-reply"></i>
+												<img src="https://s.kaskus.id/user/avatar/2009/11/10/avatar1197611_89.gif" alt="" class="photo">
+											</span>
+										</div>
+									</span>
+								</div>
+							</div>
+							<div class="post">
+								<div class="entry-content">
+									JAKARTA - Kementerian Pendidikan dan Kebudayaan (Kemendikbud) menetapkan formulasi baru dalam Seleksi Nasional Masuk Perguruan Tinggi Negeri (SNMPTN) 2013 mendatang. Tahun depan, SNMPTN hanya dilakukan dengan jalur undangan. SNMPTN jalur tulis di hapus.
+								</div>
+								<div class="footer footer-act">
+									<div class="footer__wrapper">
+										<div class="is-left-content c-reputation__list">
+											<a href="javascript:void(0)" class="c-reputation__item up-vote">
+												<div class="c-reputation__container">
+													<span class="is-icon-wrapper is-cendol jsCendol"></span>
+													<span class="is-icon-wrapper is-up-vote"></span>
+												</div>
+											</a>
+											<div class="c-reputation__item vote-count-post">
+												<span>1k</span>
+											</div>
+											<a href="javascript:void(0)" class="c-reputation__item down-vote">
+												<span class="is-icon-wrapper is-down-vote"></span>
+												<span class="is-icon-wrapper is-bata jsBata"></span>
+											</a>
+										</div>
+										
+										<div class="is-right-content c-user__tools">
+											<!-- ADMIN VIEW -->
+											<!-- <a href="#" class="user-post-tool"><i class="fa fa-edit"></i> Edit</a> -->
+											<a href="#" class="user-post-tool"><i class="fa fa-comment"></i></a>
+											<a href="#" class="user-post-tool"><i class="fa fa-comments"></i></a>
+											<a href="#" class="user-post-tool reply"><i class="fa fa-reply"></i>Reply</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="controls">
+					<div class="pagination">
+						<div class="pagination-center">
+							<span class="pagination-page-count">Page 1 of 815</span>
+							<span class="text-right p-right">
+								<a href="#" class="arr">«</a>
+								<a href="#">199</a>
+								<a href="#" class="current">200</a>
+								<a href="#">201</a>
+								<a href="#">202</a>
+								<a href="#">203</a>
+								<a href="#" class="arr">»</a>
+							</span>
+						</div>
+					</div>
+					<div class="action mr10">
+						<a href="#" class="btn orange">Post Reply</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-input reply-input">
+				<div class="legend">
+					<span>Quick Reply</span>
+				</div>
+				<form>
+					<fieldset>
+						<label class="r">
+							<span>Title</span>
+							<div class="in-txt">
+								<input type="text" autocorrect="off" spellcheck="false" autofocus="yes" required>
+							</div>
+						</label>
+						<label class="r">
+							<span>Body</span>
+							<div class="in-txt">
+								<textarea id="textArea" spellcheck="false" onKeyDown="countChars()" onKeyUp="countChars()" name="textArea" rows="7" value=""></textarea>
+								<div class="chr">
+									<input disabled size="3" value="10000" name="txtLen" id="txtLen">
+								</div>
+							</div>
+						</label>
+						<div class="r">
+							<div>
+								<div class="in-btn blue">
+									<input type="submit" value="Submit Reply">
+								</div>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+
+			<div id="more-like-this" class="bar">
+				<h2>More Like This</h2>
+				<a href="#" class="back-to-top">
+					<img src="../assets/img/arrow-top.png" height="10" width="10" alt="">
+				</a>
+				<ul>
+					<li><a href="#">1. Wanita Gila Seks Memaksa Supir Taxi Yang Ia Tumpangi Berhubungan Badan.</a></li>
+					<li><a href="#">2. Wanita Gila Seks Memaksa Supir Taxi Yang Ia Tumpangi Berhubungan Badan.</a></li>
+					<li><a href="#">3. Wanita Gila Seks Memaksa Supir Taxi Yang Ia Tumpangi Berhubungan Badan.</a></li>
+					<li><a href="#">4. Wanita Gila Seks Memaksa Supir Taxi Yang Ia Tumpangi Berhubungan Badan.</a></li>
+					<li><a href="#">5. Wanita Gila Seks Memaksa Supir Taxi Yang Ia Tumpangi Berhubungan Badan.</a></li>
+				</ul>
+			</div>
+
+			<div id="hot-threads" class="bar">
+				<h2>Hot Threads</h2>
+				<ul>
+					<li>
+						<a href="#">11 Sutradara Film Terbaik Dunia</a>
+					</li>
+					<li>
+						<a href="#">11 Film Teknologi Wajib Tonton</a>
+					</li>
+					<li>
+						<a href="#">Siap Bikin Heboh #HitsWithoutViolence ?</a>
+					</li>
+					<li>
+						<a href="#">Kumpulan Foto Jadul Seleb Hollywood</a>
+					</li>
+					<li>
+						<a href="#">2013, SNMPTN Ujian Tulis Akan Dihapuskan</a>
+					</li>
+					<li>
+						<a href="#">Ikutan KULKAS Yuk, Kuis Ala KASKUS</a>
+					</li>
+					<li>
+						<a href="#">Karikatur Lucu Puluhan Selebriti Dunia</a>
+					</li>
+				</ul>
+			</div>
+    		<div id="online-bazaar" class="bar">
+                <h2 class="nav-arrow" id="otherTitle" >More from Others</h2>
+                <ul class="item-list online-bazaar r" id="otherList">
+                    <li class="item-bazaar">
+                        <a href="#">
+                            <img src="../assets/img/kob1.png" alt="image">
+                            <div class="item-detail">
+                                <p class="name">11 Sutradara Film Terbaik Dunia</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../assets/img/kob2.png" alt="image" />
+                            <div class="item-detail">
+                                <p class="name">Siap Bikin Heboh #HitsWithoutViolence ?</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../assets/img/kob3.png" alt="image" />
+                            <div class="item-detail">
+                                <p class="name">2013, SNMPTN Ujian Tulis Akan Dihapuskan</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+			 <!-- NEWS LIST -->
+			<div id="news-partner-widget" class="bar">
+		        <h2>News</h2>
+
+		        <a href="#" class="back-to-top">
+					<img src="../assets/img/arrow-top.png" height="10" width="10" alt="">
+		        </a>
+
+		        <div class="tabnav">
+					<a id="tab-nav-news1" href="#" onclick="navTabs('tab-content-news1', 'tab-nav-news1'); return false;" class="current">Beritagar</a>
+					<span class="separator">|</span>
+					<a id="tab-nav-news2" href="#" onclick="navTabs('tab-content-news2', 'tab-nav-news2'); return false;">Metronews</a>
+					<span class="separator">|</span>
+					<a id="tab-nav-news3" href="#" onclick="navTabs('tab-content-news3', 'tab-nav-news3'); return false;">Liputan6</a>
+					<div class="clr"></div>
+		        </div>
+
+		        <div class="c-list">
+		          	<div class="bar">
+						<ul id="tab-content-news1" style="display: block;">
+							<li>
+								<a href="#">11 Sutradara Film Terbaik Dunia</a>
+							</li>
+							<li>
+								<a href="#">11 Film Teknologi Wajib Tonton</a>
+							</li>
+							<li>
+								<a href="#">Ikutan KULKAS Yuk, Kuis Ala KASKUS</a>
+							</li>
+							<li>
+								<a href="#">Karikatur Lucu Puluhan Selebriti Dunia</a>
+							</li>
+							<li>
+								<a href="#">Siap Bikin Heboh #HitsWithoutViolence ?</a>
+							</li>
+						</ul>
+						<ul id="tab-content-news2" style="display: none;">
+							<li>
+								<a href="#">2013, SNMPTN Ujian Tulis Akan Dihapuskan</a>
+							</li>
+							<li>
+								<a href="#">Ikutan KULKAS Yuk, Kuis Ala KASKUS</a>
+							</li>
+							<li>
+								<a href="#">Karikatur Lucu Puluhan Selebriti Dunia</a>
+							</li>
+							<li>
+								<a href="#">11 Sutradara Film Terbaik Dunia</a>
+							</li>
+							<li>
+								<a href="#">11 Film Teknologi Wajib Tonton</a>
+							</li>
+						</ul>
+		            	<ul id="tab-content-news3" style="display: none;">
+			            	<li>
+								<a href="#">11 Sutradara Film Terbaik Dunia</a>
+							</li>
+							<li>
+								<a href="#">11 Film Teknologi Wajib Tonton</a>
+							</li>
+							<li>
+								<a href="#">Siap Bikin Heboh #HitsWithoutViolence ?</a>
+							</li>
+							<li>
+								<a href="#">Kumpulan Foto Jadul Seleb Hollywood</a>
+							</li>
+							<li>
+								<a href="#">2013, SNMPTN Ujian Tulis Akan Dihapuskan</a>
+							</li>
+		            	</ul>
+		          	</div>
+		        </div>
+			</div>
+
+	    <!-- NEWS WITH IMAGE -->
+			<!-- <div id="news-partner-widget" class="bar">
+        <h2>News</h2>
+
+        <a href="#" class="back-to-top">
+          <img src="../assets/img/arrow-top.png" height="10" width="10" alt="">
+        </a>
+
+        <div class="tabnav">
+          <a id="tab-nav-news1" href="#" onclick="navTabs('tab-content-news1', 'tab-nav-news1'); return false;" class="current">Beritagar</a>
+          <span class="separator">|</span>
+          <a id="tab-nav-news2" href="#" onclick="navTabs('tab-content-news2', 'tab-nav-news2'); return false;">Metronews</a>
+          <span class="separator">|</span>
+          <a id="tab-nav-news3" href="#" onclick="navTabs('tab-content-news3', 'tab-nav-news3'); return false;">Liputan6</a>
+          <div class="clr"></div>
+        </div>
+
+        <div class="c-list">
+          <div class="bar">
+            <ul id="tab-content-news1" style="display: block;">
+            	<div class="r">
+								<div class="news-item c c-2">
+									<div class="news-item-wrapper">
+										<a href="">
+											<div class="news-thumb" style="background-image:url(img/potd1.png)"></div>
+											<h3>Laju Rupiah Masih Lemah Laju Rupiah Masih Lemah</h3>
+										</a>
+									</div>
+								</div>
+								<div class="news-item c c-2">
+									<div class="news-item-wrapper">
+										<a href="">
+											<div class="news-thumb" style="background-image:url(img/potd2.png)"></div>
+											<h3>Laju Rupiah Masih Lemah</h3>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="r">
+								<div class="news-item c c-2">
+									<div class="news-item-wrapper">
+										<a href="">
+											<div class="news-thumb" style="background-image:url(img/potd3.png)"></div>
+											<h3>Laju Rupiah Masih Lemah</h3>
+										</a>
+									</div>
+								</div>
+								<div class="news-item c c-2">
+									<div class="news-item-wrapper">
+										<a href="">
+											<div class="news-thumb" style="background-image:url(img/potd4.png)"></div>
+											<h3>Laju Rupiah Masih Lemah</h3>
+										</a>
+									</div>
+								</div>
+							</div>
+            </ul>
+            <ul id="tab-content-news2" style="display: none;">
+            	<div class="r">
+								<div class="news-item c c-2">
+									<div class="news-item-wrapper">
+										<a href="">
+											<div class="news-thumb" style="background-image:url(img/potd4.png)"></div>
+											<h3>Laju Rupiah Masih Lemah</h3>
+										</a>
+									</div>
+								</div>
+								<div class="news-item c c-2">
+									<div class="news-item-wrapper">
+										<a href="">
+											<div class="news-thumb" style="background-image:url(img/potd3.png)"></div>
+											<h3>Laju Rupiah Masih Lemah</h3>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="r">
+								<div class="news-item c c-2">
+									<div class="news-item-wrapper">
+										<a href="">
+											<div class="news-thumb" style="background-image:url(img/potd2.png)"></div>
+											<h3>Laju Rupiah Masih Lemah</h3>
+										</a>
+									</div>
+								</div>
+								<div class="news-item c c-2">
+									<div class="news-item-wrapper">
+										<a href="">
+											<div class="news-thumb" style="background-image:url(img/potd1.png)"></div>
+											<h3>Laju Rupiah Masih Lemah</h3>
+										</a>
+									</div>
+								</div>
+							</div>
+            </ul>
+            <ul id="tab-content-news3" style="display: none;">
+            	<div class="r">
+								<div class="news-item c c-2">
+									<div class="news-item-wrapper">
+										<a href="">
+											<div class="news-thumb" style="background-image:url(img/potd4.png)"></div>
+											<h3>Laju Rupiah Masih Lemah</h3>
+										</a>
+									</div>
+								</div>
+								<div class="news-item c c-2">
+									<div class="news-item-wrapper">
+										<a href="">
+											<div class="news-thumb" style="background-image:url(img/potd3.png)"></div>
+											<h3>Laju Rupiah Masih Lemah</h3>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="r">
+								<div class="news-item c c-2">
+									<div class="news-item-wrapper">
+										<a href="">
+											<div class="news-thumb" style="background-image:url(img/potd1.png)"></div>
+											<h3>Laju Rupiah Masih Lemah</h3>
+										</a>
+									</div>
+								</div>
+								<div class="news-item c c-2">
+									<div class="news-item-wrapper">
+										<a href="">
+											<div class="news-thumb" style="background-image:url(img/potd2.png)"></div>
+											<h3>Laju Rupiah Masih Lemah</h3>
+										</a>
+									</div>
+								</div>
+							</div>
+            </ul>
+          </div>
+        </div>
+    	</div> -->
+
+			<!-- NEWS TAB FUNCTION -->
+			<script>
+				var selected = 'tab-content-news1';
+				var selectedLink = 'tab-nav-news1';
+				function navTabs(a, id){
+					document.getElementById(selected).style.display = "none";
+					document.getElementById(a).style.display = "block";
+					document.getElementById(selectedLink).className = "";
+					document.getElementById(id).className = "current";
+					selected = a;
+					selectedLink = id;
+				}
+				navTabs(selected, selectedLink);
+			</script>
+
+			<div id="login" class="bar form-input">
+				<h2>KASKUS Sign In</h2>
+				<a href="#" class="back-to-top">
+					<img src="../assets/img/arrow-top.png" height="10" width="10" alt="">
+				</a>
+				<form>
+					<fieldset>
+						<label class="r">
+							<div class="c c-2">
+								<span>Username</span>
+							</div>
+							<div class="c c-2">
+								<div class="in-txt">
+									<input type="text" autocorrect="off" required>
+								</div>
+							</div>
+						</label>
+						<label class="r">
+							<div class="c c-2">
+								<span>Password</span>
+							</div>
+							<div class="c c-2">
+								<div class="in-txt">
+									<input type="password" autocorrect="off" required>
+								</div>
+							</div>
+						</label>
+						<div class="r">
+							<div class="in-btn c-1" style="margin-left:75%;">
+								<input type="submit" value="Sign in">
+							</div>
+						</div>
+
+						<div class="r">
+							<div class="c c-2">
+								<span>or Sign in with</span>
+							</div>
+							<div class="c c-2">
+								<ul class="social-media">
+									<li>
+										<a href="#">
+											<img src="../assets/img/mindtalk.png" height="19" width="19" alt="">
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="../assets/img/facebook.png" height="19" width="9" alt="">
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="../assets/img/twitter-login.png" height="14" width="17" alt="">
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<img src="../assets/img/google-plus.png" height="18" width="18" alt="">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+			<!-- <div id="pop-surprise-thread" class="modal c-modal--anniversary" >  
+		        <div class="modal-content o-modal--wrapper">
+		          <div class="o-modal--wrapper-inner">
+		            <div class="o-modal--decoration-1"></div>
+		            <div class="o-modal--decoration-2"></div>
+		            <div class="modal-header">
+		              <img src="../assets/images/anniv18/Asset-7.png" alt="Icon Anniversary">
+		              <span class="close">×</span>
+		            </div>
+		            <div class="o-modal--wrapper-secondary">
+		              <div class="modal-body text-center">
+		                <p class="o-main--title m-top-10">SELAMAT!!!</p>
+		                <p class="mb10">Agan berhasil menemukan Pop Surprise! Dalam 1x24 jam Agan akan mendapatkan:</p>
+		                <div class="c c-4 o-modal--info">
+		                  <div class="c c-2">
+		                    <img src="../assets/images/anniv18/Asset-4.png" alt="Icon Anniversary" />
+		                  </div>
+		                  <div class="c c-2 o-modal--highlight">
+		                    <b>Badge Eksklusif + 18 Poin Cendol</b>
+		                  </div>
+		                </div>
+		                <p class="mb10">Tunggu pengumuman pemenang <b>6 SMARTPHONE SAMSUNG - KASKUS EDITION</b> tanggal 07 November 2017 hanya di KASKUS!</p>
+		              </div>
+		              <div class="modal-footer text-center">
+		                <a class="btn btn-large btn-gradient mb10 close" href="">
+		                  LIHAT INFONYA
+		                </a>
+		              </div>
+		            </div>
+		            <div class="o-modal--footer mt5 clearfix">
+		              <span class="p-left o-modal--footer-right">(*untuk 6 Kaskuser Terpilih)</span>
+		              <span class="p-right o-modal--footer-left">kaskus.id</span>
+		            </div>
+		          </div>
+		        </div>
+		    </div> -->
+
+		
+<div class="c-footer">
+  <div class="notice p-all-10">
+    <div class="title-kn">Kirim info peristiwa menarik di sekitarmu ke (Chat Only)</div>
+    <!-- add more text here -->
+    <div class="notice-wrapper">
+      <a href="" class="notice-btn whatsapp">
+        <img src="../assets/images/icon-whatsapp-border.svg" alt="whatsapp-icon"/>
+        <strong>+628119KASKUS</strong>
+      </a>
+      <a href="" class="notice-btn k-chat">
+        <img src="../assets/images/icon-chat-white.svg" alt="chat-icon"/>
+        <strong>KASKUS.Update</strong>
+      </a>
+    </div>
+  </div>
+
+  <nav class="kaskusnetworks">
+    <div class="title-kn">CHANNELS</div>
+    <div class="list-kn">
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611291043150120.png" alt="kaskusnetworks-image"> </a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611291043400966.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611290202260804.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2017/01/11/4501355_201701110710070180.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2017/03/06/6498705_201703060945090923.png" alt="kaskusnetworks-image"></a>
+    </div>
+  </nav>
+
+  <footer id="site-footer">
+    <nav class="mb10">
+          <a href="#site-header">Kembali ke Atas</a>
+          <a href="http://kaskus.com">Versi Desktop</a>
+          <a href="http://kaskus.com">Nightmode</a>
+          <a href="http://kaskus.com">Image off</a>
+          <a href="#" class="out">Widget</a>
+          <a href="#" class="out">Hubungi Kami</a>
+          <a href="#" class="out">Keluar</a>
+    </nav>
+    <img src="../assets/img/banner1.jpg" height="250" width="300" alt="">
+    <small>&copy; 2017 Kaskus – The Largest Indonesian Community</small>
+  </footer>
+</div>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="../assets/js/header.js"></script>
+<script type="text/javascript" src="../assets/js/carousel.js"></script>
+<script type="text/javascript" src="../assets/js/scroll.js"></script>
+<script type="text/javascript">$(".m-carousel").carousel()</script>	</div>
+	<script type="text/javascript">
+		$( document ).ready(function() {
+			$("textarea.reply-post").on("keyup",function() {
+		        var textarea_value = $(this).closest(".reply-post").val();
+		        
+		        if(textarea_value != '') {
+		            $(this).parent().next().addClass("is-enabled").prop("disabled", false);
+		        } else {
+		            $(this).parent().next().removeClass("is-enabled").prop("disabled", true);
+		        }
+		    });
+
+			$(".o-btn--quote").click(function(){
+				$(this).closest(".entry").toggleClass("o-multi-quoted");
+			    if($(this).closest(".entry").hasClass("o-multi-quoted")) {
+		    		$(this).closest(".o-btn--quote").addClass("selected").removeClass("unselect");
+		    	}
+		    	else {
+		    		$(this).closest(".o-btn--quote").removeClass("selected").addClass("unselect");
+		    	}
+			});
+			$("a.c-reputation__item.up-vote").on( "click", function() {
+			    $(".jsCendol", this).toggleClass("is-cendol is-cendol-animate");
+			    $(".is-up-vote", this).toggleClass("is-active");
+			    $(".jsBata").addClass("is-bata").removeClass("is-bata-animate");
+			    $(".is-down-vote").removeClass("is-active");
+			});
+
+			$("a.c-reputation__item.down-vote").on( "click", function() {
+			    $(".jsBata", this).toggleClass("is-bata is-bata-animate");
+			    $(".is-down-vote", this).toggleClass("is-active");
+			    $(".jsCendol").addClass("is-cendol").removeClass("is-cendol-animate");
+				$(".is-up-vote").removeClass("is-active");
+			});
+		});
+
+		function textAreaAdjust(o) {
+		  	o.style.height = "1px";
+		  	o.style.height = (o.scrollHeight-30)+"px";
+		}
+
+		function spoiler(spoilerData)
+		{
+		   if (spoilerData.value == "Show")
+		   {
+		       $(".content_" + $(spoilerData).attr("class")).slideDown(0);
+		       spoilerData.innerHTML = "";
+		       spoilerData.value = "Hide";
+		   }
+		   else
+		   {
+		       $(".content_" + $(spoilerData).attr("class")).slideUp(0);
+		       spoilerData.innerHTML = "";
+		       spoilerData.value = "Show";
+		   }
+		}
+	</script>
+	<!-- <div id="c-on-boarding--modal" class="modal">
+		<div class="modal-content">
+			<div class="modal-header">
+				<span class="close">×</span>
+			</div>
+			<div class="modal-body">
+				<p>Sekarang Agan dapat mengedit thread, tambah polling dan subscribe thread disini!</p>
+			</div>
+		</div>
+	</div> -->
+
+	<script type="text/javascript" src="../assets/js/reveal-modal.js"></script>
+	<script type="text/javascript" src="../assets/js/more-menu.js"></script>
+	<!-- <script type="text/javascript">
+		$(document).ready(function () {
+	        moreComment = 'Lihat komentar lainnya';
+		 	$('.jsShowComment').click(function() {
+				$(".postlist__comment-nested").addClass("is-open");
+				if($(".postlist__comment-nested").hasClass("is-open"))
+				{
+					$(".postlist__comment-showmore").html(moreComment);
+				}
+			});   
+		});
+	</script> -->
+	
+	<!-- <script type="text/javascript">
+	      $(document).ready(function () {
+	        $('#pop-surprise-thread').show();
+	        $('body').addClass('o-hidden');
+	        
+	      });
+	      	var container = $("html,body");
+			var offsetTop = $("#first-post .c-showMoremenus").offset().top;
+			var isModalOpen = false;
+
+		    $("#c-on-boarding--modal").show();
+		    isModalOpen = true;
+		    $("body").addClass("o-hidden");
+	    	$("#c-on-boarding--modal").find(".modal-content").addClass("fixed");
+	    	container.animate({scrollTop: offsetTop - 50 - 50, scrollLeft: 0}, 5);
+	    	$("#first-post .c-showMoremenus").css( "z-index", "5005" );
+	    	$('#first-post > div.author > span > div.usr.position-r > span').addClass('onboarding');
+
+	    	$(window).click(function(){
+				if (isModalOpen) {
+					$("#first-post .c-showMoremenus").css( "z-index", "6" );
+					$('#first-post > div.author > span > div.usr.position-r > span').removeClass('onboarding');
+					isModalOpen = false;
+				}
+			});
+
+	        // $("#pop-surprise-thread").show();
+	        // $('body').addClass('o-hidden');
+      	});
+    </script> -->
+	<script type="text/javascript" src="js/nav-arrow.js"></script>
+	<script type="text/javascript" src="../assets/js/user-agent.js"></script>
+
+
+</body>
+
+</html>

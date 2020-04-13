@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="ID">
+
+<head>
+  <meta charset="UTF-8">
+  <title>M Framework</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, target-densitydpi=device-dpi" />
+  <link href="../assets/stylesheets/main.css" rel="stylesheet" type="text/css" media="all"/>
+  <!-- <link href="../assets/stylesheets/night.css" rel="stylesheet" type="text/css" media="all"/> -->
+  <link rel="apple-touch-icon-precomposed" href="../assets/img/apps_icon.png" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+</head>
+
+<body class="">
+  <div id="wrapper" style="background: white;" class="header-body">
+    <!-- FORUM NOTICE -->
+    <!-- <div class="nm nm-forum notice-app">
+      <a href="https://play.google.com/store/apps/details?id=com.kaskus.android&utm_source=kaskusmsite" target="_blank">
+        <img src="../assets/img/icon-notice-forum.png" class="left">
+      </a>
+      <div class="nm-title">
+        <span>KASKUS</span>
+        <a href="#" class="x">&times;</a>
+      </div>
+      <div>
+        <span>
+          <a href="https://play.google.com/store/apps/details?id=com.kaskus.android&utm_source=kaskusmsite" target="_blank">Get the App</a>
+        </span>
+        <span class="right">
+          <a href="https://play.google.com/store/apps/details?id=com.kaskus.android&utm_source=kaskusmsite" target="_blank">View in App</a>
+        </span>
+      </div>
+    </div> -->
+
+    <div class="jsTopHeader">
+      <div class="c-notice">
+        <div class="c-notice__wrapper">
+          <a href="">Gak Bisa Move On</a>
+        </div>
+      </div>
+      <!-- <div class="nm nm-forum notice-app">
+  <a href="" target="_blank">
+    <img src="../assets/img/icon-notice-forum.png" class="left">
+  </a>
+  <div class="nm-title">
+    <span>KASKUS</span>
+    <a href="#" class="x">&times;</a>
+  </div>
+
+  <div>
+    <span><a href="https://play.google.com/store/apps/details?id=com.kaskus.android&utm_source=kaskusmsite" target="_blank">Get the App</a></span>
+    <span class="right"><a href="https://play.google.com/store/apps/details?id=com.kaskus.android&utm_source=kaskusmsite" target="_blank">View in App</a></span>
+  </div>
+</div> -->
+
+<div class="c-panel--wrapper">
+  <div class="dis-inline-block p-left">
+    <img src="../assets/images/img-forum-app.png" class="c-panel--img" alt="images deep link forum app">
+    <!-- <img src="../assets/images/img-jb-app.png" class="c-panel--img" alt="images deep link jb app"> -->
+  </div>
+  <div class="dis-inline-block p-left">
+    <div class="c-panel--content-wrapper">
+      <div class="c-panel--content-head">
+        <span class="c-panel--content-head-title">KASKUS Forum App</span>
+      </div>
+      <div>
+        <span><a href="" class="btn blue btn-has-radius long20 mall0">Install</a></span>
+        <span><a href="" class="btn list-blue btn-has-radius long20 btn-app">View in App</a></span>
+      </div>
+    </div>
+  </div>
+  <div class="dis-inline-block p-right">
+    <a href="" class="c-panel--content-close">×</a>
+  </div>
+  <div class="clr"></div>
+</div>
+    </div>
+    
+    <div class="header-body-top-wrapper">
+      <div class="header-body-top-header">
+        <header id="site-header-main">
+          <div class="header-body-main-h">
+            <nav class="n">
+              <a href="#" class="header-body-kaskus-logo">
+                <img src="https://s.kaskus.id/themes_3.0/mobile/images/logo-n.svg" alt="">
+              </a>
+              <div class="header-text-button">
+                <a href="#" class="active-forum">Forum</a>
+                <a href="#" class="active-fjb">Jual Beli</a>
+                <a href="#" id="kk-bpl" class="premium"><img src="images/logo-sundul-eropa.png" alt=""></a>
+                <!-- <a href="#" class="premium"><img src="images/logo-sundul-eropa.png" alt=""></a> -->
+              </div>
+            </nav>
+            <nav class="right-nav login">
+              <a class="header-body-user-photo">
+                <div class="search-button">
+                  <img src="img/search-abu.png" alt="search-button" class="search-btn-img">
+                </div>
+              </a>
+              <!-- IF LOGGED IN -->
+
+              <span id="mobile-menu-btn" class="login_btn">
+                <a href="#" class="header-body-user-photo" onclick="toggleProfile();">
+                  <div class="photo-wrapper">
+                    <img src="https://s.kaskus.id/r30x30/user/avatar/2016/11/10/avatar9329691_1.gif" alt="user photo">
+                  </div>
+                  <div class="user-notice">99+</div>
+                </a>
+              </span>
+
+              <!-- IF NOT LOGGED IN -->
+              <!-- <span id="mobile-menu-btn" class="">
+                <a href="#" class="header-body-user-photo" onclick="toggleProfile();">
+                  Masuk
+                </a>
+              </span> -->
+            </nav>
+          </div>
+          <form role="search" action="/search" method="get" id="searchform">
+            <div class="search-space">
+              <div class="search-space__input">
+                <input id="global-search" type="text" placeholder="Cari di sini" name="q" autocomplete="off" autocorrect="off" spellcheck="false" required="" value="">
+                <a class="search-cancel-btn search-button">Batal</a>
+                <ul class="global-search-results" >
+                  <div id="history">
+                    <div class="results-title is-history">
+                      <span>Riwayat Pencarian</span>
+                      <span class="p-right is-remove-all">Hapus Semua</span>
+                    </div>
+                    <li><a href="#">Lorem Ipsum #1</a></li>
+                    <li><a href="#">Lorem Ipsum dolor sit amet #2</a></li>
+                    <li><a href="#">Lorem Ipsum mollit anim id #3</a></li>
+                    <li><a href="#">Lorem Ipsum nulla pariatur #4</a></li>
+                  </div>
+                  <div id="popular">
+                    <div class="results-title is-history">Pencarian Terpopuler</div>
+                    <li><a href="#">Lorem Ipsum #1</a></li>
+                    <li><a href="#">Lorem Ipsum dolor sit amet #2</a></li>
+                    <li><a href="#">Lorem Ipsum mollit anim id #3</a></li>
+                    <li><a href="#">Lorem Ipsum nulla pariatur #4</a></li>
+                  </div>
+                  <div id="forum">
+                    <div class="results-title is-forum">Forum</div>
+                    <li><a href="#">Lorem Ipsum #1<span>di The Lounge</span></a></li>
+                    <li><a href="#">Lorem Ipsum dolor sit amet #2<span>di The Lounge</span></a></li>
+                    <li><a href="#">Lorem Ipsum mollit anim id #3<span>di The Lounge</span></a></li>
+                    <li><a href="#">Lorem Ipsum nulla pariatur #4<span>di The Lounge</span></a></li>
+                  </div>
+                  <div id="jual-beli">
+                    <div class="results-title is-jb">Jual Beli</div>
+                    <li><a href="#">Lorem Ipsum #1<span>di The Lounge</span></a></li>
+                    <li><a href="#">Lorem Ipsum dolor sit amet #2<span>di The Lounge</span></a></li>
+                    <li><a href="#">Lorem Ipsum mollit anim id #3<span>di The Lounge</span></a></li>
+                    <li><a href="#">Lorem Ipsum nulla pariatur #4<span>di The Lounge</span></a></li>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </form>
+        </header>
+      </div>
+    </div>
+    <div class="header-body-add active">
+      <a href="#" class="pick-category" onclick="toggleCategory();">
+        <span>KATEGORI</span>
+        <img src="../assets/img/ic-right-white.png">
+      </a>
+      <span class="right-nav">
+        <a href="#" onclick="toggleCreate();">
+          <span class="user-notice">N</span>
+          <img height src="../assets/img/icon-pencil-edit-alt.png"> BUAT POST
+        </a>
+        <span class="nav-divider"></span>
+        <a href="">
+          <span class="user-notice user-notice-long">99+</span>
+          <img height="20" src="../assets/img/ic_chat_alt.png"/>
+        </a>
+        <span class="nav-divider"></span>
+        <a href="">
+          <span class="user-notice">12</span>
+          <img height="20" src="../assets/img/ic-cart-2.png">
+        </a>
+      </span>
+    </div>
+    <div class="below-add">
+      <div id="category-swipe">
+        <span hidden id="scroll-left" class="block-row block-row--left noselect">&lsaquo;</span>
+        <div id="nav-swipe" class="header-body-category active">
+          <div class="nav-category">
+            <a class="premium" href="">Plus</a>
+            <a class="premium" href="">KasAds</a>
+            <a class="premium" href="">ePulsa</a>
+            <a href="">News</a>
+            <a href="">Video</a>
+            <a href="">Komunitas</a>
+            <a href="">Plus</a>
+            <a href="">KasAds</a>
+            <a href="">ePulsa</a>
+            <a href="">News</a>
+            <a href="">Video</a>
+            <a href="">Komunitas</a>
+            <a href="">Plus</a>
+            <a href="">KasAds</a>
+            <a href="">ePulsa</a>
+            <a href="">News</a>
+            <a href="">Video</a>
+            <a href="">Komunitas</a>
+          </div>
+        </div>
+        <span id="scroll-right" class="block-row block-row--right noselect">&rsaquo;</span>
+      </div>
+      <div class="header-body-top-banner">
+        <a href="#">
+          <img src="../assets/img/ads_1.jpg">
+        </a>
+      </div>
+      <div id="hot_threads" class="bar revamp border-none">
+        <div class="header-body-hot-thread">
+          <i class="section__icon" style="background-image:url(../assets/img/layout/ic_hotdeals.png);"></i>
+          <span class="section__title">Hot Threads</span>
+        </div>
+        <div class="item-list hot-thread">
+          <div class="small-block-grid-2">
+            <div class="block-grid__item">
+              <a href="" class="grid__item">
+                <div class="item__image">
+                  <div class="image__photo">
+                    <img src="../assets/img/ht-banner-1.jpg" alt="img/ht-banner-1.jpg">
+                  </div>
+                </div>
+                <div class="item__description">
+                  <div class="item__title">Cara Mempromosikan Kentang Yang Kreatif</div>
+                </div>
+              </a>
+            </div>
+            <div class="block-grid__item">
+              <a href="" class="grid__item">
+                <div class="item__image">
+                  <div class="image__photo">
+                    <img src="../assets/img/ht-banner-2.jpg" alt="img/ht-banner-2.jpg">
+                  </div>
+                </div>
+                <div class="item__description">
+                  <div class="item__title">Museum Bawah Laut Yang Sangat Indah</div>
+                </div>
+              </a>
+            </div>
+            <div class="block-grid__item">
+              <a href="" class="grid__item">
+                <div class="item__image">
+                  <div class="image__photo">
+                    <img src="../assets/img/ht-banner-3.jpg" alt="img/ht-banner-3.jpg">
+                  </div>
+                </div>
+                <div class="item__description">
+                  <div class="item__title">Foto-foto Paus untuk Meperingati Hari Paus Sedunia</div>
+                </div>
+              </a>
+            </div>
+            <div class="block-grid__item">
+              <a href="" class="grid__item">
+                <div class="item__image">
+                  <div class="image__photo">
+                    <img src="../assets/img/ht-banner-4.jpg" alt="img/ht-banner-4.jpg">
+                  </div>
+                </div>
+                <div class="item__description">
+                  <div class="item__title">Rute Kereta Di Kanada Yang Sangat Ekstrim</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="search-overlay"></div>
+
+    <div id="category-list" hidden>
+      <div class="pick-category-list o-dialog">
+    <div class="pick-category-list__header">
+        <div class="o-toolbar row">
+            <h2 class="text-center">Kategori</h2>
+            <a href="#" class="btn btn-icon" onclick="toggleCategory();">&#215;</a>
+        </div>
+        <div class="tab-list">
+            <ul>
+                <li class="active-forum" id="forum-tab">Forum</li>
+                <li id="fjb-tab">Jual Beli</li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="Cari Kategori"/>
+            </div>
+        </div>
+    </div>
+    <div class="forum-category active">
+        <div class="list">
+            <div class="list__subscribe">
+                <img src="../assets/img/tag-orange.png" alt="">
+                <span>Subscribed Forum</span>
+            </div>
+            <!-- <div class="list__subscribe list__subscribe__disable">
+                <img src="../assets/img/tag-orange.png" alt="">
+                <span>Subscribed Forum</span>
+            </div> -->
+            <div class="list__item">
+                <div class="login"><span>Agan belum login. <br>Silakan <a href="">login</a> untuk subscribe forum.</span></div>
+                <ul>
+                    <!-- <li><a>The Lounge</a></li>
+                    <li><a>Indonesia</a></li>
+                    <li class="see-all"><a>Lihat Semua Subscribe...</a></li> -->
+                </ul>
+            </div>
+            <div class="list__section">
+                <span>A</span>
+            </div>
+            <div class="list__item">
+                <ul>
+                    <li><a href="#">All About Design</a></li>
+                    <li><a href="#">Anime & Manga Haven</a></li>
+                    <li><a href="#">Antik</a></li>
+                    <li><a href="#">All About Design</a></li>
+                    <li><a href="#">Anime & Manga Haven</a></li>
+                    <li><a href="#">Antik</a></li>
+                    <li><a href="#">All About Design</a></li>
+                    <li><a href="#">Anime & Manga Haven</a></li>
+                    <li><a href="#">Antik</a></li>
+                    <li><a href="#">All About Design</a></li>
+                    <li><a href="#">Anime & Manga Haven</a></li>
+                    <li><a href="#">Antik</a></li>
+                    <li><a href="#">All About Design</a></li>
+                    <li><a href="#">Anime & Manga Haven</a></li>
+                    <li><a href="#">Antik</a></li>
+                    <li><a href="#">All About Design</a></li>
+                    <li><a href="#">Anime & Manga Haven</a></li>
+                    <li><a href="#">Antik</a></li>
+                    <li><a href="#">All About Design</a></li>
+                    <li><a href="#">Anime & Manga Haven</a></li>
+                    <li><a href="#">Antik</a></li>
+                </ul>
+            </div>
+            <div class="list__section">
+                <span>B</span>
+            </div>
+            <div class="list__item">
+                <ul>
+                    <li><a href="#">Bisnis</a></li>
+                    <li><a href="#">Buku</a></li>
+                </ul>
+            </div>
+            <div class="list__section">
+                <span>C</span>
+            </div>
+            <div class="list__item">
+                <ul>
+                    <li><a href="#">Can You Solve This Game</a></li>
+                    <li><a href="#">Computer Stuff</a></li>
+                    <li><a href="#">Cooking & Resto Guide</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="list search-result">
+            <div class="list__item">
+                <ul>
+                    <li>No result</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="fjb-category">
+        <div class="list disappear">
+            <div class="list__subscribe">
+                <img src="../assets/img/tag-orange.png" alt="">
+                <span>Subsribed FJB</span>
+            </div>
+            <div class="list__item">
+                <ul>
+                    <li>Anime & Manga Heaven</li>
+                    <li>The Lounge</li>
+                    <li>Indonesia</li>
+                    <li class="see-all">Lihat Semua Subscribe...</li>
+                </ul>
+            </div>
+            <div class="list__section">
+                <span>A</span>
+            </div>
+            <div class="list__item">
+                <ul>
+                    <li><a href="#">Anime & Manga Heaven</a></li>
+                    <li><a href="#">Antik</a></li>
+                    <li><a href="#">Amerika</a></li>
+                    <li><a href="#">Asia</a></li>
+                    <li><a href="#">Antik</a></li>
+                    <li><a href="#">America</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="list search-result appear">
+            <div class="list__item">
+                <ul>
+                    <li><a href="#">No result</a></li>
+                    <li><a href="#">Pada</a></li>
+                    <li><a href="#">Suatu</a></li>
+                    <li><a href="#">Hari</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+
+    <div id="profile-login" hidden>
+      <div class="o-dialog" aria-hidden="false">		
+     <div class="o-toolbar row">		
+         <h2 class="text-center">Masuk KASKUS</h2>		
+         <a href="#" class="btn btn-icon" onclick="toggleProfile();">&#215;</a>		
+     </div>		
+     <div class="p-all-10 border-none profile-menu">
+    <form class="form-input border-none">
+        <label class="r">
+            <span>Username</span>
+            <div class="in-txt">
+                <input type="text" autocorrect="off" required>
+            </div>
+        </label>
+        <label class="r">
+            <span>Password</span>
+            <div class="in-txt">
+                <input type="password" autocorrect="off" required>
+            </div>
+        </label>
+        <div class="r">
+            <div class="in-btn btn-block">
+                <input type="submit" value="Sign in">
+            </div>
+            <span style="font-size: 12px;font-weight: 400;">
+                <a href="#" onclick="goToStep1()">
+                    <i>Forgot Password?</i>
+                </a>
+            </span>
+        </div>
+        <div class="r text-center mt30">
+            <i style="background-color: white; padding: 10px;">or sign in with</i>
+            <hr style="margin-top: -10px; margin-bottom: 20px;">
+            <ul class="social-media">
+                <li>
+                    <a href="#">
+                        <img src="../assets/img/facebook.png" height="19" width="9" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../assets/img/twitter-login.png" height="14" width="17" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../assets/img/google-plus.png" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="r text-center mt30">
+            Tidak punya akun? <a href="" class="reset-margin">Daftar</a>
+        </div>
+    </form>
+</div>		
+ -</div>       <div class="text-left o-dialog" aria-hidden="false">
+    <div class="o-toolbar row">
+        <h2 class="text-center">Profile</h2>
+        <a href="#" class="btn btn-icon" onclick="toggleProfile();">&#215;</a>
+    </div>
+    <ul class="border-none profile-menu">
+        <li>
+            <a href="#" class="user-photo">
+                <div class="photo-wrapper">
+                    <img src="../assets/img/kob1.png" alt="user photo">
+                </div>
+                <span>Zenk</span>
+            </a>
+        </li>
+        <li class="notice-plus">
+            <a href="#">
+                <img src="../assets/img/icon-kplus-grey.png" alt="" class="icon">
+                <span>Upgrade Akun ke Plus</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="../assets/img/icon-kplus-grey.png" alt="" class="icon">
+                <span>KASKUS Plus</span>
+                <h6>20-08-2016</h6>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="../assets/img/icon-rp-grey.png" alt="" class="icon">
+                <span>Saldo BranKas</span>
+                <h6>Rp. 1.250.000</h6>
+            </a>
+        </li>
+        <li class="">
+            <a href="#" class="">
+                <img src="../assets/img/icon-bell.png" alt="" class="icon">
+                <span>Notifications</span>
+                <span class="notif-count">99+</span>
+            </a>
+            <ul class="">
+                <li>
+                    <a href="">
+                        <span>New Private Message</span>
+                        <span class="notif-count">10</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span>New Visitor Message</span>
+                        <span class="notif-count">1</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span>Quoted Post</span>
+                    </a>
+                </li>
+                <li>
+                    <a href=""><span>Feedback</span>
+                        <span class="notif-count">9</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class=" close">
+            <a href="#" class="">
+                <img src="../assets/img/icon-bubble.png" alt="" class="icon">
+                <span>Forum Activities</span><span class="notif-new">New</span>
+            </a>
+        </li>
+        <li class=" close">
+            <a href="#" class="">
+                <img src="../assets/img/icon-basket.png" alt="" class="icon">
+                <span>Jual Beli Activities</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="../assets/img/icon-envelope.png" alt="" class="icon">
+                <span>Private Message</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="../assets/img/icon-gear.png" alt="" class="icon">
+                <span>Account Settings</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="../assets/img/icon-exit.png" alt="" class="icon">
+                <span>Sign Out</span>
+            </a>
+        </li>
+    </ul>
+</div>    </div>
+
+    <div id="create-list" hidden>
+      <div class="o-dialog">
+    <div class="o-toolbar row">
+        <h2 class="text-center">Buat Post</h2>
+        <a href="#" class="btn btn-icon" onclick="toggleCreate();">&#215;</a>
+    </div>
+    <ul class="create__list">
+        <li class="create__option">
+            <a href="#">
+                <div class="create__icon">
+                    <img src="../assets/img/ic-create-teks.png"/>
+                </div>
+                <div class="create__text">
+                    <h3>Tulis Thread</h3>
+                    <p>Ini adalah tempat untuk keterangan</p>
+                </div>
+            </a>
+        </li>
+        <li class="create__option">
+            <a href="#">
+                <div class="create__icon">
+                    <img src="../assets/img/ic-create-image.png"/>
+                </div>
+                <div class="create__text">
+                    <h3>Upload Gambar</h3>
+                    <p>Ini adalah tempat untuk keterangan</p>
+                </div>
+            </a>
+        </li>
+        <li class="create__option">
+            <a href="#">
+                <div class="create__icon">
+                    <img src="../assets/img/ic-create-video.png"/>
+                </div>
+                <div class="create__text">
+                    <h3>Upload Video <sup class="create__label">New!</sup></h3>
+                    <p>Ini adalah tempat untuk keterangan</p>
+                </div>
+            </a>
+        </li>
+        <li class="create__option">
+            <a href="#">
+                <div class="create__icon">
+                    <img src="../assets/img/ic-create-jual.png"/>
+                </div>
+                <div class="create__text">
+                    <h3>Mulai Berjualan</h3>
+                    <p>Ini adalah tempat untuk keterangan</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>    </div>
+
+  <!-- <div id="hot_threads" class="bar revamp border-none">
+    <div class="header-body-hot-thread fjb">
+      <div class="hot-thread-list fjb">
+        <div class="hot-thread-item">
+          <a href="#">Harbolnas Live in KASKUS</a>
+        </div>
+        <div class="hot-thread-item">
+          <a href="#">Harbolnas Promo</a>
+        </div>
+        <div class="hot-thread-item">
+          <a href="#">Ini yang Agan Cari</a>
+        </div>
+        <div class="hot-thread-item">
+          <a href="#">Adalagi Diskon di Matahari Store</a>
+        </div>
+        <div class="hot-thread-item">
+          <a href="#">Mau Keren Ala Artis</a>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  
+<div class="c-footer">
+  <div class="notice p-all-10">
+    <div class="title-kn">Kirim info peristiwa menarik di sekitarmu ke (Chat Only)</div>
+    <!-- add more text here -->
+    <div class="notice-wrapper">
+      <a href="" class="notice-btn whatsapp">
+        <img src="../assets/images/icon-whatsapp-border.svg" alt="whatsapp-icon"/>
+        <strong>+628119KASKUS</strong>
+      </a>
+      <a href="" class="notice-btn k-chat">
+        <img src="../assets/images/icon-chat-white.svg" alt="chat-icon"/>
+        <strong>KASKUS.Update</strong>
+      </a>
+    </div>
+  </div>
+
+  <nav class="kaskusnetworks">
+    <div class="title-kn">CHANNELS</div>
+    <div class="list-kn">
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611291043150120.png" alt="kaskusnetworks-image"> </a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611291043400966.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611290202260804.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2017/01/11/4501355_201701110710070180.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2017/03/06/6498705_201703060945090923.png" alt="kaskusnetworks-image"></a>
+    </div>
+  </nav>
+
+  <footer id="site-footer">
+    <nav class="mb10">
+          <a href="#site-header">Kembali ke Atas</a>
+          <a href="http://kaskus.com">Versi Desktop</a>
+          <a href="http://kaskus.com">Nightmode</a>
+          <a href="http://kaskus.com">Image off</a>
+          <a href="#" class="out">Widget</a>
+          <a href="#" class="out">Hubungi Kami</a>
+          <a href="#" class="out">Keluar</a>
+    </nav>
+    <img src="../assets/img/banner1.jpg" height="250" width="300" alt="">
+    <small>&copy; 2017 Kaskus – The Largest Indonesian Community</small>
+  </footer>
+</div>
+  </div>
+</body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="../assets/js/header.js"></script>
+<script type="text/javascript" src="../assets/js/carousel.js"></script>
+<script type="text/javascript" src="../assets/js/scroll.js"></script>
+<script type="text/javascript">$(".m-carousel").carousel()</script>

@@ -1,0 +1,363 @@
+@keyframes lanternMove {
+  0% {
+    transform: translateY(-200px); }
+  30% {
+    transform: translateY(0); }
+  70% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(-200px); } }
+
+@keyframes angryguyMove {
+  0% {
+    transform: translateX(0) translateY(-1000px); }
+  30% {
+    transform: translateX(0) translateY(0); }
+  70% {
+    transform: translateX(0) translateY(0); }
+  100% {
+    transform: translateX(-500px) translateY(0); } }
+
+@keyframes dustMove {
+  0% {
+    opacity: 0;
+    transform: scale(0.9); }
+  27% {
+    opacity: 0;
+    transform: scale(0.9); }
+  40% {
+    opacity: 1;
+    transform: scale(1.1); }
+  60% {
+    opacity: 0;
+    transform: scale(0.9); }
+  100% {
+    opacity: 0;
+    transform: scale(0.9); } }
+
+@keyframes dustSmallLeftMove {
+  0% {
+    opacity: 0;
+    transform: scale(1) translateX(0); }
+  27% {
+    opacity: 0;
+    transform: scale(1) translateX(0); }
+  40% {
+    opacity: 1;
+    transform: scale(1.1) translateX(-20px); }
+  60% {
+    opacity: 0;
+    transform: scale(1.1) translateX(-40px); }
+  100% {
+    opacity: 0;
+    transform: scale(1.1) translateX(-40px); } }
+
+@keyframes dustSmallRightMove {
+  0% {
+    opacity: 0;
+    transform: scaleX(-1) scale(1) translateX(0); }
+  27% {
+    opacity: 0;
+    transform: scaleX(-1) scale(1) translateX(0); }
+  40% {
+    opacity: 1;
+    transform: scaleX(-1) scale(1.1) translateX(-20px); }
+  60% {
+    opacity: 0;
+    transform: scaleX(-1) scale(1, 1) translateX(-40px); }
+  100% {
+    opacity: 0;
+    transform: scaleX(-1) scale(1) translateX(-40px); } }
+
+@keyframes blueguyMove {
+  0% {
+    transform: translateX(500px); }
+  30% {
+    transform: translateX(0); }
+  70% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(500px); } }
+
+@keyframes bedugMove {
+  0% {
+    background-position: 0; }
+  100% {
+    background-position: -256px; } }
+
+@keyframes leavesLeftMove {
+  0% {
+    transform: translateX(-200px) translateY(200px) scale(0.2); }
+  30% {
+    transform: translateX(-13px) translateY(17px) scale(1); }
+  70% {
+    transform: translateX(-13px) translateY(17px) scale(1); }
+  100% {
+    transform: translateX(-200px) translateY(200px) scale(0.2); } }
+
+@keyframes leavesRightMove {
+  0% {
+    transform: translateX(200px) translateY(200px) scale(0.2) scaleX(-1); }
+  30% {
+    transform: translateX(13px) translateY(17px) scale(1) scaleX(-1); }
+  70% {
+    transform: translateX(13px) translateY(17px) scale(1) scaleX(-1); }
+  100% {
+    transform: translateX(200px) translateY(200px) scale(0.2) scaleX(-1); } }
+
+@keyframes textImsakMove {
+  0% {
+    transform: scale(1.5);
+    opacity: 0.5; }
+  15% {
+    transform: scale(4);
+    opacity: 1; }
+  30% {
+    transform: scale(3.5);
+    opacity: 0; }
+  100% {
+    transform: scale(0.5);
+    opacity: 0; } }
+
+@keyframes textKunciAmarahMove {
+  0% {
+    transform: scale(0.8);
+    opacity: 0; }
+  30% {
+    transform: scale(0.8);
+    opacity: 0; }
+  45% {
+    transform: scale(1.1);
+    opacity: 1; }
+  60% {
+    transform: scale(1.3);
+    opacity: 0; }
+  100% {
+    transform: scale(0.9);
+    opacity: 0; } }
+
+@keyframes textSelamatPuasaMove {
+  0% {
+    transform: scale(0.7);
+    opacity: 0; }
+  60% {
+    transform: scale(0.7);
+    opacity: 0; }
+  85% {
+    transform: scale(1.2);
+    opacity: 1; }
+  100% {
+    transform: scale(1.2);
+    opacity: 0; } }
+
+@keyframes textBedugMove {
+  0% {
+    transform: translateX(404px); }
+  60% {
+    transform: translateX(-904px); }
+  100% {
+    transform: translateX(-904px); } }
+
+@keyframes textBukaMove {
+  0% {
+    transform: scale(0.9);
+    opacity: 0; }
+  60% {
+    transform: scale(0.9);
+    opacity: 0; }
+  80% {
+    transform: scale(1.2);
+    opacity: 1; }
+  100% {
+    transform: scale(1.2);
+    opacity: 0; } }
+
+.ramadhanCanvas {
+  overflow: hidden;
+  width: 300px;
+  height: 402px;
+  position: relative; }
+  .ramadhanCanvas .ramadhanObject-lantern {
+    animation-name: lanternMove;
+    animation-duration: 7s;
+    animation-iteration-count: infinite; }
+  .ramadhanCanvas .ramadhanObject-leaves-left {
+    animation-name: leavesLeftMove;
+    animation-duration: 7s;
+    animation-iteration-count: infinite; }
+  .ramadhanCanvas .ramadhanObject-leaves-right {
+    animation-name: leavesRightMove;
+    animation-duration: 7s;
+    animation-iteration-count: infinite; }
+  .ramadhanCanvas .ramadhanObject-angryguy {
+    animation-name: angryguyMove;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; }
+  .ramadhanCanvas .ramadhanObject-blueguy {
+    animation-name: blueguyMove;
+    animation-duration: 7s;
+    animation-iteration-count: infinite; }
+  .ramadhanCanvas .ramadhanObject-dust {
+    animation-name: dustMove;
+    animation-duration: 7s;
+    animation-iteration-count: infinite; }
+  .ramadhanCanvas .ramadhanObject-dustSmall-left {
+    animation-name: dustSmallLeftMove;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; }
+  .ramadhanCanvas .ramadhanObject-dustSmall-right {
+    animation-name: dustSmallRightMove;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; }
+  .ramadhanCanvas .ramadhanObject-textImsak {
+    animation-name: textImsakMove;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; }
+  .ramadhanCanvas .ramadhanObject-textKunciAmarah {
+    animation-name: textKunciAmarahMove;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; }
+  .ramadhanCanvas .ramadhanObject-bedug {
+    animation: bedugMove 0.8s steps(2) infinite; }
+  .ramadhanCanvas .ramadhanObject-textBedug {
+    animation-name: textBedugMove;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; }
+  .ramadhanCanvas .ramadhanObject-textSelamatPuasa {
+    animation-name: textSelamatPuasaMove;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; }
+  .ramadhanCanvas .ramadhanObject-textBuka {
+    animation-name: textBukaMove;
+    animation-duration: 7s;
+    animation-iteration-count: infinite; }
+
+.ramadhanObject-bg {
+  position: absolute;
+  background-image: url(../images/bg-plain.png);
+  width: 303px;
+  height: 404px; }
+
+.ramadhanObject-gate {
+  position: absolute;
+  background-image: url(../images/image-gate.png);
+  width: 301px;
+  height: 404px; }
+
+.ramadhanObject-lantern {
+  position: absolute;
+  background-image: url(../images/image-lantern.png);
+  width: 201px;
+  height: 125px;
+  left: 50px; }
+
+.ramadhanObject-dust {
+  position: absolute;
+  background-image: url(../images/image-dust.png);
+  width: 79px;
+  height: 44px;
+  left: 73px;
+  bottom: 35px; }
+
+.ramadhanObject-dustSmall {
+  position: absolute;
+  background-image: url(../images/image-dustSmall.png);
+  width: 67px;
+  height: 28px; }
+  .ramadhanObject-dustSmall-left {
+    bottom: 35px;
+    left: 40px; }
+  .ramadhanObject-dustSmall-right {
+    bottom: 35px;
+    left: 110px;
+    transform: scaleX(-1); }
+
+.ramadhanObject-blueguy {
+  position: absolute;
+  background-image: url(../images/image-blueguy.png);
+  width: 45px;
+  height: 75px;
+  right: 80px;
+  bottom: 41px; }
+
+.ramadhanObject-bedug {
+  position: absolute;
+  background-image: url(../images/image-bedug.png);
+  width: 128px;
+  height: 75px;
+  right: 80px;
+  bottom: 41px; }
+
+.ramadhanObject-angryguy {
+  position: absolute;
+  background-image: url(../images/image-angryguy.png);
+  width: 129px;
+  height: 89px;
+  left: 47px;
+  bottom: 40px; }
+
+.ramadhanObject-textImsak {
+  position: absolute;
+  background-image: url(../images/image-imsak.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 56px;
+  height: 18px;
+  left: 120px;
+  top: 150px; }
+
+.ramadhanObject-textKunciAmarah {
+  position: absolute;
+  background-image: url(../images/image-kunciamarah.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 182px;
+  height: 59px;
+  left: 60px;
+  top: 150px; }
+
+.ramadhanObject-textSelamatPuasa {
+  position: absolute;
+  background-image: url(../images/image-selamatpuasa.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 205px;
+  height: 31px;
+  left: 50px;
+  top: 150px; }
+
+.ramadhanObject-leaves {
+  position: absolute;
+  background-image: url(../images/image-leaves.png);
+  width: 92px;
+  height: 166px; }
+  .ramadhanObject-leaves-left {
+    left: 0;
+    bottom: 0; }
+  .ramadhanObject-leaves-right {
+    right: 0;
+    bottom: 0;
+    transform: scaleX(-1); }
+
+.ramadhanObject-textBedug {
+  position: absolute;
+  background-image: url(../images/image-duk.svg);
+  background-repeat: repeat-x;
+  width: 900px;
+  height: 61px;
+  top: 120px; }
+
+.ramadhanObject-textBuka {
+  position: absolute;
+  background-image: url(../images/image-buka.svg);
+  width: 129px;
+  height: 58px;
+  top: 150px;
+  right: 82px; }

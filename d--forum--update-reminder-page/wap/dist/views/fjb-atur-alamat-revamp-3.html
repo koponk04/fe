@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ID">
+
+<head>
+  <meta charset="UTF-8">
+  <title>M Framework</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, target-densitydpi=device-dpi" />
+  <link href="../assets/stylesheets/main.css" rel="stylesheet" type="text/css" media="all"/>
+  <!-- <link href="../assets/stylesheets/night.css" rel="stylesheet" type="text/css" media="all"/> -->
+  <link rel="apple-touch-icon-precomposed" href="../assets/img/apps_icon.png" />
+  <script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+</head>
+<body class="fjb">
+  <div id="wrapper" style="background:white;">
+    <div class="top-header">
+        <!-- FJB NOTICE -->
+      <div class="nm nm-forum notice-app">
+        <a href="" target="_blank">
+          <img src="../assets/img/icon-notice-fjb.png" class="left">
+        </a>
+        <div class="nm-title">
+          <span>KASKUS</span>
+          <a href="#" class="x">&times;</a>
+        </div>
+        <div>
+          <span><a href="https://play.google.com/store/apps/details?id=com.kaskus.android&utm_source=kaskusmsite" target="_blank">Get the App</a></span>
+          <span class="right"><a href="https://play.google.com/store/apps/details?id=com.kaskus.android&utm_source=kaskusmsite" target="_blank">View in App</a></span>
+        </div>
+      </div>
+      <header id="site-header" class="" style="box-shadow: none!important; -webkit-box-shadow: none!important;">
+        <div class="main-hr r">
+          <nav class="n">
+            <a href="#" class="logo">
+              <img src="../assets/img/logo.png" height="30" width="30" alt="">
+            </a>
+            <a href="#" id="kk-forum">Forum</a>
+            <a href="#" id="kk-fjb">Jual Beli</a>
+            <a href="#" id="kk-premium">Premium</a>
+           <!--  <a href="#" id="kk-mataharimall"><img src="../assets/img/logo-mataharimall.png" alt=""></a> -->
+          </nav>
+          <nav class="u">
+            <!--USER NOT LOGGED IN-->
+            <!--<span id="mobile-menu-btn" class="login_btn">
+              <a href="https://fjb.m.kaskus.co.id/user/menu">
+                <div class="" style="color: rgb(0,115,183);">Masuk</div>
+                <!--<div class="user-notice">6</div>
+              </a>
+            </span>-->
+            <!--USER LOGGED IN-->
+            <span id="mobile-menu-btn" class="login_btn">
+              <a href="#" class="user-photo">
+                  <div class="user-photo-wrapper">
+                      <img src="../assets/img/kob1.png" alt="user photo">
+                  </div>
+                <div class="user-notice">99+</div>
+              </a>
+            </span>
+          </nav>
+        </div>
+      </header>
+    </div>
+
+      <!-- if notice install apps is closed & user not logged in -->
+      <!-- <div id="main" class="p-top-68" role="main"> -->
+
+      <!-- if notice install apps is closed & user is logged in -->
+      <!-- <div id="main" class="p-top-40" role="main"> -->
+      <div id="main" role="main" class="p-top-50">
+      <div class="main-hr r">
+        <form action="" name="" method="" class="category-menu-filter">
+          <div class="r relative p-7">
+            <div class="c c-4">
+              <input class="search-category" type="text" id="filter-cat" placeholder="Cari di sini">
+            </div>
+          </div>
+          <div class="c c-1">
+            <div class="search-icon">
+              <input class="search-txt" type="submit" value="Search">
+            </div>
+          </div>
+        </form>
+      </div>
+      
+      <div class="fjb-header">
+        <ul class="fjb-breadcrumbs">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Jual Beli</a></li>
+  <li><a href="#">Categories</a></li>
+  <li>Current Category</li>
+</ul>        <h1>Alamat Baru</h1>
+      </div>
+
+      <form class="r pall10 c-form">
+    <div class="c-form__field c-form__field--required">
+        <label class="c-form__field-name">Label Alamat</label>
+        <div class="o-input">
+            <input type="text" placeholder="Isi Label Alamat"/>
+        </div>
+    </div>
+    <div class="c-form__field c-form__field--required">
+        <label class="c-form__field-name">Nama</label>
+        <div class="o-input">
+            <input type="text" placeholder="Isi Nama"/>
+        </div>
+    </div>
+    <div class="c-form__field c-form__field--required">
+        <label class="c-form__field-name">Nomor Handphone</label>
+        <div class="o-input">
+            <input type="text" placeholder="Isi Handphone"/>
+        </div>
+    </div>
+    <div class="c-form__field c-form__field--required">
+        <label class="c-form__field-name">Alamat</label>
+        <div class="o-input">
+            <textarea placeholder="Isi Alamat Pengirim"></textarea>
+        </div>
+    </div>
+    <div class="c-form__field c-form__field--required">
+        <label class="c-form__field-name">Provinsi</label>
+        <div class="o-input o-input--select">
+            <select>
+                <option>Pilih Provinsi</option>
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+            </select>
+        </div>
+    </div>
+    <div class="c-form__field c-form__field--required">
+        <label class="c-form__field-name">Kota/Kabupaten</label>
+        <div class="o-input o-input--select">
+            <select>
+                <option>Pilih Kota/Kabupaten</option>
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+            </select>
+        </div>
+    </div>
+    <div class="c-form__field c-form__field--required">
+        <label class="c-form__field-name">Kecamatan</label>
+        <div class="o-input o-input--select">
+            <select>
+                <option>Pilih Kecamatan</option>
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+            </select>
+        </div>
+    </div>
+    <div class="c-form__field c-form__field--required">
+        <label class="c-form__field-name">Kode Pos</label>
+        <div class="o-input">
+            <input type="text" placeholder="Contoh: 12550"/>
+        </div>
+    </div>
+    <div class="c-form__field">
+        <div class="o-checkbox o-checkbox--jb">
+            <input id="cb-address" type="checkbox" value="1"/>
+            <label for="cb-address">Jadikan alamat utama</label>
+        </div>
+    </div>
+    <hr class="mb10">
+    <div class="c-form__field">
+        <label for="lat-lng" class="c-form__field-name">Lokasi Pengiriman</label>
+        <div class="row">
+            <input id="lat-lng" type="hidden"/>
+            <div class="row">
+                <div class="pull-left mr10">
+                    <i class="fa fa-map-marker fa-lg green"></i>
+                </div>
+                <p id="address" class="pull-left">
+                    Jl. Ultramen no.1 Pejaten,<br>
+                    Pasar Minggu
+                </p>
+                <button type="button" class="btn btn-link pull-right" onclick="showLocationPicker();">
+                    <i class="fa fa-edit fa-lg"></i>Ubah
+                </button>
+            </div>
+            <button type="button" class="btn btn__full list-teal mall0" onclick="showLocationPicker();">
+                <i class="fa fa-map-marker fa-lg"></i>
+                <span>Pilih Tujuan Pengiriman Dalam Peta</span>
+            </button>
+        </div>
+    </div>
+    <button type="submit"class="btn btn__full teal mt30">Simpan</button>
+</form>
+      <dialog id="overlay-map" class="c-dialog c-dialog--overlay c-overlay">
+        <div class="c-overlay__toolbar">
+          <button onclick="KaskusDialog.hideDialog();"><i class="fa fa-chevron-left"></i></button>
+          <h1>Lokasi Pengiriman</h1>
+        </div>
+        <div class="c-overlay__content">
+          <div id="kk-map" class="c-map" style="height: 100%;">Loading map...</div>
+        </div>
+      </dialog>
+      
+      
+<div class="c-footer">
+  <div class="notice p-all-10">
+    <div class="title-kn">Kirim info peristiwa menarik di sekitarmu ke (Chat Only)</div>
+    <!-- add more text here -->
+    <div class="notice-wrapper">
+      <a href="" class="notice-btn whatsapp">
+        <img src="../assets/images/icon-whatsapp-border.svg" alt="whatsapp-icon"/>
+        <strong>+628119KASKUS</strong>
+      </a>
+      <a href="" class="notice-btn k-chat">
+        <img src="../assets/images/icon-chat-white.svg" alt="chat-icon"/>
+        <strong>KASKUS.Update</strong>
+      </a>
+    </div>
+  </div>
+
+  <nav class="kaskusnetworks">
+    <div class="title-kn">CHANNELS</div>
+    <div class="list-kn">
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611291043150120.png" alt="kaskusnetworks-image"> </a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611291043400966.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611290202260804.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2017/01/11/4501355_201701110710070180.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2017/03/06/6498705_201703060945090923.png" alt="kaskusnetworks-image"></a>
+    </div>
+  </nav>
+
+  <footer id="site-footer">
+    <nav class="mb10">
+          <a href="#site-header">Kembali ke Atas</a>
+          <a href="http://kaskus.com">Versi Desktop</a>
+          <a href="http://kaskus.com">Nightmode</a>
+          <a href="http://kaskus.com">Image off</a>
+          <a href="#" class="out">Widget</a>
+          <a href="#" class="out">Hubungi Kami</a>
+          <a href="#" class="out">Keluar</a>
+    </nav>
+    <img src="../assets/img/banner1.jpg" height="250" width="300" alt="">
+    <small>&copy; 2017 Kaskus – The Largest Indonesian Community</small>
+  </footer>
+</div>
+      <script src="../assets/js/util.js"></script>
+<script src="../assets/js/dialog.js"></script>
+<script src="../assets/js/map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFrD3vuTQ_GDDaD31NW21Bg4vSrJzhZi8&libraries=places" async defer></script>      <script>
+        function showLocationPicker() {
+          KaskusDialog.showDialog('overlay-map');
+
+          var mapContainer = $('#kk-map')[0];
+          var locationPicker = new KaskusMap(mapContainer);
+          locationPicker.setLocation({ address: 'Plaza Festival' });
+          locationPicker.setOnSelectedListener(onLocationSelected);
+          locationPicker.init();
+        }
+
+        function onLocationSelected(location) {
+          var inputHidden = $('#lat-lng');
+          var locationText = $('#address');
+
+          inputHidden.val('' + location.latLng.lat + ';' + location.latLng.lng);
+          locationText.html(location.address.split(',').join('<br>'));
+          KaskusDialog.hideDialog();
+        }
+      </script>
+  </div>
+</body>
+
+</html>

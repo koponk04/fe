@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="ID">
+
+<head>
+  <meta charset="UTF-8">
+  <title>M Framework</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, target-densitydpi=device-dpi" />
+  <link href="../assets/stylesheets/main.css" rel="stylesheet" type="text/css" media="all"/>
+  <!-- <link href="../assets/stylesheets/night.css" rel="stylesheet" type="text/css" media="all"/> -->
+  <link rel="apple-touch-icon-precomposed" href="../assets/img/apps_icon.png" />
+  <script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+</head>
+<body class="forum">
+	<div id="wrapper" style="background:white;">
+		<header id="site-header">
+			<div class="main-h r">
+				<div class="c c-3">
+					<nav class="n">
+						<a href="#" class="logo">
+							<img src="../assets/img/logo.png" height="30" width="30" alt="">
+						</a>
+						<a href="#" id="kk-forum">Forum</a>
+						<a href="#" id="kk-fjb" class="current">Jual Beli</a>
+					</nav>
+				</div>
+				<div class="c c-1">
+					<nav class="u">
+						<a href="#">Sign In</a>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+		<div id="main" role="main">
+			<div id="search">
+				<form>
+					<div class="r"><div class="c c-3"><div class="in-txt"><input type="text" placeholder="cari disini" name="q" autocorrect="off" spellcheck="false" required=""></div></div><div class="c c-1"><div class="in-btn"><input type="submit" value="Search"></div></div></div>
+				</form>
+			</div>
+
+			<div>
+				<ul class="trending-search">
+					<li><strong>TRENDING : </strong></li>
+					<li><a href="#">Travel Adapter</a></li>
+					<li><a href="#">Hard Case</a></li>
+					<li><a href="#">Xiao Mi Yi</a></li>
+					<li><a href="#">Samsung</a></li>
+					<li><a href="#">Lenovo</a></li>
+					<li><a href="#">Iphone6</a></li>
+					<li><a href="#">PS4</a></li>
+					<li><a href="#">HTC</a></li>
+					<li><a href="#">Macbook Pro</a></li>
+					<li><a href="#">Smartwatch</a></li>
+				</ul>
+			</div>
+			<div class="ads-b">
+				<img src="../assets/img/banner_ads.gif" alt="" height="50">
+			</div>
+			<div class="button__group">
+				<div class="r">
+					<div class="c c-4">
+						<div class="small-block-grid-1">
+							<div class="block-grid__item">
+								<div class="button__wrappper">
+									<a href="#" class="btn__full btn--orange">Categories</a>
+								</div>
+							</div>
+							<div class="block-grid__item">
+								<div class="button__wrappper">
+									<button type="button" class="btn__full btn--green">Start Selling</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="highlight-slider">
+				<div class="slider-item">
+					<a href="#">
+						<img class="banner_image" src="../assets/img/banner_landing1.jpg">
+					</a>
+				</div>
+				<div class="slider-item">
+					<a href="#">
+						<img class="banner_image" src="../assets/img/banner_landing2.jpg">
+					</a>
+				</div>
+				<div class="slider-item">
+					<a href="#">
+						<img class="banner_image" src="../assets/img/banner_landing3.jpg">
+					</a>
+				</div>
+			</div>
+            <div id="hot_reviews" class="bar revamp">
+            	<h2 class="nav-arrow">
+					<i class="section__icon" style="background-image:url(img/layout/ic_hot_reviews.png);"></i>
+            		<span class="section__title">Hot Reviews</span>
+	                <div class="control">
+	                    <div class="page">
+	                        <b id="page-selectedhotreviews">1 </b>/ 2
+	                    </div>
+	                    <div class="pagination">
+	                        <a href="#" onClick="javascript:showNextPrev('hotreviews',false);return false;" class="arrow left">&#10094;</a>
+	                        <a href="#" onClick="javascript:showNextPrev('hotreviews',true);return false;" class="arrow right">&#10095;</a>
+	                    </div>
+	                </div>
+	            </h2>
+	            <div class="item-list hotreviews" id="item-listhotreviews1">
+	                <div class="small-block-grid-2">
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+								</div>
+								<div class="item__description">
+									<div class="item__title">Daniel Wellington Watch</div>
+									<div class="description__content">Tampil trendy dengan jam tangan yang cocok buat untuk semua orang</div>
+								</div>
+							</div>
+						</div>
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+								</div>
+								<div class="item__description">
+									<div class="item__title">iPhone 6s</div>
+									<div class="description__content">Tampil trendy dengan jam tangan yang cocok buat untuk semua orang</div>
+								</div>
+							</div>
+						</div>
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+								</div>
+								<div class="item__description">
+									<div class="item__title">Nike Shoes Roshe</div>
+									<div class="description__content">Pas untuk Agan yang ingin tampil tetap trendy</div>
+								</div>
+							</div>
+						</div>
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+								</div>
+								<div class="item__description">
+									<div class="item__title">Magnum Ice Cream</div>
+									<div class="description__content">Ada yang baru dari Magnum classic</div>
+								</div>
+							</div>
+						</div>
+					</div>
+	            </div>
+	            <div class="item-list hotreviews" id="item-listhotreviews2" style="display:none;">
+	                <div class="small-block-grid-2">
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+								</div>
+								<div class="item__description">
+									<div class="item__title">Danielo Wellington Watch</div>
+									<div class="description__content">Tampil trendy dengan jam tangan yang cocok buat untuk semua orang</div>
+								</div>
+							</div>
+						</div>
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+								</div>
+								<div class="item__description">
+									<div class="item__title">iPhone 6s</div>
+									<div class="description__content">Tampil trendy dengan jam tangan yang cocok buat untuk semua orang</div>
+								</div>
+							</div>
+						</div>
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+								</div>
+								<div class="item__description">
+									<div class="item__title">Nike Shoes Roshe</div>
+									<div class="description__content">Pas untuk Agan yang ingin tampil tetap trendy</div>
+								</div>
+							</div>
+						</div>
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+								</div>
+								<div class="item__description">
+									<div class="item__title">Magnum Ice Cream</div>
+									<div class="description__content">Ada yang baru dari Magnum classic</div>
+								</div>
+							</div>
+						</div>
+					</div>
+	            </div>
+	        </div>
+
+
+			<!-- <div class="ads">
+				<div class="r">
+					<img src="../assets/img/ads_1.jpg" alt="">
+				</div>
+			</div> -->
+
+			<div id="success_story" class="bar revamp">
+				<h2 class="nav-arrow">
+					<i class="section__icon" style="background-image:url(img/layout/ic_successstory.png);"></i>
+					<span class="section__title">Success Story</span></h2>
+				<div class="item-list">
+	                <div class="story__image">
+	                	<img src="../assets/img/layout/img_success_story.png">
+	            	</div>
+	            	<div class="story__detail">
+	            		<div class="detail__title"><span class="title--green">Featured!</span>Ar Signature</div>
+	            		<div class="detail__content">Pengusaha Muda Sukses Dengan Mengasah Kilau Kristal</div>
+	            	</div>
+	            	<div class="story__button">
+	            		<div class="r">
+	            			<a class="p-right" href="">Success Story Lainya &#10095;</a>
+	            		</div>
+	            	</div>
+				</div>
+			</div>
+
+			<div id="hot_deals" class="bar revamp">
+				<h2 class="nav-arrow">
+					<i class="section__icon" style="background-image:url(img/layout/ic_hotdeals.png);"></i>
+					<span class="section__title">Hot Deals</span></h2>
+				<div class="item-list">
+	                <div class="small-block-grid-2">
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+								</div>
+								<div class="item__description">
+									<div class="username">
+										<div class="username__profile">
+											<div class="profile__image" style="background-image:url(img/layout/placeholder-userpp.png)">
+											</div>
+										</div>
+										<div class="username__name">kepitingpanggang</div>
+									</div>
+									<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+									<div class="item__price">
+										<div class="price__final">Rp. 490.000</div>
+										<div class="price__discount">Rp. 800.000</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+								</div>
+								<div class="item__description">
+									<div class="username">
+										<div class="username__profile">
+											<div class="profile__image" style="background-image:url(img/layout/placeholder-userpp.png)">
+											</div>
+										</div>
+										<div class="username__name">kepitingpanggang</div>
+									</div>
+									<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+									<div class="item__price">
+										<div class="price__final">Rp. 490.000</div>
+										<div class="price__discount">Rp. 800.000</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+								</div>
+								<div class="item__description">
+									<div class="username">
+										<div class="username__profile">
+											<div class="profile__image" style="background-image:url(img/layout/placeholder-userpp.png)">
+											</div>
+										</div>
+										<div class="username__name">kepitingpanggang</div>
+									</div>
+									<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+									<div class="item__price">
+										<div class="price__final">Rp. 490.000</div>
+										<div class="price__discount">Rp. 800.000</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+								</div>
+								<div class="item__description">
+									<div class="username">
+										<div class="username__profile">
+											<div class="profile__image" style="background-image:url(img/layout/placeholder-userpp.png)">
+											</div>
+										</div>
+										<div class="username__name">kepitingpanggang</div>
+									</div>
+									<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+									<div class="item__price">
+										<div class="price__final">Rp. 490.000</div>
+										<div class="price__discount">Rp. 800.000</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="online_bazaar" class="bar revamp">
+            	<h2 class="nav-arrow">
+					<i class="section__icon" style="background-image:url(img/layout/ic_kob.png);"></i>
+            		<span class="section__title">KASKUS Online Bazaar</span>
+	                <div class="control">
+	                    <div class="page">
+	                        <b id="page-selectedonlinebazaar">1 </b>/ 2
+	                    </div>
+	                    <div class="pagination">
+	                        <a href="#" onClick="javascript:showNextPrev('onlinebazaar',false);return false;" class="arrow left">&#10094;</a>
+	                        <a href="#" onClick="javascript:showNextPrev('onlinebazaar',true);return false;" class="arrow right">&#10095;</a>
+	                    </div>
+	                </div>
+	            </h2>
+	            <div class="item-list onlinebazaar" id="item-listonlinebazaar1">
+	                <div class="small-block-grid-2">
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+								</div>
+								<div class="item__description">
+									<div class="username">
+										<div class="username__profile">
+											<div class="profile__image" style="background-image:url(img/layout/placeholder-userpp.png)">
+											</div>
+										</div>
+										<div class="username__name">kepitingpanggang</div>
+									</div>
+									<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+									<div class="item__price">
+										<div class="price__final">Rp. 490.000</div>
+										<div class="price__discount">Rp. 800.000</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+								</div>
+								<div class="item__description">
+									<div class="username">
+										<div class="username__profile">
+											<div class="profile__image" style="background-image:url(img/layout/placeholder-userpp.png)">
+											</div>
+										</div>
+										<div class="username__name">kepitingpanggang</div>
+									</div>
+									<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+									<div class="item__price">
+										<div class="price__final">Rp. 490.000</div>
+										<div class="price__discount">Rp. 800.000</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+	            </div>
+	            <div class="item-list onlinebazaar" id="item-listonlinebazaar2" style="display:none;">
+	                <div class="small-block-grid-2">
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+								</div>
+								<div class="item__description">
+									<div class="username">
+										<div class="username__profile">
+											<div class="profile__image" style="background-image:url(img/layout/placeholder-userpp.png)">
+											</div>
+										</div>
+										<div class="username__name">kepitingpanggang</div>
+									</div>
+									<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+									<div class="item__price">
+										<div class="price__final">Rp. 490.000</div>
+										<div class="price__discount">Rp. 800.000</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+								</div>
+								<div class="item__description">
+									<div class="username">
+										<div class="username__profile">
+											<div class="profile__image" style="background-image:url(img/layout/placeholder-userpp.png)">
+											</div>
+										</div>
+										<div class="username__name">kepitingpanggang</div>
+									</div>
+									<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+									<div class="item__price">
+										<div class="price__final">Rp. 490.000</div>
+										<div class="price__discount">Rp. 800.000</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+	            </div>
+	            <div class="bar__link">
+	            	<div class="r">
+        				<a class="p-right" href="">Koleksi Lainya &#10095;</a>
+        			</div>
+        		</div>
+	        </div>
+
+	        <div class="categories_trend bar revamp">
+	        	<div class="trend__title text-center">
+	        		<p class="title__head">Kategori Paling Ngetrend</p>
+	        		<p class="title__description">( Kategori yang paling rame dicari di KASKUS)</p>
+	        	</div>
+            	<h2 class="nav-arrow">
+            		<span class="section__title">
+            			<i class="section__icon" style="background-image:url(img/layout/ic_handphone.png);"></i>Handphone &amp; Accessories
+            		</span>
+	                <div class="control">
+	                    <div class="page">
+	                        <b id="page-selected-category-1_">1 </b>/ 2
+	                    </div>
+	                    <div class="pagination">
+	                        <a href="#" onClick="javascript:showNextPrev('-category-1_',false);return false;" class="arrow left">&#10094;</a>
+	                        <a href="#" onClick="javascript:showNextPrev('-category-1_',true);return false;" class="arrow right">&#10095;</a>
+	                    </div>
+	                </div>
+	            </h2>
+	            <div class="item-list -category-1_" id="item-list-category-1_1">
+	                <div class="small-block-grid-2">
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+								</div>
+								<div class="item__description">
+									<div class="username">
+										<div class="username__profile">
+											<div class="profile__image" style="background-image:url(img/layout/placeholder-userpp.png)">
+											</div>
+										</div>
+										<div class="username__name">kepitingpanggang</div>
+									</div>
+									<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+									<div class="item__price">
+										<div class="price__final">Rp. 490.000</div>
+										<div class="price__discount">Rp. 800.000</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+								</div>
+								<div class="item__description">
+									<div class="username">
+										<div class="username__profile">
+											<div class="profile__image" style="background-image:url(img/layout/placeholder-userpp.png)">
+											</div>
+										</div>
+										<div class="username__name">kepitingpanggang</div>
+									</div>
+									<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+									<div class="item__price">
+										<div class="price__final">Rp. 490.000</div>
+										<div class="price__discount">Rp. 800.000</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+	            </div>
+	            <div class="item-list -category-1_" id="item-list-category-1_2" style="display:none;">
+	                <div class="small-block-grid-2">
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+								</div>
+								<div class="item__description">
+									<div class="username">
+										<div class="username__profile">
+											<div class="profile__image" style="background-image:url(img/layout/placeholder-userpp.png)">
+											</div>
+										</div>
+										<div class="username__name">kepitingpanggang</div>
+									</div>
+									<div class="item__title">Jam Garmin 120% Original Macam Warna</div>
+									<div class="item__price">
+										<div class="price__final">Rp. 490.000</div>
+										<div class="price__discount">Rp. 800.000</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+								</div>
+								<div class="item__description">
+									<div class="username">
+										<div class="username__profile">
+											<div class="profile__image" style="background-image:url(img/layout/placeholder-userpp.png)">
+											</div>
+										</div>
+										<div class="username__name">kepitingpanggang</div>
+									</div>
+									<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+									<div class="item__price">
+										<div class="price__final">Rp. 490.000</div>
+										<div class="price__discount">Rp. 800.000</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+	            </div>
+	            <div class="bar__link">
+	            	<div class="r">
+        				<a class="p-right" href="">Koleksi Lainya &#10095;</a>
+        			</div>
+        		</div>
+	        </div>
+
+	        <div class="categories_trend bar revamp">
+            	<h2 class="nav-arrow">
+            		<span class="section__title">
+            			<i class="section__icon" style="background-image:url(img/layout/ic_computer.png);"></i>Computer
+            		</span>
+	                <div class="control">
+	                    <div class="page">
+	                        <b id="page-selected-category-1_">1 </b>/ 2
+	                    </div>
+	                    <div class="pagination">
+	                        <a href="#" onClick="javascript:showNextPrev('-category-1_',false);return false;" class="arrow left">&#10094;</a>
+	                        <a href="#" onClick="javascript:showNextPrev('-category-1_',true);return false;" class="arrow right">&#10095;</a>
+	                    </div>
+	                </div>
+	            </h2>
+	            <div class="item-list -category-1_" id="item-list-category-1_1">
+	                <div class="small-block-grid-2">
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+								</div>
+								<div class="item__description">
+									<div class="username">
+										<div class="username__profile">
+											<div class="profile__image" style="background-image:url(img/layout/placeholder-userpp.png)">
+											</div>
+										</div>
+										<div class="username__name">kepitingpanggang</div>
+									</div>
+									<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+									<div class="item__price">
+										<div class="price__final">Rp. 490.000</div>
+										<div class="price__discount">Rp. 800.000</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+								</div>
+								<div class="item__description">
+									<div class="username">
+										<div class="username__profile">
+											<div class="profile__image" style="background-image:url(img/layout/placeholder-userpp.png)">
+											</div>
+										</div>
+										<div class="username__name">kepitingpanggang</div>
+									</div>
+									<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+									<div class="item__price">
+										<div class="price__final">Rp. 490.000</div>
+										<div class="price__discount">Rp. 800.000</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+	            </div>
+	            <div class="item-list -category-1_" id="item-list-category-1_2" style="display:none;">
+	                <div class="small-block-grid-2">
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+								</div>
+								<div class="item__description">
+									<div class="username">
+										<div class="username__profile">
+											<div class="profile__image" style="background-image:url(img/layout/placeholder-userpp.png)">
+											</div>
+										</div>
+										<div class="username__name">kepitingpanggang</div>
+									</div>
+									<div class="item__title">Jam Garmin 120% Original Macam Warna</div>
+									<div class="item__price">
+										<div class="price__final">Rp. 490.000</div>
+										<div class="price__discount">Rp. 800.000</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+								</div>
+								<div class="item__description">
+									<div class="username">
+										<div class="username__profile">
+											<div class="profile__image" style="background-image:url(img/layout/placeholder-userpp.png)">
+											</div>
+										</div>
+										<div class="username__name">kepitingpanggang</div>
+									</div>
+									<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+									<div class="item__price">
+										<div class="price__final">Rp. 490.000</div>
+										<div class="price__discount">Rp. 800.000</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+	            </div>
+	            <div class="bar__link">
+	            	<div class="r">
+        				<a class="p-right" href="">Koleksi Lainya &#10095;</a>
+        			</div>
+        		</div>
+	        </div>
+
+	        <div class="categories_trend bar revamp">
+	        	<div class="trend__title text-center">
+	        		<p class="title__head">Kategori Paling Ngetrend</p>
+	        		<p class="title__description">( Kategori yang paling rame dicari di KASKUS)</p>
+	        	</div>
+            	<h2 class="nav-arrow">
+            		<span class="section__title">
+            			<i class="section__icon" style="background-image:url(img/layout/ic_fashion.png);"></i>Fashion
+            		</span>
+	                <div class="control">
+	                    <div class="page">
+	                        <b id="page-selected-category-1_">1 </b>/ 2
+	                    </div>
+	                    <div class="pagination">
+	                        <a href="#" onClick="javascript:showNextPrev('-category-1_',false);return false;" class="arrow left">&#10094;</a>
+	                        <a href="#" onClick="javascript:showNextPrev('-category-1_',true);return false;" class="arrow right">&#10095;</a>
+	                    </div>
+	                </div>
+	            </h2>
+	            <div class="item-list -category-1_" id="item-list-category-1_1">
+	                <div class="small-block-grid-2">
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+								</div>
+								<div class="item__description">
+									<div class="username">
+										<div class="username__profile">
+											<div class="profile__image" style="background-image:url(img/layout/placeholder-userpp.png)">
+											</div>
+										</div>
+										<div class="username__name">kepitingpanggang</div>
+									</div>
+									<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+									<div class="item__price">
+										<div class="price__final">Rp. 490.000</div>
+										<div class="price__discount">Rp. 800.000</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+								</div>
+								<div class="item__description">
+									<div class="username">
+										<div class="username__profile">
+											<div class="profile__image" style="background-image:url(img/layout/placeholder-userpp.png)">
+											</div>
+										</div>
+										<div class="username__name">kepitingpanggang</div>
+									</div>
+									<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+									<div class="item__price">
+										<div class="price__final">Rp. 490.000</div>
+										<div class="price__discount">Rp. 800.000</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+	            </div>
+	            <div class="item-list -category-1_" id="item-list-category-1_2" style="display:none;">
+	                <div class="small-block-grid-2">
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+								</div>
+								<div class="item__description">
+									<div class="username">
+										<div class="username__profile">
+											<div class="profile__image" style="background-image:url(img/layout/placeholder-userpp.png)">
+											</div>
+										</div>
+										<div class="username__name">kepitingpanggang</div>
+									</div>
+									<div class="item__title">Jam Garmin 120% Original Macam Warna</div>
+									<div class="item__price">
+										<div class="price__final">Rp. 490.000</div>
+										<div class="price__discount">Rp. 800.000</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+								</div>
+								<div class="item__description">
+									<div class="username">
+										<div class="username__profile">
+											<div class="profile__image" style="background-image:url(img/layout/placeholder-userpp.png)">
+											</div>
+										</div>
+										<div class="username__name">kepitingpanggang</div>
+									</div>
+									<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+									<div class="item__price">
+										<div class="price__final">Rp. 490.000</div>
+										<div class="price__discount">Rp. 800.000</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+	            </div>
+	            <div class="bar__link">
+	            	<div class="r">
+        				<a class="p-right" href="">Koleksi Lainya &#10095;</a>
+        			</div>
+        		</div>
+	        </div>
+
+	        <div class="categories_trend bar revamp">
+	        	<div class="trend__title text-center">
+	        		<p class="title__head">Kategori Paling Ngetrend</p>
+	        		<p class="title__description">( Kategori yang paling rame dicari di KASKUS)</p>
+	        	</div>
+            	<h2 class="nav-arrow">
+            		<span class="section__title">
+            			<i class="section__icon" style="background-image:url(img/layout/ic_lastseen.png);"></i>Terakhir Diliat
+            		</span>
+	                <div class="control">
+	                    <div class="page">
+	                        <b id="page-selected-category-1_">1 </b>/ 2
+	                    </div>
+	                    <div class="pagination">
+	                        <a href="#" onClick="javascript:showNextPrev('-category-1_',false);return false;" class="arrow left">&#10094;</a>
+	                        <a href="#" onClick="javascript:showNextPrev('-category-1_',true);return false;" class="arrow right">&#10095;</a>
+	                    </div>
+	                </div>
+	            </h2>
+	            <div class="item-list -category-1_" id="item-list-category-1_1">
+	                <div class="small-block-grid-2">
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+								</div>
+								<div class="item__description">
+									<div class="username">
+										<div class="username__profile">
+											<div class="profile__image" style="background-image:url(img/layout/placeholder-userpp.png)">
+											</div>
+										</div>
+										<div class="username__name">kepitingpanggang</div>
+									</div>
+									<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+									<div class="item__price">
+										<div class="price__final">Rp. 490.000</div>
+										<div class="price__discount">Rp. 800.000</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+								</div>
+								<div class="item__description">
+									<div class="username">
+										<div class="username__profile">
+											<div class="profile__image" style="background-image:url(img/layout/placeholder-userpp.png)">
+											</div>
+										</div>
+										<div class="username__name">kepitingpanggang</div>
+									</div>
+									<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+									<div class="item__price">
+										<div class="price__final">Rp. 490.000</div>
+										<div class="price__discount">Rp. 800.000</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+	            </div>
+	            <div class="item-list -category-1_" id="item-list-category-1_2" style="display:none;">
+	                <div class="small-block-grid-2">
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+								</div>
+								<div class="item__description">
+									<div class="username">
+										<div class="username__profile">
+											<div class="profile__image" style="background-image:url(img/layout/placeholder-userpp.png)">
+											</div>
+										</div>
+										<div class="username__name">kepitingpanggang</div>
+									</div>
+									<div class="item__title">Jam Garmin 120% Original Macam Warna</div>
+									<div class="item__price">
+										<div class="price__final">Rp. 490.000</div>
+										<div class="price__discount">Rp. 800.000</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="block-grid__item">
+							<div class="grid__item">
+								<div class="item__image">
+									<div class="image__photo b-lazy" data-src="../assets/img/layout/img_lapak1.png"></div>
+								</div>
+								<div class="item__description">
+									<div class="username">
+										<div class="username__profile">
+											<div class="profile__image" style="background-image:url(img/layout/placeholder-userpp.png)">
+											</div>
+										</div>
+										<div class="username__name">kepitingpanggang</div>
+									</div>
+									<div class="item__title">Jam Garmin 100% Original Macam Warna</div>
+									<div class="item__price">
+										<div class="price__final">Rp. 490.000</div>
+										<div class="price__discount">Rp. 800.000</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+	            </div>
+	            <div class="bar__link">
+	            	<div class="r">
+        				<a class="p-right" href="">Koleksi Lainya &#10095;</a>
+        			</div>
+        		</div>
+	        </div>
+		</div>
+		
+<div class="c-footer">
+  <div class="notice p-all-10">
+    <div class="title-kn">Kirim info peristiwa menarik di sekitarmu ke (Chat Only)</div>
+    <!-- add more text here -->
+    <div class="notice-wrapper">
+      <a href="" class="notice-btn whatsapp">
+        <img src="../assets/images/icon-whatsapp-border.svg" alt="whatsapp-icon"/>
+        <strong>+628119KASKUS</strong>
+      </a>
+      <a href="" class="notice-btn k-chat">
+        <img src="../assets/images/icon-chat-white.svg" alt="chat-icon"/>
+        <strong>KASKUS.Update</strong>
+      </a>
+    </div>
+  </div>
+
+  <nav class="kaskusnetworks">
+    <div class="title-kn">CHANNELS</div>
+    <div class="list-kn">
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611291043150120.png" alt="kaskusnetworks-image"> </a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611291043400966.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611290202260804.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2017/01/11/4501355_201701110710070180.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2017/03/06/6498705_201703060945090923.png" alt="kaskusnetworks-image"></a>
+    </div>
+  </nav>
+
+  <footer id="site-footer">
+    <nav class="mb10">
+          <a href="#site-header">Kembali ke Atas</a>
+          <a href="http://kaskus.com">Versi Desktop</a>
+          <a href="http://kaskus.com">Nightmode</a>
+          <a href="http://kaskus.com">Image off</a>
+          <a href="#" class="out">Widget</a>
+          <a href="#" class="out">Hubungi Kami</a>
+          <a href="#" class="out">Keluar</a>
+    </nav>
+    <img src="../assets/img/banner1.jpg" height="250" width="300" alt="">
+    <small>&copy; 2017 Kaskus – The Largest Indonesian Community</small>
+  </footer>
+</div>
+	</div>
+	<script src="../assets/js/jquery.min.js"></script>
+	<script src="../assets/js/slick.min.js"></script>
+	<script src="../assets/js/blazy.min.js"></script>
+    <script>
+        ;(function() {
+            // Initialize
+            var bLazy = new Blazy();
+        })();
+    </script>
+	<script type="text/javascript">
+	  	$(document).ready(function () {
+		    $('.highlight-slider').slick({
+		        dots: true,
+		        infinite: true,
+		        speed: 300,
+		        slidesToShow: 1,
+		        slidesToScroll: 1,
+		        autoplay: true
+		    });
+		});
+	</script>
+	<script type="text/javascript" src="../assets/js/nav-arrow.js"></script>
+
+</body>
+
+</html>
