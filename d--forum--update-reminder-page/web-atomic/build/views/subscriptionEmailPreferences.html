@@ -1660,54 +1660,46 @@
 
 	<!-- Main Content -->
 	<div class="jsMainContent mainContent Maw(970px) Mx(a) Mb(30px) jsStickyParent">
-		<div class="Mt(60px) Mb(30px) Maw(600px) Mx(a) Ta(c)">
-		  <div class="Mb(30px)">
-		    <img class="W(280px) H(a)" src="../assets/images/image-unsubscribe-email.svg">
+		<div class="My(30px) Maw(600px) Mx(a)">
+		  <div class="Ta(c)">
+		    <img class="W(280px) H(a)" src="../assets/images/image-unsubscribe-email.svg" alt="unsubscribe-email">
+		    <div class="Fz(32px) Fw(500) C(c-primary)">Kelola Preferensi Email Reminder</div>
+		    <div class="C(c-secondary) Fz(16px) Mt(5px) Lh(1.56)">Email Agan: <a href="mailto:$email">$email</a></div>
 		  </div>
-		  <div class="Mb(30px)">
-		    <div class="Fz(32px) Fw(b) C(c-dark-grey) Mb(20px)">Yang Agan Lakukan Itu, JAHAT!</div>
-		    <div class="C(c-normal) Fz(16px) Mt(5px) Lh(1.56)">Email Agan <a href="" class="">sefruitemailyangdipenuhispam@gmail.com</a>, meminta untuk berpisah. Apakah lebih baik jika kita take a break?</div>
-		  </div>
-		  <div class="Mb(30px) Ta(start) Maw(335px) Mx(a)">
-		    <div class="My(10px)">
-		      <div class="radio">
-		        <label>
-		          <input type="radio" name="emailPreferences" value="opt-1">
-		          <i></i>
-		          <span>Agan ingin menerima email seminggu sekali.</span>
-		        </label>
+		  <div class="My(16px) H(1px) Bgc(c-tertiary)"></div>
+		  <form method="post">
+		    <div class="D(f) Ai(c) Mb(8px)">
+		      <div class="Fx(flexOne)">
+		        <span class="C(c-primary) Fw(500) Fz(16px)">Email Reminder Mingguan</span>
+		      </div>
+		      <div class="Fx(flexZero)">
+		        <div class="checkboxSlider">
+		          <label>
+		            <input class="email_subscription" type="checkbox" name="subscribed_inactive" value="$subscribed_inactive" checked>
+		            <span></span>
+		          </label>
+		        </div>
 		      </div>
 		    </div>
-		    <div class="My(10px)">
-		      <div class="radio">
-		        <label>
-		          <input type="radio" name="emailPreferences" value="opt-2">
-		          <i></i>
-		          <span>Agan ingin menerima email dua minggu sekali.</span>
-		        </label>
+		    <div class="C(c-secondary) Fz(16px) Lh(1.56)">Dapatkan thread-thread terpopuler selama 7 hari ke belakang yang mungkin Agan lewatkan!</div>
+		    <div class="D(f) Ai(c) Mt(16px) Mb(8px)">
+		      <div class="Fx(flexOne)">
+		        <span class="C(c-primary) Fw(500) Fz(16px)">Email Akhir Pekan</span>
+		      </div>
+		      <div class="Fx(flexZero)">
+		        <div class="checkboxSlider">
+		          <label>
+		            <input class="email_subscription" type="checkbox" name="subscribed_weekly" value="$subscribed_weekly" checked>
+		            <span></span>
+		          </label>
+		        </div>
 		      </div>
 		    </div>
-		    <div class="My(10px)">
-		      <div class="radio">
-		        <label>
-		          <input type="radio" name="emailPreferences" value="opt-3">
-		          <i></i>
-		          <span>Agan ingin menerima email sebulan sekali.</span>
-		        </label>
-		      </div>
-		    </div>
-		    <div class="My(10px)">
-		      <div class="radio">
-		        <label>
-		          <input type="radio" name="emailPreferences" value="opt-4">
-		          <i></i>
-		          <span>Agan ingin berpisah selamanya.</span>
-		        </label>
-		      </div>
-		    </div>
-		  </div>
-		  <button class="Bgc(c-blue) C(c-white) H(32px) W(215px) Bdrs(3px) Fz(13px) Fw(b)">Simpan</button>
+		    <div class="C(c-secondary) Fz(16px) Lh(1.56)">Dapatkan update thread-thread seru untuk meramaikan akhir pekan Agan!</div>
+		    <button type="submit" class="Bgc(c-blue) C(c-white) H(32px) W(215px) Bdrs(3px) Fw(500) Mt(16px)">Simpan</button>
+		  </form>
 		</div>
+		
 	</div>
 	<!-- Ads FrameAdsSticky -->
 	<div class="frameStickyBottomAds Pos(f) W(970px) B(0) Z(1) Mx(a) H(50px) TranslateX(-50%) Start(50%)">

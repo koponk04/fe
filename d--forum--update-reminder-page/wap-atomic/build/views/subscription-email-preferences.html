@@ -202,34 +202,41 @@
 			
 			<div class="jsHeaderSeparator H(0) W(100%) Pt(125px)"></div>
 						
-			
-			<div class="My(40px) Px(10px)">
-				<div class="Mb(30px) Ta(c)">
-					<img class="W(190px) H(a) Mb(30px) D(b) Mx(a)" src="../assets/images/image-unsubscribe-email.svg">
-					<div class="Fz(16px) C(c-blue) nightmode_C(c-orange) Fw(b) Mb(10px)">Yang Agan Lakukan itu, JAHAT!</div>
-					<div class="Fz(14px) Lh(1.43)">Email Agan <a href="" class="Mend(3px) Fw(500) D(ib)">sefruitemailyangdipenuhispam@gmail.com</a>, meminta untuk berpisah. Apakah lebih baik jika kita take a break?</div>
+
+			<div class="P(16px) Bgc(c-white) nightmode_Bgc(c-black)">
+				<div class="Ta(c)">
+					<img alt="unsubscribe" class="W(190px) H(a) Mb(8px) D(b) Mx(a)" src="../assets/images/image-unsubscribe-email.svg">
+					<div class="Fz(16px) C(c-primary) nightmode_C(c-primary-night) Fw(500) Mb(8px)">Kelola Preferensi Email Reminder</div>
+					<div class="Fz(14px) C(c-secondary) nightmode_C(c-secondary-night) Lh(1.43)">
+						Email Agan: <a class="C(c-blue) nightmode_C(c-orange)" href="mailto:$email">$email</a>
+					</div>
 				</div>
-				<div class="Mb(20px) Px(20px) radioWrapper">
-					<ul>
-						<li class="My(7px)">
-    						<input type="radio" id="1week" name="emailSubscription">
-   							<label class="Fz(13px) C(c-normal) nightmode_C(c-grey-light-3)" for="1week">Agan ingin menerima email seminggu sekali.</label>
-  						</li>
-						<li class="My(7px)">
-							<input type="radio" id="2week" name="emailSubscription">
-							<label class="Fz(13px) C(c-normal) nightmode_C(c-grey-light-3)" for="2week">Agan ingin menerima email dua minggu sekali.</label>
-						</li>
-						<li class="My(7px)">
-    						<input type="radio" id="1month" name="emailSubscription">
-   							<label class="Fz(13px) C(c-normal) nightmode_C(c-grey-light-3)" for="1month">Agan ingin menerima email sebulan sekali.</label>
-  						</li>
-						<li class="My(7px)">
-							<input type="radio" id="forever" name="emailSubscription">
-							<label class="Fz(13px) C(c-normal) nightmode_C(c-grey-light-3)" for="forever">Agan ingin berpisah selamanya.</label>
-						</li>
-					</ul>
+				<div class="My(16px) H(1px) Bgc(c-tertiary)"></div>
+				<div class="Fz(14px) C(c-primary) nightmode_C(c-primary-night)">
+					<form method="post">
+						<div class="Mb(8px) D(f) Jc(sb)">
+							<div class="As(c) Fz(14px) Fw(500)">Email Reminder Mingguan</div>
+							<div class="Pos(r) End(13px)">
+								<label class="Mend(20px)">
+									<input class="D(n) email_subscription" name="subscribed_inactive" type="checkbox" value="$subscribed_inactive" checked'>
+									<span class="W(30px) H(12px) Pos(a) T(0) B(0) Start(0) End(0) Bgc(#c6c6c6) Trs(transitionSlider) sliderCheckbox nightmode_Bgc(#5d5d5d)"></span>
+								</label>
+							</div>
+						</div>
+						<span class="C(c-secondary) nightmode_C(c-secondary-night)">Dapatkan thread-thread terpopuler selama 7 hari ke belakang yang mungkin Agan lewatkan!</span>
+						<div class="Mt(16px) Mb(8px) D(f) Jc(sb)">
+							<div class="As(c) Fz(14px) Fw(500)">Email Akhir Pekan</div>
+							<div class="Pos(r) End(13px)">
+								<label class="Mend(20px)">
+									<input class="D(n) email_subscription" name="subscribed_weekly" value="$subscribed_weekly" type="checkbox" 'checked'>
+									<span class="W(30px) H(12px) Pos(a) T(0) B(0) Start(0) End(0) Bgc(#c6c6c6) Trs(transitionSlider) sliderCheckbox nightmode_Bgc(#5d5d5d)"></span>
+								</label>
+							</div>
+						</div>
+						<span class="C(c-secondary) nightmode_C(c-secondary-night)">Dapatkan update thread-thread seru untuk meramaikan akhir pekan Agan!</span>
+							<button type="submit" class="Mt(16px) Fz(13px) Fw(500) C(c-white) Bgc(c-blue) Bd(0) W(100%) Bdrs(3px) nightmode_Bgc(c-orange) Py(10px) Cur(p) nightmode_C(c-primary)">Simpan</button>
+					</form>
 				</div>
-				<button type="submit" class="Fz(14px) Fw(b) C(c-white) Bgc(c-blue) Bd(0) W(100%) Bdrs(3px) nightmode_Bgc(c-blue-night) Py(10px) Cur(p) nightmode_C(c-primary-night)">Simpan</button>
 			</div>
 
 			<div id="jsNotification" class="modal Pos(f) T(0) W(100%) H(100%) Maw(620px) Bgc(c-white) Fz(13) nightmode_Bgc(c-dark-grey-2) nightmode_C(c-grey)">
@@ -1549,7 +1556,7 @@
 				<div class="Ta(c) Mt(10px) Fz(10px)">Copyright © 2018, Kaskus Networks, PT Darta Media Indonesia</div>
 			</div>
 		</div>
-		
+
 	<script src="../assets/javascripts/vendor.min.js"></script>
 	<!-- <script src="../assets/javascripts/separate/anniversary.min.js"></script> -->
 	<script src="../assets/javascripts/separate/ramadhan.min.js" type="text/javascript"></script>
