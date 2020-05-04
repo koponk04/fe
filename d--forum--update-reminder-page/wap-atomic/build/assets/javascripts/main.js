@@ -181,7 +181,7 @@ function display_ht(resp, key)
                     html += '</div>'+
                       '<div class="Fz(13px) Mt(15px) Mb(10px) is-compact-view_D(n)">' + ht_list[i].description + '</div>'+
                       '<div class="Mt(10px) Mb(10px)">'+
-                        '<span class="Va(m)"><a href="'+ ht_list[i].url +'">'+ht_list[i].promoted_cta +'</a></span>'+
+                        '<span class="Va(m)"><a class="C(#1998ed) nightmode_C(#fbc160)" href="'+ ht_list[i].url +'">'+ht_list[i].promoted_cta +'</a></span>'+
                       '</div>'+
                     '</div>'+
                   '</div>'+
@@ -202,7 +202,7 @@ function display_ht(resp, key)
                 '</a>'+
                 '<div class="Fx(flex1Auto) As(c)">'+
                   '<div class="Mb(3px) Fz(13px) Fw(500) Maw(200px) Ov(h) is-compact-view_Mb(0px)">'+
-                    '<a href="/profile/' + ht_list[i].userid + '?ref=htarchive&med=hot_thread" class="C(c-secondary) nightmode_C(c-secondary-night)">'+ ht_list[i].username+'</a>'+
+                    '<a href="/profile/' + ht_list[i].userid + '?ref=htarchive&med=hot_thread" class="C(#484848)">'+ ht_list[i].username+'</a>'+
                   '</div>'+
                   '<div class="Fz(12px) C(#9e9e9e)">'+ user_details[ht_list[i].userid].usertitle +'</div>'+
                 '</div>'+
@@ -369,7 +369,6 @@ function load_tl() {
   feed_track = $('#feed_track').val();
   tl_sort_track = $('#tl_sort_track').val();
   feedtype = $('#tl_feed').val();
-  var threadListChannelId = $('#tl_channel').val();
 
   $.ajax({
     'type': 'post',
@@ -378,8 +377,7 @@ function load_tl() {
       cursor: tl_cursor,
       sort: tl_sort,
       order: tl_order,
-      feedtype: feedtype,
-      channel : threadListChannelId
+      feedtype: feedtype
     },
     'success': function(resp) {
       try {
@@ -481,8 +479,6 @@ function display_oh(resp, key) {
   if (item_count < oh_limit || oh_page > 2) {
     $('#oh-loader').hide();
     oh_no_more_item = true;
-    $('#oh-loader').prev().removeClass('Bdb(gray-border) nightmode_Bdb(night-border)');
-    $('#to-oh-page').removeClass('D(n)');
   }
   bindOpenWhoPosted();
   bindJsRevealModal();
@@ -1060,13 +1056,13 @@ function bindSetSubcategoryItem(element) {
     $('.jsButtonSubscribe').addClass('is-disabled');
     $('.jsButtonSubscribe button').prop('disabled', true);
     $('.jsButtonSubscribe button').toggleClass('Bgc(#ededed) C(#a4a4a4) Bgc(#1998ed) C(#ffffff)');
-    $('.jsButtonSubscribe button').toggleClass('nightmode_Bgc(c-grey) nightmode_C(c-white) nightmode_Bgc(c-blue-night) nightmode_C(c-primary-night)');
+    $('.jsButtonSubscribe button').toggleClass('nightmode_Bgc(c-grey) nightmode_C(c-white) nightmode_Bgc(c-orange-night) nightmode_C(#3f3f3f)');
   }
   else if($('.jsCategoryPersonalizationItem.is-selected').length == 1 && $('.jsButtonSubscribe').hasClass('is-disabled')){
     $('.jsButtonSubscribe').removeClass('is-disabled');
     $('.jsButtonSubscribe button').prop('disabled', false);
     $('.jsButtonSubscribe button').toggleClass('Bgc(#ededed) C(#a4a4a4) Bgc(#1998ed) C(#ffffff)');
-    $('.jsButtonSubscribe button').toggleClass('nightmode_Bgc(c-grey) nightmode_C(c-white) nightmode_Bgc(c-blue-night) nightmode_C(c-primary-night)');
+    $('.jsButtonSubscribe button').toggleClass('nightmode_Bgc(c-grey) nightmode_C(c-white) nightmode_Bgc(c-orange-night) nightmode_C(#3f3f3f)');
   }
 }
 
@@ -1442,7 +1438,7 @@ function removeAvatar() {
 				$('.jsModal #jsImageAvatar').attr('src', e.imgurl);
 				$("#remove_avatar").addClass('D(n)');
 				$("#jsImageAvatarView").attr("src", e.imgurl);
-				$('#jsConfirmRemoveAvatar').find('.jsDismissModal').first().click();
+				$('.jsModal').fadeOut();
 			}
 		});
 	}, "json")
@@ -1557,7 +1553,8 @@ function uploadAvatar() {
 							},
 							success: function (e) {
 								$('#remove_avatar').removeClass('D(n)');
-								$('#changeProfilePicture').find('.jsToggleChangePP').first().click();
+								$('#changeProfilePicture').find('.jsClosePopUp').click();
+								//$(".jsDismissModal").click();
 							}
 						});
 					} else {
@@ -1585,7 +1582,7 @@ function removeCoverImage() {
 				if (result.status == 'ok') {
 					$('#jsImageCover').attr('src', assetsFolderNew + '/images/placeholder-cover-image.png');
 					$('#remove_cover').addClass('D(n)');
-					$('#jsConfirmRemoveCover').find('.jsDismissModal').first().click();
+					$('.jsModal').fadeOut();
 				}
 			}
 		});
@@ -1662,7 +1659,7 @@ function uploadCover() {
 					$('.sctoken').val(e.securitytoken);
 					if (e.status == "ok") {
 						$('#remove_cover').removeClass('D(n)');
-						$('#changeCoverPicture').find('.jsToggleChangeCover').first().click();
+						$('#changeCoverPicture').find('.jsClosePopUp').click();
 					} else {
 						$('#jsModalError #error_message').html(e.error);
 						openModal('jsModalError');
@@ -1766,19 +1763,7 @@ $(document).ready(function() {
       loadNotif(url, '#notif_wrapper');
     }
   });
-
-  bindEmailSubscriptionSetting();
 });
-
-function bindEmailSubscriptionSetting() {
-  $('.email_subscription').on('change', function () {
-    if ($(this).is(':checked')) {
-      $(this).attr('value', 1);
-    } else {
-      $(this).attr('value', 0);
-    }
-  });
-}
 
 var all_notif_empty = '<div class="notif_empty"><div class="Ta(c)"><img src="'+ assetsFolderNew +'/images/image-notification-empty.png" width="80" height="80" /></div><span>Agan belum memiliki notifikasi sama sekali nih. Yuk mulai beraktivitas di KASKUS dari baca dan komentar di thread hingga membuat teman baru. Ramein notifikasi Agan sekarang!</span></div>';
 var cendol_notif_empty = '<div class="notif_empty"><div class="Ta(c)"><img src="'+ assetsFolderNew +'/images/image-notification-empty.png" width="80" height="80" /></div><span>Agan belum memiliki reputasi nih. Untuk mendapatkan cendol, Agan bisa mulai komen atau buat thread di Kaskus. Jika Kaskuser lain merasa thread Agan menarik, maka Agan bisa mendapatkan cendol atau bata.</span></div>';
@@ -2151,7 +2136,7 @@ function load_following_data(base_url)
 }
 
 var moderated_page = 1;
-var load_more_forum = '<li id="forum-loadmore" class="D(f) Ai(c) Mb(15px)"><a data-id="moderator-load-more" onclick="load_more_moderated_forum()" href="javascript:void(0)" class="Fz(12px) C(#fff) nightmode_C(c-primary-night) Bgc(c-blue) Bd(0) Px(28px) Py(8px) Bdrs(3px) nightmode_Bgc(c-blue-night) Ta(c) Fw(b) D(b) W(100%)">Lihat Lainnya</a></li>';
+var load_more_forum = '<li id="forum-loadmore" class="D(f) Ai(c) Mb(15px)"><a data-id="moderator-load-more" onclick="load_more_moderated_forum()" href="javascript:void(0)" class="Fz(12px) C(#fff) nightmode_C(#000) Bgc(c-blue) Bd(0) Px(28px) Py(8px) Bdrs(3px) nightmode_Bgc(c-orange) Ta(c) Fw(500) D(b) W(100%)">Load More</a></li>';
 function moderate()
 {
 	moderated_page = 1;
@@ -2209,7 +2194,7 @@ function load_more_moderated_forum()
 }
 
 var badge_page = 1;
-var load_more = '<li id="badge-loadmore" class="D(f) Ai(c) Mb(15px)"><a data-id="badge-load-more" onclick="load_more_badge()" href="javascript:void(0)" class="Fz(12px) C(#fff) nightmode_C(c-primary-night) Bgc(c-blue) Bd(0) Px(28px) Py(8px) Bdrs(3px) nightmode_Bgc(c-blue-night) Ta(c) Fw(b) D(b) W(100%)">Lihat Lainnya</a></li>';
+var load_more = '<li id="badge-loadmore" class="D(f) Ai(c) Mb(15px)"><a data-id="badge-load-more" onclick="load_more_badge()" href="javascript:void(0)" class="Fz(12px) C(#fff) nightmode_C(#000) Bgc(c-blue) Bd(0) Px(28px) Py(8px) Bdrs(3px) nightmode_Bgc(c-orange) Ta(c) Fw(500) D(b) W(100%)">Load More</a></li>';
 
 function badge()
 {
@@ -2358,15 +2343,6 @@ $(document).ready(function(){
 		});
 	}
 });
-
-function check_not_empty_input(elId)
-{
-	var elementInput = $("#" + elId).val();
-	if (typeof elementInput !== typeof undefined && elementInput !== false && elementInput != '') {
-		return true;
-	}
-		return false;
-}
 
 var topicDetailThreadLoading = false;
 
@@ -2909,6 +2885,21 @@ function requestPerm() {
   }).catch(function(err) {
     console.log('Unable to get permission to notify.', err);
   });
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
 }
 
 function sendTokenToServer(currentToken) {
@@ -3774,6 +3765,8 @@ $(document).ready(function() {
       $(".jsRevealMenus, .jsRevealShare").hide();
       $(".jsShowMenus, .jsMoreMenus").removeClass("show").addClass("hide");
       $('.jsPopoverMenu').removeClass('is-visible');
+      $('.jsPopoverTrigger').removeClass('C(c-blue)').addClass('C(c-primary)');
+      $('.jsPopoverTrigger').removeClass('nightmode_C(c-orange-night)').addClass('nightmode_C(c-secondary-night)');
     }
   });
 
@@ -3830,8 +3823,6 @@ $(document).ready(function() {
   $(document).on("click", ".jsToggleChangeCover", function() {
     $("#changeCoverPicture").toggleClass("is-open");
     $(document.body).removeClass("o-hidden");
-    $("#jsUploadCover").val("");
-    $(document.body).removeClass("Ov(h)");
   });
 
   /**
@@ -3840,8 +3831,6 @@ $(document).ready(function() {
   $(document).on("click", ".jsToggleChangePP", function() {
     $("#changeProfilePicture").toggleClass("is-open");
     $(document.body).removeClass("o-hidden");
-    $("#jsUploadAvatar").val("");
-    $(document.body).removeClass("Ov(h)");
   });
 
   /**
@@ -4006,8 +3995,18 @@ $(document).ready(function() {
   $('body').on('click', '.jsPopoverTrigger', function() {
     createNewThreadlistMenuData($(this));
     var others = $('.jsPopoverTrigger').not(this);
+    others.removeClass('C(c-blue)').addClass('C(c-primary)');
+    others.removeClass('nightmode_C(c-orange-night)').addClass('nightmode_C(c-secondary-night)');
     others.next().removeClass('is-visible');
-    $(this).next().toggleClass('is-visible');
+    if ($(this).next().hasClass("is-visible")) {
+      $(this).next().removeClass("is-visible");
+      $(this).removeClass('C(c-blue)').addClass('C(c-primary)');
+      $(this).removeClass('nightmode_C(c-orange-night)').addClass('nightmode_C(c-secondary-night)');
+    } else {
+      $(this).next().addClass("is-visible");
+      $(this).addClass('C(c-blue)').removeClass('C(c-primary)');
+      $(this).addClass('nightmode_C(c-orange-night)').removeClass('nightmode_C(c-secondary-night)');
+    }
   });
 
   // /*
@@ -4185,9 +4184,9 @@ $(document).ready(function() {
   $(document).on('click', '.jsThreadCardShare', function() {
     createNewThreadlistShareMenuData($(this));
     var others = $('.jsThreadCardShare').not(this);
-    var thisElement = $(this);
-    setTimeout(function(){
-      others.closest('.jsThreadCard').find('.jsShareBar').removeClass("is-visible");
+    var thisElement = $(this);   
+    setTimeout(function(){ 
+      others.closest('.jsThreadCard').find('.jsShareBar').removeClass("is-visible");    
     }, 300);
     others.closest('.jsThreadCard').find('.jsShareBarList').removeClass('is-show');
     if ($(this).closest('.jsThreadCard').find('.jsShareBar').hasClass("is-visible")) {
@@ -4199,11 +4198,11 @@ $(document).ready(function() {
     }
   });
 
-  $(document).on("click", ".jsThreadCardShareClose", function(e) {
-    var thisElement = $(this);
+  $(document).on("click", ".jsThreadCardShareClose", function(e) {   
+    var thisElement = $(this);   
     thisElement.closest('.jsShareBar').find('.jsShareBarList').removeClass('is-show');
-    setTimeout(function(){
-      thisElement.closest('.jsShareBar').removeClass('is-visible');
+    setTimeout(function(){ 
+      thisElement.closest('.jsShareBar').removeClass('is-visible');   
     }, 300);
   });
 
@@ -4626,16 +4625,10 @@ $(document).ready(function() {
   $(".pass-trigger").on("click", function() {
     if ($(this).find(".pass-icon-eye").hasClass("fa-eye-slash")) {
       $(this).find(".pass-icon-eye").addClass("fa-eye").removeClass("fa-eye-slash");
-      var passInputControl = $(this).parent().find(".pass-input-control")[0];
-      if (passInputControl !== undefined) {
-        $(passInputControl).prop("type", "text");
-      }
+      $(".pass-input-control").prop("type", "text");
     } else {
       $(this).find(".pass-icon-eye").addClass("fa-eye-slash").removeClass("fa-eye");
-      var passInputControl = $(this).parent().find(".pass-input-control")[0];
-      if (passInputControl !== undefined) {
-        $(passInputControl).prop("type", "password");
-      }
+      $(".pass-input-control").prop("type", "password");
     }
   });
 

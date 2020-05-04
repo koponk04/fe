@@ -755,15 +755,14 @@ var tl_page = 1;
 /*
  * show list of thread
  */
-function show_thread_list(sort, cursor, order, feedtype, channelId) {
+function show_thread_list(sort, cursor, order, feedtype) {
   tl_is_loading = true;
   var scrollCurrent = $(window).scrollTop();
   $.post("/misc/get_threadlist_forum_landing/", {
     sort: sort,
     cursor: cursor,
     order: order,
-    feedtype : feedtype,
-    channel : channelId
+    feedtype : feedtype
   }, function(response) {
     tl_page++;
     var item_count = response.totalcount;
@@ -2375,15 +2374,6 @@ function dataURLtoFile(dataurl, filename) {
   });
 }
 
-function resetInputAvatarAndCoverValue() {
-  if ($('#jsUploadAvatar').length) {
-    $('#jsUploadAvatar').val('');
-  }
-  if ($('#jsUploadCover').length) {
-    $('#jsUploadCover').val('');
-  }
-}
-
 function removeAvatar() {
   $.post("/user/removeprofilepicture/", {
     userimgrev: $("#userimgrev").val()
@@ -2745,18 +2735,7 @@ $(document).ready(function() {
       });
     }
   });
-  bindEmailSubscriptionSetting();
 });
-
-function bindEmailSubscriptionSetting() {
-  $('.email_subscription').on('change', function () {
-    if ($(this).is(':checked')) {
-      $(this).attr('value', 1);
-    } else {
-      $(this).attr('value', 0);
-    }
-  });
-}
 
 function getDisplayedState() {
   return $('#notification_data').attr('data-displayed_state');
@@ -5209,7 +5188,6 @@ function openModal(modalTarget) {
 function closeModal() {
   $('.jsModal').removeClass('is-open is-animate');
   $('body').removeClass('Ov(h)');
-  resetInputAvatarAndCoverValue();
 }
 
 /*
@@ -5327,8 +5305,7 @@ if ($("#threadlist-loading-area").length) {
       data_cursor = $('#tl_cursor').val();
       data_order = $('#tl_order').val();
       data_feed = $('#tl_feed').val();
-      data_channel = $('#tl_channel').val();
-      show_thread_list(data_sort, data_cursor, data_order, data_feed, data_channel);
+      show_thread_list(data_sort, data_cursor, data_order, data_feed);
 
       tracking_ref = $('#tl_tracking_ref').val();
       data_sort_track = $('#tl_sort_track').val();
@@ -5553,7 +5530,6 @@ $(document).ready(function () {
     if (!$(event.target).closest('.jsModalContent').length) {
       $('.jsModal').removeClass('is-open is-animate');
       $('body').removeClass('Ov(h)');
-      resetInputAvatarAndCoverValue();
     }
   });
 

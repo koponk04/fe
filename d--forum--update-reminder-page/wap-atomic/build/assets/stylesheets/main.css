@@ -7888,10 +7888,6 @@ a {
     -webkit-transition: all 0.15s ease-in-out;
     transition: all 0.15s ease-in-out; }
 
-.nightmode :link,
-.nightmode a {
-  color: var(--c-blue-night); }
-
 :visited {
   color: #0082C6; }
 
@@ -8166,15 +8162,18 @@ button {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   z-index: 9999; }
 
-div.active-forum,
+div.active-forum {
+  background-color: #fff;
+  color: #1a98ed; }
+
 div.active-fjb {
   background-color: #fff;
-  color: #484848; }
+  color: #00b09f; }
 
 .nightmode div.active-forum,
 .nightmode div.active-fjb {
   background-color: #171717;
-  color: var(--c-gray-2); }
+  color: #fdba4d; }
 
 #searchform.active {
   display: block; }
@@ -8531,11 +8530,17 @@ img#CssProfPic {
 .nightmode .nightmode_Bd\(borderSolidGray6\) {
   border: 1px solid var(--c-gray-6); }
 
+.nightmode .nightmode_Bd\(borderSolidYellow\) {
+  border: 1px solid var(--c-yellow-1); }
+
 .nightmode .nightmode_Bd\(dark-gray-border-2\) {
   border: 1px solid #9e9e9e; }
 
 .nightmode .nightmode_Bd\(night-border\) {
   border: 1px solid #3f3f3f; }
+
+.nightmode .nightmode_Bd\(night-border-orange\) {
+  border: 1px solid #fbc160; }
 
 .Bdt\(borderSolidGray2\) {
   border-top: 1px solid var(--c-gray-2); }
@@ -8719,9 +8724,6 @@ img#CssProfPic {
 
 .nightmode .nightmode_Bdc\(c-black\) {
   border-color: var(--c-black); }
-
-.nightmode .nightmode_Bdc\(c-blue-night\) {
-  border-color: var(--c-blue-night); }
 
 .nightmode .nightmode_Bdc\(c-gray-6\) {
   border-color: var(--c-gray-6); }
@@ -9254,6 +9256,9 @@ img#CssProfPic {
 .Bgc\(\#faa517\), .Bgc\(c-orange\), .is-multiquoted .is-multiquoted_Bgc\(\#faa517\), .is-multiquoted .is-multiquoted_Bgc\(c-orange\), .nightmode .nightmode_Bgc\(\#faa517\), .nightmode .nightmode_Bgc\(c-orange\) {
   background-color: #faa517; }
 
+.Bgc\(\#faa61a\) {
+  background-color: #faa61a; }
+
 .Bgc\(\#fbeced\), .Bgc\(c-pinklight\) {
   background-color: #fbeced; }
 
@@ -9533,13 +9538,13 @@ img#CssProfPic {
 .C\(\#4967ad\) {
   color: #4967ad; }
 
-.C\(\#49a0eb\), .C\(c-twitter\), .nightmode .nightmode_C\(c-twitter\) {
+.C\(\#49a0eb\), .C\(c-twitter\) {
   color: #49a0eb; }
 
 .C\(\#4a4a4a\), .C\(c-dark-grey\), .nightmode .nightmode_C\(c-dark-grey\) {
   color: #4a4a4a; }
 
-.C\(\#4a9a2f\), .C\(c-whatsapp\), .nightmode .nightmode_C\(c-whatsapp\) {
+.C\(\#4a9a2f\), .C\(c-whatsapp\) {
   color: #4a9a2f; }
 
 .C\(\#4b86ab\) {
@@ -9746,10 +9751,10 @@ img#CssProfPic {
 .C\(c-cendol-disabled\), .nightmode .nightmode_C\(c-cendol-disabled\) {
   color: var(--c-cendol-disabled); }
 
-.C\(c-facebook\), .nightmode .nightmode_C\(c-facebook\) {
+.C\(c-facebook\) {
   color: #4967AD; }
 
-.C\(c-facebook-messenger\), .nightmode .nightmode_C\(c-facebook-messenger\) {
+.C\(c-facebook-messenger\) {
   color: #0084ff; }
 
 .C\(c-gray-0\), .nightmode .nightmode_C\(c-gray-0\) {
@@ -10078,9 +10083,6 @@ img#CssProfPic {
 .H\(12px\) {
   height: 12px; }
 
-.H\(130px\) {
-  height: 130px; }
-
 .H\(14px\) {
   height: 14px; }
 
@@ -10388,11 +10390,23 @@ img#CssProfPic {
 .My\(30px\), .Mb\(30px\) {
   margin-bottom: 30px; }
 
+.My\(40px\), .Mt\(40px\) {
+  margin-top: 40px; }
+
+.My\(40px\), .Mb\(40px\) {
+  margin-bottom: 40px; }
+
 .My\(5px\), .Mt\(5px\) {
   margin-top: 5px; }
 
 .My\(5px\), .Mb\(5px\) {
   margin-bottom: 5px; }
+
+.My\(7px\), .Mt\(7px\) {
+  margin-top: 7px; }
+
+.My\(7px\) {
+  margin-bottom: 7px; }
 
 .My\(8px\), .Mt\(8px\) {
   margin-top: 8px; }
@@ -10439,17 +10453,11 @@ img#CssProfPic {
 .Mt\(3px\) {
   margin-top: 3px; }
 
-.Mt\(40px\) {
-  margin-top: 40px; }
-
 .Mt\(4px\) {
   margin-top: 4px; }
 
 .Mt\(50px\) {
   margin-top: 50px; }
-
-.Mt\(7px\) {
-  margin-top: 7px; }
 
 .Mend\(-5px\) {
   margin-right: -5px; }
@@ -10490,9 +10498,6 @@ img#CssProfPic {
 .Mb\(3px\) {
   margin-bottom: 3px; }
 
-.Mb\(40px\) {
-  margin-bottom: 40px; }
-
 .Mb\(64px\) {
   margin-bottom: 64px; }
 
@@ -10513,9 +10518,6 @@ img#CssProfPic {
 
 .Mstart\(-5px\) {
   margin-left: -5px; }
-
-.Mstart\(110px\) {
-  margin-left: 110px; }
 
 .Mstart\(14px\) {
   margin-left: 14px; }
@@ -10657,9 +10659,6 @@ img#CssProfPic {
 
 .Miw\(0\) {
   min-width: 0; }
-
-.Miw\(100px\) {
-  min-width: 100px; }
 
 .Miw\(139px\) {
   min-width: 139px; }
@@ -11447,9 +11446,6 @@ img#CssProfPic {
 
 .W\(24px\) {
   width: 24px; }
-
-.W\(250px\) {
-  width: 250px; }
 
 .W\(26px\) {
   width: 26px; }
@@ -12636,7 +12632,7 @@ input.jsInputSearch:focus {
 .jsSignInTab.active,
 .jsSignUpTab.active {
   background-color: #fff;
-  color: var(--c-primary); }
+  color: #1998ed; }
 
 textarea.replySection::-webkit-input-placeholder {
   color: #b3b3b3;
@@ -13226,9 +13222,6 @@ a:hover {
   -o-object-fit: cover;
      object-fit: cover; }
 
-.itemView.is-selected i {
-  color: var(--c-gray-4); }
-
 .repeatY {
   background-repeat-y: repeat; }
 
@@ -13299,6 +13292,7 @@ input[type=checkbox]:checked + .checkboxAslinyaloChecker .checkedTitle {
   display: flex; }
 
 body.nightmode {
+  color: #dcdcdc;
   color: var(--c-gray-2); }
   body.nightmode .currentPagination {
     background-color: var(--c-orange-night);
@@ -13308,21 +13302,28 @@ body.nightmode {
     color: var(--c-gray-2); }
     body.nightmode input[type="radio"]:checked + label {
       font-weight: bold;
-      color: var(--c-blue-night); }
+      color: var(--c-orange-night); }
     body.nightmode input::-webkit-input-placeholder {
       color: #828282; }
+  body.nightmode a.forgotPassword {
+    color: var(--c-orange-night); }
   body.nightmode div.subForumItem:nth-child(odd) {
     border-right: 1px solid #3f3f3f; }
+  body.nightmode .sliderCheckbox:before {
+    background-color: var(--c-gray-2);
+    box-shadow: inset 0px -1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2); }
+  body.nightmode input:checked + .sliderCheckbox {
+    background-color: rgba(253, 186, 77, 0.4); }
   body.nightmode input:checked + .sliderCheckbox:before {
-    background-color: var(--c-blue-night); }
+    background-color: var(--c-orange-night); }
   body.nightmode input:focus + .sliderCheckbox {
     box-shadow: 0 0 1px #2196F3; }
   body.nightmode .c-compact .is-compact-view {
     border-bottom: 1px solid #3f3f3f; }
   body.nightmode .jsSignInTab.active,
   body.nightmode .jsSignUpTab.active {
-    background-color: #171717;
-    color: var(--c-gray-2); }
+    background-color: var(--c-gray-7);
+    color: var(--c-orange-night); }
   body.nightmode .btnStatus {
     background-color: var(--c-orange-night); }
     body.nightmode .btnStatus input {
@@ -13375,7 +13376,7 @@ body.nightmode {
   body.nightmode .jsQuoteUsername {
     color: var(--c-gray-2) !important; }
   body.nightmode .jsQuotePost {
-    color: var(--c-blue-night) !important; }
+    color: var(--c-orange-night) !important; }
   body.nightmode .is-selected .subscribeCardItem {
     background-color: #3f3f3f; }
   body.nightmode .jsThreadPoll input[type="radio"] + label,
@@ -13386,23 +13387,23 @@ body.nightmode {
     body.nightmode .jsThreadPoll input[type="checkbox"] + label:after {
       color: #f5f5f5; }
   body.nightmode .jsThreadPoll input[type="radio"] + label:before {
-    box-shadow: inset 0 0 0 1px #979797, inset 0 0 0 16px #fff, inset 0 0 0 16px var(--c-blue-night); }
+    box-shadow: inset 0 0 0 1px #979797, inset 0 0 0 16px #fff, inset 0 0 0 16px var(--c-orange-night); }
   body.nightmode .jsThreadPoll input[type="radio"]:checked + label {
-    color: var(--c-blue-night); }
+    color: var(--c-orange-night); }
     body.nightmode .jsThreadPoll input[type="radio"]:checked + label:before {
-      box-shadow: inset 0 0 0 1px #979797, inset 0 0 0 3px #fff, inset 0 0 0 16px var(--c-blue-night); }
+      box-shadow: inset 0 0 0 1px #979797, inset 0 0 0 3px #fff, inset 0 0 0 16px var(--c-orange-night); }
   body.nightmode .jsThreadPoll input[type="checkbox"] + label {
     color: var(--c-gray-2); }
     body.nightmode .jsThreadPoll input[type="checkbox"] + label:before {
       background-color: #fff;
       color: #fff;
-      box-shadow: inset 0 0 0 1px #666565, inset 0 0 0 16px #fff, inset 0 0 0 16px var(--c-blue-night); }
+      box-shadow: inset 0 0 0 1px #666565, inset 0 0 0 16px #fff, inset 0 0 0 16px var(--c-orange-night); }
   body.nightmode .jsThreadPoll input[type="checkbox"]:checked + label {
-    color: var(--c-blue-night); }
+    color: var(--c-orange-night); }
     body.nightmode .jsThreadPoll input[type="checkbox"]:checked + label:before {
       background-color: #c3c3c3;
       color: #fff;
-      box-shadow: inset 0 0 0 1px var(--c-blue-night), inset 0 0 0 0 #fff, inset 0 0 0 16px var(--c-blue-night); }
+      box-shadow: inset 0 0 0 1px var(--c-orange-night), inset 0 0 0 0 #fff, inset 0 0 0 16px var(--c-orange-night); }
   body.nightmode .jsThreadPoll .PollResultTitle {
     color: var(--c-gray-2); }
   body.nightmode .jsThreadPoll .PollResultVal {
@@ -13410,9 +13411,9 @@ body.nightmode {
   body.nightmode .jsThreadPoll .PollResultBar {
     background-color: var(--c-yellow-1); }
   body.nightmode .jsThreadPoll .is-selected .PollResultTitle {
-    color: var(--c-blue-night); }
+    color: var(--c-orange-night); }
   body.nightmode .jsThreadPoll .is-selected .PollResultVal {
-    color: var(--c-blue-night); }
+    color: var(--c-orange-night); }
   body.nightmode .notificationItem > div {
     background-color: var(--c-gray-7); }
   body.nightmode .notificationItem.is-opened > div {
@@ -13442,19 +13443,22 @@ body.nightmode {
     background-color: var(--c-orange-night);
     color: var(--c-gray-7); }
   body.nightmode .itemView.is-selected i {
-    color: var(--c-secondary-night); }
+    color: var(--c-orange-night); }
   body.nightmode .is-rounded label {
-    background-color: white;
+    background-color: var(--c-black);
     border: 1px solid #9b9b9b; }
     body.nightmode .is-rounded label:after {
-      border-color: var(--c-primary-night); }
+      border-color: var(--c-black); }
   body.nightmode .is-rounded input[type="checkbox"]:checked + label {
-    background-color: var(--c-blue-night);
-    border-color: var(--c-blue-night); }
+    background-color: var(--c-orange-night);
+    border-color: var(--c-orange-night); }
   body.nightmode .notificationItem .notificationItemWrap {
     background-color: var(--c-black); }
   body.nightmode .notificationItem.is-opened .notificationItemWrap {
     background-color: var(--c-gray-7); }
+  body.nightmode .is-rounded input[type="checkbox"]:checked + label {
+    background-color: var(--c-orange-night);
+    border-color: var(--c-orange-night); }
   body.nightmode .select2-container--default .select2-selection--single {
     background-color: transparent; }
   body.nightmode .select2-dropdown {
@@ -13507,7 +13511,7 @@ body.nightmode {
     background-image: url("../images/ic-kaskus-abu.svg"); }
   body.nightmode .radioWrapper ul li [type="radio"]:checked + label:after,
   body.nightmode .radioWrapper .radioWrapper ul li [type="radio"]:not(:checked) + label:after {
-    background: var(--c-blue-night); }
+    background: var(--c-orange-night); }
   body.nightmode .radioWrapper input[type="radio"]:checked + label {
     color: var(--c-gray-2); }
   body.nightmode .jsCategoryPersonalizationItem.is-selected > div {
