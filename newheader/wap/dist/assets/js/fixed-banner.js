@@ -1,0 +1,1 @@
+function setWindowHeight(){var e=Math.max(document.documentElement.clientHeight);document.getElementById("fixed-banner").style.height=e+"px"}window.onload=setWindowHeight;

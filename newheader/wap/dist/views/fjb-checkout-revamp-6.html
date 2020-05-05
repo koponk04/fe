@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ID">
+
+<head>
+  <meta charset="UTF-8">
+  <title>M Framework</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, target-densitydpi=device-dpi" />
+  <link href="../assets/stylesheets/main.css" rel="stylesheet" type="text/css" media="all"/>
+  <!-- <link href="../assets/stylesheets/night.css" rel="stylesheet" type="text/css" media="all"/> -->
+  <link rel="apple-touch-icon-precomposed" href="../assets/img/apps_icon.png" />
+  <script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+</head>
+<body class="fjb">
+  <div id="wrapper" style="background:white;">
+    <div class="top-header">
+        <!-- FJB NOTICE -->
+      <div class="nm nm-forum notice-app">
+        <a href="" target="_blank">
+          <img src="../assets/img/icon-notice-fjb.png" class="left">
+        </a>
+        <div class="nm-title">
+          <span>KASKUS</span>
+          <a href="#" class="x">&times;</a>
+        </div>
+        <div>
+          <span><a href="https://play.google.com/store/apps/details?id=com.kaskus.android&utm_source=kaskusmsite" target="_blank">Get the App</a></span>
+          <span class="right"><a href="https://play.google.com/store/apps/details?id=com.kaskus.android&utm_source=kaskusmsite" target="_blank">View in App</a></span>
+        </div>
+      </div>
+      <header id="site-header" class="" style="box-shadow: none!important; -webkit-box-shadow: none!important;">
+        <div class="main-hr r">
+          <nav class="n">
+            <a href="#" class="logo">
+              <img src="../assets/img/logo.png" height="30" width="30" alt="">
+            </a>
+            <a href="#" id="kk-forum">Forum</a>
+            <a href="#" id="kk-fjb">Jual Beli</a>
+            <a href="#" id="kk-premium">Premium</a>
+           <!--  <a href="#" id="kk-mataharimall"><img src="../assets/img/logo-mataharimall.png" alt=""></a> -->
+          </nav>
+          <nav class="u">
+            <!--USER NOT LOGGED IN-->
+            <!--<span id="mobile-menu-btn" class="login_btn">
+              <a href="https://fjb.m.kaskus.co.id/user/menu">
+                <div class="" style="color: rgb(0,115,183);">Masuk</div>
+                <!--<div class="user-notice">6</div>
+              </a>
+            </span>-->
+            <!--USER LOGGED IN-->
+            <span id="mobile-menu-btn" class="login_btn">
+              <a href="#" class="user-photo">
+                  <div class="user-photo-wrapper">
+                      <img src="../assets/img/kob1.png" alt="user photo">
+                  </div>
+                <div class="user-notice">99+</div>
+              </a>
+            </span>
+          </nav>
+        </div>
+      </header>
+    </div>
+
+      <!-- if notice install apps is closed & user not logged in -->
+      <!-- <div id="main" class="p-top-68" role="main"> -->
+
+      <!-- if notice install apps is closed & user is logged in -->
+      <!-- <div id="main" class="p-top-40" role="main"> -->
+      <div id="main" role="main" class="p-top-50">
+      <div class="main-hr r">
+        <form action="" name="" method="" class="category-menu-filter">
+          <div class="r relative p-7">
+            <div class="c c-4">
+              <input class="search-category" type="text" id="filter-cat" placeholder="Cari di sini">
+            </div>
+          </div>
+          <div class="c c-1">
+            <div class="search-icon">
+              <input class="search-txt" type="submit" value="Search">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="header-detail">
+        <div class="r head-menu">
+            <div class="p-left">
+            <span>
+                <a href="">
+                  <img class="logo-header" src="../assets/img/arrow-left-teal.png">
+                </a>
+            </span>
+            <span>
+              <a href="">
+                <img class="logo-header" src="../assets/img/logo.png">
+              </a>
+            </span>
+            <span class="row-tr">
+                <a href="">Tambah Alamat</a>
+            </span>
+            </div>
+        </div>
+    </div>
+      <div id="content-wrapper" class="bar ">
+        <div class="wrapper-add-address">
+          <div class="rekening-bank">
+            <div class="donatello">
+              <div class="r wrapper">
+                <div class="r attribute">
+                  <label class="no-after">Label Alamat</label>
+                  <div class="in-txt"><input type="text" placeholder="Contoh: Alamat Kantor"></div>
+                </div>
+                <div class="r attribute">
+                  <label class="no-after">Nama Penerima</label>
+                  <div class="in-txt"><input type="text" placeholder="Nama penerima"></div>
+                </div>
+                <div class="r attribute">
+                  <label class="no-after">Nomor Handphone Penerima</label>
+                  <div class="in-txt"><input type="text" placeholder="Contoh: 081234567890"></div>
+                </div>
+                <div class="r attribute">
+                  <label class="no-after">Alamat</label>
+                  <div class="in-txt price">
+                    <textarea name="" id="" cols="30" rows="3" required="required" placeholder="Alamat Lengkap"></textarea>
+                  </div>
+                </div>
+                <div class="r attribute">
+                  <label class="no-after">Provinsi</label>
+                  <div class="in-txt">
+                    <select name="" id="">
+                      <option value="1">Pilih Provinsi</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="r attribute">
+                  <label class="no-after">Kota/Kabupaten</label>
+                  <div class="in-txt">
+                    <select name="" id="">
+                      <option value="1">Pilih Kota/Kabupaten</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="r attribute">
+                  <label class="no-after">Kecamatan</label>
+                  <div class="in-txt">
+                    <select name="" id="">
+                      <option value="1">Pilih Kecamatan</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="r attribute">
+                  <label class="no-after">Kode Pos</label>
+                  <div class="in-txt"><input type="text" placeholder="Contoh: 12345"></div>
+                </div>
+                <div class="wrapper-desc-status">
+                  <div class="checkbox-group">
+                    <input type="checkbox" value="biasa" name="option_4" id="option_4" />
+                    <label for="option_4">Jadikan alamat utama</label>
+                  </div>
+                </div>
+                <div class="r attribute">
+                  <span>Untuk melakukan perubahan alamat, silahkan ke halaman <a href="" class="link-teal">Atur Alamat</a></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt10 mb20">
+              <a href="" class="btn orange btn-full radius-5 top-padding-10 bottom-padding-10 mr10">Simpan</a>
+            </div>
+      </div>
+		</div>
+    
+<div class="c-footer">
+  <div class="notice p-all-10">
+    <div class="title-kn">Kirim info peristiwa menarik di sekitarmu ke (Chat Only)</div>
+    <!-- add more text here -->
+    <div class="notice-wrapper">
+      <a href="" class="notice-btn whatsapp">
+        <img src="../assets/images/icon-whatsapp-border.svg" alt="whatsapp-icon"/>
+        <strong>+628119KASKUS</strong>
+      </a>
+      <a href="" class="notice-btn k-chat">
+        <img src="../assets/images/icon-chat-white.svg" alt="chat-icon"/>
+        <strong>KASKUS.Update</strong>
+      </a>
+    </div>
+  </div>
+
+  <nav class="kaskusnetworks">
+    <div class="title-kn">CHANNELS</div>
+    <div class="list-kn">
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611291043150120.png" alt="kaskusnetworks-image"> </a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611291043400966.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611290202260804.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2017/01/11/4501355_201701110710070180.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2017/03/06/6498705_201703060945090923.png" alt="kaskusnetworks-image"></a>
+    </div>
+  </nav>
+
+  <footer id="site-footer">
+    <nav class="mb10">
+          <a href="#site-header">Kembali ke Atas</a>
+          <a href="http://kaskus.com">Versi Desktop</a>
+          <a href="http://kaskus.com">Nightmode</a>
+          <a href="http://kaskus.com">Image off</a>
+          <a href="#" class="out">Widget</a>
+          <a href="#" class="out">Hubungi Kami</a>
+          <a href="#" class="out">Keluar</a>
+    </nav>
+    <img src="../assets/img/banner1.jpg" height="250" width="300" alt="">
+    <small>&copy; 2017 Kaskus – The Largest Indonesian Community</small>
+  </footer>
+</div>
+  </div>
+</body>
+
+</html>

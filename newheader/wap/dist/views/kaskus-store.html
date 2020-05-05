@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ID">
+
+<head>
+  <meta charset="UTF-8">
+  <title>M Framework</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, target-densitydpi=device-dpi" />
+  <link href="../assets/stylesheets/main.css" rel="stylesheet" type="text/css" media="all"/>
+  <!-- <link href="../assets/stylesheets/night.css" rel="stylesheet" type="text/css" media="all"/> -->
+  <link rel="apple-touch-icon-precomposed" href="../assets/img/apps_icon.png" />
+  <script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+</head>
+<body>
+	<div id="wrapper">
+		<header id="site-header">
+			<div class="main-h r">
+				<div class="c c-3">
+					<nav class="n">
+						<a href="#" class="logo">
+							<img src="../assets/img/logo.png" height="30" width="30" alt="">
+						</a>
+						<a href="#" id="kk-forum">Forum</a>
+						<a href="#" id="kk-fjb">FJB</a>
+					</nav>
+				</div>
+				<div class="c c-1">
+					<nav class="u">
+						<a href="#">Sign In</a>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<div id="main" role="main">
+			<div id="subnav">
+				<span><a href="#">VM<sup>3</sup></a></span>
+				<span><a href="#">PM<sup>3</sup></a></span>
+				<span class="curr"><a href="#">Activities</a></span>
+				<span><a href="#">Store</a></span>
+				<span><a href="#">Settings</a></span>
+				<span><a href="#">Sign Out</a></span>
+			</div>
+
+			<div id="search">
+				<form>
+					<div class="r">
+						<div class="c c-3">
+							<div class="in-txt">
+								<input type="text" placeholder="Search something&hellip;" autofocus="autofocus" autocorrect="off" spellcheck="false" required>
+							</div>
+						</div>
+						<div class="c c-1">
+							<div class="in-btn">
+								<input type="submit" value="Search">
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<div id="content-wrapper" class="bar">
+				<div class="c-list forum-activities">
+					<div class="wrap" style="margin-bottom:0;">
+						<p><strong>KASKUS Store</strong></p>
+					</div>
+
+					<div class="post-list">
+
+						<h2 class="b">Info Membership KASKUS Plus Agan</h2>
+						<div class="wrap" style="margin-bottom:0px;">
+							<p><strong>Status Paket KASKUS Plus Agan</strong></p>
+							<p>Status : <span class="red"><strong style="text-transform:uppercase;">Not Active</strong></span></p>
+						</div>
+
+						<h2 class="b">KasAds Voucher</h2>
+						<div class="wrap" style="margin-bottom:-10px;">
+							<p>Sisa Voucher : <strong>2</strong></p>
+							<hr style="margin:10px 0;">
+							<p><strong>List KasAds Voucher</strong></p>
+						</div>
+						<table class="b-table">
+							<thead>
+								<tr>
+									<th>Kode Voucher</th>
+									<th>Nominal Voucher</th>
+									<th>Masa Berlaku</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>K4ECCB169E1</td>
+									<td>Rp. 50.000</td>
+									<td>21-11-2016 08:00</td>
+								</tr>
+								<tr>
+									<td>D4ECPB167PL</td>
+									<td>Rp. 20.000</td>
+									<td>21-11-2016 08:00</td>
+								</tr>
+							</tbody>
+
+						</table>
+
+						<h2 class="b">KASKUS Plus Form</h2>
+						<div class="wrap">
+
+							<form action="" method="" id="kaskus-plus-form">
+								<div class="c c-4 mb10 position-r">
+									<div class="c c-4">
+										<span>
+											<label for="user-id">
+												<strong>User ID</strong>
+												<button type="button" class="tooltip-plus" onclick="revealTooltip(this);">?</button>
+				                                <div id="tooltip-content" class="tooltip-plus-content" style="display: none;">Masukkan User ID yang akan dijadikan member Plus
+				                                    <button type="button" class="tooltip-plus-close" onclick="concealTooltip(this);">x</button>
+				                                </div>
+											</label>
+										</span>
+									</div>
+									<div class="c c-4">
+										<div class="in-txt has-radius">
+											<input type="text" id="user-id">
+										</div>
+										<div class="mt5">Masukkan User ID yang akan dijadikan member Plus</div>
+									</div>
+								</div>
+
+								<div class="c c-4 mb10 position-r">
+									<div class="c c-4">
+										<span>
+											<label for="email">
+												<strong>Email</strong>
+												<button type="button" class="tooltip-plus" onclick="revealTooltip(this);">?</button>
+				                                <div id="tooltip-content" class="tooltip-plus-content" style="display: none; left: 33px;">Email akan digunakan untuk pengiriman data transaksi
+				                                    <button type="button" class="tooltip-plus-close" onclick="concealTooltip(this);">x</button>
+				                                </div>
+											</label>
+										</span>
+									</div>
+									<div class="c c-4">
+										<div class="in-txt has-radius">
+											<input type="text" id="email">
+										</div>
+										<div class="mt5">Email akan digunakan untuk pengiriman data transaksi</div>
+									</div>
+								</div>
+
+								<p style="margin: 10px 0;"><strong>Paket KASKUS Plus</strong></p>
+
+								<fieldset>
+									<input type="radio" name="paket-plus" id="1-bulan">
+									<label for="1-bulan">1 Bulan : Rp. 30,000</label>
+									<br>
+									<input type="radio" name="paket-plus" id="3-bulan">
+									<label for="3-bulan">3 Bulan : Rp. 80,000</label>
+								</fieldset>
+
+								<fieldset>
+									<input type="radio" name="paket-plus" id="6-bulan">
+									<label for="6-bulan">6 Bulan : Rp. 150,000</label>
+									<br>
+									<input type="radio" name="paket-plus" id="12-bulan">
+									<label for="12-bulan">12 Bulan : Rp. 300,000</label>
+								</fieldset>
+								<br>
+								<a href="#" class="btn green btn-block">Bungkus Gan!</a>
+							</form>
+						</div>
+						<h2 class="b">Syarat &amp; Ketentuan KASKUS Plus</h2>
+						<div class="wrap">
+							<ol>
+								<li>Peraturan yang berlaku di KASKUS akan berlaku juga pada anggota KASKUS Plus.</li>
+								<li>Segala pelanggaran yang dilakukan anggota KASKUS Plus akan mendapat sanksi yang sama seperti user biasa.</li>
+								<li>Pembayaran KASKUS Plus tidak bisa di-refund apabila user tersebut terbukti melakukan pelanggaran dan berakibat mendapatkan sanksi banned/perubahan tag di KASKUS.</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+<div class="c-footer">
+  <div class="notice p-all-10">
+    <div class="title-kn">Kirim info peristiwa menarik di sekitarmu ke (Chat Only)</div>
+    <!-- add more text here -->
+    <div class="notice-wrapper">
+      <a href="" class="notice-btn whatsapp">
+        <img src="../assets/images/icon-whatsapp-border.svg" alt="whatsapp-icon"/>
+        <strong>+628119KASKUS</strong>
+      </a>
+      <a href="" class="notice-btn k-chat">
+        <img src="../assets/images/icon-chat-white.svg" alt="chat-icon"/>
+        <strong>KASKUS.Update</strong>
+      </a>
+    </div>
+  </div>
+
+  <nav class="kaskusnetworks">
+    <div class="title-kn">CHANNELS</div>
+    <div class="list-kn">
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611291043150120.png" alt="kaskusnetworks-image"> </a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611291043400966.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611290202260804.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2017/01/11/4501355_201701110710070180.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2017/03/06/6498705_201703060945090923.png" alt="kaskusnetworks-image"></a>
+    </div>
+  </nav>
+
+  <footer id="site-footer">
+    <nav class="mb10">
+          <a href="#site-header">Kembali ke Atas</a>
+          <a href="http://kaskus.com">Versi Desktop</a>
+          <a href="http://kaskus.com">Nightmode</a>
+          <a href="http://kaskus.com">Image off</a>
+          <a href="#" class="out">Widget</a>
+          <a href="#" class="out">Hubungi Kami</a>
+          <a href="#" class="out">Keluar</a>
+    </nav>
+    <img src="../assets/img/banner1.jpg" height="250" width="300" alt="">
+    <small>&copy; 2017 Kaskus – The Largest Indonesian Community</small>
+  </footer>
+</div>
+			<script type="text/javascript" src="../assets/js/tooltip.js"></script>
+		</div>
+</body>
+</html>

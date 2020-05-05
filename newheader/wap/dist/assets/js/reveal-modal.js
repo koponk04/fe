@@ -1,0 +1,1 @@
+$(".reveal-modal").on("click",function(){$("#"+$(this).data("modal")).css("display","block"),$("body").addClass("o-hidden")}),$(".close, .dismiss-modal").on("click",function(){$(".modal").hide(),$("body").removeClass("o-hidden")}),window.onclick=function(d){"modal"==d.target.className&&($(".modal").hide(),$("body").removeClass("o-hidden"))};

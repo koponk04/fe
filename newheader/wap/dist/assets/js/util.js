@@ -1,0 +1,1 @@
+window.KaskusUtil=function(){function n(n,t,u){var i;return function(){var e=this,o=arguments,r=function(){i=null,u||n.apply(e,o)},a=u&&!i;clearTimeout(i),i=setTimeout(r,t||200),a&&n.apply(e,o)}}return{debounce:n}}();

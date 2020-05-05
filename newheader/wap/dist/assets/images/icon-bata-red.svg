@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="19px" viewBox="0 0 21 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/bata</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M9.67804728,4.78396027 L15.8525017,8.201184 L6.29048586,13.4544103 L0.116031463,10.0371866 L9.67804728,4.78396027 Z M6.29048586,14.4228536 L15.8525017,9.1937484 L15.8525017,12.6967497 L6.29048586,18.0108903 L0.116031463,14.5489617 L0.116031463,11.0459604 L6.29048586,14.4228536 Z M12.3776561,3.34305544 L14.6201445,0.985477201 L14.2730496,4.31397997 L18.0526931,2.41508617 L16.3104839,5.77928869 L19.8137969,5.79333681 L17.2923446,7.8844734 L20.2248409,9.40159695 L16.5911605,9.92806951 L18.647131,9.10737205 C18.647131,9.10737205 16.0169423,7.86221117 15.9601418,7.86121972 C15.9050816,7.86025864 18.1636364,6.33219038 18.1636364,6.33219038 C18.1636364,6.33219038 15.1705104,6.66647653 15.1440279,6.55157639 C15.1175426,6.43683806 16.701621,3.69952652 16.701621,3.69952652 L13.7458557,5.34799158 L13.9302048,2.40301756 L12.5233368,4.5446872 L11.0545157,2.01177467 L10.3568439,4.67925614 L10.9609831,0.968870604 L12.3776561,3.34305544 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="action/bata" transform="translate(-20.000000, 0.000000)">
+            <g id="icons/bata" transform="translate(20.000000, 0.000000)">
+                <g id="Group" transform="translate(-2.000000, -3.000000)">
+                    <g id="color/red" transform="translate(12.712136, 12.361895) rotate(-13.000000) translate(-12.712136, -12.361895) translate(2.212136, 2.861895)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#F8E71C" xlink:href="#path-1"></use>
+                        <g mask="url(#mask-2)" fill="#D0021B" id="Rectangle-3">
+                            <g transform="translate(-5.074074, -3.166667)">
+                                <rect x="0" y="0" width="28" height="28"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

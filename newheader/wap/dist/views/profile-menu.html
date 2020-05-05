@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ID">
+
+<head>
+  <meta charset="UTF-8">
+  <title>M Framework</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, target-densitydpi=device-dpi" />
+  <link href="../assets/stylesheets/main.css" rel="stylesheet" type="text/css" media="all"/>
+  <!-- <link href="../assets/stylesheets/night.css" rel="stylesheet" type="text/css" media="all"/> -->
+  <link rel="apple-touch-icon-precomposed" href="../assets/img/apps_icon.png" />
+  <script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+</head>
+<body class="forum">
+    <div id="wrapper">
+
+        <!-- FORUM NOTICE -->
+        <div class="nm nm-forum notice-app">
+            <a href="https://play.google.com/store/apps/details?id=com.kaskus.android&utm_source=kaskusmsite" target="_blank">
+                <img src="../assets/img/icon-notice-forum.png" class="left">
+            </a>
+            <div class="nm-title">
+                <span>KASKUS</span>
+                <a href="#" class="x">&times;</a>
+            </div>
+
+            <div>
+                <span><a href="https://play.google.com/store/apps/details?id=com.kaskus.android&utm_source=kaskusmsite" target="_blank">Get the App</a></span>
+                <span class="right"><a href="https://play.google.com/store/apps/details?id=com.kaskus.android&utm_source=kaskusmsite" target="_blank">View in App</a></span>
+            </div>
+        </div>
+
+        <!-- FJB NOTICE -->
+        <!-- <div class="nm nm-fjb notice-app">
+            <a href="https://itunes.apple.com/id/app/kaskus-jual-beli/id1050532138" target="_blank">
+                <img src="../assets/img/icon-notice-fjb.png" class="left">
+            </a>
+            <div class="nm-title">
+                <span>KASKUS Jual Beli</span>
+                <a href="#" class="x">&times;</a>
+            </div>
+
+            <div>
+                <span><a href="https://itunes.apple.com/id/app/kaskus-jual-beli/id1050532138" target="_blank">Get the App</a></span>
+                <span class="right"><a href="https://itunes.apple.com/id/app/kaskus-jual-beli/id1050532138" target="_blank">View in App</a></span>
+            </div>
+        </div> -->
+
+        <header id="site-header">
+            <div class="main-h r">
+                <nav class="n">
+                    <a href="#" class="logo">
+                        <img src="../assets/img/logo.png" height="30" width="30" alt="">
+                    </a>
+                    <a href="#" id="kk-forum">Forum</a>
+                    <a href="#" id="kk-fjb">Jual Beli</a>
+                    <a href="#" id="kk-news">News</a>
+                    <a href="#" id="kk-mataharimall">MatahariMall</a>
+                </nav>
+                <nav class="u">
+                    <a href="#" class="user-photo">
+                        <div class="photo-wrapper">
+                            <img src="../assets/img/kob1.png" alt="user photo">
+                        </div>
+                        <span class="user-notice">4</span>
+                    </a>
+                </nav>
+            </div>
+            <div class="header-login">
+                <div class="r">
+                    <div class="p-left">
+                        <span><a href="#login">Login</a></span>
+                        <span>or</span>
+                        <span><a href="">Sign Up</a></span>
+                    </div>
+                    <div class="p-right">
+                        <span>Masa belum login, Gan?</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="main" role="main">
+            <div class="profile-menu" class="text-left">
+                <form action="" name="" method="" class="category-filter">
+                    <div class="r relative">
+                        <input type="text" placeholder="Filter Categories">
+                        <a href="" class="search-icon"><img src="../assets/img/search-icon.png" alt=""></a>
+                    </div>
+                </form>
+                <ul class="">
+                    <li>
+                        <a href="#">
+                            <img src="../assets/img/icon-bell.png" alt="" class="icon">
+                            <span>Notification</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../assets/img/icon-book.png" alt="" class="icon">
+                            <span>Visitor Message</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../assets/img/icon-envelope.png" alt="" class="icon">
+                            <span class="notif">Private Message</span>
+                        </a>
+                    </li>
+                    <li class="accordionItem open">
+                        <a href="#" class="accordionItemHeading">
+                            <img src="../assets/img/icon-text-bubble.png" alt="" class="icon">
+                            <span class="notif">Forum Activities</span>
+                            <img src="../assets/img/arrow-down.png" alt="" class="arrow-down">
+                        </a>
+                        <ul class="accordionContent">
+                            <li><a href="">Activities</a></li>
+                            <li><a href="">My Post</a></li>
+                            <li><a href="">My Thread</a></li>
+                            <li><a href="">My Quoted Post</a></li>
+                            <li><a href="">Subscribe Thread</a></li>
+                        </ul>
+                    </li>
+                    <li class="accordionItem close">
+                        <a href="#" class="accordionItemHeading">
+                            <img src="../assets/img/icon-basket.png" alt="" class="icon">
+                            <span class="notif">Jual Beli Activities</span>
+                            <img src="../assets/img/arrow-down.png" alt="" class="arrow-down">
+                        </a>
+                        <ul class="accordionContent">
+                            <li><a href="">Become a Seller</a></li>
+                            <li><a href="">My Selling History</a></li>
+                            <li><a href="">My Buying History</a></li>
+                            <li><a href="">Saldo BranKas</a></li>
+                            <li><a href="">Resolution Center</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../assets/img/icon-user.png" alt="" class="icon">
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../assets/img/icon-gear.png" alt="" class="icon">
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../assets/img/icon-exit.png" alt="" class="icon">
+                            <span>Sign Out</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+<div class="c-footer">
+  <div class="notice p-all-10">
+    <div class="title-kn">Kirim info peristiwa menarik di sekitarmu ke (Chat Only)</div>
+    <!-- add more text here -->
+    <div class="notice-wrapper">
+      <a href="" class="notice-btn whatsapp">
+        <img src="../assets/images/icon-whatsapp-border.svg" alt="whatsapp-icon"/>
+        <strong>+628119KASKUS</strong>
+      </a>
+      <a href="" class="notice-btn k-chat">
+        <img src="../assets/images/icon-chat-white.svg" alt="chat-icon"/>
+        <strong>KASKUS.Update</strong>
+      </a>
+    </div>
+  </div>
+
+  <nav class="kaskusnetworks">
+    <div class="title-kn">CHANNELS</div>
+    <div class="list-kn">
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611291043150120.png" alt="kaskusnetworks-image"> </a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611291043400966.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2016/11/29/6498705_201611290202260804.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2017/01/11/4501355_201701110710070180.png" alt="kaskusnetworks-image"></a>
+      <a href="#" target="_blank"><img src="//s.kaskus.id/images/2017/03/06/6498705_201703060945090923.png" alt="kaskusnetworks-image"></a>
+    </div>
+  </nav>
+
+  <footer id="site-footer">
+    <nav class="mb10">
+          <a href="#site-header">Kembali ke Atas</a>
+          <a href="http://kaskus.com">Versi Desktop</a>
+          <a href="http://kaskus.com">Nightmode</a>
+          <a href="http://kaskus.com">Image off</a>
+          <a href="#" class="out">Widget</a>
+          <a href="#" class="out">Hubungi Kami</a>
+          <a href="#" class="out">Keluar</a>
+    </nav>
+    <img src="../assets/img/banner1.jpg" height="250" width="300" alt="">
+    <small>&copy; 2017 Kaskus – The Largest Indonesian Community</small>
+  </footer>
+</div>
+    </div>
+
+    <script>
+        var accItem = document.getElementsByClassName('accordionItem');
+var accHD = document.getElementsByClassName('accordionItemHeading');
+for (i = 0; i < accHD.length; i++) {
+    accHD[i].addEventListener('click', toggleItem, false);
+}
+function toggleItem() {
+    var itemClass = this.parentNode.className;
+    for (i = 0; i < accItem.length; i++) {
+        accItem[i].className = 'accordionItem close';
+    }
+    if (itemClass == 'accordionItem close') {
+        this.parentNode.className = 'accordionItem open';
+    }
+}
+    </script>
+
+    <script type="text/javascript" src="js/nav-arrow.js"></script>
+
+</body>
+
+</html>
