@@ -181,7 +181,7 @@ function display_ht(resp, key)
                     html += '</div>'+
                       '<div class="Fz(13px) Mt(15px) Mb(10px) is-compact-view_D(n)">' + ht_list[i].description + '</div>'+
                       '<div class="Mt(10px) Mb(10px)">'+
-                        '<span class="Va(m)"><a class="C(#1998ed) nightmode_C(#fbc160)" href="'+ ht_list[i].url +'">'+ht_list[i].promoted_cta +'</a></span>'+
+                        '<span class="Va(m)"><a href="'+ ht_list[i].url +'">'+ht_list[i].promoted_cta +'</a></span>'+
                       '</div>'+
                     '</div>'+
                   '</div>'+
@@ -202,7 +202,7 @@ function display_ht(resp, key)
                 '</a>'+
                 '<div class="Fx(flex1Auto) As(c)">'+
                   '<div class="Mb(3px) Fz(13px) Fw(500) Maw(200px) Ov(h) is-compact-view_Mb(0px)">'+
-                    '<a href="/profile/' + ht_list[i].userid + '?ref=htarchive&med=hot_thread" class="C(#484848)">'+ ht_list[i].username+'</a>'+
+                    '<a href="/profile/' + ht_list[i].userid + '?ref=htarchive&med=hot_thread" class="C(c-secondary) nightmode_C(c-secondary-night)">'+ ht_list[i].username+'</a>'+
                   '</div>'+
                   '<div class="Fz(12px) C(#9e9e9e)">'+ user_details[ht_list[i].userid].usertitle +'</div>'+
                 '</div>'+
@@ -369,6 +369,7 @@ function load_tl() {
   feed_track = $('#feed_track').val();
   tl_sort_track = $('#tl_sort_track').val();
   feedtype = $('#tl_feed').val();
+  var threadListChannelId = $('#tl_channel').val();
 
   $.ajax({
     'type': 'post',
@@ -377,7 +378,8 @@ function load_tl() {
       cursor: tl_cursor,
       sort: tl_sort,
       order: tl_order,
-      feedtype: feedtype
+      feedtype: feedtype,
+      channel : threadListChannelId
     },
     'success': function(resp) {
       try {
@@ -479,6 +481,8 @@ function display_oh(resp, key) {
   if (item_count < oh_limit || oh_page > 2) {
     $('#oh-loader').hide();
     oh_no_more_item = true;
+    $('#oh-loader').prev().removeClass('Bdb(gray-border) nightmode_Bdb(night-border)');
+    $('#to-oh-page').removeClass('D(n)');
   }
   bindOpenWhoPosted();
   bindJsRevealModal();
@@ -1056,13 +1060,13 @@ function bindSetSubcategoryItem(element) {
     $('.jsButtonSubscribe').addClass('is-disabled');
     $('.jsButtonSubscribe button').prop('disabled', true);
     $('.jsButtonSubscribe button').toggleClass('Bgc(#ededed) C(#a4a4a4) Bgc(#1998ed) C(#ffffff)');
-    $('.jsButtonSubscribe button').toggleClass('nightmode_Bgc(c-grey) nightmode_C(c-white) nightmode_Bgc(c-orange-night) nightmode_C(#3f3f3f)');
+    $('.jsButtonSubscribe button').toggleClass('nightmode_Bgc(c-grey) nightmode_C(c-white) nightmode_Bgc(c-blue-night) nightmode_C(c-primary-night)');
   }
   else if($('.jsCategoryPersonalizationItem.is-selected').length == 1 && $('.jsButtonSubscribe').hasClass('is-disabled')){
     $('.jsButtonSubscribe').removeClass('is-disabled');
     $('.jsButtonSubscribe button').prop('disabled', false);
     $('.jsButtonSubscribe button').toggleClass('Bgc(#ededed) C(#a4a4a4) Bgc(#1998ed) C(#ffffff)');
-    $('.jsButtonSubscribe button').toggleClass('nightmode_Bgc(c-grey) nightmode_C(c-white) nightmode_Bgc(c-orange-night) nightmode_C(#3f3f3f)');
+    $('.jsButtonSubscribe button').toggleClass('nightmode_Bgc(c-grey) nightmode_C(c-white) nightmode_Bgc(c-blue-night) nightmode_C(c-primary-night)');
   }
 }
 
@@ -1250,6 +1254,7 @@ function createNewThreadlistMenuData(elThreadListMenu)
 }
 
 
+
 // Function Play Video gif
 function clickVideo(el){
   if( (' ' + el.className + ' ').indexOf(' playing ') > -1){
@@ -1277,6 +1282,7 @@ function clickVideo(el){
   }
 }
 // End
+
 
 
 var track_url;
@@ -1438,7 +1444,7 @@ function removeAvatar() {
 				$('.jsModal #jsImageAvatar').attr('src', e.imgurl);
 				$("#remove_avatar").addClass('D(n)');
 				$("#jsImageAvatarView").attr("src", e.imgurl);
-				$('.jsModal').fadeOut();
+				$('#jsConfirmRemoveAvatar').find('.jsDismissModal').first().click();
 			}
 		});
 	}, "json")
@@ -1553,8 +1559,7 @@ function uploadAvatar() {
 							},
 							success: function (e) {
 								$('#remove_avatar').removeClass('D(n)');
-								$('#changeProfilePicture').find('.jsClosePopUp').click();
-								//$(".jsDismissModal").click();
+								$('#changeProfilePicture').find('.jsToggleChangePP').first().click();
 							}
 						});
 					} else {
@@ -1582,7 +1587,7 @@ function removeCoverImage() {
 				if (result.status == 'ok') {
 					$('#jsImageCover').attr('src', assetsFolderNew + '/images/placeholder-cover-image.png');
 					$('#remove_cover').addClass('D(n)');
-					$('.jsModal').fadeOut();
+					$('#jsConfirmRemoveCover').find('.jsDismissModal').first().click();
 				}
 			}
 		});
@@ -1659,7 +1664,7 @@ function uploadCover() {
 					$('.sctoken').val(e.securitytoken);
 					if (e.status == "ok") {
 						$('#remove_cover').removeClass('D(n)');
-						$('#changeCoverPicture').find('.jsClosePopUp').click();
+						$('#changeCoverPicture').find('.jsToggleChangeCover').first().click();
 					} else {
 						$('#jsModalError #error_message').html(e.error);
 						openModal('jsModalError');
@@ -2107,36 +2112,8 @@ function seeMore(element) {
 	}
 }
 
-
-
-
-
-function load_follower_data(base_url)
-{
-	$.ajax({
-		url: base_url,
-		success : function(result){
-			response = $.parseJSON(result);
-			$('#follower_list').html(response.dataview);
-			$('#pagination-follower').html(response.pagination);
-		}
-	});
-}
-
-function load_following_data(base_url)
-{
-	$.ajax({
-		url: base_url,
-		success : function(result) {
-			response = $.parseJSON(result);
-			$('#following_list').html(response.dataview);
-			$('#pagination-following').html(response.pagination);
-		}
-	});
-}
-
 var moderated_page = 1;
-var load_more_forum = '<li id="forum-loadmore" class="D(f) Ai(c) Mb(15px)"><a data-id="moderator-load-more" onclick="load_more_moderated_forum()" href="javascript:void(0)" class="Fz(12px) C(#fff) nightmode_C(#000) Bgc(c-blue) Bd(0) Px(28px) Py(8px) Bdrs(3px) nightmode_Bgc(c-orange) Ta(c) Fw(500) D(b) W(100%)">Load More</a></li>';
+var load_more_forum = '<li id="forum-loadmore" class="D(f) Ai(c) Mb(15px)"><a data-id="moderator-load-more" onclick="load_more_moderated_forum()" href="javascript:void(0)" class="Fz(12px) C(#fff) nightmode_C(c-primary-night) Bgc(c-blue) Bd(0) Px(28px) Py(8px) Bdrs(3px) nightmode_Bgc(c-blue-night) Ta(c) Fw(b) D(b) W(100%)">Lihat Lainnya</a></li>';
 function moderate()
 {
 	moderated_page = 1;
@@ -2194,7 +2171,7 @@ function load_more_moderated_forum()
 }
 
 var badge_page = 1;
-var load_more = '<li id="badge-loadmore" class="D(f) Ai(c) Mb(15px)"><a data-id="badge-load-more" onclick="load_more_badge()" href="javascript:void(0)" class="Fz(12px) C(#fff) nightmode_C(#000) Bgc(c-blue) Bd(0) Px(28px) Py(8px) Bdrs(3px) nightmode_Bgc(c-orange) Ta(c) Fw(500) D(b) W(100%)">Load More</a></li>';
+var load_more = '<li id="badge-loadmore" class="D(f) Ai(c) Mb(15px)"><a data-id="badge-load-more" onclick="load_more_badge()" href="javascript:void(0)" class="Fz(12px) C(#fff) nightmode_C(c-primary-night) Bgc(c-blue) Bd(0) Px(28px) Py(8px) Bdrs(3px) nightmode_Bgc(c-blue-night) Ta(c) Fw(b) D(b) W(100%)">Lihat Lainnya</a></li>';
 
 function badge()
 {
@@ -2269,18 +2246,6 @@ $(document).ready(function(){
 		});
 	});
 
-	$('#pagination-follower').unbind('click').on('click','a',function(e){
-		e.preventDefault();
-		var base_url = $(this).attr('href');
-		load_follower_data(base_url);
-	});
-
-	$('#pagination-following').unbind('click').on('click','a',function(e){
-		e.preventDefault();
-		var base_url = $(this).attr('href');
-		load_following_data(base_url);
-	});
-
 	// $('#jsBacktoTop').click(backToTopFunction);
 	$(document).on('click', '#qr-code-btn', function(){
 		$.ajax({
@@ -2343,6 +2308,16 @@ $(document).ready(function(){
 		});
 	}
 });
+
+
+function check_not_empty_input(elId)
+{
+	var elementInput = $("#" + elId).val();
+	if (typeof elementInput !== typeof undefined && elementInput !== false && elementInput != '') {
+		return true;
+	}
+		return false;
+}
 
 var topicDetailThreadLoading = false;
 
@@ -2752,6 +2727,7 @@ function initLazyload() {
 		});
 }
 
+
 var messaging = '';
 var config;
 var firebaseInitStatus = false;
@@ -2887,21 +2863,6 @@ function requestPerm() {
   });
 }
 
-function getCookie(cname) {
-  var name = cname + "=";
-  var ca = document.cookie.split(';');
-  for(var i = 0; i < ca.length; i++) {
-    var c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
-}
-
 function sendTokenToServer(currentToken) {
   if (!isTokenSentToServer()) {
     setTokenSentToServer(true);
@@ -2933,6 +2894,12 @@ function bindRequestFcm() {
   });
 }
 
+
+// @codekit-prepend "../backend/backend-subforum.js";
+// @codekit-prepend "../backend/backend-thread.js";
+// @codekit-prepend "../backend/backend-user.js";
+// @codekit-prepend "../backend/backend-visualita.js";
+// @codekit-prepend "../backend/backend-pushnotification.js";
 
 /**
  * Function subscribe unsubscribe thread (sub forum and thread used)
@@ -3415,12 +3382,15 @@ function bindDarkModeDetected()
       var expiredTime = new Date().getTime() + 7776000000;
       if (!nightmodeCookieSet) {
         document.body.classList.add('nightmode');
-        setCookie('mode', '1', expiredTime);
+        // disable setCookie for FE development, remove before merge
+        // setCookie('mode', '1', expiredTime);
         document.getElementById('nightmode_').checked = true;
       }
-      setCookie('dark_mode_detected', '1', expiredTime);
+      // disable setCookie for FE development, remove before merge
+      // setCookie('dark_mode_detected', '1', expiredTime);
     }
 }
+
 
 /**
  *Bind clicks anywhere outside of the modal, close it
@@ -3473,6 +3443,7 @@ function largeTextAreaAdjust(o) {
 //   $(this).parents('.noticeParent').hide();
 // })
 //
+
 
 $(document).ready(function() {
   window.addEventListener("scroll", function() {
@@ -3591,6 +3562,7 @@ function setTopNotice() {
     }
 }
 
+
 // FRONT END
 
 /*
@@ -3692,6 +3664,9 @@ function stickyShare() {
   }
 }
 
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
 // DOCUMENT READY
 $(document).ready(function() {
   bindVoteButton();
@@ -3765,8 +3740,6 @@ $(document).ready(function() {
       $(".jsRevealMenus, .jsRevealShare").hide();
       $(".jsShowMenus, .jsMoreMenus").removeClass("show").addClass("hide");
       $('.jsPopoverMenu').removeClass('is-visible');
-      $('.jsPopoverTrigger').removeClass('C(c-blue)').addClass('C(c-primary)');
-      $('.jsPopoverTrigger').removeClass('nightmode_C(c-orange-night)').addClass('nightmode_C(c-secondary-night)');
     }
   });
 
@@ -3823,6 +3796,8 @@ $(document).ready(function() {
   $(document).on("click", ".jsToggleChangeCover", function() {
     $("#changeCoverPicture").toggleClass("is-open");
     $(document.body).removeClass("o-hidden");
+    $("#jsUploadCover").val("");
+    $(document.body).removeClass("Ov(h)");
   });
 
   /**
@@ -3831,6 +3806,8 @@ $(document).ready(function() {
   $(document).on("click", ".jsToggleChangePP", function() {
     $("#changeProfilePicture").toggleClass("is-open");
     $(document.body).removeClass("o-hidden");
+    $("#jsUploadAvatar").val("");
+    $(document.body).removeClass("Ov(h)");
   });
 
   /**
@@ -3846,6 +3823,13 @@ $(document).ready(function() {
    */
   $(document).on("click", ".jsToggleCategory", function() {
     $("#jsCategory").toggleClass("is-open");
+    $(".jsToggleCategory").find("i").toggleClass("fa-chevron-up");
+    $(".jsToggleCategory").find("i").toggleClass("fa-chevron-down");
+    $("#searchform").removeClass("active");
+    $("#JsCatBar").addClass("active");
+    $("#jsSearchButton").css("color", "#ddd");
+    $("#category-swipe").removeClass("disappear");
+    $(".jsSearchDropdown").removeClass("is-open");
     $(document.body).toggleClass("o-hidden");
     if (!catLoad) {
       fetchCategories();
@@ -3995,18 +3979,8 @@ $(document).ready(function() {
   $('body').on('click', '.jsPopoverTrigger', function() {
     createNewThreadlistMenuData($(this));
     var others = $('.jsPopoverTrigger').not(this);
-    others.removeClass('C(c-blue)').addClass('C(c-primary)');
-    others.removeClass('nightmode_C(c-orange-night)').addClass('nightmode_C(c-secondary-night)');
     others.next().removeClass('is-visible');
-    if ($(this).next().hasClass("is-visible")) {
-      $(this).next().removeClass("is-visible");
-      $(this).removeClass('C(c-blue)').addClass('C(c-primary)');
-      $(this).removeClass('nightmode_C(c-orange-night)').addClass('nightmode_C(c-secondary-night)');
-    } else {
-      $(this).next().addClass("is-visible");
-      $(this).addClass('C(c-blue)').removeClass('C(c-primary)');
-      $(this).addClass('nightmode_C(c-orange-night)').removeClass('nightmode_C(c-secondary-night)');
-    }
+    $(this).next().toggleClass('is-visible');
   });
 
   // /*
@@ -4184,9 +4158,9 @@ $(document).ready(function() {
   $(document).on('click', '.jsThreadCardShare', function() {
     createNewThreadlistShareMenuData($(this));
     var others = $('.jsThreadCardShare').not(this);
-    var thisElement = $(this);   
-    setTimeout(function(){ 
-      others.closest('.jsThreadCard').find('.jsShareBar').removeClass("is-visible");    
+    var thisElement = $(this);
+    setTimeout(function(){
+      others.closest('.jsThreadCard').find('.jsShareBar').removeClass("is-visible");
     }, 300);
     others.closest('.jsThreadCard').find('.jsShareBarList').removeClass('is-show');
     if ($(this).closest('.jsThreadCard').find('.jsShareBar').hasClass("is-visible")) {
@@ -4198,11 +4172,11 @@ $(document).ready(function() {
     }
   });
 
-  $(document).on("click", ".jsThreadCardShareClose", function(e) {   
-    var thisElement = $(this);   
+  $(document).on("click", ".jsThreadCardShareClose", function(e) {
+    var thisElement = $(this);
     thisElement.closest('.jsShareBar').find('.jsShareBarList').removeClass('is-show');
-    setTimeout(function(){ 
-      thisElement.closest('.jsShareBar').removeClass('is-visible');   
+    setTimeout(function(){
+      thisElement.closest('.jsShareBar').removeClass('is-visible');
     }, 300);
   });
 
@@ -4478,15 +4452,15 @@ $(document).ready(function() {
     }
   });
 
-  $(".jsCategoryItem").each(function(idx) {
-    $(this).on("scroll", function() {
-      if ($(this).scrollTop() > 0) {
-        $(".jsCategoryItem").parent().addClass("fixed");
-      } else {
-        $(".jsCategoryItem").parent().removeClass("fixed");
-      }
-    })
-  });
+  // $(".jsCategoryItem").each(function(idx) {
+  //   $(this).on("scroll", function() {
+  //     if ($(this).scrollTop() > 0) {
+  //       $(".jsCategoryItem").parent().addClass("fixed");
+  //     } else {
+  //       $(".jsCategoryItem").parent().removeClass("fixed");
+  //     }
+  //   })
+  // });
 
   $(document).on("click", "#fjb-tab", function(e) {
     if ($("#forum-tab").hasClass("active-forum")) {
@@ -4520,7 +4494,7 @@ $(document).ready(function() {
       $("#JsCatBar").addClass("active");
       $("#jsSearchButton").css("color", "#ddd");
       $("#category-swipe").removeClass("disappear");
-      $(".search-overlay").removeClass("is-show");
+      $(".jsSearchDropdown").removeClass("is-open");
       $("body").removeClass("o-hidden");
     } else {
       $("#searchform").addClass("active");
@@ -4528,8 +4502,12 @@ $(document).ready(function() {
       $("#jsSearchButton").css("color", "#ff7100");
       $("input[name=q]").focus();
       $("#category-swipe").addClass("disappear");
-      $(".search-overlay").addClass("is-show");
+      $(".jsSearchDropdown").addClass("is-open");
       $("body").addClass("o-hidden");
+      $("#jsCategory").removeClass("is-open");
+      $(".jsToggleCategory").find("i").removeClass("fa-chevron-up");
+      $(".jsToggleCategory").find("i").addClass("fa-chevron-down");
+      $(document.body).toggleClass("o-hidden");
     }
   });
 
@@ -4625,10 +4603,16 @@ $(document).ready(function() {
   $(".pass-trigger").on("click", function() {
     if ($(this).find(".pass-icon-eye").hasClass("fa-eye-slash")) {
       $(this).find(".pass-icon-eye").addClass("fa-eye").removeClass("fa-eye-slash");
-      $(".pass-input-control").prop("type", "text");
+      var passInputControl = $(this).parent().find(".pass-input-control")[0];
+      if (passInputControl !== undefined) {
+        $(passInputControl).prop("type", "text");
+      }
     } else {
       $(this).find(".pass-icon-eye").addClass("fa-eye-slash").removeClass("fa-eye");
-      $(".pass-input-control").prop("type", "password");
+      var passInputControl = $(this).parent().find(".pass-input-control")[0];
+      if (passInputControl !== undefined) {
+        $(passInputControl).prop("type", "password");
+      }
     }
   });
 
@@ -5079,3 +5063,8 @@ $(document).ready(function() {
   bindTopicDetailThreadNext();
 });
 
+
+// @codekit-prepend "main/main-backend.js";
+// @codekit-prepend "main/main-click.js";
+// @codekit-prepend "main/main-scroll.js";
+// @codekit-prepend "main/main-ready.js";
