@@ -12722,15 +12722,17 @@ textarea.replySection:focus {
   -webkit-transition: height 0.5s linear;
   transition: height 0.5s linear; }
   #jsCategory.is-open {
-    height: 100vh;
-    height: calc(var(--vh, 1vh) * 100); }
+    height: calc(102vh + 50px); }
 
 .jsSearchDropdown {
   height: 0;
   -webkit-transition: height 0.5s linear;
   transition: height 0.5s linear; }
   .jsSearchDropdown.is-open {
-    height: 100vh; }
+    height: calc(102vh + 50px); }
+
+.jsCalcMaxHeightSearchDropdown {
+  max-height: calc(100% - 135px); }
 
 #jsCategory #jsCategoryForum,
 #jsCategory #jsCategoryFjb {

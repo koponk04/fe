@@ -3822,6 +3822,11 @@ $(document).ready(function() {
    * bind to open category overlay
    */
   $(document).on("click", ".jsToggleCategory", function() {
+    if ($("#jsCategory").hasClass("is-open")) {
+      $(document.body).removeClass("o-hidden");
+    } else {
+      $(document.body).addClass("o-hidden");
+    }
     $("#jsCategory").toggleClass("is-open");
     $(".jsToggleCategory").find("i").toggleClass("fa-chevron-up");
     $(".jsToggleCategory").find("i").toggleClass("fa-chevron-down");
@@ -3830,7 +3835,7 @@ $(document).ready(function() {
     $("#jsSearchButton").css("color", "#ddd");
     $("#category-swipe").removeClass("disappear");
     $(".jsSearchDropdown").removeClass("is-open");
-    $(document.body).toggleClass("o-hidden");
+
     if (!catLoad) {
       fetchCategories();
     }
@@ -4495,7 +4500,7 @@ $(document).ready(function() {
       $("#jsSearchButton").css("color", "#ddd");
       $("#category-swipe").removeClass("disappear");
       $(".jsSearchDropdown").removeClass("is-open");
-      $("body").removeClass("o-hidden");
+      $(document.body).removeClass("o-hidden");
     } else {
       $("#searchform").addClass("active");
       $("#JsCatBar").removeClass("active");
@@ -4507,7 +4512,7 @@ $(document).ready(function() {
       $("#jsCategory").removeClass("is-open");
       $(".jsToggleCategory").find("i").removeClass("fa-chevron-up");
       $(".jsToggleCategory").find("i").addClass("fa-chevron-down");
-      $(document.body).toggleClass("o-hidden");
+      $(document.body).addClass("o-hidden");
     }
   });
 
