@@ -38,6 +38,14 @@
 		var user_id = "5842633";
 		var tracking_ref = "channel1landing";
 		var channel_id = "1";
+		var WEB_PUSH_API_KEY = '';
+        var WEB_PUSH_AUTH_DOMAIN = '';
+        var WEB_PUSH_DATABASE_URL = '';
+        var WEB_PUSH_PROJECT_ID = '';
+        var WEB_PUSH_STORAGE_BUCKET = '';
+        var WEB_PUSH_MESSAGING_SENDER_ID = '';
+        var WEB_PUSH_APP_ID = '';
+        var PUSH_NOTIFICATION_BADGE = '';
 	</script>
 
 <body class="Bgc(c-grey-light-2) Miw(1024px)">
@@ -112,6 +120,21 @@
       										<span class="Fz(12px) C(c-grey)">Pencarian Terpopuler</span>
       									</div>
       									<ul class="jsSearchWrapper">
+      										<li><a href="#" class="D(b) P(5px) C(c-normal) Fz(12px) Td(n):h Bgc(c-semiwhite):h">Gempa
+      												Lombok</a></li>
+      										<li><a href="#" class="D(b) P(5px) C(c-normal) Fz(12px) Td(n):h Bgc(c-semiwhite):h">GIIAS
+      												2018</a></li>
+      										<li><a href="#" class="D(b) P(5px) C(c-normal) Fz(12px) Td(n):h Bgc(c-semiwhite):h">Poco
+      												poco</a></li>
+      										<li><a href="#" class="D(b) P(5px) C(c-normal) Fz(12px) Td(n):h Bgc(c-semiwhite):h">Cawapres</a>
+      										</li>
+      										<li><a href="#" class="D(b) P(5px) C(c-normal) Fz(12px) Td(n):h Bgc(c-semiwhite):h">#Iniindonesiaku</a>
+      										</li>
+      									</ul>
+      									<div class="D(n) D(f) Jc(sb) P(5px)">
+      										<span class="Fz(13px) Fz(12px) C(c-grey)">Forum</span>
+      									</div>
+      									<ul class="D(n) jsSearchWrapper">
       										<li><a href="#" class="D(b) P(5px) C(c-normal) Fz(12px) Td(n):h Bgc(c-semiwhite):h">Gempa
       												Lombok</a></li>
       										<li><a href="#" class="D(b) P(5px) C(c-normal) Fz(12px) Td(n):h Bgc(c-semiwhite):h">GIIAS
@@ -1814,7 +1837,7 @@
                                 </div>
                             
                                 <!-- Thread Card -->
-                                        <div class="P(15px) Bd(borderSolidLightGrey) Mb(15px) Bgc(c-white) Pos(r) Ov(h) jsThreadCard">
+                                        <div class="P(16px) Bd(borderSolidLightGrey) Mb(8px) Bgc(c-white) Pos(r) Ov(h) jsThreadCard">
                                             <!-- Thread Nav -->
                                             <div class="D(f) Jc(sb) Mb(5px)">
                                                 <div class="Fx(flex1Auto) As(c) Ov(h) Tov(e) Whs(nw) Maw(100%) Pend(10px) Fz(12px)">
@@ -1861,11 +1884,9 @@
                                                 <div class="D(f) Jc(fs) Ai(c) c-reputation">
                                                     <div class="D(f) Ai(c) is-up-vote  Pend(5px) Cur(p)" href="#">
                                                         <div class="cendolWrapper"></div>
-                                                        <i class="Fz(10px) fa fa-arrow-up"></i>
                                                     </div>
                                                     <div class="Ta(c) ">10k</div>
                                                     <div class="D(f) Ai(c) is-down-vote Pstart(5px) Cur(p)" href="#">
-                                                        <i class="Fz(10px) fa fa-arrow-down"></i>
                                                         <div class="bataWrapper"></div>
                                                     </div>
                                                 </div>
@@ -1912,7 +1933,7 @@
                                             </div>
                                         </div>
                                 <!-- Thread Card -->
-                                                        <div class="P(15px) Bd(borderSolidLightGrey) Mb(15px) Bgc(c-white) Pos(r) Ov(h) jsThreadCard">
+                                                        <div class="P(16px) Bd(borderSolidLightGrey) Mb(8px) Bgc(c-white) Pos(r) Ov(h) jsThreadCard">
                                                             <!-- Thread Nav -->
                                                             <div class="D(f) Jc(sb) Mb(5px) ">
                                                                 <div class="Fx(flex1Auto) As(c) Ov(h) Tov(e) Whs(nw) Maw(100%) Pend(10px) Fz(12px)">
@@ -1965,11 +1986,9 @@
                                                                 <div class="D(f) Jc(fs) Ai(c) c-reputation">
                                                                     <div class="D(f) Ai(c) is-up-vote  Pend(5px) Cur(p)" href="#">
                                                                         <div class="cendolWrapper"></div>
-                                                                        <i class="Fz(10px) fa fa-arrow-up"></i>
                                                                     </div>
                                                                     <div class="Ta(c) ">10k</div>
                                                                     <div class="D(f) Ai(c) is-down-vote Pstart(5px) Cur(p)" href="#">
-                                                                        <i class="Fz(10px) fa fa-arrow-down"></i>
                                                                         <div class="bataWrapper"></div>
                                                                     </div>
                                                                 </div>
@@ -2016,7 +2035,7 @@
                                                             </div>
                                                         </div>
                                 <!-- Thread Card -->
-                                                                        <div class="P(15px) Bd(borderSolidLightGrey) Mb(15px) Bgc(c-white) Pos(r) Ov(h) jsThreadCard">
+                                                                        <div class="P(16px) Bd(borderSolidLightGrey) Mb(8px) Bgc(c-white) Pos(r) Ov(h) jsThreadCard">
                                                                             <!-- Thread Nav -->
                                                                             <div class="D(f) Jc(sb) Mb(5px)">
                                                                                 <div class="Fx(flex1Auto) As(c) Ov(h) Tov(e) Whs(nw) Maw(100%) Pend(10px) Fz(12px)">
@@ -2068,11 +2087,9 @@
                                                                                 <div class="D(f) Jc(fs) Ai(c) c-reputation">
                                                                                     <div class="D(f) Ai(c) is-up-vote  Pend(5px) Cur(p)" href="#">
                                                                                         <div class="cendolWrapper"></div>
-                                                                                        <i class="Fz(10px) fa fa-arrow-up"></i>
                                                                                     </div>
                                                                                     <div class="Ta(c) ">10k</div>
                                                                                     <div class="D(f) Ai(c) is-down-vote Pstart(5px) Cur(p)" href="#">
-                                                                                        <i class="Fz(10px) fa fa-arrow-down"></i>
                                                                                         <div class="bataWrapper"></div>
                                                                                     </div>
                                                                                 </div>
@@ -2249,7 +2266,7 @@
                                 </div> -->
                             
                                 <!-- Thread Card -->
-                                        <div class="P(15px) Bd(borderSolidLightGrey) Mb(15px) Bgc(c-white) Pos(r) Ov(h) jsThreadCard">
+                                        <div class="P(16px) Bd(borderSolidLightGrey) Mb(8px) Bgc(c-white) Pos(r) Ov(h) jsThreadCard">
                                             <!-- Thread Nav -->
                                             <div class="D(f) Jc(sb) Mb(5px)">
                                                 <div class="Fx(flex1Auto) As(c) Ov(h) Tov(e) Whs(nw) Maw(100%) Pend(10px) Fz(12px)">
@@ -2296,11 +2313,9 @@
                                                 <div class="D(f) Jc(fs) Ai(c) c-reputation">
                                                     <div class="D(f) Ai(c) is-up-vote  Pend(5px) Cur(p)" href="#">
                                                         <div class="cendolWrapper"></div>
-                                                        <i class="Fz(10px) fa fa-arrow-up"></i>
                                                     </div>
                                                     <div class="Ta(c) ">10k</div>
                                                     <div class="D(f) Ai(c) is-down-vote Pstart(5px) Cur(p)" href="#">
-                                                        <i class="Fz(10px) fa fa-arrow-down"></i>
                                                         <div class="bataWrapper"></div>
                                                     </div>
                                                 </div>
@@ -2550,7 +2565,7 @@
                                 </div>
                                 
                                 <!-- Thread Card -->
-                                        <div class="P(15px) Bd(borderSolidLightGrey) Mb(15px) Bgc(c-white) Pos(r) Ov(h) jsThreadCard">
+                                        <div class="P(16px) Bd(borderSolidLightGrey) Mb(8px) Bgc(c-white) Pos(r) Ov(h) jsThreadCard">
                                             <!-- Thread Nav -->
                                             <div class="D(f) Jc(sb) Mb(5px)">
                                                 <div class="Fx(flex1Auto) As(c) Ov(h) Tov(e) Whs(nw) Maw(100%) Pend(10px) Fz(12px)">
@@ -2597,11 +2612,9 @@
                                                 <div class="D(f) Jc(fs) Ai(c) c-reputation">
                                                     <div class="D(f) Ai(c) is-up-vote  Pend(5px) Cur(p)" href="#">
                                                         <div class="cendolWrapper"></div>
-                                                        <i class="Fz(10px) fa fa-arrow-up"></i>
                                                     </div>
                                                     <div class="Ta(c) ">10k</div>
                                                     <div class="D(f) Ai(c) is-down-vote Pstart(5px) Cur(p)" href="#">
-                                                        <i class="Fz(10px) fa fa-arrow-down"></i>
                                                         <div class="bataWrapper"></div>
                                                     </div>
                                                 </div>

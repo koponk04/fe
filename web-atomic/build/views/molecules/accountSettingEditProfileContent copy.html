@@ -1,0 +1,170 @@
+<div class="W(100%) Mstart(16px) ">
+    <div class="Ff(VagRounded) Fz(20px)">Sunting Profile</div>
+    <div class="Mt(16px) Bgc(c-white) Px(120px) Py(24px) W(100%)">
+        <div class="D(f) Ai(fs) Jc(fs)">
+            <div class="Pos(r) Fx(flexZero) jsPopover">
+                <img class="Bdrs(50%) W(120px) H(120px) oFitCover" src="http://placekitten.com/400/700">
+                <button
+                    class="Pos(a) Start(50%) Trf(transformCenterX) B(16px) W(28px) H(28px) Bgc(c-white-blue-hover):h Bgc(c-white) D(ib) Bdrs(50%) Ta(c) jsTippy jsPopoverTrigger"
+                    data-tippy-content="Edit Profile Picture" data-tippy-placement="right">
+                    <i class="fas fa-camera Fz(16px)"></i>
+                </button>
+                <div
+                    class="jsPopoverMenu Pos(a) P(3px) End(0) T(125px) Bgc(c-white) Z(2) Bd(borderSolidLightGrey) W(100%) toggleMenu Trfo(c)!">
+                    <ul>
+                        <li class="D(b)">
+                            <a href="" data-modal="jsModalPreviewAvatar" onclick="return false;"
+                                class="jsModalTrigger D(b) Px(3px) Py(5px) C(c-normal) Bgc(c-lightgrey):h Ta(c)">
+                                <span class="Fz(12px)">Preview Photo</span>
+                            </a>
+                        </li>
+                        <li class="D(b)">
+                            <label for="jsUploadAvatar" href=""
+                                class="D(b) Px(3px) Py(5px) C(c-normal) Bgc(c-lightgrey):h Ta(c)">
+                                <span class="Fz(12px)">Upload Photo</span>
+                            </label>
+                        </li>
+                        <li class="D(b)">
+                            <a href="" class="D(b) Px(3px) Py(5px) C(c-normal) Bgc(c-lightgrey):h Ta(c)">
+                                <span class="Fz(12px)">Remove Photo</span>
+                            </a>
+                        </li>
+                        <li class="D(b)">
+                            <a href="" class="D(b) Px(3px) Py(5px) C(c-normal) Bgc(c-lightgrey):h Ta(c)">
+                                <span class="Fz(12px)">Cancel</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="Mstart(16px) W(272px)">
+                <div class="Ff(VagRounded) Fz(14px)">Avatar</div>
+                <div class="Fz(12px) C(c-secondary) Mt(8px)">Gunakan foto/gambar terbaikmu. Hindari gambar yang
+                    mengandung Pornografi, dan menyinggung SARA.</div>
+                <a class="D(b) Mt(8px) Fz(12px) C(c-blue)">Gunakan Default Avatar</a>
+            </div>
+        </div>
+        <div class="Mt(16px)">
+            <div class="C(c-secondary) Fz(14px)">
+                <form class="form-plus D(f) Fxd(c) Ai(c) W(100%)">
+                    <div class="Ta(s) form-input W(100%)">
+                        <label
+                            class="D(b) Fw(500) Mb(8px) C(c-primary) nightmode_C(c-primary-night) Ff(VagRounded)">Username</label>
+                        <input class="D(b) W(100%) H(30px) Fz(12px) Px(8px) Bdrs(1px) Bgc(c-gray-1) C(c-secondary)"
+                            disabled type="text" value="username" id="userid">
+                        <div class="Mt(4px) Fz(12px)">Akses halaman profile agan di <a
+                                class="C(c-blue)">https://www.kaskus.co.id/@username</a></div>
+                    </div>
+                    <div class="Mt(16px) Ta(s) form-input W(100%)">
+                        <label
+                            class="D(b) Fw(500) Mb(8px) C(c-primary) nightmode_C(c-primary-night) Ff(VagRounded)">Nama</label>
+                        <input class="D(b) W(100%) H(30px) Fz(12px) Px(8px) Bdrs(1px)" type="text" value="Lala Lalalala"
+                            id="name"></div>
+                    <div class="Mt(16px) Ta(s) form-input W(100%)">
+                        <label
+                            class="D(b) Fw(500) Mb(8px) C(c-primary) nightmode_C(c-primary-night) Ff(VagRounded)">Email</label>
+                        <div class="D(f) Ai(c)">
+                            <input class="D(b) W(100%) H(30px) Fz(12px) Px(8px)  Bgc(c-gray-1) Bdrs(1px) C(c-secondary)"
+                                disabled type="text" value="lala@gmail.com" id="email">
+                            <button type="button"
+                                class="Mstart(16px) W(128px) Fx(flexZero) Bgc(c-white) C(c-blue) Td(n):h D(ib) Py(8px) Px(16px) Fz(12px) Fw(500) Bd(borderSolidBlue) Bdrs(5px) jsModalTrigger"
+                                data-modal="jsModalEditProfileEmail">Ganti email</button>
+                        </div>
+                    </div>
+
+                    <div class="Mt(16px) Ta(s) form-input W(100%)">
+                        <label class="D(b) Fw(500) Mb(8px) C(c-primary) nightmode_C(c-primary-night) Ff(VagRounded)">No
+                            Handphone</label>
+                        <div class="D(f) Ai(c) Pos(r)">
+                            <input class="D(b) W(100%) H(30px) Fz(12px) Px(8px)  Bgc(c-gray-1) Bdrs(1px) C(c-secondary)"
+                                disabled type="text" value="081234567890" id="phone">
+                            <div class="Pos(a) End(152px)">
+                                <i class="C(c-yellow-1) fas fa-exclamation-circle"></i>
+                                <i class="C(c-blue) fas fa-check-circle"></i>
+                            </div>
+                            <button type="button"
+                                class="Mstart(16px) W(128px) Fx(flexZero) Bgc(c-white) C(c-blue) Td(n):h D(ib) Py(8px) Px(16px) Fz(12px) Fw(500) Bd(borderSolidBlue) Bdrs(5px) jsModalTrigger"
+                                data-modal="jsModalEditProfilePhoneNumberNew">Daftarkan nomor</button>
+                        </div>
+                    </div>
+                    <div class="Mt(16px) Ta(s) form-input W(100%)">
+                        <label
+                            class="D(b) Fw(500) Mb(8px) C(c-primary) nightmode_C(c-primary-night) Ff(VagRounded)">Jenis
+                            Kelamin</label>
+                        <div class="Ff(Roboto) Mt(16px) Fz(12px) C(c-secondary)">
+                            <select id="edit-profile-gender" class="W(100%)">
+                                <option></option>
+                                <option value="AL">Perempuan</option>
+                                <option value="WY">Laki-laki</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="Mt(16px) Ta(s) form-input W(100%)">
+                        <div class="D(b) Fw(500) Mb(8px) C(c-primary) nightmode_C(c-primary-night) Ff(VagRounded)">
+                            Tanggal Lahir</div>
+                        <div
+                            class="Pos(r) D(f) Ai(c) Jc(sb) Fz(12px) Bd(borderSolidGray2) W(100%) H(30px) Bdrs(1px) C(c-secondary)">
+                            <input type="text"
+                                class="jsEditProfileBirthday Bgc(t) P(8px) Fz(12px) W(100%) Bd(0) P(0) flatpickr-input active Pos(r) Z(1)"
+                                placeholder="Masukkan tanggal lahir" readonly="readonly">
+                            <i class="fas fa-calendar-alt C(c-blue) End(8px) Pos(a)"></i>
+                        </div>
+                    </div>
+                    <div class="Mt(16px) Ta(s) form-input W(100%)">
+                        <label
+                            class="D(b) Fw(500) Mb(8px) C(c-primary) nightmode_C(c-primary-night) Ff(VagRounded)">Biodata</label>
+                        <textarea class="Rsz(n) D(b) W(100%) H(84px) Fz(12px) P(8px) Bdrs(1px)"
+                            maxlength="180">Online concerts make you broke</textarea>
+                    </div>
+                    <div class="Mt(16px) Ta(s) form-input W(100%)">
+                        <label
+                            class="D(b) Fw(500) Mb(8px) C(c-primary) nightmode_C(c-primary-night) Ff(VagRounded)">Alamat</label>
+                        <textarea class="Rsz(n) D(b) W(100%) H(84px) Fz(12px) P(8px) Bdrs(1px)">Behind you</textarea>
+                    </div>
+                    <div class="Mt(16px) Ta(s) form-input W(100%)">
+                        <label
+                            class="D(b) Fw(500) Mb(8px) C(c-primary) nightmode_C(c-primary-night) Ff(VagRounded)">Negara</label>
+                        <div class="Ff(Roboto) Mt(16px) Fz(12px) C(c-secondary)">
+                            <select id="edit-profile-country" class="W(100%)">
+                                <option></option>
+                                <option value="AL">Perempuan</option>
+                                <option value="WY">Laki-laki</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="Mt(16px) Ta(s) form-input W(100%)">
+                        <label
+                            class="D(b) Fw(500) Mb(8px) C(c-primary) nightmode_C(c-primary-night) Ff(VagRounded)">Provinsi</label>
+                        <div class="Ff(Roboto) Mt(16px) Fz(12px) C(c-secondary)">
+                            <select id="edit-profile-province" class="W(100%)">
+                                <option></option>
+                                <option value="AL">Perempuan</option>
+                                <option value="WY">Laki-laki</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="Mt(16px) Ta(s) form-input W(100%)">
+                        <label
+                            class="D(b) Fw(500) Mb(8px) C(c-primary) nightmode_C(c-primary-night) Ff(VagRounded)">Kartu
+                            Identitas</label>
+                        <div class="D(f) Ai(c) Pos(r)">
+                            <input class="D(b) W(100%) H(30px) Fz(12px) Px(8px)  Bgc(c-gray-1) Bdrs(1px) C(c-secondary)"
+                                disabled type="text" value="1234 5678 9000 0000" id="idnum">
+                            <div class="Pos(a) End(152px)">
+                                <i class="C(c-yellow-1) fas fa-exclamation-circle"></i>
+                                <i class="C(c-blue) fas fa-check-circle"></i>
+                            </div>
+                            <button href="#"
+                                class="Mstart(16px) W(128px) Fx(flexZero) Bgc(c-white) C(c-blue) Td(n):h D(ib) Py(8px) Px(16px) Fz(12px) Fw(500) Bd(borderSolidBlue) Bdrs(5px) jsModalTrigger"
+                                data-modal="jsModalKoin">Verifikasi</button>
+                        </div>
+                    </div>
+
+                    <button type="button"
+                        class="W(240px) Mt(16px) Bgc(c-white):h nightmode_Bgc(t):h C(c-blue):h nightmode_C(c-blue):h Td(n):h D(ib) Py(8px) Px(16px) Fz(14px) Fw(500) C(c-white) Bgc(c-blue) nightmode_Bgc(c-blue-night) Bd(borderSolidBlue) nightmode_Bd(borderSolidBlueNight) Bdrs(5px) jsModalTrigger" data-modal="jsModalEditProfileRequestOTP">Simpan
+                        Perubahan</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

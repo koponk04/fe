@@ -1,1 +1,0 @@
-function show(e,t){document.getElementById(selected).style.display="none",document.getElementById(e).style.display="block",document.getElementById(selectedLink).className="",document.getElementById(t).className="current",selected=e,selectedLink=t}var selected="qu-entertainment",selectedLink="qu-entertainment-link";show(selected,selectedLink);

@@ -1,1 +1,0 @@
-$(document).ready(function(){function n(n){return n.val().length+"/"+n.attr("maxlength")}$(".o-input--wCounter").each(function(){var t=$(this).find("[maxlength]"),e=$('<span class="o-input__counter">'+n(t)+"</span>");$(this).after(e),t.keydown(function(){setTimeout(function(){e.text(n(t))},0)})})});

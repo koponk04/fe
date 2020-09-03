@@ -38,6 +38,14 @@
 		var user_id = "5842633";
 		var tracking_ref = "channel1landing";
 		var channel_id = "1";
+		var WEB_PUSH_API_KEY = '';
+        var WEB_PUSH_AUTH_DOMAIN = '';
+        var WEB_PUSH_DATABASE_URL = '';
+        var WEB_PUSH_PROJECT_ID = '';
+        var WEB_PUSH_STORAGE_BUCKET = '';
+        var WEB_PUSH_MESSAGING_SENDER_ID = '';
+        var WEB_PUSH_APP_ID = '';
+        var PUSH_NOTIFICATION_BADGE = '';
 	</script>
 
 
@@ -113,6 +121,21 @@
           										<span class="Fz(12px) C(c-grey)">Pencarian Terpopuler</span>
           									</div>
           									<ul class="jsSearchWrapper">
+          										<li><a href="#" class="D(b) P(5px) C(c-normal) Fz(12px) Td(n):h Bgc(c-semiwhite):h">Gempa
+          												Lombok</a></li>
+          										<li><a href="#" class="D(b) P(5px) C(c-normal) Fz(12px) Td(n):h Bgc(c-semiwhite):h">GIIAS
+          												2018</a></li>
+          										<li><a href="#" class="D(b) P(5px) C(c-normal) Fz(12px) Td(n):h Bgc(c-semiwhite):h">Poco
+          												poco</a></li>
+          										<li><a href="#" class="D(b) P(5px) C(c-normal) Fz(12px) Td(n):h Bgc(c-semiwhite):h">Cawapres</a>
+          										</li>
+          										<li><a href="#" class="D(b) P(5px) C(c-normal) Fz(12px) Td(n):h Bgc(c-semiwhite):h">#Iniindonesiaku</a>
+          										</li>
+          									</ul>
+          									<div class="D(n) D(f) Jc(sb) P(5px)">
+          										<span class="Fz(13px) Fz(12px) C(c-grey)">Forum</span>
+          									</div>
+          									<ul class="D(n) jsSearchWrapper">
           										<li><a href="#" class="D(b) P(5px) C(c-normal) Fz(12px) Td(n):h Bgc(c-semiwhite):h">Gempa
           												Lombok</a></li>
           										<li><a href="#" class="D(b) P(5px) C(c-normal) Fz(12px) Td(n):h Bgc(c-semiwhite):h">GIIAS
@@ -1735,7 +1758,7 @@
             </div>
         
             <!-- Thread Card -->
-                <div class="P(15px) Bd(borderSolidLightGrey) Mb(15px) Bgc(c-white) Pos(r) jsThreadCard">
+                <div class="P(16px) Bd(borderSolidLightGrey) Mb(8px) Bgc(c-white) Pos(r) jsThreadCard">
                     <!-- Thread Nav -->
                     <div class="D(f) Jc(sb) Mb(5px) ">
                         <div class="Fx(flex1Auto) As(c)">
@@ -1743,37 +1766,45 @@
                                     class="C(c-secondary) Fz(12px) Fw(500)"> masnukho </a> • <a href="#" class="C(c-tertiary) Fz(12px)">
                                     The Lounge </a></div>
                         </div>
-                
-                        <div class="Fx(flex0Auto) Pos(r) jsPopover">
-                            <i class="Fz(15px) fas fa-ellipsis-h C(c-primary) C(c-blue):h jsPopoverTrigger Cur(p):h"></i>
-                            <div
-                                class="jsPopoverMenu Pos(a) Px(3px) End(1px) T(20px) Bgc(c-white) Z(2) Bd(borderSolidLightGrey) W(200px) toggleMenu">
-                                <ul>
-                                    <li class="D(b) ">
-                                        <a href="" class="D(b) C(c-normal) Bgc(c-lightgrey):h My(3px) Py(5px) Px(10px)">
-                                            <i class="Mend(12px) Va(m) fas Fz(14px) fa-bookmark fa-fw"></i>
-                                            <span class="Fz(12px)">Subscribe</span>
-                                        </a>
-                                    </li>
-                                    <li class="D(b)">
-                                        <a href="" class="D(b) C(c-normal) Bgc(c-lightgrey):h My(3px) Py(5px) Px(10px)">
-                                            <i class="Mend(12px) Va(m) fas Fz(14px) fa-chevron-square-down fa-fw"></i>
-                                            <span class="Fz(12px)">Go to First New Post</span>
-                                        </a>
-                                    </li>
-                                    <li class="D(b)">
-                                        <a href="" class="D(b) C(c-normal) Bgc(c-lightgrey):h My(3px) Py(5px) Px(10px)">
-                                            <i class="Mend(12px) Va(m) fas Fz(14px) fa-chevron-square-right fa-fw"></i>
-                                            <span class="Fz(12px)">Go to Last Post</span>
-                                        </a>
-                                    </li>
-                                </ul>
+                        
+                        <div class="D(f) Ai(c)">
+                            <div class="Fx(flex0Auto) Pos(r) jsPopover">
+                                <i class="Fz(15px) fas fa-ellipsis-h C(c-primary) C(c-blue):h jsPopoverTrigger Cur(p):h"></i>
+                                <div
+                                    class="jsPopoverMenu Pos(a) Px(3px) End(1px) T(20px) Bgc(c-white) Z(2) Bd(borderSolidLightGrey) W(200px) toggleMenu">
+                                    <ul>
+                                        <li class="D(b) ">
+                                            <a href="" class="D(b) C(c-normal) Bgc(#e9e9e9):h My(3px) Py(5px) Px(10px)">
+                                                <i class="Mend(12px) Va(m) fas Fz(14px) fa-bookmark fa-fw"></i>
+                                                <span class="Fz(12px)">Subscribe</span>
+                                            </a>
+                                        </li>
+                                        <li class="D(b)">
+                                            <a href="" class="D(b) C(c-normal) Bgc(#e9e9e9):h My(3px) Py(5px) Px(10px)">
+                                                <i class="Mend(12px) Va(m) fas Fz(14px) fa-chevron-square-down fa-fw"></i>
+                                                <span class="Fz(12px)">Go to First New Post</span>
+                                            </a>
+                                        </li>
+                                        <li class="D(b)">
+                                            <a href="" class="D(b) C(c-normal) Bgc(#e9e9e9):h My(3px) Py(5px) Px(10px)">
+                                                <i class="Mend(12px) Va(m) fas Fz(14px) fa-chevron-square-right fa-fw"></i>
+                                                <span class="Fz(12px)">Go to Last Post</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="checkbox Mstart(15px)">
+                                <label>
+                                    <input type="checkbox" class="jsSearchModeration">
+                                    <i></i>
+                                </label>
                             </div>
                         </div>
                     </div>
                     <div class="D(f)">
                         <!-- Thread Title -->
-                        <div class="Fx(flexOne)">
+                        <div class="Fx(flexOne) D(f) Fxd(c) Jc(sb)">
                             <div class="Fw(500) C(c-primary) Fz(18px) Mb(10px)">Kuda, Salah Satu Hewan Paling Berjasa Bagi
                                 Manusia Yang Kita
                                 Sia-Siakan 🤧</div>
@@ -1783,11 +1814,9 @@
                                     <div class="D(f) Jc(fs) Ai(c) c-reputation">
                                         <div class="D(f) Ai(c) is-up-vote  Pend(5px) Cur(p)" href="#">
                                             <div class="cendolWrapper"></div>
-                                            <i class="Fz(10px) fa fa-arrow-up"></i>
                                         </div>
                                         <div class="Ta(c) ">10k</div>
                                         <div class="D(f) Ai(c) is-down-vote Pstart(5px) Cur(p)" href="#">
-                                            <i class="Fz(10px) fa fa-arrow-down"></i>
                                             <div class="bataWrapper"></div>
                                         </div>
                                     </div>
@@ -1841,43 +1870,51 @@
                     </div>
                 </div>
             <!-- Thread Card -->
-                        <div class="P(15px) Bd(borderSolidLightGrey) Mb(15px) Bgc(c-white) Pos(r) jsThreadCard">
+                        <div class="P(16px) Bd(borderSolidLightGrey) Mb(8px) Bgc(c-white) Pos(r) jsThreadCard">
                             <!-- Thread Nav -->
                             <div class="D(f) Jc(sb) Mb(5px) ">
                                 <div class="Fx(flex1Auto) As(c)">
                                     <a href="" class="C(c-secondary) Fz(12px)">admin</a>
                                 </div>
-                                
-                                <div class="Fx(flex0Auto) Pos(r) jsPopover">
-                                    <i class="Fz(15px) fas fa-ellipsis-h C(c-primary) C(c-blue):h jsPopoverTrigger Cur(p):h"></i>
-                                    <div
-                                        class="jsPopoverMenu Pos(a) Px(3px) End(1px) T(20px) Bgc(c-white) Z(2) Bd(borderSolidLightGrey) W(200px) toggleMenu">
-                                        <ul>
-                                            <li class="D(b) ">
-                                                <a href="" class="D(b) C(c-normal) Bgc(c-lightgrey):h My(3px) Py(5px) Px(10px)">
-                                                    <i class="Mend(12px) Va(m) fas Fz(14px) fa-bookmark fa-fw"></i>
-                                                    <span class="Fz(12px)">Subscribe</span>
-                                                </a>
-                                            </li>
-                                            <li class="D(b)">
-                                                <a href="" class="D(b) C(c-normal) Bgc(c-lightgrey):h My(3px) Py(5px) Px(10px)">
-                                                    <i class="Mend(12px) Va(m) fas Fz(14px) fa-chevron-square-down fa-fw"></i>
-                                                    <span class="Fz(12px)">Go to First New Post</span>
-                                                </a>
-                                            </li>
-                                            <li class="D(b)">
-                                                <a href="" class="D(b) C(c-normal) Bgc(c-lightgrey):h My(3px) Py(5px) Px(10px)">
-                                                    <i class="Mend(12px) Va(m) fas Fz(14px) fa-chevron-square-right fa-fw"></i>
-                                                    <span class="Fz(12px)">Go to Last Post</span>
-                                                </a>
-                                            </li>
-                                        </ul>
+                        
+                                <div class="D(f) Ai(c)">
+                                    <div class="Fx(flex0Auto) Pos(r) jsPopover">
+                                        <i class="Fz(15px) fas fa-ellipsis-h C(c-primary) C(c-blue):h jsPopoverTrigger Cur(p):h"></i>
+                                        <div
+                                            class="jsPopoverMenu Pos(a) Px(3px) End(1px) T(20px) Bgc(c-white) Z(2) Bd(borderSolidLightGrey) W(200px) toggleMenu">
+                                            <ul>
+                                                <li class="D(b) ">
+                                                    <a href="" class="D(b) C(c-normal) Bgc(#e9e9e9):h My(3px) Py(5px) Px(10px)">
+                                                        <i class="Mend(12px) Va(m) fas Fz(14px) fa-bookmark fa-fw"></i>
+                                                        <span class="Fz(12px)">Subscribe</span>
+                                                    </a>
+                                                </li>
+                                                <li class="D(b)">
+                                                    <a href="" class="D(b) C(c-normal) Bgc(#e9e9e9):h My(3px) Py(5px) Px(10px)">
+                                                        <i class="Mend(12px) Va(m) fas Fz(14px) fa-chevron-square-down fa-fw"></i>
+                                                        <span class="Fz(12px)">Go to First New Post</span>
+                                                    </a>
+                                                </li>
+                                                <li class="D(b)">
+                                                    <a href="" class="D(b) C(c-normal) Bgc(#e9e9e9):h My(3px) Py(5px) Px(10px)">
+                                                        <i class="Mend(12px) Va(m) fas Fz(14px) fa-chevron-square-right fa-fw"></i>
+                                                        <span class="Fz(12px)">Go to Last Post</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="checkbox Mstart(15px)">
+                                        <label>
+                                            <input type="checkbox" class="jsSearchModeration">
+                                            <i></i>
+                                        </label>
                                     </div>
                                 </div>
                             </div>
                             <div class="D(f)">
                                 <!-- Thread Title -->
-                                <div class="Fx(flexOne)">
+                                <div class="Fx(flexOne) D(f) Fxd(c) Jc(sb)">
                                     <div class="Fw(500) C(c-primary) Fz(18px) Mb(10px)">Kuda, Salah Satu Hewan Paling Berjasa Bagi
                                         Manusia Yang Kita
                                         Sia-Siakan 🤧</div>
@@ -1887,11 +1924,9 @@
                                             <div class="D(f) Jc(fs) Ai(c) c-reputation">
                                                 <div class="D(f) Ai(c) is-up-vote  Pend(5px) Cur(p)" href="#">
                                                     <div class="cendolWrapper"></div>
-                                                    <i class="Fz(10px) fa fa-arrow-up"></i>
                                                 </div>
                                                 <div class="Ta(c) ">10k</div>
                                                 <div class="D(f) Ai(c) is-down-vote Pstart(5px) Cur(p)" href="#">
-                                                    <i class="Fz(10px) fa fa-arrow-down"></i>
                                                     <div class="bataWrapper"></div>
                                                 </div>
                                             </div>
@@ -1939,53 +1974,60 @@
                                     </div>
                                 </div>
                                 <!-- Thread Image -->
-                                <div 
-                                    class="W(90px) Fx(flexZero) Mstart(10px) Bdrs(5px) Bdrsbstart(0) H(90px) Ov(h) Pos(r)">
+                                <div class="W(90px) Fx(flexZero) Mstart(10px) Bdrs(5px) Bdrsbstart(0) H(90px) Ov(h) Pos(r)">
                                     <img src="https://source.unsplash.com/random/640x400?sig=2" class="W(100%) H(100%) oFitCover" />
-                                    <div class="Pos(a) D(f) Jc(c) Ai(c) W(40px) H(40px) Bdrs(50%) T(50%) Start(50%) Mstart(-20px) Mt(-20px) Bgc(c-black-transparent)">
+                                    <div
+                                        class="Pos(a) D(f) Jc(c) Ai(c) W(40px) H(40px) Bdrs(50%) T(50%) Start(50%) Mstart(-20px) Mt(-20px) Bgc(c-black-transparent)">
                                         <i class="fas fa-volume C(c-white) Fz(20px)"></i>
                                     </div>
                                 </div>
                             </div>
                         </div>
             <!-- Thread Card -->
-                                <div class="P(15px) Bd(borderSolidLightGrey) Mb(15px) Bgc(c-white) Pos(r) jsThreadCard">
+                                <div class="P(16px) Bd(borderSolidLightGrey) Mb(8px) Bgc(c-white) Pos(r) jsThreadCard">
                                     <!-- Thread Nav -->
                                     <div class="D(f) Jc(sb) Mb(5px) ">
                                         <div class="Fx(flex1Auto) As(c)">
                                             <a href="" class="C(c-secondary) Fz(12px)">admin</a>
                                         </div>
-                                        
-                                        <div class="Fx(flex0Auto) Pos(r) jsPopover">
-                                            <i class="Fz(15px) fas fa-ellipsis-h C(c-primary) C(c-blue):h jsPopoverTrigger Cur(p):h"></i>
-                                            <div
-                                                class="jsPopoverMenu Pos(a) Px(3px) End(1px) T(20px) Bgc(c-white) Z(2) Bd(borderSolidLightGrey) W(200px) toggleMenu">
-                                                <ul>
-                                                    <li class="D(b) ">
-                                                        <a href="" class="D(b) C(c-normal) Bgc(c-lightgrey):h My(3px) Py(5px) Px(10px)">
-                                                            <i class="Mend(12px) Va(m) fas Fz(14px) fa-bookmark fa-fw"></i>
-                                                            <span class="Fz(12px)">Subscribe</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="D(b)">
-                                                        <a href="" class="D(b) C(c-normal) Bgc(c-lightgrey):h My(3px) Py(5px) Px(10px)">
-                                                            <i class="Mend(12px) Va(m) fas Fz(14px) fa-chevron-square-down fa-fw"></i>
-                                                            <span class="Fz(12px)">Go to First New Post</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="D(b)">
-                                                        <a href="" class="D(b) C(c-normal) Bgc(c-lightgrey):h My(3px) Py(5px) Px(10px)">
-                                                            <i class="Mend(12px) Va(m) fas Fz(14px) fa-chevron-square-right fa-fw"></i>
-                                                            <span class="Fz(12px)">Go to Last Post</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
+                                        <div class="D(f) Ai(c)">
+                                            <div class="Fx(flex0Auto) Pos(r) jsPopover">
+                                                <i class="Fz(15px) fas fa-ellipsis-h C(c-primary) C(c-blue):h jsPopoverTrigger Cur(p):h"></i>
+                                                <div
+                                                    class="jsPopoverMenu Pos(a) Px(3px) End(1px) T(20px) Bgc(c-white) Z(2) Bd(borderSolidLightGrey) W(200px) toggleMenu">
+                                                    <ul>
+                                                        <li class="D(b) ">
+                                                            <a href="" class="D(b) C(c-normal) Bgc(#e9e9e9):h My(3px) Py(5px) Px(10px)">
+                                                                <i class="Mend(12px) Va(m) fas Fz(14px) fa-bookmark fa-fw"></i>
+                                                                <span class="Fz(12px)">Subscribe</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="D(b)">
+                                                            <a href="" class="D(b) C(c-normal) Bgc(#e9e9e9):h My(3px) Py(5px) Px(10px)">
+                                                                <i class="Mend(12px) Va(m) fas Fz(14px) fa-chevron-square-down fa-fw"></i>
+                                                                <span class="Fz(12px)">Go to First New Post</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="D(b)">
+                                                            <a href="" class="D(b) C(c-normal) Bgc(#e9e9e9):h My(3px) Py(5px) Px(10px)">
+                                                                <i class="Mend(12px) Va(m) fas Fz(14px) fa-chevron-square-right fa-fw"></i>
+                                                                <span class="Fz(12px)">Go to Last Post</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="checkbox Mstart(15px)">
+                                                <label>
+                                                    <input type="checkbox" class="jsSearchModeration">
+                                                    <i></i>
+                                                </label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="D(f)">
                                         <!-- Thread Title -->
-                                        <div class="Fx(flexOne)">
+                                        <div class="Fx(flexOne) D(f) Fxd(c) Jc(sb)">
                                             <div class="Fw(500) C(c-primary) Fz(18px) Mb(10px)">Kuda, Salah Satu Hewan Paling Berjasa Bagi
                                                 Manusia Yang Kita
                                                 Sia-Siakan 🤧</div>
@@ -1995,11 +2037,9 @@
                                                     <div class="D(f) Jc(fs) Ai(c) c-reputation">
                                                         <div class="D(f) Ai(c) is-up-vote  Pend(5px) Cur(p)" href="#">
                                                             <div class="cendolWrapper"></div>
-                                                            <i class="Fz(10px) fa fa-arrow-up"></i>
                                                         </div>
                                                         <div class="Ta(c) ">10k</div>
                                                         <div class="D(f) Ai(c) is-down-vote Pstart(5px) Cur(p)" href="#">
-                                                            <i class="Fz(10px) fa fa-arrow-down"></i>
                                                             <div class="bataWrapper"></div>
                                                         </div>
                                                     </div>
@@ -2047,17 +2087,17 @@
                                             </div>
                                         </div>
                                         <!-- Thread Image -->
-                                        <div 
-                                            class="W(90px) Fx(flexZero) Mstart(10px) Bdrs(5px) Bdrsbstart(0) H(90px) Ov(h) Pos(r)">
+                                        <div class="W(90px) Fx(flexZero) Mstart(10px) Bdrs(5px) Bdrsbstart(0) H(90px) Ov(h) Pos(r)">
                                             <img src="https://source.unsplash.com/random/640x400?sig=3" class="W(100%) H(100%) oFitCover" />
-                                            <div class="Pos(a) D(f) Jc(c) Ai(c) W(40px) H(40px) Bdrs(50%) T(50%) Start(50%) Mstart(-20px) Mt(-20px) Bgc(c-black-transparent)">
+                                            <div
+                                                class="Pos(a) D(f) Jc(c) Ai(c) W(40px) H(40px) Bdrs(50%) T(50%) Start(50%) Mstart(-20px) Mt(-20px) Bgc(c-black-transparent)">
                                                 <i class="fas fa-video C(c-white) Fz(20px)"></i>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
             <!-- Thread Card -->
-                                        <div class="P(15px) Bd(borderSolidLightGrey) Mb(15px) Bgc(c-white) Pos(r) jsThreadCard">
+                                        <div class="P(16px) Bd(borderSolidLightGrey) Mb(8px) Bgc(c-white) Pos(r) jsThreadCard">
                                             <!-- Thread Nav -->
                                             <div class="D(f) Jc(sb) Mb(5px) ">
                                                 <div class="Fx(flex1Auto) As(c)">
@@ -2065,37 +2105,45 @@
                                                             class="C(c-secondary) Fz(12px) Fw(500)"> masnukho </a> • <a href="#" class="C(c-tertiary) Fz(12px)">
                                                             The Lounge </a></div>
                                                 </div>
-                                        
-                                                <div class="Fx(flex0Auto) Pos(r) jsPopover">
-                                                    <i class="Fz(15px) fas fa-ellipsis-h C(c-primary) C(c-blue):h jsPopoverTrigger Cur(p):h"></i>
-                                                    <div
-                                                        class="jsPopoverMenu Pos(a) Px(3px) End(1px) T(20px) Bgc(c-white) Z(2) Bd(borderSolidLightGrey) W(200px) toggleMenu">
-                                                        <ul>
-                                                            <li class="D(b) ">
-                                                                <a href="" class="D(b) C(c-normal) Bgc(c-lightgrey):h My(3px) Py(5px) Px(10px)">
-                                                                    <i class="Mend(12px) Va(m) fas Fz(14px) fa-bookmark fa-fw"></i>
-                                                                    <span class="Fz(12px)">Subscribe</span>
-                                                                </a>
-                                                            </li>
-                                                            <li class="D(b)">
-                                                                <a href="" class="D(b) C(c-normal) Bgc(c-lightgrey):h My(3px) Py(5px) Px(10px)">
-                                                                    <i class="Mend(12px) Va(m) fas Fz(14px) fa-chevron-square-down fa-fw"></i>
-                                                                    <span class="Fz(12px)">Go to First New Post</span>
-                                                                </a>
-                                                            </li>
-                                                            <li class="D(b)">
-                                                                <a href="" class="D(b) C(c-normal) Bgc(c-lightgrey):h My(3px) Py(5px) Px(10px)">
-                                                                    <i class="Mend(12px) Va(m) fas Fz(14px) fa-chevron-square-right fa-fw"></i>
-                                                                    <span class="Fz(12px)">Go to Last Post</span>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
+                                                
+                                                <div class="D(f) Ai(c)">
+                                                    <div class="Fx(flex0Auto) Pos(r) jsPopover">
+                                                        <i class="Fz(15px) fas fa-ellipsis-h C(c-primary) C(c-blue):h jsPopoverTrigger Cur(p):h"></i>
+                                                        <div
+                                                            class="jsPopoverMenu Pos(a) Px(3px) End(1px) T(20px) Bgc(c-white) Z(2) Bd(borderSolidLightGrey) W(200px) toggleMenu">
+                                                            <ul>
+                                                                <li class="D(b) ">
+                                                                    <a href="" class="D(b) C(c-normal) Bgc(#e9e9e9):h My(3px) Py(5px) Px(10px)">
+                                                                        <i class="Mend(12px) Va(m) fas Fz(14px) fa-bookmark fa-fw"></i>
+                                                                        <span class="Fz(12px)">Subscribe</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="D(b)">
+                                                                    <a href="" class="D(b) C(c-normal) Bgc(#e9e9e9):h My(3px) Py(5px) Px(10px)">
+                                                                        <i class="Mend(12px) Va(m) fas Fz(14px) fa-chevron-square-down fa-fw"></i>
+                                                                        <span class="Fz(12px)">Go to First New Post</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="D(b)">
+                                                                    <a href="" class="D(b) C(c-normal) Bgc(#e9e9e9):h My(3px) Py(5px) Px(10px)">
+                                                                        <i class="Mend(12px) Va(m) fas Fz(14px) fa-chevron-square-right fa-fw"></i>
+                                                                        <span class="Fz(12px)">Go to Last Post</span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="checkbox Mstart(15px)">
+                                                        <label>
+                                                            <input type="checkbox" class="jsSearchModeration">
+                                                            <i></i>
+                                                        </label>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="D(f)">
                                                 <!-- Thread Title -->
-                                                <div class="Fx(flexOne)">
+                                                <div class="Fx(flexOne) D(f) Fxd(c) Jc(sb)">
                                                     <div class="Fw(500) C(c-primary) Fz(18px) Mb(10px)">Kuda, Salah Satu Hewan Paling Berjasa Bagi
                                                         Manusia Yang Kita
                                                         Sia-Siakan 🤧</div>
@@ -2105,11 +2153,9 @@
                                                             <div class="D(f) Jc(fs) Ai(c) c-reputation">
                                                                 <div class="D(f) Ai(c) is-up-vote  Pend(5px) Cur(p)" href="#">
                                                                     <div class="cendolWrapper"></div>
-                                                                    <i class="Fz(10px) fa fa-arrow-up"></i>
                                                                 </div>
                                                                 <div class="Ta(c) ">10k</div>
                                                                 <div class="D(f) Ai(c) is-down-vote Pstart(5px) Cur(p)" href="#">
-                                                                    <i class="Fz(10px) fa fa-arrow-down"></i>
                                                                     <div class="bataWrapper"></div>
                                                                 </div>
                                                             </div>
@@ -2163,7 +2209,7 @@
                                             </div>
                                         </div>
             <!-- Thread Card -->
-                                                <div class="P(15px) Bd(borderSolidLightGrey) Mb(15px) Bgc(c-white) Pos(r) jsThreadCard">
+                                                <div class="P(16px) Bd(borderSolidLightGrey) Mb(8px) Bgc(c-white) Pos(r) jsThreadCard">
                                                     <!-- Thread Nav -->
                                                     <div class="D(f) Jc(sb) Mb(5px) ">
                                                         <div class="Fx(flex1Auto) As(c)">
@@ -2171,37 +2217,45 @@
                                                                     class="C(c-secondary) Fz(12px) Fw(500)"> masnukho </a> • <a href="#" class="C(c-tertiary) Fz(12px)">
                                                                     The Lounge </a></div>
                                                         </div>
-                                                
-                                                        <div class="Fx(flex0Auto) Pos(r) jsPopover">
-                                                            <i class="Fz(15px) fas fa-ellipsis-h C(c-primary) C(c-blue):h jsPopoverTrigger Cur(p):h"></i>
-                                                            <div
-                                                                class="jsPopoverMenu Pos(a) Px(3px) End(1px) T(20px) Bgc(c-white) Z(2) Bd(borderSolidLightGrey) W(200px) toggleMenu">
-                                                                <ul>
-                                                                    <li class="D(b) ">
-                                                                        <a href="" class="D(b) C(c-normal) Bgc(c-lightgrey):h My(3px) Py(5px) Px(10px)">
-                                                                            <i class="Mend(12px) Va(m) fas Fz(14px) fa-bookmark fa-fw"></i>
-                                                                            <span class="Fz(12px)">Subscribe</span>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li class="D(b)">
-                                                                        <a href="" class="D(b) C(c-normal) Bgc(c-lightgrey):h My(3px) Py(5px) Px(10px)">
-                                                                            <i class="Mend(12px) Va(m) fas Fz(14px) fa-chevron-square-down fa-fw"></i>
-                                                                            <span class="Fz(12px)">Go to First New Post</span>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li class="D(b)">
-                                                                        <a href="" class="D(b) C(c-normal) Bgc(c-lightgrey):h My(3px) Py(5px) Px(10px)">
-                                                                            <i class="Mend(12px) Va(m) fas Fz(14px) fa-chevron-square-right fa-fw"></i>
-                                                                            <span class="Fz(12px)">Go to Last Post</span>
-                                                                        </a>
-                                                                    </li>
-                                                                </ul>
+                                                        
+                                                        <div class="D(f) Ai(c)">
+                                                            <div class="Fx(flex0Auto) Pos(r) jsPopover">
+                                                                <i class="Fz(15px) fas fa-ellipsis-h C(c-primary) C(c-blue):h jsPopoverTrigger Cur(p):h"></i>
+                                                                <div
+                                                                    class="jsPopoverMenu Pos(a) Px(3px) End(1px) T(20px) Bgc(c-white) Z(2) Bd(borderSolidLightGrey) W(200px) toggleMenu">
+                                                                    <ul>
+                                                                        <li class="D(b) ">
+                                                                            <a href="" class="D(b) C(c-normal) Bgc(#e9e9e9):h My(3px) Py(5px) Px(10px)">
+                                                                                <i class="Mend(12px) Va(m) fas Fz(14px) fa-bookmark fa-fw"></i>
+                                                                                <span class="Fz(12px)">Subscribe</span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="D(b)">
+                                                                            <a href="" class="D(b) C(c-normal) Bgc(#e9e9e9):h My(3px) Py(5px) Px(10px)">
+                                                                                <i class="Mend(12px) Va(m) fas Fz(14px) fa-chevron-square-down fa-fw"></i>
+                                                                                <span class="Fz(12px)">Go to First New Post</span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="D(b)">
+                                                                            <a href="" class="D(b) C(c-normal) Bgc(#e9e9e9):h My(3px) Py(5px) Px(10px)">
+                                                                                <i class="Mend(12px) Va(m) fas Fz(14px) fa-chevron-square-right fa-fw"></i>
+                                                                                <span class="Fz(12px)">Go to Last Post</span>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="checkbox Mstart(15px)">
+                                                                <label>
+                                                                    <input type="checkbox" class="jsSearchModeration">
+                                                                    <i></i>
+                                                                </label>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="D(f)">
                                                         <!-- Thread Title -->
-                                                        <div class="Fx(flexOne)">
+                                                        <div class="Fx(flexOne) D(f) Fxd(c) Jc(sb)">
                                                             <div class="Fw(500) C(c-primary) Fz(18px) Mb(10px)">Kuda, Salah Satu Hewan Paling Berjasa Bagi
                                                                 Manusia Yang Kita
                                                                 Sia-Siakan 🤧</div>
@@ -2211,11 +2265,9 @@
                                                                     <div class="D(f) Jc(fs) Ai(c) c-reputation">
                                                                         <div class="D(f) Ai(c) is-up-vote  Pend(5px) Cur(p)" href="#">
                                                                             <div class="cendolWrapper"></div>
-                                                                            <i class="Fz(10px) fa fa-arrow-up"></i>
                                                                         </div>
                                                                         <div class="Ta(c) ">10k</div>
                                                                         <div class="D(f) Ai(c) is-down-vote Pstart(5px) Cur(p)" href="#">
-                                                                            <i class="Fz(10px) fa fa-arrow-down"></i>
                                                                             <div class="bataWrapper"></div>
                                                                         </div>
                                                                     </div>
@@ -2269,7 +2321,7 @@
                                                     </div>
                                                 </div>
             <!-- Thread Card -->
-                                                        <div class="P(15px) Bd(borderSolidLightGrey) Mb(15px) Bgc(c-white) Pos(r) jsThreadCard">
+                                                        <div class="P(16px) Bd(borderSolidLightGrey) Mb(8px) Bgc(c-white) Pos(r) jsThreadCard">
                                                             <!-- Thread Nav -->
                                                             <div class="D(f) Jc(sb) Mb(5px) ">
                                                                 <div class="Fx(flex1Auto) As(c)">
@@ -2277,37 +2329,45 @@
                                                                             class="C(c-secondary) Fz(12px) Fw(500)"> masnukho </a> • <a href="#" class="C(c-tertiary) Fz(12px)">
                                                                             The Lounge </a></div>
                                                                 </div>
-                                                        
-                                                                <div class="Fx(flex0Auto) Pos(r) jsPopover">
-                                                                    <i class="Fz(15px) fas fa-ellipsis-h C(c-primary) C(c-blue):h jsPopoverTrigger Cur(p):h"></i>
-                                                                    <div
-                                                                        class="jsPopoverMenu Pos(a) Px(3px) End(1px) T(20px) Bgc(c-white) Z(2) Bd(borderSolidLightGrey) W(200px) toggleMenu">
-                                                                        <ul>
-                                                                            <li class="D(b) ">
-                                                                                <a href="" class="D(b) C(c-normal) Bgc(c-lightgrey):h My(3px) Py(5px) Px(10px)">
-                                                                                    <i class="Mend(12px) Va(m) fas Fz(14px) fa-bookmark fa-fw"></i>
-                                                                                    <span class="Fz(12px)">Subscribe</span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li class="D(b)">
-                                                                                <a href="" class="D(b) C(c-normal) Bgc(c-lightgrey):h My(3px) Py(5px) Px(10px)">
-                                                                                    <i class="Mend(12px) Va(m) fas Fz(14px) fa-chevron-square-down fa-fw"></i>
-                                                                                    <span class="Fz(12px)">Go to First New Post</span>
-                                                                                </a>
-                                                                            </li>
-                                                                            <li class="D(b)">
-                                                                                <a href="" class="D(b) C(c-normal) Bgc(c-lightgrey):h My(3px) Py(5px) Px(10px)">
-                                                                                    <i class="Mend(12px) Va(m) fas Fz(14px) fa-chevron-square-right fa-fw"></i>
-                                                                                    <span class="Fz(12px)">Go to Last Post</span>
-                                                                                </a>
-                                                                            </li>
-                                                                        </ul>
+                                                                
+                                                                <div class="D(f) Ai(c)">
+                                                                    <div class="Fx(flex0Auto) Pos(r) jsPopover">
+                                                                        <i class="Fz(15px) fas fa-ellipsis-h C(c-primary) C(c-blue):h jsPopoverTrigger Cur(p):h"></i>
+                                                                        <div
+                                                                            class="jsPopoverMenu Pos(a) Px(3px) End(1px) T(20px) Bgc(c-white) Z(2) Bd(borderSolidLightGrey) W(200px) toggleMenu">
+                                                                            <ul>
+                                                                                <li class="D(b) ">
+                                                                                    <a href="" class="D(b) C(c-normal) Bgc(#e9e9e9):h My(3px) Py(5px) Px(10px)">
+                                                                                        <i class="Mend(12px) Va(m) fas Fz(14px) fa-bookmark fa-fw"></i>
+                                                                                        <span class="Fz(12px)">Subscribe</span>
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="D(b)">
+                                                                                    <a href="" class="D(b) C(c-normal) Bgc(#e9e9e9):h My(3px) Py(5px) Px(10px)">
+                                                                                        <i class="Mend(12px) Va(m) fas Fz(14px) fa-chevron-square-down fa-fw"></i>
+                                                                                        <span class="Fz(12px)">Go to First New Post</span>
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="D(b)">
+                                                                                    <a href="" class="D(b) C(c-normal) Bgc(#e9e9e9):h My(3px) Py(5px) Px(10px)">
+                                                                                        <i class="Mend(12px) Va(m) fas Fz(14px) fa-chevron-square-right fa-fw"></i>
+                                                                                        <span class="Fz(12px)">Go to Last Post</span>
+                                                                                    </a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="checkbox Mstart(15px)">
+                                                                        <label>
+                                                                            <input type="checkbox" class="jsSearchModeration">
+                                                                            <i></i>
+                                                                        </label>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="D(f)">
                                                                 <!-- Thread Title -->
-                                                                <div class="Fx(flexOne)">
+                                                                <div class="Fx(flexOne) D(f) Fxd(c) Jc(sb)">
                                                                     <div class="Fw(500) C(c-primary) Fz(18px) Mb(10px)">Kuda, Salah Satu Hewan Paling Berjasa Bagi
                                                                         Manusia Yang Kita
                                                                         Sia-Siakan 🤧</div>
@@ -2317,11 +2377,9 @@
                                                                             <div class="D(f) Jc(fs) Ai(c) c-reputation">
                                                                                 <div class="D(f) Ai(c) is-up-vote  Pend(5px) Cur(p)" href="#">
                                                                                     <div class="cendolWrapper"></div>
-                                                                                    <i class="Fz(10px) fa fa-arrow-up"></i>
                                                                                 </div>
                                                                                 <div class="Ta(c) ">10k</div>
                                                                                 <div class="D(f) Ai(c) is-down-vote Pstart(5px) Cur(p)" href="#">
-                                                                                    <i class="Fz(10px) fa fa-arrow-down"></i>
                                                                                     <div class="bataWrapper"></div>
                                                                                 </div>
                                                                             </div>
@@ -2375,7 +2433,7 @@
                                                             </div>
                                                         </div>
             <!-- Thread Card -->
-                                                                <div class="P(15px) Bd(borderSolidLightGrey) Mb(15px) Bgc(c-white) Pos(r) jsThreadCard">
+                                                                <div class="P(16px) Bd(borderSolidLightGrey) Mb(8px) Bgc(c-white) Pos(r) jsThreadCard">
                                                                     <!-- Thread Nav -->
                                                                     <div class="D(f) Jc(sb) Mb(5px) ">
                                                                         <div class="Fx(flex1Auto) As(c)">
@@ -2383,37 +2441,45 @@
                                                                                     class="C(c-secondary) Fz(12px) Fw(500)"> masnukho </a> • <a href="#" class="C(c-tertiary) Fz(12px)">
                                                                                     The Lounge </a></div>
                                                                         </div>
-                                                                
-                                                                        <div class="Fx(flex0Auto) Pos(r) jsPopover">
-                                                                            <i class="Fz(15px) fas fa-ellipsis-h C(c-primary) C(c-blue):h jsPopoverTrigger Cur(p):h"></i>
-                                                                            <div
-                                                                                class="jsPopoverMenu Pos(a) Px(3px) End(1px) T(20px) Bgc(c-white) Z(2) Bd(borderSolidLightGrey) W(200px) toggleMenu">
-                                                                                <ul>
-                                                                                    <li class="D(b) ">
-                                                                                        <a href="" class="D(b) C(c-normal) Bgc(c-lightgrey):h My(3px) Py(5px) Px(10px)">
-                                                                                            <i class="Mend(12px) Va(m) fas Fz(14px) fa-bookmark fa-fw"></i>
-                                                                                            <span class="Fz(12px)">Subscribe</span>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li class="D(b)">
-                                                                                        <a href="" class="D(b) C(c-normal) Bgc(c-lightgrey):h My(3px) Py(5px) Px(10px)">
-                                                                                            <i class="Mend(12px) Va(m) fas Fz(14px) fa-chevron-square-down fa-fw"></i>
-                                                                                            <span class="Fz(12px)">Go to First New Post</span>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                    <li class="D(b)">
-                                                                                        <a href="" class="D(b) C(c-normal) Bgc(c-lightgrey):h My(3px) Py(5px) Px(10px)">
-                                                                                            <i class="Mend(12px) Va(m) fas Fz(14px) fa-chevron-square-right fa-fw"></i>
-                                                                                            <span class="Fz(12px)">Go to Last Post</span>
-                                                                                        </a>
-                                                                                    </li>
-                                                                                </ul>
+                                                                        
+                                                                        <div class="D(f) Ai(c)">
+                                                                            <div class="Fx(flex0Auto) Pos(r) jsPopover">
+                                                                                <i class="Fz(15px) fas fa-ellipsis-h C(c-primary) C(c-blue):h jsPopoverTrigger Cur(p):h"></i>
+                                                                                <div
+                                                                                    class="jsPopoverMenu Pos(a) Px(3px) End(1px) T(20px) Bgc(c-white) Z(2) Bd(borderSolidLightGrey) W(200px) toggleMenu">
+                                                                                    <ul>
+                                                                                        <li class="D(b) ">
+                                                                                            <a href="" class="D(b) C(c-normal) Bgc(#e9e9e9):h My(3px) Py(5px) Px(10px)">
+                                                                                                <i class="Mend(12px) Va(m) fas Fz(14px) fa-bookmark fa-fw"></i>
+                                                                                                <span class="Fz(12px)">Subscribe</span>
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li class="D(b)">
+                                                                                            <a href="" class="D(b) C(c-normal) Bgc(#e9e9e9):h My(3px) Py(5px) Px(10px)">
+                                                                                                <i class="Mend(12px) Va(m) fas Fz(14px) fa-chevron-square-down fa-fw"></i>
+                                                                                                <span class="Fz(12px)">Go to First New Post</span>
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li class="D(b)">
+                                                                                            <a href="" class="D(b) C(c-normal) Bgc(#e9e9e9):h My(3px) Py(5px) Px(10px)">
+                                                                                                <i class="Mend(12px) Va(m) fas Fz(14px) fa-chevron-square-right fa-fw"></i>
+                                                                                                <span class="Fz(12px)">Go to Last Post</span>
+                                                                                            </a>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="checkbox Mstart(15px)">
+                                                                                <label>
+                                                                                    <input type="checkbox" class="jsSearchModeration">
+                                                                                    <i></i>
+                                                                                </label>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="D(f)">
                                                                         <!-- Thread Title -->
-                                                                        <div class="Fx(flexOne)">
+                                                                        <div class="Fx(flexOne) D(f) Fxd(c) Jc(sb)">
                                                                             <div class="Fw(500) C(c-primary) Fz(18px) Mb(10px)">Kuda, Salah Satu Hewan Paling Berjasa Bagi
                                                                                 Manusia Yang Kita
                                                                                 Sia-Siakan 🤧</div>
@@ -2423,11 +2489,9 @@
                                                                                     <div class="D(f) Jc(fs) Ai(c) c-reputation">
                                                                                         <div class="D(f) Ai(c) is-up-vote  Pend(5px) Cur(p)" href="#">
                                                                                             <div class="cendolWrapper"></div>
-                                                                                            <i class="Fz(10px) fa fa-arrow-up"></i>
                                                                                         </div>
                                                                                         <div class="Ta(c) ">10k</div>
                                                                                         <div class="D(f) Ai(c) is-down-vote Pstart(5px) Cur(p)" href="#">
-                                                                                            <i class="Fz(10px) fa fa-arrow-down"></i>
                                                                                             <div class="bataWrapper"></div>
                                                                                         </div>
                                                                                     </div>
@@ -2481,7 +2545,7 @@
                                                                     </div>
                                                                 </div>
             <!-- Thread Card -->
-                                                                        <div class="P(15px) Bd(borderSolidLightGrey) Mb(15px) Bgc(c-white) Pos(r) jsThreadCard">
+                                                                        <div class="P(16px) Bd(borderSolidLightGrey) Mb(8px) Bgc(c-white) Pos(r) jsThreadCard">
                                                                             <!-- Thread Nav -->
                                                                             <div class="D(f) Jc(sb) Mb(5px) ">
                                                                                 <div class="Fx(flex1Auto) As(c)">
@@ -2489,37 +2553,45 @@
                                                                                             class="C(c-secondary) Fz(12px) Fw(500)"> masnukho </a> • <a href="#" class="C(c-tertiary) Fz(12px)">
                                                                                             The Lounge </a></div>
                                                                                 </div>
-                                                                        
-                                                                                <div class="Fx(flex0Auto) Pos(r) jsPopover">
-                                                                                    <i class="Fz(15px) fas fa-ellipsis-h C(c-primary) C(c-blue):h jsPopoverTrigger Cur(p):h"></i>
-                                                                                    <div
-                                                                                        class="jsPopoverMenu Pos(a) Px(3px) End(1px) T(20px) Bgc(c-white) Z(2) Bd(borderSolidLightGrey) W(200px) toggleMenu">
-                                                                                        <ul>
-                                                                                            <li class="D(b) ">
-                                                                                                <a href="" class="D(b) C(c-normal) Bgc(c-lightgrey):h My(3px) Py(5px) Px(10px)">
-                                                                                                    <i class="Mend(12px) Va(m) fas Fz(14px) fa-bookmark fa-fw"></i>
-                                                                                                    <span class="Fz(12px)">Subscribe</span>
-                                                                                                </a>
-                                                                                            </li>
-                                                                                            <li class="D(b)">
-                                                                                                <a href="" class="D(b) C(c-normal) Bgc(c-lightgrey):h My(3px) Py(5px) Px(10px)">
-                                                                                                    <i class="Mend(12px) Va(m) fas Fz(14px) fa-chevron-square-down fa-fw"></i>
-                                                                                                    <span class="Fz(12px)">Go to First New Post</span>
-                                                                                                </a>
-                                                                                            </li>
-                                                                                            <li class="D(b)">
-                                                                                                <a href="" class="D(b) C(c-normal) Bgc(c-lightgrey):h My(3px) Py(5px) Px(10px)">
-                                                                                                    <i class="Mend(12px) Va(m) fas Fz(14px) fa-chevron-square-right fa-fw"></i>
-                                                                                                    <span class="Fz(12px)">Go to Last Post</span>
-                                                                                                </a>
-                                                                                            </li>
-                                                                                        </ul>
+                                                                                
+                                                                                <div class="D(f) Ai(c)">
+                                                                                    <div class="Fx(flex0Auto) Pos(r) jsPopover">
+                                                                                        <i class="Fz(15px) fas fa-ellipsis-h C(c-primary) C(c-blue):h jsPopoverTrigger Cur(p):h"></i>
+                                                                                        <div
+                                                                                            class="jsPopoverMenu Pos(a) Px(3px) End(1px) T(20px) Bgc(c-white) Z(2) Bd(borderSolidLightGrey) W(200px) toggleMenu">
+                                                                                            <ul>
+                                                                                                <li class="D(b) ">
+                                                                                                    <a href="" class="D(b) C(c-normal) Bgc(#e9e9e9):h My(3px) Py(5px) Px(10px)">
+                                                                                                        <i class="Mend(12px) Va(m) fas Fz(14px) fa-bookmark fa-fw"></i>
+                                                                                                        <span class="Fz(12px)">Subscribe</span>
+                                                                                                    </a>
+                                                                                                </li>
+                                                                                                <li class="D(b)">
+                                                                                                    <a href="" class="D(b) C(c-normal) Bgc(#e9e9e9):h My(3px) Py(5px) Px(10px)">
+                                                                                                        <i class="Mend(12px) Va(m) fas Fz(14px) fa-chevron-square-down fa-fw"></i>
+                                                                                                        <span class="Fz(12px)">Go to First New Post</span>
+                                                                                                    </a>
+                                                                                                </li>
+                                                                                                <li class="D(b)">
+                                                                                                    <a href="" class="D(b) C(c-normal) Bgc(#e9e9e9):h My(3px) Py(5px) Px(10px)">
+                                                                                                        <i class="Mend(12px) Va(m) fas Fz(14px) fa-chevron-square-right fa-fw"></i>
+                                                                                                        <span class="Fz(12px)">Go to Last Post</span>
+                                                                                                    </a>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="checkbox Mstart(15px)">
+                                                                                        <label>
+                                                                                            <input type="checkbox" class="jsSearchModeration">
+                                                                                            <i></i>
+                                                                                        </label>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="D(f)">
                                                                                 <!-- Thread Title -->
-                                                                                <div class="Fx(flexOne)">
+                                                                                <div class="Fx(flexOne) D(f) Fxd(c) Jc(sb)">
                                                                                     <div class="Fw(500) C(c-primary) Fz(18px) Mb(10px)">Kuda, Salah Satu Hewan Paling Berjasa Bagi
                                                                                         Manusia Yang Kita
                                                                                         Sia-Siakan 🤧</div>
@@ -2529,11 +2601,9 @@
                                                                                             <div class="D(f) Jc(fs) Ai(c) c-reputation">
                                                                                                 <div class="D(f) Ai(c) is-up-vote  Pend(5px) Cur(p)" href="#">
                                                                                                     <div class="cendolWrapper"></div>
-                                                                                                    <i class="Fz(10px) fa fa-arrow-up"></i>
                                                                                                 </div>
                                                                                                 <div class="Ta(c) ">10k</div>
                                                                                                 <div class="D(f) Ai(c) is-down-vote Pstart(5px) Cur(p)" href="#">
-                                                                                                    <i class="Fz(10px) fa fa-arrow-down"></i>
                                                                                                     <div class="bataWrapper"></div>
                                                                                                 </div>
                                                                                             </div>

@@ -1,7 +1,6 @@
-;
-(function($) {
+(function ($) {
 
-  $.fn.kslzy = function(threshold, callback) {
+  $.fn.kslzy = function (threshold, callback) {
 
     var $w = $(window),
       images = this,
@@ -22,11 +21,11 @@
       if (checker == "above") return ((y < (vpH + st)));
     }
 
-    this.one("display", function() {
+    this.one("display", function () {
       var downloadingImage = new Image();
       if ($(this).prop("tagName") == 'DIV' || $(this).prop("tagName") == 'A') {
         var currElem = this;
-        downloadingImage.onload = function() {
+        downloadingImage.onload = function () {
           $(currElem).removeClass("mls-img")
             .addClass("rjn-img")
             .removeAttr("data-src")
@@ -44,7 +43,7 @@
         };
       } else {
         var currImage = this;
-        downloadingImage.onload = function() {
+        downloadingImage.onload = function () {
           $(currImage).removeClass("mls-img")
             .addClass("rjn-img")
             .removeAttr("data-src");
@@ -52,13 +51,61 @@
           $(currImage).attr('src', this.src);
         };
       }
-      if(typeof $(this).attr("data-src") != "undefined"){
+      if (typeof $(this).attr("data-src") != "undefined") {
         downloadingImage.src = $(this).attr("data-src");
       }
     });
 
+    this.one("fetch_twitter", function () {
+      var elm = $(this).prev();
+      var twitterurl = $(this).data('url');
+      $.ajax({
+        url: 'https://publish.twitter.com/oembed?url=' + twitterurl,
+        type: 'GET',
+        dataType: "jsonp",
+        success: function (response) {
+          if (typeof response !== 'object') {
+            response = $.parseJSON(response);
+          }
+          $(elm).css('max-width', '480px');
+          if (response.html) {
+            $(elm).children("div").html(response.html);
+          } else {
+            $(elm).children("div").html('<img src="' + assetsFolderNew + '/images/image-twitter-invalid-placeholder.svg">');
+          }
+        },
+        error: function (xhr, status, error) {
+          $(elm).css('max-width', '480px');
+          $(elm).children("div").html('<img src="' + assetsFolderNew + '/images/image-twitter-invalid-placeholder.svg">');
+        }
+      });
+    });
+
+    this.one("fetch_instagram", function () {
+      var elm = $(this).prev();
+      var urlinstagram = $(this).data('url');
+      $.ajax({
+        url: 'https://graph.facebook.com/v8.0/instagram_oembed?url=' + urlinstagram + '&access_token=' + FACEBOOK_CLIENT_TOKEN,
+        type: 'GET',
+        dataType: "json",
+        success: function (data) {
+          if (typeof data !== 'object') {
+            data = $.parseJSON(data);
+          }
+          if (data.html) {
+            $(elm).html(data.html);
+          } else {
+            $(elm).html('<img src="' + assetsFolderNew + '/images/image-ig-invalid-placeholder.svg" style="max-width:480px">');
+          }
+        },
+        error: function (xhr, status, error) {
+          $(elm).html('<img src="' + assetsFolderNew + '/images/image-ig-invalid-placeholder.svg" style="max-width:480px">');
+        }
+      });
+    });
+
     function scan() {
-      var inview = images.filter(function() {
+      var inview = images.filter(function () {
 
         if ($(this).is(":visible") == false)
           return false;
@@ -66,7 +113,12 @@
         return checkVisible($(this));
       });
 
-      var loaded = inview.trigger("display");
+      var loaded = '';
+      if (typeof (callback) !== "undefined") {
+        loaded = inview.trigger(callback);
+      } else {
+        loaded = inview.trigger("display");
+      }
       // console.log(inview);
       images = images.not(loaded);
     }
@@ -80,7 +132,6 @@
   };
 
 })(window.jQuery || window.Zepto);
-
 
 function build_ga_track_event(category, action, label) {
   var ga_event_code = "_gaq.push(['_trackEvent', " + category + ", " + action + ", " + label + "]);";
@@ -556,15 +607,20 @@ function bindOpenWhoPosted() {
   }
 }
 
+var whoposted_page = 1;
+var whoposted_load_more = '<li id="whoposted-loadmore" class="D(f) Ai(c) Mb(15px)"><a data-id="whoposted-load-more" onclick="load_more_whoposted()" href="javascript:void(0)" class="D(b) W(100%) Bgc(#1998ed):h C(c-white):h Td(n):h D(b) Py(7px) Px(7px) Fw(500) Ta(c) C(#1998ed) Bd(borderSolidBlue) Bdrs(5px) Mb(10px)">Lihat Lainnya</a></li>';
+var whoposted_urlAjax = '';
+
 function openWhoPosted(el) {
-  var urlAjax = el.attr('href');
+  whoposted_page = 1;
+  whoposted_urlAjax = el.attr('href');
   $('#jsModalWhoPosted').empty();
   var html_view = '<div class="modal-dialog jsModalDialog Ov(h)">' +
               '<div class="modal-content jsModalContent">' +
                 '<div class="modal-section W(400px)">' +
                   '<div class="modal-header H(140px) Bgc(c-aqua-light) Bdrs(5px) Pos(r) Maw(360px) Mx(a) Bdrsbend(0) Bdrsbstart(0)">' +
                     '<div class="W(100%) H(130px) Bg(bgImageProps) Bgi(imagePopupWhoposted) Pos(a) B(0)"></div>' +
-                    '<button class="Pos(a) End(10px) T(10px) jsModalCloseButton Z(1)">' +
+                    '<button class="Pos(a) End(10px) T(10px) jsModalCloseButton Z(1)" type="button">' +
                       '<i class="fas fa-times C(#6e6e6e) Fz(20px)"></i>' +
                     '</button>' +
                   '</div>' +
@@ -577,57 +633,115 @@ function openWhoPosted(el) {
                     '<div class="Ovy(a) Mah(350px) Mb(15px) Mt(10px)">' +
                       '<div class="D(f) Fld(c)" id="whoposted_list_user">' +
                         '<ul>';
-  html_view += '<img src="' + assetsFolderNew + '/images/icon-load-biru.gif" width="40" height="40" alt="notification-loading" />';
+  html_view += '<img id="whoposted-loading-image" src="' + assetsFolderNew + '/images/icon-load-biru.gif" width="40" height="40" alt="notification-loading" />';
   html_view += '</ul></div></div></div></div></div></div>';
   $("#jsModalWhoPosted").html(html_view);
   bindJsModalCloseButton();
 
   $.ajax({
-    url: urlAjax,
+    url: whoposted_urlAjax + '/?whoposted_page=' + whoposted_page,
     success: function(result) {
-    if (typeof result !== 'object') {
-      result = $.parseJSON(result);
-    }
-    $('#whoposted_list_user').empty();
+      if (typeof result !== 'object') {
+        result = $.parseJSON(result);
+      }
+      $('#whoposted_list_user').empty();
 
-    whoposted_data = result.result.whoposted;
-    userDatas = result.result.user_info;
-    post_userid = result.result.post_userid;
-    html_view = "<ul>";
-    if (Object.keys(whoposted_data).length > 0) {
-      $.each(whoposted_data, function(key, post_info) {
-        userData = userDatas[post_info.userid];
-        if (typeof userData !== 'undefined' ) {
-          html_view += '<li class="D(f) Ai(c) Mb(15px)">' +
-                  '<a href="/profile/' + post_info.userid + '" target="_blank">' +
-                    '<div class="Pos(r)">' +
-                      '<img src="' + userData.profile_picture + '" class="W(36px) H(36px) Bdrs(50%)">' +
-                      ((userData.is_online) ? '<i class="W(12px) H(12px) Bdrs(50%) Bgc(c-green) Pos(a) End(0) B(0) Bd(borderSolidGreen)"></i>' : '') +
-                    '</div>' +
-                  '</a>' +
-                  '<div class="Fx(flexOne) Mx(10px) Ta(start)">' +
-                    '<a href="/profile/' + post_info.userid + '" class="C(c-normal) D(f) Ai(c) Jc(fs) Mb(5px)" target="_blank">' +
-                    ((post_info.userid==post_userid) ? '<span class="Bgc(#f8c31c) Bdrs(5px) P(3px) Fw(b) Fz(11px) Mend(5px)">TS</span>' : '') +
-                      '<div class="Fz(13px) Fw(500)">' + userData.username + '</div>' +
+      whoposted_data = result.result.whoposted;
+      post_userid = result.result.post_userid;
+      thread_id = result.result.thread_id;
+      total_post = (parseInt(result.result.total_post) || 0);
+      whoposted_page = result.result.next_page;
+      page_remaining = result.result.page_remaining;
+      html_view = "<ul>";
+      if (Object.keys(whoposted_data).length > 0) {
+        $.each(whoposted_data, function(key, post_info) {
+          if (typeof post_info.userid !== 'undefined' ) {
+            html_view += '<li class="D(f) Ai(c) Mb(15px)">' +
+                    '<a href="/profile/' + post_info.userid + '" target="_blank">' +
+                      '<div class="Pos(r)">' +
+                        '<img src="' + post_info.profile_picture + '" class="W(36px) H(36px) Bdrs(50%)">' +
+                        ((post_info.is_online) ? '<i class="W(12px) H(12px) Bdrs(50%) Bgc(c-green) Pos(a) End(0) B(0) Bd(borderSolidGreen)"></i>' : '') +
+                      '</div>' +
                     '</a>' +
-                    '<div class="C(#a3a3a3) Fz(11px)">' + userData.user_title + '</div>' +
-                  '</div>' +
-                  '<div class="W(80px)">' +
-                    '<a href="/viewallposts/' + post_info.userid + '?thread_id=' + result.result.thread_id + '&count=' + post_info.total_post + '" class="Td(u):h C(c-normal) Fz(12px) Fw(500) Ta(c)">' + post_info.total_post + '</a>' +
-                  '</div>' +
-                '</li>';
-        }
-      });
-    } else {
-      html_view = '<ul><li class="D(f) Ai(c) Mb(15px)">Empty Post</li></ul>';
-    }
-    html_view += "</ul>";
-    $('#whoposted_total_post').html('Post(' + (parseInt(whoposted_data.total_post) || 0) + ')');
-    $('#whoposted_list_user').html(html_view);
+                    '<div class="Fx(flexOne) Mx(10px) Ta(start)">' +
+                      '<a href="/profile/' + post_info.userid + '" class="C(c-normal) D(f) Ai(c) Jc(fs) Mb(5px)" target="_blank">' +
+                      ((post_info.userid == post_userid) ? '<span class="Bgc(#f8c31c) Bdrs(5px) P(3px) Fw(b) Fz(11px) Mend(5px)">TS</span>' : '') +
+                        '<div class="Fz(13px) Fw(500)">' + post_info.username + '</div>' +
+                      '</a>' +
+                      '<div class="C(#a3a3a3) Fz(11px)">' + post_info.user_title + '</div>' +
+                    '</div>' +
+                    '<div class="W(80px)">' +
+                      '<a href="/viewallposts/' + post_info.userid + '?thread_id=' + thread_id + '&count=' + post_info.total_post + '" class="Td(u):h C(c-normal) Fz(12px) Fw(500) Ta(c)">' + post_info.total_post + '</a>' +
+                    '</div>' +
+                  '</li>';
+          }
+        });
+      } else {
+        html_view = '<ul><li class="D(f) Ai(c) Mb(15px)">Empty Post</li></ul>';
+      }
+      html_view += "</ul>";
+      $('#whoposted_total_post').html('Post(' + total_post + ')');
+      $('#whoposted_list_user').html(html_view);
+      if (page_remaining > 0) {
+        $("#whoposted_list_user ul").append(whoposted_load_more);
+      }
     }
   });
 
   return false;
+}
+
+function load_more_whoposted()
+{
+  $('#whoposted-loadmore').hide();
+  html_view = '<img id="whoposted-loading-image" src="' + assetsFolderNew + '/images/icon-load-biru.gif" width="40" height="40" alt="notification-loading" />';
+  $('#whoposted_list_user ul').append(html_view);
+  $.ajax({
+    url: whoposted_urlAjax + '/?whoposted_page=' + whoposted_page,
+    success: function(result) {
+      if (typeof result !== 'object') {
+        result = $.parseJSON(result);
+      }
+
+      whoposted_data = result.result.whoposted;
+      post_userid = result.result.post_userid;
+      thread_id = result.result.thread_id;
+      whoposted_page = result.result.next_page;
+      page_remaining = result.result.page_remaining;
+      html_view = '';
+      if (Object.keys(whoposted_data).length > 0) {
+        $.each(whoposted_data, function(key, post_info) {
+          if (typeof post_info.userid !== 'undefined' ) {
+            html_view += '<li class="D(f) Ai(c) Mb(15px)">' +
+                    '<a href="/profile/' + post_info.userid + '" target="_blank">' +
+                      '<div class="Pos(r)">' +
+                        '<img src="' + post_info.profile_picture + '" class="W(36px) H(36px) Bdrs(50%)">' +
+                        ((post_info.is_online) ? '<i class="W(12px) H(12px) Bdrs(50%) Bgc(c-green) Pos(a) End(0) B(0) Bd(borderSolidGreen)"></i>' : '') +
+                      '</div>' +
+                    '</a>' +
+                    '<div class="Fx(flexOne) Mx(10px) Ta(start)">' +
+                      '<a href="/profile/' + post_info.userid + '" class="C(c-normal) D(f) Ai(c) Jc(fs) Mb(5px)" target="_blank">' +
+                      ((post_info.userid == post_userid) ? '<span class="Bgc(#f8c31c) Bdrs(5px) P(3px) Fw(b) Fz(11px) Mend(5px)">TS</span>' : '') +
+                        '<div class="Fz(13px) Fw(500)">' + post_info.username + '</div>' +
+                      '</a>' +
+                      '<div class="C(#a3a3a3) Fz(11px)">' + post_info.user_title + '</div>' +
+                    '</div>' +
+                    '<div class="W(80px)">' +
+                      '<a href="/viewallposts/' + post_info.userid + '?thread_id=' + thread_id + '&count=' + post_info.total_post + '" class="Td(u):h C(c-normal) Fz(12px) Fw(500) Ta(c)">' + post_info.total_post + '</a>' +
+                    '</div>' +
+                  '</li>';
+          }
+        });
+      }
+
+      $('#whoposted_list_user ul').append(html_view);
+      $('#whoposted-loadmore').remove();
+      $('#whoposted-loading-image').remove();
+      if (page_remaining > 0) {
+        $("#whoposted_list_user ul").append(whoposted_load_more);
+      }
+    }
+  });
 }
 
 function bindJsModalCloseButton()
@@ -2696,6 +2810,8 @@ function build_notification_card(notification) {
   template = template.replace('{notifId}', String(notification._id.$id));
   read_url = '/notification/read/' + String(notification._id.$id) + '/?is_pop_up=false';
   template = template.replace('{clickUrl}', read_url);
+  target_attr = (notification.type === 'live_thread_selected') ? '_blank' : '_self';
+  template = template.replace('{targetAttr}', target_attr);
   template = template.replace('{postBody}', notification.additional_data.post_body);
   template = template.replace('{lastUpdated}', notification.last_updated);
   if (notification.additional_data.post_content) {
@@ -2952,7 +3068,7 @@ function ignoreDataLayer(type) {
   });
 }
 
-function add_connection(url, username, modal) {
+function add_connection(url, username) {
   closeModal();
 
   var currentid = $('#currentid').val();
@@ -3044,18 +3160,6 @@ function add_connection(url, username, modal) {
     } else if (data.result == false) {
       showBottomToast(data.error_message, 1500);
     }
-
-    if (modal == 'following') {
-      setTimeout(function() {
-        openModal('jsModalFollowingList')
-      }, 1500);
-      load_following_data();
-    } else if (modal == 'follower') {
-      setTimeout(function() {
-        openModal('jsModalFollowersList')
-      }, 1500);
-      load_follower_data();
-    }
   }, "json");
 }
 
@@ -3093,21 +3197,6 @@ $(document).on({
     $(this).text($(this).data('default'));
   }
 }, '.jsFollowingButton, .jsBlockedButton');
-
-function set_data_unfol_modal(image_unfol, text_unfol, url_unfol, username, modal) {
-  $("#jsModalConfirmUnfollow img").attr("src", image_unfol);
-  set_show_modal_confirm(url_unfol, text_unfol, username, modal);
-};
-
-function set_data_unblock_modal(image_unblock, text_unblock, url_unblock, username, modal) {
-  $("#jsModalConfirmUnblock img").attr("src", image_unblock);
-  set_show_modal_confirm(url_unblock, text_unblock, username, modal);
-};
-
-function set_show_modal_confirm(url, text, username, modal) {
-  $("#confirm-message").html(text);
-  $(".confirm-action").attr("onclick", "add_connection('" + url + "', '" + username + "', '" + modal + "')");
-}
 
 var moderated_page = 1;
 var load_more_forum = '<li id="forum-loadmore" class="D(f) Ai(c) Mb(15px)"><a data-id="moderator-load-more" onclick="load_more_moderated_forum()" href="javascript:void(0)" class="D(b) W(100%) Bgc(#1998ed):h C(c-white):h Td(n):h D(b) Py(7px) Px(7px) Fw(500) Ta(c) C(#1998ed) Bd(borderSolidBlue) Bdrs(5px) Mb(10px)">Load More</a></li>';
@@ -3165,7 +3254,7 @@ function load_more_moderated_forum() {
 }
 
 var badge_page = 1;
-var load_more = '<li id="badge-loadmore" class="D(f) Ai(c) Mb(15px)"><a data-id="badge-load-more" onclick="load_more_badge()" href="javascript:void(0)" class="D(b) W(100%) Bgc(#1998ed):h C(c-white):h Td(n):h D(b) Py(7px) Px(7px) Fw(500) Ta(c) C(#1998ed) Bd(borderSolidBlue) Bdrs(5px) Mb(10px)">Load More</a></li>';
+var load_more = '<li id="badge-loadmore" class="D(f) Ai(c) Mb(15px)"><a data-id="badge-load-more" onclick="load_more_badge()" href="javascript:void(0)" class="D(b) W(100%) Bgc(#1998ed):h C(c-white):h Td(n):h D(b) Py(7px) Px(7px) Fw(500) Ta(c) C(#1998ed) Bd(borderSolidBlue) Bdrs(5px) Mb(10px)">Lihat Lainnya</a></li>';
 
 function badge() {
   badge_page = 1;
@@ -3232,7 +3321,7 @@ function get_list_connection(connection_type) {
   $('#loading-area').html(loading_img);
   $('#pagination').html('');
 
-  $.get("/profile/get_connection/?connection_type=" + connection_type + "&id=" + userid + "&theme=new_connection&page=" + current_page, function(data) {
+  $.get("/profile/get_connection/?connection_type=" + connection_type + "&id=" + userid + "&page=" + current_page, function(data) {
     $('#loading-area').html(data.html);
     $('#pagination').html(data.pagination);
   }, "json");
@@ -3297,7 +3386,7 @@ function searchConnection() {
     $('#loading-area').html(loading_img);
     $('#pagination').html('');
 
-    $.get("/profile/get_networkings/" + tab + '/' + 0 + '/' + userid + '/' + 0 + '/' + keyword + '/new_connection', function(response) {
+    $.get("/profile/get_networkings/" + tab + '/' + 0 + '/' + userid + '/' + 0 + '/' + keyword, function(response) {
       $('#loading-area').html(response.html);
     }, "json");
 
@@ -3433,10 +3522,8 @@ function toggleUpVote(source, resp = null) {
 	if(resp === null)
 	{
 		$(".is-up-vote", source).toggleClass("active");
-		$(".fa-arrow-up", source).toggleClass("C(c-green)");
 		var targetParent = source.parents(".vote-wrapper");
 		targetParent.find(".is-down-vote").removeClass("active");
-		targetParent.find(".fa-arrow-down").removeClass("C(c-red)");
 	}
 	else
 	{
@@ -3447,14 +3534,13 @@ function toggleUpVote(source, resp = null) {
 
 function doToggleUpVote(source, resp) {
 	source.toggleClass('active');
-	source.find('.fa-arrow-up').toggleClass('C(c-green)');
 
 	var wrapper = source.closest(".vote-wrapper");
 	var last_status = 0;
+	var downVote = wrapper.find(".is-down-vote");
 
-	if (wrapper.find('.fa-arrow-down').hasClass('C(c-red)')) {
-		wrapper.find(".fa-arrow-down").removeClass("C(c-red)");
-		wrapper.find(".is-down-vote").removeClass('active');
+	if (downVote.hasClass('active')) {
+		downVote.removeClass('active');
 		last_status = -1;
 	}
 	wrapper.find('.vote-value').html(resp.upvote-resp.downvote);
@@ -3474,7 +3560,6 @@ function toggleDownVote(source, resp = null) {
 		$(".is-down-vote", source).toggleClass("active");
 		var targetParent = source.parents(".vote-wrapper");
 		targetParent.find(".is-up-vote").removeClass("active");
-		targetParent.find(".fa-arrow-up").removeClass("C(c-green)");
 	}
 	else
 	{
@@ -3485,14 +3570,13 @@ function toggleDownVote(source, resp = null) {
 
 function doToggleDownVote(source, resp) {
 	source.toggleClass('active');
-	source.find('.fa-arrow-down').toggleClass('C(c-red)');
 
 	var wrapper = source.closest(".vote-wrapper");
 	var last_status = 0;
+	var upVote = wrapper.find(".is-up-vote");
 
-	if (wrapper.find(".fa-arrow-up").hasClass('C(c-green)')) {
-		wrapper.find(".is-up-vote").removeClass('active');
-		wrapper.find(".fa-arrow-up").removeClass('C(c-green)');
+	if (upVote.hasClass('active')) {
+		upVote.removeClass('active');
 		last_status = 1;
 	}
 	wrapper.find('.vote-value').html(resp.upvote-resp.downvote);
@@ -3565,8 +3649,8 @@ function landing_connection(followBtn) {
 				followBtn.attr('data-hover', data.word);
 				followBtn.attr('data-url', data.url);
 				followBtn.text(data.label_connection);
-				followBtn.removeClass('C(c-white) Bgc(c-blue)');
-				followBtn.addClass('C(c-secondary) Bgc(c-gray-2)');
+				followBtn.addClass('Bdw(1px) Bds(s) C(c-blue) Bgc(c-white) Bgc(c-red):h Bdc(c-red):h Td(n):h C(c-white):h');
+				followBtn.removeClass('Bgc(c-blue) C(c-white) Bd(borderSolidLightGrey)');
 
 				followCustomMetrics('follow', current_id, creator_id.toString());
 				showBottomToast(window.KASKUS_lang.success_follow_msg.replace('%s', creator_username), 3000);
@@ -3578,16 +3662,15 @@ function landing_connection(followBtn) {
 				followBtn.text(data.word);
 
 				if (data.hasOwnProperty('number_of_following')) {
-					followBtn.removeClass('C(c-secondary) Bgc(c-gray-2)');
-					followBtn.addClass('C(c-white) Bgc(c-blue)');
 					followCustomMetrics('unfollow', current_id, creator_id.toString());
 					showBottomToast(window.KASKUS_lang.success_unfollow_msg.replace('%s', creator_username), 3000);
 				} else {
-					followBtn.removeClass('C(c-red-1) Bgc(c-gray-2)');
-					followBtn.addClass('C(c-white) Bgc(c-blue)');
 					ignoreDataLayer('unignore');
 					showBottomToast(window.KASKUS_lang.success_unignore_msg.replace('%s', creator_username), 3000);
 				}
+				followBtn.addClass('Bdw(1px) Bds(s) Bgc(c-blue) C(c-white) Bd(borderSolidLightGrey)');
+				followBtn.removeClass('C(c-blue) Bgc(c-white) Bgc(c-red):h Bdc(c-red):h Td(n):h C(c-white):h');
+                                followBtn.removeClass('Bgc(c-gray-2) Bgc(c-blue):h Td(n):h C(c-normal) C(c-white):h'); //remove class styling from blocked user
 				$(this).unbind('mouseenter mouseleave');
 			}
 		} else if (data.result == false) {
@@ -3709,8 +3792,6 @@ function fetch_more_topic_detail_thread() {
 				.replace(/{{iconColor}}/g, iconColor)
 				.replace(/{{topicName}}/g, threadList[key].topicName)
 				.replace(/{{topicId}}/g, threadList[key].topicId)
-				.replace(/{{upArrowColor}}/g, threadList[key].upArrowColor)
-				.replace(/{{downArrowColor}}/g, threadList[key].downArrowColor)
 				.replace(/{{metaImages}}/g, divMetaImages)
 				.replace(/{{topicUrl}}/g, threadList[key].topicUrl)
 				.replace(/{{showGotoFirstNewPost}}/g, threadList[key].showGotoFirstNewPost)
@@ -3762,7 +3843,7 @@ function createHorizontalShareMenu(elShareBar) {
 			var category = forum_id + " " + title;
 		}
 		var elString =
-		'<a href="' + fb_href + '" data-url="' + fb_url + '" data-threadid="' + threadid + '" onclick="threadlist_facebook_share(\'' + fb_url + '\', \'' + threadid + '\');' + build_ga_custom_track_share_thread(category, "share thread", "facebook", shareDataEl, custom_dimension) + ';return false;" class="C(c-facebook) C(c-facebook-hover):h Mend(15px) ' + font_size + '" >' +
+		'<a target="_blank" href="' + fb_href + '" data-url="' + fb_url + '" data-threadid="' + threadid + '" onclick="threadlist_facebook_share(\'' + fb_url + '\', \'' + threadid + '\');' + build_ga_custom_track_share_thread(category, "share thread", "facebook", shareDataEl, custom_dimension) + ';return false;" class="C(c-facebook) C(c-facebook-hover):h Mend(15px) ' + font_size + '" >' +
 		'<i class="fab fa-facebook-f"></i>' +
 		'</a>' +
 		'<a target="_blank" href="' + fb_msg_href + '" data-threadid="' + threadid + '" onclick="threadlist_share_count(\'' + threadid + '\', \'facebook-messenger\');' + build_ga_custom_track_share_thread(category, "share thread", "facebook-messenger", shareDataEl, custom_dimension) + '" class="C(c-facebook-messenger) C(c-facebook-messenger-hover):h Mx(15px) ' + font_size + '">' +
@@ -4094,6 +4175,7 @@ function get_search_dropdown() {
   get_top_keyword();
   get_search_history();
   show_search_drop_down();
+  bindOnClickSearchButton();
 }
 
 function show_search_drop_down() {
@@ -4117,6 +4199,12 @@ function show_search_drop_down() {
         fidterm += " fid:" + $(this).find('a').attr('data-forum-id');
       }
       $("#search").val(fidterm);
+    } else if ($(this).find('a').hasClass('forumSearch')) {
+      if ($(this).find('a').attr('data-url') !== undefined) {
+        url = $(this).find('a').attr('data-url');
+        window.location.href = url;
+        return;
+      }
     } else {
       $("#search").val($(this).text());
     }
@@ -4140,6 +4228,16 @@ function show_template_search(terms, div_id, div_to_hide, last_data) {
   } else {
     $(div_to_hide).show();
   }
+}
+
+function bindOnClickSearchButton() {
+  $('#btn-search').on('click', function (e) {
+    if ($('#searchform').attr('data-url') !== undefined) {
+      e.preventDefault();
+      url = $('#searchform').attr('data-url');
+      window.location.href = url;
+    }
+  });
 }
 
 function get_top_keyword() {
@@ -4264,14 +4362,14 @@ function remove_search_history() {
   });
 }
 
-function fetchCategories() {
+function fetchCategories(fromSearchBox = false) {
   var url = KASKUS_URL + '/misc/get_categories/' + catVersion;
   $.retrieveJSON(url, {}, function(a) {
     if (retryFetch && a.version != catVersion) {
       $.clearJSON(url, {});
       retryFetch = false;
-      fetchCategories();
-    } else {
+      fetchCategories(fromSearchBox);
+    } else if (fromSearchBox == false) {
       $('#cat-forum').replaceWith(a.forum);
       $('#cat-jb').replaceWith(a.jb);
       catLoaded = true;
@@ -4484,6 +4582,47 @@ function fetchCategories() {
       $(".flyout__category-children__list").bind('scroll', function() {
         checkScroller($(this));
       });
+    } else {
+      try {
+        var searchField = $('#search').val();
+        if (searchField == '') {
+          $('#forum_search').addClass('D(n)');
+          $('#forum_search_choice').addClass('D(n)');
+          $('#forum_search_choice').html('');
+          return;
+        }
+        myExp = new RegExp(searchField, 'i');
+        var url = '/misc/forum_categories/';
+        $.retrieveJSON(url, {
+          usergroupid: userGroupIdJSON
+        }, function(data) {
+          var template = '';
+          var limit = 5;
+          var count = 0;
+          $.each(data, function (key, val) {
+            if (val.forum_name.search(myExp) != -1 && count < limit) {
+              var forum_url = decodeURIComponent(val.forum_url);
+              var segments = forum_url.split('?');
+              var arr = {};
+              arr.ref = 'header';
+              arr.med = 'search';
+              forum_url = segments[0] + '?' + jQuery.param(arr);
+              template += '<li><a data-url="' + forum_url + '" href="' + forum_url + '" class="D(b) forumSearch P(5px) C(c-normal) Fz(12px) Td(n):h Bgc(c-semiwhite):h resultTerm">' + decodeURIComponent(val.forum_name) + '</a></li>';
+              count++;
+            }
+          });
+          if (template != '') {
+            $('#forum_search_choice').html(template);
+            $('#forum_search').removeClass('D(n)');
+            $('#forum_search_choice').removeClass('D(n)');
+          } else {
+            $('#forum_search').addClass('D(n)');
+            $('#forum_search_choice').addClass('D(n)');
+            $('#forum_search_choice').html('');
+          }
+        }, 864e5);
+      } catch (err) {
+      }
     }
   }, 36e5);
 }
@@ -5237,6 +5376,11 @@ function insertBBCode(openWith, closeWith, textbox) {
   objectTextbox.selectionEnd = posSelectionStart + txtToAddStart.length + selection.length + txtToAddEnd.length;
 }
 
+$('#search').on('search', function () {
+  $('#search').keyup();
+});
+
+var updateSearchResult = true;
 var regex = /^(.+?)(\d+)$/i;
 $(document).on("keyup", "#search", function () {
   var term = $(this).val().trim();
@@ -5261,6 +5405,22 @@ $(document).on("keyup", "#search", function () {
     var highlightedTerm = searchTerms[i].innerText.replace(pattern, "<span class=\"highlightedText\">$1</span>");
     searchTerms[i].innerHTML = highlightedTerm;
   }
+  if (updateSearchResult) {
+    if ($('#forum_search').hasClass('D(n)')) {
+      if ($('#search').val().length >= 3) {
+        fetchCategories(true);
+      }
+    } else {
+      fetchCategories(true);
+    }
+  }
+
+  var pattern = new RegExp("(" + term + ")", "gi");
+  searchTerms = document.getElementsByClassName("resultTerm");
+  for (var i = 0; i < searchTerms.length; i++) {
+    var highlightedTerm = searchTerms[i].innerText.replace(pattern, "<span class=\"highlightedText\">$1</span>");
+    searchTerms[i].innerHTML = highlightedTerm;
+  }
 });
 
 /*
@@ -5274,7 +5434,6 @@ if ($.cookie('notices') === null) {
     secure: false
   });
 }
-
 /*
  * general notice
  */
@@ -5661,13 +5820,6 @@ $(document).ready(function () {
       searchConnection();
     }
 
-  });
-
-  $(".connection_tab").click(function () {
-    connection_type = tab = $(this).attr("connection-type");
-    current_page = 1;
-    $('#search_connection_keyword').val('');
-    get_list_connection(connection_type);
   });
 
   var KaskusTvSwiper = new Swiper('.jsKaskusTvSwiper', {
@@ -6118,6 +6270,9 @@ $(document).ready(function () {
 
   $("#search").keydown(function (event) {
     $(".jsSearchResult").find('li').removeClass('Bgc(c-semiwhite)');
+    if (event.which != 13) {
+      $('#searchform').removeAttr('data-url');
+    }
     var totalIndex = $(".jsSearchResult .jsSearchWrapper li").length - 1;
     var fidterm = '';
     var selectedElement = ".jsSearchResult .jsSearchWrapper li:eq(" + indexSelected + ")";
@@ -6149,6 +6304,8 @@ $(document).ready(function () {
         indexSelected = 0;
       }
       setSelectedSearch();
+    } else {
+      updateSearchResult = true;
     }
   });
 
@@ -6156,8 +6313,14 @@ $(document).ready(function () {
     var selectedElement = ".jsSearchResult .jsSearchWrapper li:eq(" + indexSelected + ")";
     if ($(selectedElement).find('a').hasClass("categorySearch")) {
       var selectedElementValue = $(selectedElement).find('span').text();
+    } else if ($(selectedElement).find('a').hasClass("forumSearch")) {
+      var selectedElementValue = $(selectedElement).find('a').text();
+      if ($(selectedElement).find('a').attr('data-url') !== undefined) {
+        $('#searchform').attr('data-url', $(selectedElement).find('a').attr('data-url'));
+      }
     } else {
       var selectedElementValue = $(selectedElement).find('a').text();
+      $('#searchform').removeAttr('data-url');
     }
 
     $("#search").val(selectedElementValue);
@@ -6165,6 +6328,7 @@ $(document).ready(function () {
     $("#search").attr("value", selectedElementValue);
     $("#search").blur();
     $("#search").focus();
+    updateSearchResult = false;
   }
 
   $('.jsUserAvatar').click(function () {

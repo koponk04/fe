@@ -1,1 +1,0 @@
-$(".video-share .embed").click(function(){$(".reveal-embed").fadeToggle("slow",function(){setTimeout(function(){$(".reveal-embed").find("input").focus().select()},50)})});
